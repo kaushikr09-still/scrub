@@ -26,11 +26,11 @@ describe("gstinCheckDigit", () => {
 });
 
 describe("isValidGstin", () => {
-  it("[UNVERIFIED] accepts a self-generated example GSTIN (state 29 prefix)", () => {
+  it("[self-computed, cross-checked with an independent mod-36 calculation (not yet confirmed against an official GSTN document)] accepts a self-generated example GSTIN (state 29 prefix)", () => {
     expect(isValidGstin("29AABCU9603R1ZJ")).toBe(true);
   });
 
-  it("[UNVERIFIED] accepts a second self-generated example GSTIN (state 27 prefix)", () => {
+  it("[self-computed, cross-checked with an independent mod-36 calculation (not yet confirmed against an official GSTN document)] accepts a second self-generated example GSTIN (state 27 prefix)", () => {
     expect(isValidGstin("27AAPFU0939F1ZV")).toBe(true);
   });
 
