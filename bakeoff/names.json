@@ -1,0 +1,488 @@
+[
+  {
+    "id": "n001",
+    "pattern": "full_name",
+    "name": "Priya Nair",
+    "text": "Hi Priya Nair, thanks for sending the report."
+  },
+  {
+    "id": "n002",
+    "pattern": "full_name",
+    "name": "Arjun Mehta",
+    "text": "Please share the invoice with Arjun Mehta by Friday."
+  },
+  {
+    "id": "n003",
+    "pattern": "full_name",
+    "name": "Kavita Deshpande",
+    "text": "Candidate: Kavita Deshpande, currently based in Pune."
+  },
+  {
+    "id": "n004",
+    "pattern": "full_name",
+    "name": "Imran Qureshi",
+    "text": "Regards, Imran Qureshi"
+  },
+  {
+    "id": "n005",
+    "pattern": "full_name",
+    "name": "Gurpreet Kaur",
+    "text": "I spoke to Gurpreet Kaur yesterday about the ticket."
+  },
+  {
+    "id": "n006",
+    "pattern": "full_name",
+    "name": "Sandeep Reddy",
+    "text": "Meeting notes: Sandeep Reddy will present the budget."
+  },
+  {
+    "id": "n007",
+    "pattern": "full_name",
+    "name": "Anjali Bora",
+    "text": "Please loop in Anjali Bora on this thread."
+  },
+  {
+    "id": "n008",
+    "pattern": "full_name",
+    "name": "Tenzin Dorjee",
+    "text": "Dear Tenzin Dorjee, your application has been received."
+  },
+  {
+    "id": "n009",
+    "pattern": "full_name",
+    "name": "Manoj Pillai",
+    "text": "Ticket raised by Manoj Pillai, priority high."
+  },
+  {
+    "id": "n010",
+    "pattern": "initials_first",
+    "name": "K. Ramesh",
+    "text": "Reporting manager: K. Ramesh"
+  },
+  {
+    "id": "n011",
+    "pattern": "initials_first",
+    "name": "R. K. Subramanian",
+    "text": "Signed, R. K. Subramanian"
+  },
+  {
+    "id": "n012",
+    "pattern": "initials_first",
+    "name": "S. Venkatesh",
+    "text": "Please forward this to S. Venkatesh for approval."
+  },
+  {
+    "id": "n013",
+    "pattern": "initials_first",
+    "name": "M. Anitha",
+    "text": "Team lead is M. Anitha from the Chennai office."
+  },
+  {
+    "id": "n014",
+    "pattern": "initials_first",
+    "name": "P. V. Rajan",
+    "text": "Cc: P. V. Rajan"
+  },
+  {
+    "id": "n015",
+    "pattern": "initials_first",
+    "name": "A. Karthikeyan",
+    "text": "Interview panel: A. Karthikeyan and two others."
+  },
+  {
+    "id": "n016",
+    "pattern": "initials_first",
+    "name": "T. S. Lakshmi",
+    "text": "Account holder: T. S. Lakshmi"
+  },
+  {
+    "id": "n017",
+    "pattern": "initials_first",
+    "name": "V. Meenakshi",
+    "text": "Thanks to V. Meenakshi for the quick turnaround."
+  },
+  {
+    "id": "n018",
+    "pattern": "initials_first",
+    "name": "N. Balaji",
+    "text": "The refund was approved by N. Balaji."
+  },
+  {
+    "id": "n019",
+    "pattern": "initials_last",
+    "name": "Ramesh K",
+    "text": "Spoke with Ramesh K about the delivery date."
+  },
+  {
+    "id": "n020",
+    "pattern": "initials_last",
+    "name": "Suresh R.",
+    "text": "Reviewed by Suresh R. on Monday."
+  },
+  {
+    "id": "n021",
+    "pattern": "initials_last",
+    "name": "Anitha M",
+    "text": "Please ask Anitha M to join the call."
+  },
+  {
+    "id": "n022",
+    "pattern": "initials_last",
+    "name": "Karthik S.",
+    "text": "Applicant name: Karthik S."
+  },
+  {
+    "id": "n023",
+    "pattern": "initials_last",
+    "name": "Divya P",
+    "text": "Forwarding this to Divya P for a second look."
+  },
+  {
+    "id": "n024",
+    "pattern": "initials_last",
+    "name": "Vignesh T",
+    "text": "Vignesh T will share the logs tomorrow."
+  },
+  {
+    "id": "n025",
+    "pattern": "initials_last",
+    "name": "Lakshmi N.",
+    "text": "Customer: Lakshmi N."
+  },
+  {
+    "id": "n026",
+    "pattern": "initials_last",
+    "name": "Arun B",
+    "text": "Could Arun B check the invoice?"
+  },
+  {
+    "id": "n027",
+    "pattern": "initials_last",
+    "name": "Sowmya V",
+    "text": "Referred by Sowmya V, who worked with me earlier."
+  },
+  {
+    "id": "n028",
+    "pattern": "honorific",
+    "name": "Sharma",
+    "text": "Dear Mr. Sharma, please find the quote attached."
+  },
+  {
+    "id": "n029",
+    "pattern": "honorific",
+    "name": "Fatima Sheikh",
+    "text": "Dr. Fatima Sheikh will chair the review."
+  },
+  {
+    "id": "n030",
+    "pattern": "honorific",
+    "name": "Ramakant Joshi",
+    "text": "Forwarded by Shri Ramakant Joshi on behalf of the office."
+  },
+  {
+    "id": "n031",
+    "pattern": "honorific",
+    "name": "Kamala Devi",
+    "text": "Smt. Kamala Devi has signed the form."
+  },
+  {
+    "id": "n032",
+    "pattern": "honorific",
+    "name": "Ashok Banerjee",
+    "text": "Prof. Ashok Banerjee supervised the project."
+  },
+  {
+    "id": "n033",
+    "pattern": "honorific",
+    "name": "Gupta",
+    "text": "Dear Mrs. Gupta, your order has shipped."
+  },
+  {
+    "id": "n034",
+    "pattern": "honorific",
+    "name": "Singhania",
+    "text": "Please address the letter to Mr. Singhania."
+  },
+  {
+    "id": "n035",
+    "pattern": "honorific",
+    "name": "Thakur",
+    "text": "Ms. Thakur from accounts called twice."
+  },
+  {
+    "id": "n036",
+    "pattern": "honorific",
+    "name": "Prakash Jha",
+    "text": "Er. Prakash Jha inspected the site."
+  },
+  {
+    "id": "n037",
+    "pattern": "single_name",
+    "name": "Karthik",
+    "text": "Ask Karthik to review the draft."
+  },
+  {
+    "id": "n038",
+    "pattern": "single_name",
+    "name": "Meera",
+    "text": "Thanks Meera, that works for me."
+  },
+  {
+    "id": "n039",
+    "pattern": "single_name",
+    "name": "Faisal",
+    "text": "Faisal said the payment is pending."
+  },
+  {
+    "id": "n040",
+    "pattern": "single_name",
+    "name": "Deepa",
+    "text": "Hi Deepa, sharing the notes from today."
+  },
+  {
+    "id": "n041",
+    "pattern": "single_name",
+    "name": "Nikhil",
+    "text": "Can Nikhil take this ticket?"
+  },
+  {
+    "id": "n042",
+    "pattern": "single_name",
+    "name": "Zoya",
+    "text": "Zoya will join us after lunch."
+  },
+  {
+    "id": "n043",
+    "pattern": "single_name",
+    "name": "Harpreet",
+    "text": "Please confirm with Harpreet before sending."
+  },
+  {
+    "id": "n044",
+    "pattern": "single_name",
+    "name": "Tarun",
+    "text": "Tarun is out of office until Thursday."
+  },
+  {
+    "id": "n045",
+    "pattern": "single_name",
+    "name": "Ishita",
+    "text": "Looping in Ishita for the design review."
+  },
+  {
+    "id": "n046",
+    "pattern": "ordinary_word",
+    "name": "Sunny",
+    "text": "Sunny will bring the documents tomorrow."
+  },
+  {
+    "id": "n047",
+    "pattern": "ordinary_word",
+    "name": "Lucky",
+    "text": "Please ask Lucky to update the sheet."
+  },
+  {
+    "id": "n048",
+    "pattern": "ordinary_word",
+    "name": "Honey",
+    "text": "Honey called to reschedule the meeting."
+  },
+  {
+    "id": "n049",
+    "pattern": "ordinary_word",
+    "name": "Rocky",
+    "text": "Rocky mentioned the server is down again."
+  },
+  {
+    "id": "n050",
+    "pattern": "ordinary_word",
+    "name": "Happy",
+    "text": "Happy is handling the vendor payments this week."
+  },
+  {
+    "id": "n051",
+    "pattern": "ordinary_word",
+    "name": "Grace Thomas",
+    "text": "Reference: Grace Thomas, former manager."
+  },
+  {
+    "id": "n052",
+    "pattern": "ordinary_word",
+    "name": "Joy Mathew",
+    "text": "Spoke with Joy Mathew about the contract."
+  },
+  {
+    "id": "n053",
+    "pattern": "ordinary_word",
+    "name": "Rose Fernandes",
+    "text": "Please send it to Rose Fernandes."
+  },
+  {
+    "id": "n054",
+    "pattern": "ordinary_word",
+    "name": "Pearl Dsouza",
+    "text": "Customer name is Pearl Dsouza."
+  },
+  {
+    "id": "n055",
+    "pattern": "all_caps",
+    "name": "RAHUL VERMA",
+    "text": "CANDIDATE NAME: RAHUL VERMA"
+  },
+  {
+    "id": "n056",
+    "pattern": "all_caps",
+    "name": "SRINIVASAN RAGHAVAN",
+    "text": "PLEASE SEND THE FILE TO SRINIVASAN RAGHAVAN TODAY."
+  },
+  {
+    "id": "n057",
+    "pattern": "all_caps",
+    "name": "FATIMA ANSARI",
+    "text": "APPLICANT: FATIMA ANSARI"
+  },
+  {
+    "id": "n058",
+    "pattern": "all_caps",
+    "name": "KULDEEP SINGH BAINS",
+    "text": "SIGNED BY KULDEEP SINGH BAINS"
+  },
+  {
+    "id": "n059",
+    "pattern": "all_caps",
+    "name": "NEHA KULKARNI",
+    "text": "DEAR NEHA KULKARNI, YOUR REQUEST IS APPROVED."
+  },
+  {
+    "id": "n060",
+    "pattern": "all_caps",
+    "name": "DEVENDRA PATEL",
+    "text": "PREPARED BY DEVENDRA PATEL"
+  },
+  {
+    "id": "n061",
+    "pattern": "all_caps",
+    "name": "MANISHA DAS",
+    "text": "NAME OF EMPLOYEE: MANISHA DAS"
+  },
+  {
+    "id": "n062",
+    "pattern": "all_caps",
+    "name": "ABDUL RAHMAN",
+    "text": "ACCOUNT HOLDER ABDUL RAHMAN HAS BEEN NOTIFIED."
+  },
+  {
+    "id": "n063",
+    "pattern": "all_caps",
+    "name": "SUNITA YADAV",
+    "text": "CONTACT PERSON: SUNITA YADAV"
+  },
+  {
+    "id": "n064",
+    "pattern": "lowercase_chat",
+    "name": "priya",
+    "text": "arre priya, invoice bhej diya kya?"
+  },
+  {
+    "id": "n065",
+    "pattern": "lowercase_chat",
+    "name": "amit",
+    "text": "amit sir ne bola kal meeting hai"
+  },
+  {
+    "id": "n066",
+    "pattern": "lowercase_chat",
+    "name": "sneha",
+    "text": "ok will ask sneha to check the file"
+  },
+  {
+    "id": "n067",
+    "pattern": "lowercase_chat",
+    "name": "vikram",
+    "text": "vikram ka number do na"
+  },
+  {
+    "id": "n068",
+    "pattern": "lowercase_chat",
+    "name": "rahul",
+    "text": "rahul bhai kal aa rahe hain office"
+  },
+  {
+    "id": "n069",
+    "pattern": "lowercase_chat",
+    "name": "pooja",
+    "text": "pooja didi ko forward kar dena"
+  },
+  {
+    "id": "n070",
+    "pattern": "lowercase_chat",
+    "name": "arjun",
+    "text": "tell arjun the build is fixed"
+  },
+  {
+    "id": "n071",
+    "pattern": "lowercase_chat",
+    "name": "kavya",
+    "text": "kavya said she will call you back"
+  },
+  {
+    "id": "n072",
+    "pattern": "lowercase_chat",
+    "name": "imran",
+    "text": "imran ne payment kar diya hai"
+  },
+  {
+    "id": "n073",
+    "pattern": "multipart",
+    "name": "Lakshmi Narayana Rao",
+    "text": "Father's Name: Lakshmi Narayana Rao"
+  },
+  {
+    "id": "n074",
+    "pattern": "multipart",
+    "name": "Mohammed Aslam Khan",
+    "text": "Mohammed Aslam Khan has been added to the list."
+  },
+  {
+    "id": "n075",
+    "pattern": "multipart",
+    "name": "Ramesh Chandra Gupta",
+    "text": "Father's Name: Ramesh Chandra Gupta"
+  },
+  {
+    "id": "n076",
+    "pattern": "multipart",
+    "name": "Sai Krishna Prasad",
+    "text": "Please contact Sai Krishna Prasad for access."
+  },
+  {
+    "id": "n077",
+    "pattern": "multipart",
+    "name": "Aarav Kumar Singh",
+    "text": "Nominee: Aarav Kumar Singh"
+  },
+  {
+    "id": "n078",
+    "pattern": "multipart",
+    "name": "Venkata Subba Rao",
+    "text": "Reference letter from Venkata Subba Rao is attached."
+  },
+  {
+    "id": "n079",
+    "pattern": "multipart",
+    "name": "Gurmeet Singh Sandhu",
+    "text": "Gurmeet Singh Sandhu joined the call late."
+  },
+  {
+    "id": "n080",
+    "pattern": "multipart",
+    "name": "Anil Kumar Mishra",
+    "text": "Husband's Name: Anil Kumar Mishra"
+  },
+  {
+    "id": "n081",
+    "pattern": "multipart",
+    "name": "Sheela Rani Das",
+    "text": "Sheela Rani Das approved the leave request."
+  }
+]
