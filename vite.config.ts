@@ -6,6 +6,10 @@ export default defineConfig({
     port: Number(process.env.PORT) || 5173,
     strictPort: !!process.env.PORT,
   },
+  build: {
+    // The polyfill uses fetch(); the page's CSP (vercel.json) blocks all fetches and one bundle needs no preloading.
+    modulePreload: { polyfill: false },
+  },
   test: {
     environment: "node",
     include: ["src/**/*.test.ts"],
