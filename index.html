@@ -3,10 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scrub</title>
+    <meta name="referrer" content="no-referrer" />
+    <title>Scrub: mask personal details before you ask a chatbot</title>
+    <link rel="stylesheet" href="/src/ui/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <header>
+        <h1>Scrub</h1>
+        <p>
+          Masks personal details in your text before you paste it into an AI chatbot, then puts them back into the
+          chatbot's reply.
+        </p>
+        <p class="honesty"><strong>Reduces what you expose. It does not guarantee anonymity.</strong></p>
+        <p>
+          Everything runs in this page. Your text is not sent or saved anywhere. Reloading the page forgets it.
+        </p>
+      </header>
+
+      <section class="notice" role="note" aria-labelledby="notice-title">
+        <h2 id="notice-title"><span aria-hidden="true">⚠ </span>Not checked yet</h2>
+        <p>Names, organisations and places are <strong>NOT</strong> checked yet (rules only).</p>
+        <p>
+          The rules look for: email addresses, phone numbers, Aadhaar, PAN, GSTIN, IFSC, UPI IDs and card numbers.
+          Read your text yourself before you share it.
+        </p>
+      </section>
+
+      <section class="step" aria-labelledby="step1-title">
+        <h2 id="step1-title">1. Your text</h2>
+        <label for="input">Paste the text you want to share</label>
+        <textarea
+          id="input"
+          rows="8"
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          aria-describedby="input-hint input-status"
+        ></textarea>
+        <p id="input-hint" class="hint">Tip: Ctrl+Enter (or ⌘+Enter) also scrubs.</p>
+        <p id="input-status" class="status warning" aria-live="polite"></p>
+        <button id="scrub-button" type="button">Scrub</button>
+      </section>
+
+      <section class="step" aria-labelledby="step2-title">
+        <h2 id="step2-title">2. What the chatbot will see</h2>
+        <label for="scrubbed">Scrubbed text (read-only)</label>
+        <textarea
+          id="scrubbed"
+          rows="8"
+          readonly
+          spellcheck="false"
+          autocomplete="off"
+          aria-describedby="scrub-summary"
+        ></textarea>
+        <div aria-live="polite">
+          <p id="scrub-summary" class="status"></p>
+          <ul id="scrub-warnings" class="warnings"></ul>
+        </div>
+        <div class="ack">
+          <input id="ack" type="checkbox" aria-describedby="copy-scrubbed-status" />
+          <label for="ack">I understand that names, organisations and places are not checked.</label>
+        </div>
+        <button id="copy-scrubbed" type="button">Copy<span class="visually-hidden"> scrubbed text</span></button>
+        <p id="copy-scrubbed-status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="step" aria-labelledby="step3-title">
+        <h2 id="step3-title">3. The chatbot's reply</h2>
+        <label for="reply">Paste the chatbot's reply</label>
+        <textarea
+          id="reply"
+          rows="8"
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          aria-describedby="reply-hint"
+        ></textarea>
+        <p id="reply-hint" class="hint">Tip: Ctrl+Enter (or ⌘+Enter) also restores.</p>
+        <button id="restore-button" type="button">Restore</button>
+      </section>
+
+      <section class="step" aria-labelledby="step4-title">
+        <h2 id="step4-title">4. Reply with your details put back</h2>
+        <label for="restored">Restored reply (read-only)</label>
+        <textarea
+          id="restored"
+          rows="8"
+          readonly
+          spellcheck="false"
+          autocomplete="off"
+          aria-describedby="restore-warnings"
+        ></textarea>
+        <ul id="restore-warnings" class="warnings" aria-live="polite"></ul>
+        <button id="copy-restored" type="button">Copy<span class="visually-hidden"> restored reply</span></button>
+        <p id="copy-restored-status" class="status" aria-live="polite"></p>
+      </section>
+    </main>
     <script type="module" src="/src/ui/main.ts"></script>
   </body>
 </html>
