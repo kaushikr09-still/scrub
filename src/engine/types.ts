@@ -1,4 +1,4 @@
-/** Types the rules engine can detect. More are added in later tasks. */
+/** Types the rules engine can detect. */
 export type DetectionType =
   | "EMAIL"
   | "PHONE"
@@ -7,7 +7,13 @@ export type DetectionType =
   | "GSTIN"
   | "IFSC"
   | "UPI"
-  | "CARD";
+  | "CARD"
+  | "BANK_ACCOUNT"
+  | "PIN"
+  | "DATE"
+  | "MONEY"
+  | "URL"
+  | "IP";
 
 /**
  * One detected span. `start`/`end` are string offsets (end exclusive) and
