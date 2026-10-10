@@ -112,3 +112,26 @@ describe("round trip — traps", () => {
     expect(r.warnings.map((w) => w.token)).toEqual(["[PERSON_9]"]);
   });
 });
+
+describe("round trip — BANK_ACCOUNT placeholders", () => {
+  it("[BANK_ACCOUNT_1] round-trips, and restores from lowercase bank_account_1", () => {
+    const original = "Please credit A/c 50100123456788 today.";
+    const { scrubbed, restored } = roundTrip(original);
+    expect(scrubbed.text).toBe("Please credit A/c [BANK_ACCOUNT_1] today.");
+    expect(restored).toEqual({ text: original, warnings: [] });
+    expect(restore("Credited bank_account_1.", scrubbed.mapping).text).toBe("Credited 50100123456788.");
+    expect(restore("Credited [bank_account_1]'s holder.", scrubbed.mapping).text).toBe(
+      "Credited 50100123456788's holder.",
+    );
+  });
+
+  it("[BANK_ACCOUNT_10] is not confused with [BANK_ACCOUNT_1]", () => {
+    const accounts = Array.from({ length: 10 }, (_, i) => String(100000001 + i));
+    const original = accounts.map((a) => `A/c ${a}`).join("\n");
+    const { scrubbed, restored } = roundTrip(original);
+    expect(scrubbed.text.split("\n")[9]).toBe("A/c [BANK_ACCOUNT_10]");
+    expect(restored).toEqual({ text: original, warnings: [] });
+    const reply = restore("Use [BANK_ACCOUNT_10], not bank_account_1.", scrubbed.mapping);
+    expect(reply).toEqual({ text: "Use 100000010, not 100000001.", warnings: [] });
+  });
+});

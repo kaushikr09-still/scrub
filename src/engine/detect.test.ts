@@ -79,3 +79,62 @@ describe("detect — collisions", () => {
     expect(summary("ids 1234567890 2345678901 3456789012 4567890123 5678901234")).toEqual([]);
   });
 });
+
+describe("detect — collisions (Tier 1 part 2)", () => {
+  it("₹1,00,00,000 gives one MONEY and no PHONE", () => {
+    expect(summary("₹1,00,00,000")).toEqual(["MONEY:₹1,00,00,000"]);
+  });
+
+  it("12-05-2024 gives DATE and no PHONE", () => {
+    expect(summary("12-05-2024")).toEqual(["DATE:12-05-2024"]);
+  });
+
+  it("a 6-digit order ID with no context gives no PIN", () => {
+    expect(summary("Order 482913 shipped")).toEqual([]);
+  });
+
+  it("a 10-digit account number with 'A/c' gives BANK_ACCOUNT, not PHONE", () => {
+    expect(summary("A/c 9876543210")).toEqual(["BANK_ACCOUNT:9876543210"]);
+  });
+
+  it("the same 10 digits without any context give PHONE", () => {
+    expect(summary("9876543210")).toEqual(["PHONE:9876543210"]);
+  });
+
+  it("a bare 12-digit number without a valid checksum gives no AADHAAR and no BANK_ACCOUNT", () => {
+    expect(summary("123456789012")).toEqual([]);
+  });
+
+  it("a rupee amount with phone-shaped digits gives MONEY, not PHONE", () => {
+    expect(summary("Rs 9876543210")).toEqual(["MONEY:Rs 9876543210"]);
+  });
+
+  it("an email's domain is not also a URL", () => {
+    expect(summary("priya@gmail.com")).toEqual(["EMAIL:priya@gmail.com"]);
+  });
+
+  it("an IP inside a link gives one URL", () => {
+    expect(summary("http://10.0.0.1/admin")).toEqual(["URL:http://10.0.0.1/admin"]);
+  });
+
+  it("finds the new types in one text, in reading order", () => {
+    const text =
+      "DOB: 12/05/1990. Address: 12, MG Road, Bengaluru 560038. " +
+      "A/c 50100123456788, CTC ₹12 LPA, linkedin.com/in/priya, server 10.0.0.1.";
+    expect(summary(text)).toEqual([
+      "DATE:12/05/1990",
+      "PIN:560038",
+      "BANK_ACCOUNT:50100123456788",
+      "MONEY:₹12 LPA",
+      "URL:linkedin.com/in/priya",
+      "IP:10.0.0.1",
+    ]);
+  });
+});
+
+describe("detect — documented trade-offs", () => {
+  it("[self-computed] an account number that happens to pass Luhn is labelled CARD (checksum wins)", () => {
+    // 50100123456789 is Luhn-valid. It is still masked, just under CARD.
+    expect(summary("A/c 50100123456789")).toEqual(["CARD:50100123456789"]);
+  });
+});
