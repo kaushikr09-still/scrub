@@ -55,3 +55,60 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
   }
   return out;
 }
+
+// A word is any run of Unicode letters, digits and combining marks. An apostrophe (straight or curly) or a
+// hyphen between two of those stays inside the word, except a trailing possessive 's, which is left outside
+// so "Priya's" is masked as "[PERSON_1]'s" and Priya and Priya's get the same placeholder.
+const WORD_CHAR = /^[\p{L}\p{N}\p{M}]$/u;
+const JOINERS = new Set(["'", "’", "-"]);
+
+const isWordPoint = (ch: string): boolean => ch !== "" && WORD_CHAR.test(ch);
+
+/** The code point that starts at i, or "" past the end. */
+function charAt(text: string, i: number): string {
+  const cp = text.codePointAt(i);
+  return cp === undefined ? "" : String.fromCodePoint(cp);
+}
+
+/** The code point that ends at i, or "" at the start. */
+function charBefore(text: string, i: number): string {
+  if (i <= 0) return "";
+  const low = text.charCodeAt(i - 1);
+  if (low >= 0xdc00 && low <= 0xdfff && i >= 2) {
+    const high = text.charCodeAt(i - 2);
+    if (high >= 0xd800 && high <= 0xdbff) return text.slice(i - 2, i);
+  }
+  return text[i - 1];
+}
+
+/** A trailing 's: the apostrophe at i is followed by s or S and then a non-word character. */
+function isPossessive(text: string, i: number): boolean {
+  const next = text[i + 1];
+  return (next === "s" || next === "S") && !isWordPoint(charAt(text, i + 2));
+}
+
+/**
+ * Grows [start, end) outward to whole-word edges, so no letter or digit is left touching the span.
+ * Never shrinks the span and never crosses a space or other punctuation into a neighbouring word.
+ */
+export function snapToWords(text: string, start: number, end: number): { start: number; end: number } {
+  if (end <= start) return { start, end };
+  for (;;) {
+    const c = charBefore(text, start);
+    if (isWordPoint(c)) {
+      start -= c.length;
+    } else if (JOINERS.has(c) && isWordPoint(charBefore(text, start - c.length)) && isWordPoint(charAt(text, start))) {
+      start -= c.length;
+    } else break;
+  }
+  for (;;) {
+    const c = charAt(text, end);
+    if (isWordPoint(c)) {
+      end += c.length;
+    } else if (JOINERS.has(c) && isWordPoint(charBefore(text, end)) && isWordPoint(charAt(text, end + c.length))) {
+      if (c !== "-" && isPossessive(text, end)) break;
+      end += c.length;
+    } else break;
+  }
+  return { start, end };
+}

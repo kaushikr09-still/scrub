@@ -1,6 +1,6 @@
 // Finds names, organisations and places with a model, without importing one.
 // The model is injected as a "runner", so this file and its tests need no model, browser or network.
-import { locatePredictions, type Located, type RawPrediction } from "./spans";
+import { locatePredictions, snapToWords, type Located, type RawPrediction } from "./spans";
 import type { Detection, DetectionType } from "./types";
 
 /** The model reads at most 512 tokens (including 2 special ones). The worker refuses chunks over this. */
@@ -175,7 +175,15 @@ export async function findNames(text: string, runner: NameRunner, options: FindN
   await checkRange(0, text.length, options.size ?? CHUNK_CHARS, options.overlap ?? OVERLAP_CHARS);
 
   const found: Detection[] = [];
-  for (const s of mergeSpans(spans)) {
+  // Snap every model span outward to whole words first: the model often labels only the first piece of a
+  // word ("P" of "Priya"), and the rest must never be left touching the placeholder.
+  const snapped = spans.map((s) => {
+    const raw = text.slice(s.start, s.end);
+    const start = s.start + (raw.length - raw.trimStart().length);
+    const end = s.end - (raw.length - raw.trimEnd().length);
+    return end > start ? { ...s, ...snapToWords(text, start, end) } : s;
+  });
+  for (const s of mergeSpans(snapped)) {
     const raw = text.slice(s.start, s.end);
     const start = s.start + (raw.length - raw.trimStart().length);
     const end = s.end - (raw.length - raw.trimEnd().length);
