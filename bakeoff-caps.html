@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- Dev-only page for the ALL CAPS experiment (task P6c). Not linked from index.html and not part of the production build.
+     It downloads the model, which is allowed only because it sends no user text: it reads bakeoff/names.json and bakeoff/caps_headings.json only. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrub ALL CAPS experiment</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { margin: 0 auto; padding: 16px; max-width: 60rem; }
+      button { font: inherit; padding: 8px 16px; }
+      table { border-collapse: collapse; margin-top: 12px; }
+      th, td { border: 1px solid; padding: 4px 8px; text-align: left; vertical-align: top; }
+    </style>
+  </head>
+  <body>
+    <h1>ALL CAPS experiment (dev only)</h1>
+    <p>Runs bert-base-NER q8 on the 9 ALL CAPS names and 24 ALL CAPS headings, with the caps transform off and on.</p>
+    <button id="run" type="button">Run experiment</button>
+    <p id="status" role="status" aria-live="polite">Not started.</p>
+    <table>
+      <thead><tr><th>Transform</th><th>ALL CAPS names touched</th><th>ALL CAPS names fully masked</th><th>Headings with a false mask</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <pre id="detail"></pre>
+    <script type="module" src="/bakeoff/caps.ts"></script>
+  </body>
+</html>
