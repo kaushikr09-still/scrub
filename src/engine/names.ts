@@ -1,5 +1,6 @@
 // Finds names, organisations and places with a model, without importing one.
 // The model is injected as a "runner", so this file and its tests need no model, browser or network.
+import { normaliseCapsRuns } from "./capsNormalise";
 import { locatePredictions, snapToWords, type Located, type RawPrediction } from "./spans";
 import type { Detection, DetectionType } from "./types";
 
@@ -147,14 +148,17 @@ export interface FindNamesOptions {
  */
 export async function findNames(text: string, runner: NameRunner, options: FindNamesOptions = {}): Promise<Detection[]> {
   const minSize = options.minSize ?? MIN_CHUNK_CHARS;
+  // The model reads a same-length title-case copy of long ALL CAPS runs. Everything below that is not the
+  // model call (spans, values, rules) uses the original `text`, so positions need no mapping.
+  const modelText = normaliseCapsRuns(text);
   const spans: Span[] = [];
 
   async function checkRange(from: number, to: number, size: number, overlap: number): Promise<void> {
-    for (const c of planChunks(text.slice(from, to), size, overlap)) await checkChunk(from + c.start, from + c.end);
+    for (const c of planChunks(modelText.slice(from, to), size, overlap)) await checkChunk(from + c.start, from + c.end);
   }
 
   async function checkChunk(start: number, end: number): Promise<void> {
-    const piece = text.slice(start, end);
+    const piece = modelText.slice(start, end);
     if (!/\S/.test(piece)) return;
     let predictions: RawPrediction[] | null;
     try {

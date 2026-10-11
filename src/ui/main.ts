@@ -78,7 +78,7 @@ function renderModel(): void {
   if (state === "ready") {
     noticeHeading.textContent = "Name check ready";
     modelStatus.textContent =
-      "The name model is ready. Names, organisations and places are checked when you press Scrub. It misses some, especially in ALL CAPS or all-lowercase text.";
+      "The name model is ready. Names, organisations and places are checked when you press Scrub. It misses some, especially in all-lowercase text.";
     modelDownload.hidden = true;
   } else if (state === "failed") {
     noticeHeading.textContent = "Names NOT checked";

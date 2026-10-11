@@ -8,7 +8,7 @@ Your text is never sent anywhere by this page and is not saved; the mapping live
 
 ## What it does not protect
 - A lookalike number may be a real one, and a real one may be missed or wrongly masked.
-- Names can be missed, especially in ALL CAPS or all-lowercase text.
+- Names can be missed, especially in all-lowercase text.
 - Your device and browser are trusted. Malware, extensions or someone looking at your screen are out of scope.
 
 ## What the site and Hugging Face can see

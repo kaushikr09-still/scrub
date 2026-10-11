@@ -52,7 +52,7 @@ function countTokens(tokens: string[]): string[] {
 }
 
 const NOTE_CHECKED =
-  "Names, organisations and places were checked by the name model. It misses some, especially in ALL CAPS or all-lowercase text.";
+  "Names, organisations and places were checked by the name model. It misses some, especially in all-lowercase text.";
 const NOTE_LOADING =
   "Names NOT checked: the name model was still loading when you pressed Scrub, so this is a rules-only result. Press Scrub again once it is ready.";
 const NOTE_FAILED = "Names NOT checked: the name model could not check this text, so this is a rules-only result.";

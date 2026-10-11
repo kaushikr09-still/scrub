@@ -282,3 +282,28 @@ describe("combineDetections (rules first, model last)", () => {
     expect(r.text).toBe("[PERSON_1] of [ORG_1], [LOC_1]: [EMAIL_1]");
   });
 });
+
+describe("findNames with ALL CAPS text", () => {
+  it("shows the model a title-case copy but reports spans and values from the original", async () => {
+    const text = "SIGNED BY RAHUL VERMA TODAY";
+    const seen: string[] = [];
+    const runner: NameRunner = async (chunk) => {
+      seen.push(chunk);
+      return gazetteerPredictions(chunk);
+    };
+    const found = await findNames(text, runner);
+    expect(seen).toEqual(["Signed By Rahul Verma Today"]);
+    expect(found).toHaveLength(1);
+    expect(found[0]).toMatchObject({ type: "PERSON", start: 10, end: 21, value: "RAHUL VERMA" });
+    expect(text.slice(found[0].start, found[0].end)).toBe("RAHUL VERMA");
+  });
+
+  it("does not change text that has no ALL CAPS run", async () => {
+    const seen: string[] = [];
+    await findNames("Ask Rahul Verma about PAN", async (chunk) => {
+      seen.push(chunk);
+      return [];
+    });
+    expect(seen).toEqual(["Ask Rahul Verma about PAN"]);
+  });
+});
