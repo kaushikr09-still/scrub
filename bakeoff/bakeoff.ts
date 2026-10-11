@@ -4,12 +4,13 @@ import { env, pipeline } from "@huggingface/transformers";
 import candidates from "./candidates.json";
 import names from "./names.json";
 import {
-  formatRecall,
+  formatBoth,
   isPersonLabel,
   locatePredictions,
   scoreCandidate,
   sumFileSizes,
   type Located,
+  type PartialName,
   type RawPrediction,
   type Sentence,
 } from "./scoring";
@@ -24,6 +25,10 @@ interface Candidate {
 const sentences = names as Sentence[];
 const patterns = [...new Set(sentences.map((s) => s.pattern))];
 const perPattern = sentences.length / patterns.length;
+
+/** Everything the page measured, so a run can be read back as data (window.__bakeoff). */
+const results: Record<string, unknown>[] = [];
+(window as unknown as { __bakeoff: unknown }).__bakeoff = results;
 
 env.allowLocalModels = false; // never look for models on this dev server
 
@@ -55,6 +60,19 @@ function rowFor(c: Candidate): HTMLTableRowElement {
 const fmtMb = (c: Candidate, mb: number) =>
   `${mb.toFixed(1)} / ${c.reported_size_mb === null ? "not reported" : c.reported_size_mb}`;
 
+/** Lists the names the model touched but did not fully cover, with each uncovered letter shown as _. */
+function showPartial(c: Candidate, partial: PartialName[]) {
+  const h = document.createElement("h3");
+  h.textContent = `${c.id}: ${partial.length} name(s) touched but only partly masked`;
+  const ul = document.createElement("ul");
+  for (const p of partial) {
+    const li = document.createElement("li");
+    li.textContent = `${p.id} (${p.pattern}): ${p.shown}`;
+    ul.appendChild(li);
+  }
+  $("partials").append(h, ul);
+}
+
 async function runCandidate(c: Candidate, tr: HTMLTableRowElement) {
   const events: { file: string; loaded?: number; total?: number }[] = [];
   const pipe = await pipeline("token-classification", c.model_id, {
@@ -85,8 +103,22 @@ async function runCandidate(c: Candidate, tr: HTMLTableRowElement) {
       located.push(locatePredictions(s.text, out));
     }
     const score = scoreCandidate(sentences, located);
-    cell(tr, formatRecall(score.overall));
-    for (const p of patterns) cell(tr, formatRecall(score.byPattern[p] ?? { found: 0, total: perPattern }));
+    const both = (t: { found: number; total: number } | undefined, f: { found: number; total: number } | undefined) =>
+      formatBoth(t ?? { found: 0, total: perPattern }, f ?? { found: 0, total: perPattern }).replace(" / ", "\n");
+    cell(tr, both(score.overall, score.fullOverall));
+    for (const p of patterns) cell(tr, both(score.byPattern[p], score.fullByPattern[p]));
+    showPartial(c, score.partial);
+    results.push({
+      id: c.id,
+      touched: score.overall,
+      fully: score.fullOverall,
+      touchedByPattern: score.byPattern,
+      fullyByPattern: score.fullByPattern,
+      partial: score.partial,
+      outside: score.outside,
+      sizeMb: sizeMb,
+      msPerSentence: totalMs / sentences.length,
+    });
     cell(tr, String(score.outside));
     cell(tr, fmtMb(c, sizeMb));
     cell(tr, (totalMs / sentences.length).toFixed(1));
@@ -99,6 +131,8 @@ async function runAll() {
   $<HTMLButtonElement>("run").disabled = true;
   buildHeader();
   $("rows").replaceChildren();
+  $("partials").replaceChildren();
+  results.length = 0;
   for (const c of candidates as Candidate[]) {
     const tr = rowFor(c);
     $("status").textContent = `${c.id}: loading model…`;

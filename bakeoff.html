@@ -14,6 +14,7 @@
       table { border-collapse: collapse; margin-top: 12px; }
       th, td { border: 1px solid; padding: 4px 8px; text-align: left; vertical-align: top; }
       td.fail { font-weight: bold; }
+      td { white-space: pre-line; }
       .small { font-size: 0.85em; }
     </style>
   </head>
@@ -21,8 +22,7 @@
     <h1>Model bake-off (dev only)</h1>
     <p>
       Runs each model in <code>bakeoff/candidates.json</code> over the sentences in <code>bakeoff/names.json</code>.
-      Models are downloaded from the model host; no text of yours is involved. A name counts as found if any
-      person-type prediction overlaps it.
+      Models are downloaded from the model host; no text of yours is involved. Names are scored two ways (see below the table).
     </p>
     <button id="run" type="button">Run bake-off</button>
     <p id="status" role="status" aria-live="polite">Not started.</p>
@@ -32,8 +32,11 @@
         <tbody id="rows"></tbody>
       </table>
     </div>
+    <div id="partials"></div>
     <p class="small">
-      Size is measured from the files the loader reports (1 MB = 1,000,000 bytes); the reported size is the claim in
+      Each cell shows two numbers per group of 9 sentences. "touched": any person prediction overlaps the name.
+      "fully": every letter of the name sits inside a person prediction after snapping to whole-word edges (the
+      same snapping the page applies). Size is measured from the files the loader reports (1 MB = 1,000,000 bytes); the reported size is the claim in
       candidates.json. ms per sentence is the average over all sentences after one untimed warm-up run, on this
       machine's CPU. "Person outside name" counts person predictions (word pieces joined) that do not overlap the
       name. No confidence floor is applied.

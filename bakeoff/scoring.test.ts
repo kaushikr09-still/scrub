@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import names from "./names.json";
 import {
   findNameSpan,
+  formatBoth,
   formatRecall,
   isPersonLabel,
   locatePredictions,
@@ -151,5 +152,78 @@ describe("sumFileSizes", () => {
   });
   it("is zero for no events", () => {
     expect(sumFileSizes([])).toBe(0);
+  });
+});
+
+describe("scoreCandidate: fully masked (strict)", () => {
+  const s = (name: string, text: string): Sentence => ({ id: name, pattern: "p", name, text });
+
+  it("counts a name fully masked only when every letter sits inside a person span", () => {
+    const sentences = [s("Priya Nair", "Hi Priya Nair, thanks")];
+    const whole = [[{ label: "B-PER", start: 3, end: 13 }]];
+    const r = scoreCandidate(sentences, whole);
+    expect(r.overall).toEqual({ found: 1, total: 1 });
+    expect(r.fullOverall).toEqual({ found: 1, total: 1 });
+  });
+
+  it("two spans that together cover every letter count (the space between is not a letter)", () => {
+    const sentences = [s("Priya Nair", "Hi Priya Nair, thanks")];
+    const preds = [[{ label: "B-PER", start: 3, end: 8 }, { label: "I-PER", start: 9, end: 13 }]];
+    expect(scoreCandidate(sentences, preds).fullOverall.found).toBe(1);
+  });
+
+  it("touched but not fully masked: only the first name predicted", () => {
+    const sentences = [s("Priya Nair", "Hi Priya Nair, thanks")];
+    const r = scoreCandidate(sentences, [[{ label: "B-PER", start: 3, end: 8 }]]);
+    expect(r.overall.found).toBe(1);
+    expect(r.fullOverall.found).toBe(0);
+    expect(r.partial).toEqual([{ id: "Priya Nair", pattern: "p", name: "Priya Nair", shown: "Priya ____" }]);
+  });
+
+  it("snaps a fragment outward before checking, as the page does", () => {
+    const sentences = [s("Priya", "Hi Priya, send")];
+    const r = scoreCandidate(sentences, [[{ label: "B-PER", start: 3, end: 4 }]]); // just the "P"
+    expect(r.overall.found).toBe(1);
+    expect(r.fullOverall.found).toBe(1);
+    expect(r.partial).toEqual([]);
+  });
+
+  it("snapping never reaches into the next word, so a missing surname still counts as partial", () => {
+    const sentences = [s("Priya Nair", "Hi Priya Nair, thanks")];
+    const r = scoreCandidate(sentences, [[{ label: "B-PER", start: 3, end: 4 }]]);
+    expect(r.fullOverall.found).toBe(0);
+    expect(r.partial[0].shown).toBe("Priya ____");
+  });
+
+  it("a missed name is neither touched nor fully masked, and is not listed as partial", () => {
+    const sentences = [s("Priya", "Hi Priya, send")];
+    const r = scoreCandidate(sentences, [[]]);
+    expect(r.overall.found).toBe(0);
+    expect(r.fullOverall.found).toBe(0);
+    expect(r.partial).toEqual([]);
+  });
+
+  it("ignores non-person spans", () => {
+    const sentences = [s("Priya", "Hi Priya, send")];
+    expect(scoreCandidate(sentences, [[{ label: "B-ORG", start: 3, end: 8 }]]).fullOverall.found).toBe(0);
+  });
+
+  it("tallies by pattern", () => {
+    const sentences: Sentence[] = [
+      { id: "a", pattern: "one", name: "Priya", text: "Hi Priya, send" },
+      { id: "b", pattern: "two", name: "Ravi Rao", text: "Hi Ravi Rao, send" },
+    ];
+    const r = scoreCandidate(sentences, [
+      [{ label: "PER", start: 3, end: 8 }],
+      [{ label: "PER", start: 3, end: 7 }],
+    ]);
+    expect(r.fullByPattern.one).toEqual({ found: 1, total: 1 });
+    expect(r.fullByPattern.two).toEqual({ found: 0, total: 1 });
+  });
+});
+
+describe("formatBoth", () => {
+  it("shows touched and fully masked as x of N", () => {
+    expect(formatBoth({ found: 7, total: 9 }, { found: 5, total: 9 })).toBe("touched 7 of 9 / fully 5 of 9");
   });
 });
