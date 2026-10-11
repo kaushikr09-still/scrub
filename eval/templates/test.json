@@ -1,0 +1,56 @@
+[
+  {
+    "split": "test",
+    "preset": "resumes",
+    "id": "res_t1",
+    "text": "Name: {PERSON:full@1}\nFather's Name: {PERSON:full}\nMother's Name: {PERSON:full}\nDOB: {DATE:dob}\nMarital Status: Married\nPhone: {PHONE}\nEmail: {EMAIL:of1}\nPresent Address: {ADDRESS}\n\nPROFESSIONAL SUMMARY\n{FILL:designation} with strong exposure to {FILL:skill}. Expected CTC: {MONEY}.\n\nEMPLOYMENT HISTORY\n1. {ORG:employer}, {LOC:city} (Mar 2020 to Present) as {FILL:designation}\n2. {ORG:employer}, {LOC:city} (Apr 2016 to Feb 2020) as {FILL:designation}\n\nACADEMICS\n{FILL:degree} - {ORG:school} - 2016\n\nI confirm the details above are correct.\n{PERSON:full@1}\n{LOC:city}"
+  },
+  {
+    "split": "test",
+    "preset": "resumes",
+    "id": "res_t2",
+    "text": "{PERSON:honorific@1} | {FILL:designation}\nMobile {PHONE} / {PHONE} | {EMAIL:of1}\n{URL}\n\nPROFILE\nSenior {FILL:department} professional, currently at {ORG:employer} with a package of {MONEY}.\n\nKEY ACHIEVEMENTS\n- Closed a {MONEY} contract with {ORG:company}.\n- Mentored {PERSON:initials_first} and {PERSON:single}.\n\nCAREER\n{ORG:employer} | {LOC:city} | 2017 - Present\n{ORG:employer} | {LOC:city} | 2011 - 2017\n\nEDUCATION\n{FILL:degree}, {ORG:school}\n\nREFERENCES\n1. {PERSON:honorific@2}, {FILL:designation}, {ORG:company}. Mobile: {PHONE}. Email: {EMAIL:of2}\n2. {PERSON:full}, {ORG:company}. Mobile: {PHONE}"
+  },
+  {
+    "split": "test",
+    "preset": "resumes",
+    "id": "res_t3",
+    "text": "CURRICULUM VITAE\n{PERSON:full@1}\nAddress for communication:\n{ADDRESS}\nContact: {PHONE}\nMail: {EMAIL:of1}\nAadhaar: {AADHAAR}\n\nCareer Objective: To secure a position as {FILL:designation} with {ORG:employer}.\n\nExperience: {FILL:designation} at {ORG:employer}, {LOC:city} for 4 years; drawing {MONEY} per annum.\n\nEducation: {FILL:degree}, {ORG:school}.\nLanguages known: English, Hindi\nHobbies: reading, cricket\n\nPersonal Details\nFather's Name: {PERSON:initials_first}\nBorn on: {DATE:dob}\nNationality: Indian"
+  },
+  {
+    "split": "test",
+    "preset": "emails",
+    "id": "em_t1",
+    "text": "Subject: Reminder: outstanding payments\n\nDear {PERSON:honorific@1},\n\nThis is a gentle reminder that the following invoices are outstanding:\n\n{NEG:invoice}   {MONEY}   due {DATE:any}\n{NEG:invoice}   {MONEY}   due {DATE:any}\n{NEG:invoice}   {MONEY}   due {DATE:any}\n\nTotal outstanding: {MONEY}. You may pay via UPI to {UPI} or by NEFT to A/c {BANK_ACCOUNT} (IFSC: {IFSC}).\n\nIf already paid, please share the UTR reference {NEG:ref}.\n\nWarm regards,\n{PERSON:initials_first@2}\nFinance Team | {ORG:company}\nMob: {PHONE}"
+  },
+  {
+    "split": "test",
+    "preset": "emails",
+    "id": "em_t2",
+    "text": "Subject: Introduction - {PERSON:single@1} <> {PERSON:single@2}\n\nHi {PERSON:single@1} and {PERSON:single@2},\n\nI would like to introduce you both. {PERSON:full@1} runs operations at {ORG:company} in {LOC:city}, and {PERSON:full@2} leads sales at {ORG:company}.\n\n{PERSON:single@1}, you can reach {PERSON:single@2} at {EMAIL:of2} or on {PHONE}.\n{PERSON:single@2}, {PERSON:single@1} is on {PHONE} and {URL}.\n\nI will leave you to it. Let me know if the call on {DATE:any} works.\n\nCheers,\n{PERSON:ordinary_word}"
+  },
+  {
+    "split": "test",
+    "preset": "emails",
+    "id": "em_t3",
+    "text": "Subject: Purchase order {NEG:order} - {FILL:product}\n\nDear {PERSON:full@1},\n\nPlease find the purchase order for 400 units of {FILL:product} at a total value of {MONEY}. Delivery address:\n\n{ORG:company}\n{ADDRESS}\nContact at site: {PERSON:single@2}, {PHONE}\n\nOur GSTIN is {GSTIN}. Please quote it on the invoice. For portal issues, note that the server at {IP} is down for maintenance until {DATE:any}.\n\nRegards,\n{PERSON:multipart@3}\nPurchase Dept, {ORG:company}\n{EMAIL:of3}"
+  },
+  {
+    "split": "test",
+    "preset": "chats",
+    "id": "ch_t1",
+    "text": "arre {PERSON:single@1} are you there?\nyes {PERSON:single@2} bolo\n{PERSON:single@1}: can you send the gst number of {ORG:company}?\n{PERSON:single@2}: {GSTIN}\n{PERSON:single@1}: thanks. and {PERSON:single@3} bhai ka upi?\n{PERSON:single@2}: {UPI}\n{PERSON:single@1}: ok will pay {MONEY} today evening\n{PERSON:single@2}: {PERSON:single@3} bol raha tha office {LOC:area} mein hai ab"
+  },
+  {
+    "split": "test",
+    "preset": "chats",
+    "id": "ch_t2",
+    "text": "Ticket {NEG:ticket} - Refund request\n\nRequester: {PERSON:full@1}\nEmail: {EMAIL:of1}\nPhone: {PHONE}\nCard used for payment: {CARD}\nRefund to UPI: {UPI}\nAmount: {MONEY}\n\nAgent {PERSON:single@2}: Hello {PERSON:single@1}, I have checked order {NEG:order}. The refund of {MONEY} will be credited within 5-7 working days.\nCustomer {PERSON:single@1}: I am travelling to {LOC:city} on {DATE:any}, please do it before that.\nAgent {PERSON:single@2}: Noted. Reference {NEG:ref}."
+  },
+  {
+    "split": "test",
+    "preset": "chats",
+    "id": "ch_t3",
+    "text": "Call transcript - {DATE:long}\n\nAgent: Thank you for calling {ORG:company}, this is {PERSON:single@1}. How can I help?\nCaller: Hi {PERSON:single@1}, I'm {PERSON:full@2} from {ORG:company}. My number is {PHONE}.\nAgent: Could you confirm your registered email?\nCaller: It's {EMAIL:of2}.\nAgent: Thanks {PERSON:honorific@2}. I can see your GSTIN {GSTIN} on file and the order {NEG:order}.\nCaller: Yes. The goods went to {ADDRESS}.\nAgent: Understood. Your balance is {MONEY}. I will email the statement and call you on {PHONE} tomorrow.\nCaller: Okay. Also note the server at {IP} that I mentioned is down."
+  }
+]
