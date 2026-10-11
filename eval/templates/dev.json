@@ -1,0 +1,56 @@
+[
+  {
+    "split": "dev",
+    "preset": "resumes",
+    "id": "res_d1",
+    "text": "{PERSON:full@1}\n{ADDRESS}\nMobile: {PHONE} | Email: {EMAIL:of1}\n\nCAREER OBJECTIVE\nTo work as a {FILL:designation} in a growth-oriented organisation where my skills in {FILL:skill} and {FILL:skill} add value.\n\nWORK EXPERIENCE\n{FILL:designation}, {ORG:employer}, {LOC:city}\nJan 2021 - Present\n- Managed monthly reporting and worked closely with {PERSON:single} from the {FILL:department} team.\n- Reduced processing time by 30% using {FILL:skill}.\n\n{FILL:designation}, {ORG:employer}, {LOC:city}\nJun 2018 - Dec 2020\n- Handled client accounts worth {MONEY} annually.\n\nEDUCATION\n{FILL:degree}, {ORG:school}, 2018\nClass XII, {ORG:school}, 2014\n\nPERSONAL DETAILS\nFather's Name: {PERSON:multipart}\nDate of Birth: {DATE:dob}\nMarital Status: Single\nNationality: Indian\nLanguages Known: English, Hindi\nAddress: {ADDRESS}\n\nDECLARATION\nI hereby declare that the above information is true to the best of my knowledge.\nPlace: {LOC:city}\nDate: {DATE:any}\nSignature: {PERSON:full@1}"
+  },
+  {
+    "split": "dev",
+    "preset": "resumes",
+    "id": "res_d2",
+    "text": "{PERSON:initials_last@1}  |  {FILL:designation}\n{LOC:area}, {LOC:city}  |  {PHONE}  |  {EMAIL:of1}  |  {URL}\n\nSUMMARY\n{FILL:designation} with 6 years of experience in {FILL:skill} and {FILL:skill}. Currently earning {MONEY} and looking for a role in {LOC:city}.\n\nEXPERIENCE\n{ORG:employer} ({LOC:city})  -  {FILL:designation}\n2022 - Present\n* Led a team of 8; reported to {PERSON:honorific}.\n* Built dashboards in {FILL:skill}, used by {ORG:company} and two other clients.\n\n{ORG:employer}  -  {FILL:designation}\n2019 - 2022\n* Worked with {PERSON:full} on the {FILL:product} account.\n\nPROJECTS\n* Order tracking tool (ref {NEG:ticket}) for internal operations.\n\nEDUCATION\n{FILL:degree} - {ORG:school}, {LOC:city}\n\nLINKS\n{URL}"
+  },
+  {
+    "split": "dev",
+    "preset": "resumes",
+    "id": "res_d3",
+    "text": "RESUME OF {PERSON:full@1}\n\nContact Number : {PHONE}\nE-mail ID      : {EMAIL:of1}\nAadhaar No.    : {AADHAAR}\nPAN            : {PAN}\nPermanent Address : {ADDRESS}\nDate of Birth  : {DATE:dob}\n\nOBJECTIVE\nSeeking an entry-level position in {FILL:department}.\n\nQUALIFICATION\n{FILL:degree} from {ORG:school} ({LOC:city}) with 8.2 CGPA\nClass XII from {ORG:school}, 82%\n\nINTERNSHIP\nIntern, {ORG:employer}, {LOC:city} - 3 months\nWorked under {PERSON:honorific} on {FILL:skill} tasks.\n\nSKILLS\n{FILL:skill}, {FILL:skill}, communication\n\nREFERENCES\n{PERSON:honorific}, {FILL:designation}, {ORG:employer} - Ph: {PHONE}"
+  },
+  {
+    "split": "dev",
+    "preset": "emails",
+    "id": "em_d1",
+    "text": "Subject: Payment pending for invoice {NEG:invoice}\n\nDear {PERSON:single@1},\n\nPlease find attached the invoice {NEG:invoice} for {MONEY}. Kindly transfer the amount to the account below by {DATE:any}.\n\nAccount Name: {ORG:company}\nBank: {FILL:bank_name}\nA/c No: {BANK_ACCOUNT}\nIFSC: {IFSC}\nGSTIN: {GSTIN}\nPAN: {PAN}\n\nIn case of any query, please call me on {PHONE}.\n\nRegards,\n{PERSON:full@2}\nAccounts Manager, {ORG:company}\n{EMAIL:of2} | {PHONE} | {URL}"
+  },
+  {
+    "split": "dev",
+    "preset": "emails",
+    "id": "em_d2",
+    "text": "Subject: FW: Re: Delivery schedule for {FILL:product}\n\nHi {PERSON:single@1},\n\nForwarding this for your action. Please confirm by {DATE:any}.\n\nThanks,\n{PERSON:full@2}\n\n---------- Forwarded message ---------\nFrom: {PERSON:full@3} <{EMAIL:of3}>\nDate: {DATE:long}\nSubject: Re: Delivery schedule for {FILL:product}\nTo: {PERSON:full@2} <{EMAIL:of2}>\n\nHi {PERSON:single@2},\n\nThe consignment for order {NEG:order} will reach {LOC:city} by {DATE:any}. Our driver {PERSON:single} will call you on {PHONE}.\nFreight charged: {MONEY}.\n\nRegards,\n{PERSON:full@3}\n{ORG:company}\n\n> On {DATE:long}, {PERSON:full@2} <{EMAIL:of2}> wrote:\n> Please share the vehicle number and the delivery contact.\n> Tracking link: {URL}"
+  },
+  {
+    "split": "dev",
+    "preset": "emails",
+    "id": "em_d3",
+    "text": "Subject: Vendor onboarding details - {ORG:company}\n\nHello {PERSON:honorific@1},\n\nWelcome aboard. To complete registration please verify the details we have on file:\n\nCompany: {ORG:company}\nRegistered address: {ADDRESS}\nGST Registration No: {GSTIN}\nPAN: {PAN}\nUPI ID for small payments: {UPI}\nBank: {FILL:bank_name}, IFSC {IFSC}, account number {BANK_ACCOUNT}\nContact person: {PERSON:full@2}, {PHONE}\n\nPlease reply to this email with corrections. Your vendor code is {NEG:ref}.\n\nBest regards,\n{PERSON:full@3}\nProcurement, {ORG:company}\n{EMAIL:of3}"
+  },
+  {
+    "split": "dev",
+    "preset": "chats",
+    "id": "ch_d1",
+    "text": "[12/05/24, 10:42 am] {PERSON:single@1}: bhai invoice bhej diya kya?\n[12/05/24, 10:43 am] {PERSON:single@2}: haan, abhi mail kiya {EMAIL:of1}\n[12/05/24, 10:44 am] {PERSON:single@1}: ok. {PERSON:single@3} ka number do na\n[12/05/24, 10:44 am] {PERSON:single@2}: {PHONE}\n[12/05/24, 10:47 am] {PERSON:single@1}: payment {MONEY} kal tak ho jayega, UPI id {UPI}\n[12/05/24, 10:48 am] {PERSON:single@2}: done. order {NEG:order} ka status check kar lo"
+  },
+  {
+    "split": "dev",
+    "preset": "chats",
+    "id": "ch_d2",
+    "text": "Ticket #{NEG:ticket}  |  Priority: High  |  Status: Open\nCreated: {DATE:long}\nCustomer: {PERSON:full@1}\nEmail: {EMAIL:of1}\nPhone: {PHONE}\nCompany: {ORG:company}\n\nDescription:\nCustomer reports that the {FILL:product} portal is not loading from {IP}. They tried again on {DATE:any}; error persists. Order {NEG:order} is blocked. Customer asked us to call {PERSON:single@1} back on {PHONE}.\n\nInternal notes:\n{PERSON:full@2} (L2 support): checked logs, version {NEG:version}. Escalated to {PERSON:initials_first}.\nCustomer shared screenshot at {URL}."
+  },
+  {
+    "split": "dev",
+    "preset": "chats",
+    "id": "ch_d3",
+    "text": "Meeting: Weekly sync with {ORG:company}\nDate: {DATE:long}\n\n{PERSON:single@1}: Okay everyone, let's start. {PERSON:single@2}, can you share the numbers?\n{PERSON:single@2}: Sure. We closed {MONEY} this quarter, mostly from {LOC:city} and {LOC:city}.\n{PERSON:single@1}: Good. And the pending approval from {PERSON:honorific}?\n{PERSON:single@2}: Still waiting. I will call him on {PHONE}.\n{PERSON:single@3}: I can follow up with {ORG:company}. Their team in {LOC:area} said they would sign by {DATE:any}.\n{PERSON:single@1}: Action items: {PERSON:single@3} to send the contract, {PERSON:single@2} to share the deck at {URL}."
+  }
+]
