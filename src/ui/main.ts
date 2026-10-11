@@ -1,6 +1,7 @@
 // Connects index.html to ScrubSession. Builds DOM with textContent only,
 // so pasted text is never parsed as HTML.
 import { ScrubSession, type CopyCheck } from "./app";
+import { ModelClient, type WorkerLike } from "./modelClient";
 
 function el<T extends HTMLElement>(id: string): T {
   return document.getElementById(id) as T;
@@ -11,6 +12,14 @@ const inputStatus = el<HTMLParagraphElement>("input-status");
 const scrubButton = el<HTMLButtonElement>("scrub-button");
 const scrubbed = el<HTMLTextAreaElement>("scrubbed");
 const scrubSummary = el<HTMLParagraphElement>("scrub-summary");
+const namesNote = el<HTMLParagraphElement>("names-note");
+const ackRow = el<HTMLDivElement>("ack-row");
+const noticeHeading = el<HTMLSpanElement>("notice-heading");
+const noticeIcon = el<HTMLSpanElement>("notice-icon");
+const modelStatus = el<HTMLParagraphElement>("model-status");
+const modelDownload = el<HTMLDivElement>("model-download");
+const modelProgress = el<HTMLProgressElement>("model-progress");
+const modelProgressText = el<HTMLSpanElement>("model-progress-text");
 const scrubWarnings = el<HTMLUListElement>("scrub-warnings");
 const ack = el<HTMLInputElement>("ack");
 const copyScrubbed = el<HTMLButtonElement>("copy-scrubbed");
@@ -22,10 +31,22 @@ const restoreWarnings = el<HTMLUListElement>("restore-warnings");
 const copyRestored = el<HTMLButtonElement>("copy-restored");
 const copyRestoredStatus = el<HTMLParagraphElement>("copy-restored-status");
 
+// The name model starts loading in a Web Worker as soon as the page opens.
+// If workers are unavailable the model counts as failed: names are NOT checked, and copying needs the tick box.
+let model: ModelClient | null = null;
+try {
+  const worker = new Worker(new URL("./modelWorker.ts", import.meta.url), { type: "module" });
+  model = new ModelClient(worker as unknown as WorkerLike, { onChange: renderModel });
+} catch {
+  model = null;
+}
+
 // The only place the mapping lives: this object, in memory, until reload.
-const session = new ScrubSession();
+const session = new ScrubSession(undefined, model);
 // Browsers may keep a checkbox ticked across reloads; one acknowledgment per page load means starting unticked.
 ack.checked = false;
+
+renderModel();
 
 const focusTargets = { ack, input, reply } as const;
 
@@ -50,14 +71,55 @@ function clearRestore(): void {
   copyRestoredStatus.textContent = "";
 }
 
-function doScrub(): void {
-  const v = session.scrub(input.value);
-  scrubbed.value = v.text;
-  scrubSummary.textContent = v.summary;
-  scrubWarnings.replaceChildren(...v.warnings.map(warningItem));
-  setWarning(inputStatus, "");
-  copyScrubbedStatus.textContent = "";
-  clearRestore();
+/** Shows whether the name model is loading, ready or failed. */
+function renderModel(): void {
+  const state = model?.state() ?? "failed";
+  noticeIcon.hidden = state === "ready";
+  if (state === "ready") {
+    noticeHeading.textContent = "Name check ready";
+    modelStatus.textContent =
+      "The name model is ready. Names, organisations and places are checked when you press Scrub. It misses some, especially in ALL CAPS or all-lowercase text.";
+    modelDownload.hidden = true;
+  } else if (state === "failed") {
+    noticeHeading.textContent = "Names NOT checked";
+    modelStatus.replaceChildren(
+      Object.assign(document.createElement("strong"), { textContent: "Names NOT checked:" }),
+      " the name model could not be loaded, so only the rules run. Copying needs a tick box first.",
+    );
+    modelDownload.hidden = true;
+  } else {
+    const p = model?.progress() ?? null;
+    modelProgress.max = 100;
+    if (p === null) modelProgress.removeAttribute("value");
+    else modelProgress.value = Math.round(p * 100);
+    modelProgressText.textContent = p === null ? "Starting…" : `${Math.round(p * 100)}%`;
+  }
+}
+
+let scrubbing = false;
+
+async function doScrub(): Promise<void> {
+  if (scrubbing) return;
+  scrubbing = true;
+  scrubButton.disabled = true;
+  scrubbed.value = "";
+  namesNote.textContent = "";
+  scrubSummary.textContent = model?.state() === "ready" ? "Checking names…" : "";
+  try {
+    const v = await session.scrub(input.value, () => input.value);
+    if (v.discarded && v.warnings.length === 0) return; // replaced by a newer scrub
+    scrubbed.value = v.text;
+    scrubSummary.textContent = v.summary;
+    namesNote.textContent = v.namesNote;
+    ackRow.hidden = v.namesChecked; // the tick box is only for scrubs where names were not checked
+    scrubWarnings.replaceChildren(...v.warnings.map(warningItem));
+    setWarning(inputStatus, "");
+    copyScrubbedStatus.textContent = "";
+    clearRestore();
+  } finally {
+    scrubbing = false;
+    scrubButton.disabled = false;
+  }
 }
 
 function doRestore(): void {
@@ -93,9 +155,9 @@ function onCtrlEnter(box: HTMLTextAreaElement, action: () => void): void {
   });
 }
 
-scrubButton.addEventListener("click", doScrub);
+scrubButton.addEventListener("click", () => void doScrub());
 restoreButton.addEventListener("click", doRestore);
-onCtrlEnter(input, doScrub);
+onCtrlEnter(input, () => void doScrub());
 onCtrlEnter(reply, doRestore);
 
 input.addEventListener("input", () => {

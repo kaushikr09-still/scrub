@@ -22,12 +22,21 @@
       </header>
 
       <section class="notice" role="note" aria-labelledby="notice-title">
-        <h2 id="notice-title"><span aria-hidden="true">⚠ </span>Not checked yet</h2>
-        <p>Names, organisations and places are <strong>NOT</strong> checked yet (rules only).</p>
+        <h2 id="notice-title"><span id="notice-icon" aria-hidden="true">⚠ </span><span id="notice-heading">Names not checked yet</span></h2>
+        <p id="model-status">Names, organisations and places are <strong>NOT</strong> checked yet (rules only).</p>
+        <div id="model-download">
+          <p>Downloads about 110 MB once, then stays on this device. Your text is never sent.</p>
+          <p>
+            <progress id="model-progress" max="100" aria-label="Name model download"></progress>
+            <span id="model-progress-text"></span>
+          </p>
+        </div>
         <p>
-          The rules look for: email addresses, phone numbers, Aadhaar, PAN, GSTIN, IFSC, UPI IDs and card numbers.
-          Read your text yourself before you share it.
+          The rules look for: email addresses, phone numbers, Aadhaar, PAN, GSTIN, IFSC, UPI IDs, card numbers,
+          dates, money amounts, PIN codes, bank account numbers (only next to words like A/c or Account No), web
+          addresses (URLs) and IP addresses.
         </p>
+        <p><strong>Read your text yourself before you share it.</strong></p>
       </section>
 
       <section class="step" aria-labelledby="step1-title">
@@ -60,11 +69,12 @@
         ></textarea>
         <div aria-live="polite">
           <p id="scrub-summary" class="status"></p>
+          <p id="names-note" class="status"></p>
           <ul id="scrub-warnings" class="warnings"></ul>
         </div>
-        <div class="ack">
+        <div class="ack" id="ack-row">
           <input id="ack" type="checkbox" aria-describedby="copy-scrubbed-status" />
-          <label for="ack">I understand that names, organisations and places are not checked.</label>
+          <label for="ack">I understand that names, organisations and places were not checked.</label>
         </div>
         <button id="copy-scrubbed" type="button">Copy<span class="visually-hidden"> scrubbed text</span></button>
         <p id="copy-scrubbed-status" class="status" aria-live="polite"></p>

@@ -184,3 +184,13 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
+[hidden] {
+  display: none !important;
+}
+
+progress {
+  width: min(100%, 320px);
+  height: 16px;
+  vertical-align: middle;
+}
