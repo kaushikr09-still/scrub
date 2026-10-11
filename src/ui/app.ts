@@ -2,8 +2,18 @@
 // Everything here lives in memory for as long as the page is open:
 // nothing is saved, logged or sent anywhere.
 import { detect } from "../engine/detect";
+import { combineDetections } from "../engine/names";
 import { restore } from "../engine/restore";
 import { scrub, type Mapping } from "../engine/scrub";
+import type { Detection } from "../engine/types";
+
+export type ModelState = "loading" | "ready" | "failed";
+
+/** The name model, as the session sees it. find() rejects if the names could not be fully checked. */
+export interface NameChecker {
+  state(): ModelState;
+  find(text: string): Promise<Detection[]>;
+}
 
 export interface Engine {
   detect: typeof detect;
@@ -16,6 +26,12 @@ export interface ScrubView {
   text: string;
   summary: string;
   warnings: string[];
+  /** True only if the name model ran over all of this text during this scrub. */
+  namesChecked: boolean;
+  /** One sentence on whether names were checked in this scrub. */
+  namesNote: string;
+  /** The result was thrown away: the text changed, or a newer scrub replaced it. */
+  discarded?: boolean;
 }
 
 export interface RestoreView {
@@ -35,9 +51,15 @@ function countTokens(tokens: string[]): string[] {
   return [...counts].map(([t, n]) => (n > 1 ? `${t} (${n} times)` : t));
 }
 
+const NOTE_CHECKED =
+  "Names, organisations and places were checked by the name model. It misses some, especially in ALL CAPS or all-lowercase text.";
+const NOTE_LOADING =
+  "Names NOT checked: the name model was still loading when you pressed Scrub, so this is a rules-only result. Press Scrub again once it is ready.";
+const NOTE_FAILED = "Names NOT checked: the name model could not check this text, so this is a rules-only result.";
+
 function summarise(types: string[]): string {
   if (types.length === 0) {
-    return "Nothing found by the rules. Read the text yourself before you share it.";
+    return "Nothing found. Read your text yourself before you share it.";
   }
   const counts = new Map<string, number>();
   for (const t of types) counts.set(t, (counts.get(t) ?? 0) + 1);
@@ -52,8 +74,14 @@ export class ScrubSession {
   private restoredFrom: string | null = null;
   private restoredText = "";
   private acknowledged = false;
+  /** Whether the scrub now held was names-checked. Fixed when that scrub finished: never updated later. */
+  private namesChecked = false;
+  private runs = 0;
 
-  constructor(private readonly engine: Engine = { detect, scrub, restore }) {}
+  constructor(
+    private readonly engine: Engine = { detect, scrub, restore },
+    private readonly names: NameChecker | null = null,
+  ) {}
 
   setAcknowledged(value: boolean): void {
     this.acknowledged = value;
@@ -64,35 +92,69 @@ export class ScrubSession {
     return this.scrubbedFrom !== null && this.scrubbedFrom !== currentInput;
   }
 
-  scrub(input: string): ScrubView {
+  /**
+   * Rules run at once. If the name model is ready it runs too; if it is loading, failed, or errors, this
+   * scrub is rules-only and says so. That is decided during this scrub and never changes for its result.
+   * `currentInput` says what the box holds when the model finishes: a mismatch discards the result.
+   */
+  async scrub(input: string, currentInput?: () => string): Promise<ScrubView> {
+    const run = ++this.runs;
     this.mapping = null;
     this.scrubbedFrom = null;
     this.scrubbedText = "";
     this.restoredFrom = null;
     this.restoredText = "";
-    if (input.trim() === "") {
-      return { ok: false, text: "", summary: "", warnings: ["Paste some text first."] };
-    }
+    this.namesChecked = false;
+    const fail = (warning: string, discarded = false): ScrubView => ({
+      ok: false,
+      text: "",
+      summary: "",
+      warnings: warning ? [warning] : [],
+      namesChecked: false,
+      namesNote: "",
+      ...(discarded ? { discarded } : {}),
+    });
+    if (input.trim() === "") return fail("Paste some text first.");
     try {
-      const found = this.engine.detect(input);
+      let found = this.engine.detect(input);
+      let checked = false;
+      let note = NOTE_FAILED;
+      const state = this.names?.state() ?? "failed";
+      if (state === "loading") note = NOTE_LOADING;
+      if (state === "ready" && this.names) {
+        try {
+          found = combineDetections(input, found, await this.names.find(input));
+          checked = true;
+          note = NOTE_CHECKED;
+        } catch {
+          // The model failed or could not cover all the text: keep the rules-only result and say so.
+        }
+      }
+      if (run !== this.runs) return fail("", true); // a newer scrub owns the session now
+      if (currentInput && currentInput() !== input) {
+        return fail("You changed your text while it was being checked. Press Scrub again.", true);
+      }
       const r = this.engine.scrub(input, found);
       this.mapping = r.mapping;
       this.scrubbedFrom = input;
       this.scrubbedText = r.text;
+      this.namesChecked = checked;
       const warnings = countTokens(r.warnings.map((w) => w.token)).map(
         (t) =>
           `Your text already contains ${t}, which looks like a placeholder. ` +
           "New placeholders were numbered above it so they don't clash.",
       );
-      return { ok: true, text: r.text, summary: summarise(found.map((d) => d.type)), warnings };
+      return {
+        ok: true,
+        text: r.text,
+        summary: summarise(found.map((d) => d.type)),
+        warnings,
+        namesChecked: checked,
+        namesNote: note,
+      };
     } catch {
       // Fail closed. The error itself is not shown, as it could quote the text.
-      return {
-        ok: false,
-        text: "",
-        summary: "",
-        warnings: ["Something went wrong while checking your text. Nothing was scrubbed, so there is nothing to copy."],
-      };
+      return fail("Something went wrong while checking your text. Nothing was scrubbed, so there is nothing to copy.");
     }
   }
 
@@ -123,11 +185,11 @@ export class ScrubSession {
     if (this.isStale(currentInput)) {
       return { ok: false, focus: "input", message: "You changed your text after scrubbing. Press Scrub again, then copy." };
     }
-    if (!this.acknowledged) {
+    if (!this.namesChecked && !this.acknowledged) {
       return {
         ok: false,
         focus: "ack",
-        message: "Not copied. First tick the box to confirm you know names, organisations and places are not checked.",
+        message: "Not copied. First tick the box to confirm you know names, organisations and places were not checked.",
       };
     }
     return { ok: true, text: this.scrubbedText };

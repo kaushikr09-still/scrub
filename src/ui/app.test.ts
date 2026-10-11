@@ -15,41 +15,41 @@ const broken: Engine = {
 };
 
 describe("ScrubSession.scrub", () => {
-  it("returns the scrubbed text and a count by type", () => {
+  it("returns the scrubbed text and a count by type", async () => {
     const s = new ScrubSession();
-    const v = s.scrub(TEXT);
+    const v = await s.scrub(TEXT);
     expect(v.ok).toBe(true);
     expect(v.text).toBe("Mail [EMAIL_1] or [EMAIL_1], call [PHONE_1].");
     expect(v.summary).toBe("Masked 3 items: EMAIL × 2, PHONE × 1.");
     expect(v.warnings).toEqual([]);
   });
 
-  it("says when nothing was found, and still allows the text through", () => {
-    const v = new ScrubSession().scrub("Hello there");
+  it("says when nothing was found, and still allows the text through", async () => {
+    const v = await new ScrubSession().scrub("Hello there");
     expect(v.ok).toBe(true);
     expect(v.text).toBe("Hello there");
     expect(v.summary).toMatch(/nothing found/i);
   });
 
-  it("refuses empty input", () => {
-    const v = new ScrubSession().scrub("   ");
+  it("refuses empty input", async () => {
+    const v = await new ScrubSession().scrub("   ");
     expect(v.ok).toBe(false);
     expect(v.text).toBe("");
     expect(v.warnings.join(" ")).toMatch(/paste some text/i);
   });
 
-  it("warns once per token when the input already has placeholders", () => {
-    const v = new ScrubSession().scrub("See [EMAIL_4] and [EMAIL_4], or a@b.co");
+  it("warns once per token when the input already has placeholders", async () => {
+    const v = await new ScrubSession().scrub("See [EMAIL_4] and [EMAIL_4], or a@b.co");
     expect(v.text).toBe("See [EMAIL_4] and [EMAIL_4], or [EMAIL_5]");
     expect(v.warnings).toHaveLength(1);
     expect(v.warnings[0]).toContain("[EMAIL_4]");
     expect(v.warnings[0]).toContain("2 times");
   });
 
-  it("fails closed when detection throws: no text, no copy, no restore", () => {
+  it("fails closed when detection throws: no text, no copy, no restore", async () => {
     const s = new ScrubSession(broken);
     s.setAcknowledged(true);
-    const v = s.scrub(TEXT);
+    const v = await s.scrub(TEXT);
     expect(v.ok).toBe(false);
     expect(v.text).toBe("");
     expect(v.warnings.join(" ")).toMatch(/nothing was scrubbed/i);
@@ -58,52 +58,52 @@ describe("ScrubSession.scrub", () => {
     expect(s.restore("[EMAIL_1]").warnings.join(" ")).toMatch(/scrub some text first/i);
   });
 
-  it("a failed scrub drops the previous mapping", () => {
+  it("a failed scrub drops the previous mapping", async () => {
     const engine: Engine = { detect, scrub, restore };
     const s = new ScrubSession(engine);
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     engine.detect = broken.detect;
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     expect(s.restore("[EMAIL_1]").text).toBe("");
   });
 });
 
 describe("ScrubSession.scrubbedCopy (the acknowledgment gate)", () => {
-  it("blocks copy until the note is acknowledged", () => {
+  it("blocks copy until the note is acknowledged", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     const blocked = s.scrubbedCopy(TEXT);
     expect(blocked).toEqual({ ok: false, focus: "ack", message: expect.stringMatching(/tick the box/i) });
     s.setAcknowledged(true);
     expect(s.scrubbedCopy(TEXT)).toEqual({ ok: true, text: "Mail [EMAIL_1] or [EMAIL_1], call [PHONE_1]." });
   });
 
-  it("keeps the acknowledgment across new scrubs (one per page load)", () => {
+  it("keeps the acknowledgment across new scrubs (one per page load)", async () => {
     const s = new ScrubSession();
     s.setAcknowledged(true);
-    s.scrub(TEXT);
-    s.scrub("call 98765 43210");
+    await s.scrub(TEXT);
+    await s.scrub("call 98765 43210");
     expect(s.scrubbedCopy("call 98765 43210")).toEqual({ ok: true, text: "call [PHONE_1]" });
   });
 
-  it("can be un-acknowledged", () => {
+  it("can be un-acknowledged", async () => {
     const s = new ScrubSession();
     s.setAcknowledged(true);
     s.setAcknowledged(false);
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     expect(s.scrubbedCopy(TEXT).ok).toBe(false);
   });
 
-  it("blocks copy before any scrub", () => {
+  it("blocks copy before any scrub", async () => {
     const s = new ScrubSession();
     s.setAcknowledged(true);
     expect(s.scrubbedCopy("")).toMatchObject({ ok: false, focus: "input" });
   });
 
-  it("blocks copy when the input changed after scrubbing", () => {
+  it("blocks copy when the input changed after scrubbing", async () => {
     const s = new ScrubSession();
     s.setAcknowledged(true);
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     expect(s.isStale(TEXT)).toBe(false);
     expect(s.isStale(TEXT + " more")).toBe(true);
     expect(s.scrubbedCopy(TEXT + " more")).toMatchObject({
@@ -113,25 +113,25 @@ describe("ScrubSession.scrubbedCopy (the acknowledgment gate)", () => {
     });
   });
 
-  it("checks staleness before acknowledgment, so the first fix asked for is the real one", () => {
+  it("checks staleness before acknowledgment, so the first fix asked for is the real one", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     expect(s.scrubbedCopy("changed")).toMatchObject({ ok: false, focus: "input" });
   });
 });
 
 describe("ScrubSession.restore", () => {
-  it("round-trips a reply that uses tolerated placeholder forms", () => {
+  it("round-trips a reply that uses tolerated placeholder forms", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     const v = s.restore("Write to [email_1]; PHONE_1's line is busy.");
     expect(v.text).toBe("Write to asha@example.com; 98765 43210's line is busy.");
     expect(v.warnings).toEqual([]);
   });
 
-  it("warns about unknown placeholders and leaves them as is", () => {
+  it("warns about unknown placeholders and leaves them as is", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     const v = s.restore("Ask [PERSON_1] at [EMAIL_2] and [EMAIL_2].");
     expect(v.text).toBe("Ask [PERSON_1] at [EMAIL_2] and [EMAIL_2].");
     expect(v.warnings).toHaveLength(2);
@@ -140,39 +140,39 @@ describe("ScrubSession.restore", () => {
     expect(v.warnings[1]).toContain("2 times");
   });
 
-  it("asks for a scrub first", () => {
+  it("asks for a scrub first", async () => {
     const v = new ScrubSession().restore("[EMAIL_1]");
     expect(v.text).toBe("");
     expect(v.warnings.join(" ")).toMatch(/scrub some text first/i);
   });
 
-  it("asks for a reply when the box is empty", () => {
+  it("asks for a reply when the box is empty", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     const v = s.restore("  ");
     expect(v.text).toBe("");
     expect(v.warnings.join(" ")).toMatch(/paste the chatbot's reply/i);
   });
 
-  it("uses the latest scrub's mapping", () => {
+  it("uses the latest scrub's mapping", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
-    s.scrub("x@y.in");
+    await s.scrub(TEXT);
+    await s.scrub("x@y.in");
     expect(s.restore("[EMAIL_1]").text).toBe("x@y.in");
   });
 });
 
 describe("ScrubSession.restoredCopy", () => {
-  it("copies the restored text without needing acknowledgment", () => {
+  it("copies the restored text without needing acknowledgment", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     s.restore("Hi [EMAIL_1]");
     expect(s.restoredCopy("Hi [EMAIL_1]")).toEqual({ ok: true, text: "Hi asha@example.com" });
   });
 
-  it("blocks copy before a restore, or after the reply changed", () => {
+  it("blocks copy before a restore, or after the reply changed", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     expect(s.restoredCopy("Hi")).toMatchObject({ ok: false, focus: "reply" });
     s.restore("Hi [EMAIL_1]");
     expect(s.restoredCopy("Hi [EMAIL_1]!")).toMatchObject({
@@ -182,11 +182,11 @@ describe("ScrubSession.restoredCopy", () => {
     });
   });
 
-  it("a new scrub invalidates the old restored result", () => {
+  it("a new scrub invalidates the old restored result", async () => {
     const s = new ScrubSession();
-    s.scrub(TEXT);
+    await s.scrub(TEXT);
     s.restore("Hi [EMAIL_1]");
-    s.scrub("x@y.in");
+    await s.scrub("x@y.in");
     expect(s.restoredCopy("Hi [EMAIL_1]").ok).toBe(false);
   });
 });
