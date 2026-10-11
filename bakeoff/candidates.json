@@ -1,0 +1,34 @@
+[
+  {
+    "id": "rampart",
+    "model_id": "nationaldesignstudio/rampart",
+    "dtype": "q4",
+    "reported_size_mb": 14.7,
+    "licence_note": "UNVERIFIED. Assumed CC BY 4.0 (a derived model says it derives from Rampart under CC BY 4.0). Open the model card before shipping.",
+    "notes": "Tiny MiniLM-based PII model. Reported to have no organisation class and weak non-Latin-script recall (not relevant: romanised text only). Ships its own rules layer; use the model alone here."
+  },
+  {
+    "id": "meridianpii-te-v1",
+    "model_id": "plingampally/meridianpii-te-v1",
+    "dtype": "q8",
+    "reported_size_mb": 54,
+    "licence_note": "UNVERIFIED. Derived from Rampart (CC BY 4.0). Check the model card.",
+    "notes": "Built for Telugu, romanised/code-switched Telugu and Indian-English. Author's own recall numbers are self-reported; treat as a claim to test. Author suggests a low confidence floor (0.15)."
+  },
+  {
+    "id": "bert-base-ner",
+    "model_id": "Xenova/bert-base-NER",
+    "dtype": "q8",
+    "reported_size_mb": null,
+    "licence_note": "MIT (upstream dslim/bert-base-NER).",
+    "notes": "Classic PER/ORG/LOC/MISC model trained on English news (CoNLL-2003). Quantized size NOT verified (assumed about 100 MB); the script must measure it."
+  },
+  {
+    "id": "bert-multilingual-ner-hrl",
+    "model_id": "Xenova/bert-base-multilingual-cased-ner-hrl",
+    "dtype": "q8",
+    "reported_size_mb": 135,
+    "licence_note": "Fine-tune is AFL-3.0 (Davlan); base model Apache-2.0.",
+    "notes": "Yardstick only. Over the size target. No Indian languages in its listed training languages. Drop first if the bake-off slows."
+  }
+]
