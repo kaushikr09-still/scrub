@@ -92,13 +92,13 @@ async function runCandidate(c: Candidate, tr: HTMLTableRowElement) {
       });
       return;
     }
-    await pipe(sentences[0].text); // warm-up, not timed
+    await pipe(sentences[0].text, { ignore_labels: [] }); // warm-up, not timed
     const located: Located[][] = [];
     let totalMs = 0;
     for (const s of sentences) {
       $("status").textContent = `${c.id}: sentence ${located.length + 1} of ${sentences.length}`;
       const t0 = performance.now();
-      const out = (await pipe(s.text)) as RawPrediction[];
+      const out = (await pipe(s.text, { ignore_labels: [] })) as RawPrediction[];
       totalMs += performance.now() - t0;
       located.push(locatePredictions(s.text, out));
     }

@@ -25,7 +25,7 @@ if (wasm) {
 interface Tokenizer {
   encode(text: string): number[];
 }
-type Classifier = ((text: string) => Promise<unknown>) & { tokenizer: Tokenizer };
+type Classifier = ((text: string, options?: { ignore_labels: string[] }) => Promise<unknown>) & { tokenizer: Tokenizer };
 
 let classifier: Classifier | null = null;
 
@@ -59,7 +59,8 @@ async function run(id: number, text: string): Promise<void> {
       post({ type: "result", id, predictions: null });
       return;
     }
-    const out = (await classifier(text)) as { entity: string; word: string; score: number }[];
+    // ignore_labels: [] returns every token, "O" ones too. Without them we lose track of where each piece sits in the text.
+    const out = (await classifier(text, { ignore_labels: [] })) as { entity: string; word: string; score: number }[];
     post({ type: "result", id, predictions: out.map((p) => ({ entity: p.entity, word: p.word, score: p.score })) });
   } catch {
     post({ type: "run-error", id });

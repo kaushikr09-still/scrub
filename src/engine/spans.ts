@@ -44,6 +44,8 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
     const prev = out[out.length - 1];
     if (continuation && prev && lower.startsWith(piece, prev.end)) {
       prev.end += piece.length;
+      // A word is a name if any of its pieces is: keep a name label even when the first piece was "O".
+      if (prev.label === "O" && label !== "O" && label !== "") prev.label = label;
       cursor = prev.end;
       continue;
     }
