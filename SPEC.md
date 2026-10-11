@@ -12,7 +12,7 @@ Out of scope: other scripts, contracts, code, financial/medical/travel/HR docs, 
 - Precedence when detections overlap: (1) checksum-valid rule, (2) label/context rule, (3) other rule, (4) model. Longer span wins ties.
 - Tier 1 types: EMAIL, PHONE, AADHAAR, PAN, GSTIN, IFSC, UPI, PIN, CARD, URL, IP, DATE, MONEY. BANK_ACCOUNT only near a context word (A/c, Account No, IFSC).
 - Validators: Verhoeff (Aadhaar), Luhn (cards), GSTIN check character. [assumed: confirm with test vectors before relying]
-- Model: runs in a Web Worker via transformers.js, cached after first download. Chosen after a bake-off (result goes here).
+- Model: Xenova/bert-base-NER (q8, about 110 MB), run via transformers.js in a Web Worker, cached after first download. Chosen from a 4-model bake-off on 81 invented names (selection data only, not benchmark results): 65 of 81 found; weak on ALL CAPS (3 of 9) and lowercase chat (1 of 9). Labels: PER becomes PERSON; ORG and LOC are kept; MISC is ignored. Until per-preset toggles exist, PERSON, ORG and LOC are all masked.
 - Fail-closed: if the model fails or detection errors, show "names NOT checked" and require one explicit acknowledgment before copy. Rules-only works while the model loads, with that state visible.
 - Resumes: employers/schools kept by default, toggle to mask. Personal-details block detected by label.
 - Chunk long text with overlap, merge spans.
