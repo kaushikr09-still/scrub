@@ -1,4 +1,4 @@
-/** Types the rules engine can detect. */
+/** Types the engine can detect: rules for the structured ones, the name model for PERSON, ORG and LOC. */
 export type DetectionType =
   | "EMAIL"
   | "PHONE"
@@ -13,7 +13,10 @@ export type DetectionType =
   | "DATE"
   | "MONEY"
   | "URL"
-  | "IP";
+  | "IP"
+  | "PERSON"
+  | "ORG"
+  | "LOC";
 
 /**
  * One detected span. `start`/`end` are string offsets (end exclusive) and
