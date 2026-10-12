@@ -307,3 +307,28 @@ describe("findNames with ALL CAPS text", () => {
     expect(seen).toEqual(["Ask Rahul Verma about PAN"]);
   });
 });
+
+describe("findNames joins initials to the name after them", () => {
+  const tok = (text: string, word: string, entity: string, from = 0): RawPrediction => {
+    const start = text.indexOf(word, from);
+    return { entity, word, start, end: start + word.length, score: 0.9 };
+  };
+  const run = async (text: string, preds: (t: string) => RawPrediction[]) => (await findNames(text, async () => preds(text))).map((d) => [d.type, d.value]);
+
+  it("A. Agarwal is one name, including the dot", async () => {
+    const text = "Escalated to A. Agarwal today.";
+    expect(await run(text, (t) => [tok(t, "A", "B-PER"), tok(t, ".", "O"), tok(t, "Agarwal", "B-PER")])).toEqual([["PERSON", "A. Agarwal"]]);
+  });
+  it("R. L. Bains is one name", async () => {
+    const text = "Escalated to R. L. Bains.";
+    expect(await run(text, (t) => [tok(t, "R", "B-PER"), tok(t, "L", "B-PER", 15), tok(t, "Bains", "B-PER")])).toEqual([["PERSON", "R. L. Bains"]]);
+  });
+  it("does not join a full word before a full stop to the next sentence's name", async () => {
+    const text = "Ask Priya. Rahul agrees.";
+    expect(await run(text, (t) => [tok(t, "Priya", "B-PER"), tok(t, "Rahul", "B-PER")])).toEqual([["PERSON", "Priya"], ["PERSON", "Rahul"]]);
+  });
+  it("does not join a single capital letter that is not a PERSON", async () => {
+    const text = "Plan B. Pune office.";
+    expect(await run(text, (t) => [tok(t, "B", "B-ORG"), tok(t, "Pune", "B-LOC")])).toEqual([["ORG", "B"], ["LOC", "Pune"]]);
+  });
+});

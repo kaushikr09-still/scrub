@@ -135,6 +135,31 @@ export function mergeSpans(spans: Span[]): Span[] {
   return out;
 }
 
+/**
+ * Joins an initial to the name after it: "A" + "." + "Agarwal" is one name "A. Agarwal". The model often tags
+ * the initial and the surname separately and leaves the dot out, which would split one person into two
+ * placeholders with the dot showing between them. Only PERSON spans, only a single capital letter before the dot.
+ */
+function joinInitials(text: string, spans: Span[]): Span[] {
+  const out: Span[] = [];
+  for (const s of spans) {
+    const last = out[out.length - 1];
+    if (
+      last &&
+      last.type === "PERSON" &&
+      s.type === "PERSON" &&
+      /^\.\s?$/.test(text.slice(last.end, s.start)) &&
+      /(?:^|[\s.])\p{Lu}$/u.test(text.slice(last.start, last.end))
+    ) {
+      last.end = s.end;
+      last.score = Math.min(last.score, s.score);
+    } else {
+      out.push({ ...s });
+    }
+  }
+  return out;
+}
+
 export interface FindNamesOptions {
   size?: number;
   overlap?: number;
@@ -187,7 +212,7 @@ export async function findNames(text: string, runner: NameRunner, options: FindN
     const end = s.end - (raw.length - raw.trimEnd().length);
     return end > start ? { ...s, ...snapToWords(text, start, end) } : s;
   });
-  for (const s of mergeSpans(snapped)) {
+  for (const s of joinInitials(text, mergeSpans(snapped))) {
     const raw = text.slice(s.start, s.end);
     const start = s.start + (raw.length - raw.trimStart().length);
     const end = s.end - (raw.length - raw.trimEnd().length);
