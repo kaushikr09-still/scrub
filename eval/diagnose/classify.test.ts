@@ -46,6 +46,15 @@ describe("diagnoseDoc", () => {
     expect(rows[0]).toMatchObject({ category: "b" });
   });
 
+  it("(b) the product's locator lost the place after punctuation stuck to a word", () => {
+    const t = "Priority: High\nCustomer: Ishita Rao\n";
+    const doc = makeDoc(t, "Ishita Rao");
+    const w = (word: string, entity = "O") => ({ word, entity, score: 0.9 });
+    const preds = [w("Priority"), w(":"), w("High"), w("Customer"), w(":"), w("Is", "B-PER"), w("##hita", "B-PER"), w("Rao", "I-PER")];
+    const rows = diagnoseDoc(doc, [{ offset: 0, text: t, predictions: preds }], []);
+    expect(rows[0]).toMatchObject({ category: "b", sub: "locate" });
+  });
+
   it("(c) a rule detection took the characters", () => {
     const t = "Priya 9876543210";
     const doc = makeDoc(t, "Priya");

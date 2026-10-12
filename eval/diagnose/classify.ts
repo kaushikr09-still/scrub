@@ -6,6 +6,7 @@
 import { group, mapLabel, mergeSpans, type Span } from "../../src/engine/names.ts";
 import { locatePredictions, snapToWords, type RawPrediction } from "../../src/engine/spans.ts";
 import type { CaseStyle, Det, EvalDoc, PersonPattern } from "../types.ts";
+import { referenceLocate } from "./align.ts";
 import { positionOf, type Position } from "./position.ts";
 
 /** One model call: the text it saw (the ALL CAPS copy, where used), where that text starts, and what it returned. */
@@ -26,7 +27,7 @@ export interface DiagRow {
   label: string | null;
   status: "missed" | "partial";
   category: Category;
-  /** a: none | other-label | partial.  b: grouping | snapping | merge | combine.  c: the rule's type. */
+  /** a: none | other-label | partial.  b: locate | grouping | snapping | merge | combine.  c: the rule's type. */
   sub: string;
   before: string;
   after: string;
@@ -38,9 +39,13 @@ interface Iv {
   end: number;
 }
 
-function covered(ivs: readonly Iv[], s: number, e: number): number {
+/** How many characters of [s, e) the intervals cover. With `text`, spaces and line breaks are not counted (a name's inner space is not a token). */
+function covered(ivs: readonly Iv[], s: number, e: number, text?: string): number {
   let n = 0;
-  for (let i = s; i < e; i++) if (ivs.some((v) => v.start <= i && i < v.end)) n++;
+  for (let i = s; i < e; i++) {
+    if (text !== undefined && /\s/.test(text[i])) continue;
+    if (ivs.some((v) => v.start <= i && i < v.end)) n++;
+  }
   return n;
 }
 
@@ -48,18 +53,26 @@ const NAME_KINDS = new Set(["PERSON", "ORG", "LOC"]);
 const context = (s: string): string => s.replace(/\n/g, "⏎");
 
 export function diagnoseDoc(doc: EvalDoc, calls: readonly RawCall[], finalDets: readonly Det[]): DiagRow[] {
-  // Tokens by kind, as absolute positions; PERSON ones snapped to whole words like the product does.
+  // What the model really said, placed by the strict reference aligner, as absolute positions; PERSON ones are
+  // snapped to whole words like the product does. Then what the product's own locator makes of the same output.
   const personTokens: Iv[] = [];
   const otherTokens: Iv[] = [];
+  const productTokens: Iv[] = [];
   const grouped: Span[] = [];
   for (const c of calls) {
-    const located = locatePredictions(c.text, c.predictions);
-    for (const l of located) {
+    for (const l of referenceLocate(c.text, c.predictions)) {
       const kind = mapLabel(l.label);
       const raw = l.label.replace(/^[BIES][-_]/i, "").toUpperCase();
       const iv = { start: c.offset + l.start, end: c.offset + l.end };
       if (kind === "PERSON") personTokens.push({ ...iv, ...snapToWords(doc.text, iv.start, iv.end) });
       else if (kind !== null || raw === "MISC") otherTokens.push(iv);
+    }
+    const located = locatePredictions(c.text, c.predictions);
+    for (const l of located) {
+      if (mapLabel(l.label) === "PERSON") {
+        const iv = { start: c.offset + l.start, end: c.offset + l.end };
+        productTokens.push({ ...iv, ...snapToWords(doc.text, iv.start, iv.end) });
+      }
     }
     grouped.push(...group(c.text, located, c.offset));
   }
@@ -71,6 +84,8 @@ export function diagnoseDoc(doc: EvalDoc, calls: readonly RawCall[], finalDets: 
   for (const t of doc.truth) {
     if (t.type !== "PERSON") continue;
     const len = t.end - t.start;
+    const need = covered([{ start: t.start, end: t.end }], t.start, t.end, doc.text);
+    const tok = (ivs: readonly Iv[]): number => covered(ivs, t.start, t.end, doc.text);
     const hits = covered(finalDets, t.start, t.end);
     if (hits === len) continue;
     const ruleHit = finalDets.find((d) => !NAME_KINDS.has(d.type) && d.start < t.end && d.end > t.start);
@@ -80,16 +95,17 @@ export function diagnoseDoc(doc: EvalDoc, calls: readonly RawCall[], finalDets: 
     if (ruleHit) {
       category = "c";
       sub = ruleHit.type;
-    } else if (covered(personTokens, t.start, t.end) === len) {
+    } else if (tok(personTokens) === need) {
       category = "b";
-      if (covered(people(grouped), t.start, t.end) < len) sub = "grouping";
-      else if (covered(people(snapped), t.start, t.end) < len) sub = "snapping";
-      else if (covered(people(merged), t.start, t.end) < len) sub = "merge";
+      if (tok(productTokens) < need) sub = "locate";
+      else if (tok(people(grouped)) < need) sub = "grouping";
+      else if (tok(people(snapped)) < need) sub = "snapping";
+      else if (tok(people(merged)) < need) sub = "merge";
       else sub = "combine";
     } else {
       category = "a";
-      if (covered(personTokens, t.start, t.end) > 0) sub = "partial";
-      else if (covered(otherTokens, t.start, t.end) > 0) sub = "other-label";
+      if (tok(personTokens) > 0) sub = "partial";
+      else if (tok(otherTokens) > 0) sub = "other-label";
       else sub = "none";
     }
 
