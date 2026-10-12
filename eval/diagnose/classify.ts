@@ -52,7 +52,13 @@ function covered(ivs: readonly Iv[], s: number, e: number, text?: string): numbe
 const NAME_KINDS = new Set(["PERSON", "ORG", "LOC"]);
 const context = (s: string): string => s.replace(/\n/g, "⏎");
 
-export function diagnoseDoc(doc: EvalDoc, calls: readonly RawCall[], finalDets: readonly Det[]): DiagRow[] {
+/** `locate` is the product's own token locator; a test can pass a broken one to see the "locate" step fire. */
+export function diagnoseDoc(
+  doc: EvalDoc,
+  calls: readonly RawCall[],
+  finalDets: readonly Det[],
+  locate: typeof locatePredictions = locatePredictions,
+): DiagRow[] {
   // What the model really said, placed by the strict reference aligner, as absolute positions; PERSON ones are
   // snapped to whole words like the product does. Then what the product's own locator makes of the same output.
   const personTokens: Iv[] = [];
@@ -67,7 +73,7 @@ export function diagnoseDoc(doc: EvalDoc, calls: readonly RawCall[], finalDets: 
       if (kind === "PERSON") personTokens.push({ ...iv, ...snapToWords(doc.text, iv.start, iv.end) });
       else if (kind !== null || raw === "MISC") otherTokens.push(iv);
     }
-    const located = locatePredictions(c.text, c.predictions);
+    const located = locate(c.text, c.predictions);
     for (const l of located) {
       if (mapLabel(l.label) === "PERSON") {
         const iv = { start: c.offset + l.start, end: c.offset + l.end };
