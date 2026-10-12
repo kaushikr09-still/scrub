@@ -11,7 +11,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "vite build && playwright test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "eval:generate": "node eval/generate/cli.ts",
+    "eval:report": "node eval/report.ts"
   },
   "devDependencies": {
     "@playwright/test": "1.64.0",

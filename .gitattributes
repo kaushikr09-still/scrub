@@ -1,0 +1,3 @@
+# Keep the scored files byte-for-byte as written, so the SHA-256 recorded in results.json stays valid on every machine.
+eval/generated/*.jsonl -text
+eval/results/*.json -text

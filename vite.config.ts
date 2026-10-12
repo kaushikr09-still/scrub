@@ -27,6 +27,6 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["src/**/*.test.ts", "bakeoff/**/*.test.ts"],
+    include: ["src/**/*.test.ts", "bakeoff/**/*.test.ts", "eval/**/*.test.ts"],
   },
 });
