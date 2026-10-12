@@ -107,3 +107,35 @@ describe("findNames with the real token stream", () => {
     ]);
   });
 });
+
+describe("locatePredictions keeps its place after punctuation stuck to a word", () => {
+  const w = (word: string, entity = "O"): RawPrediction => ({ word, entity });
+
+  it("a colon right after a word is not mistaken for a later colon", () => {
+    const text = "Priority: High\nCustomer Ishita Rao\n(x): y";
+    const spans = locatePredictions(text, [
+      w("Priority"), w(":"), w("High"), w("Customer"),
+      w("Is", "B-PER"), w("##hita", "B-PER"), w("Rao", "I-PER"),
+      w("("), w("x"), w(")"), w(":"), w("y"),
+    ]);
+    expect(spans.filter((s) => s.label !== "O").map((s) => [s.label, text.slice(s.start, s.end)])).toEqual([
+      ["B-PER", "Ishita"],
+      ["I-PER", "Rao"],
+    ]);
+  });
+
+  it("a chat speaker's colon does not hide the names after it", () => {
+    const text = "[10:42 am] Amit: ok\n(x): y Priya Rao";
+    const spans = locatePredictions(text, [
+      w("["), w("10"), w(":"), w("42"), w("am"), w("]"), w("Amit", "B-PER"), w(":"), w("ok"),
+      w("("), w("x"), w(")"), w(":"), w("y"), w("Priya", "B-PER"), w("Rao", "I-PER"),
+    ]);
+    expect(spans.filter((s) => s.label !== "O").map((s) => text.slice(s.start, s.end))).toEqual(["Amit", "Priya", "Rao"]);
+  });
+
+  it("a punctuation token that is not where it should be is skipped, never searched for further on", () => {
+    const text = "ok \u{1F600} Ravi (x): y";
+    const spans = locatePredictions(text, [w("ok"), w("[UNK]"), w(":"), w("Ravi", "B-PER")]);
+    expect(spans.filter((s) => s.label !== "O").map((s) => text.slice(s.start, s.end))).toEqual(["Ravi"]);
+  });
+});

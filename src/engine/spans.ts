@@ -49,8 +49,19 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
       cursor = prev.end;
       continue;
     }
-    let idx = lower.indexOf(piece, cursor);
-    while (idx >= 0 && !continuation && isWordChar(text[idx - 1])) idx = lower.indexOf(piece, idx + 1);
+    // The model's tokens come in text order, so the next one normally sits right at the cursor (after spaces).
+    // Take it there first: this keeps punctuation stuck to a word ("Amit:", "Name:") in step.
+    let at = cursor;
+    if (!continuation) while (at < text.length && /\s/.test(text[at])) at++;
+    let idx = lower.startsWith(piece, at) ? at : -1;
+    if (idx < 0 && isWordChar(piece[0])) {
+      // Not there: tokens were dropped (or the model could not read a character). Search ahead for a word, but
+      // never into the middle of another word.
+      idx = lower.indexOf(piece, cursor);
+      while (idx >= 0 && !continuation && isWordChar(text[idx - 1])) idx = lower.indexOf(piece, idx + 1);
+    }
+    // A punctuation token that is not at the cursor is skipped, never searched for further on: a later
+    // match would carry the cursor past real names.
     if (idx < 0) continue;
     out.push(score === undefined ? { label, start: idx, end: idx + piece.length } : { label, start: idx, end: idx + piece.length, score });
     cursor = idx + piece.length;
