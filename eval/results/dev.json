@@ -1,0 +1,7995 @@
+{
+ "format": 1,
+ "split": "dev",
+ "runAt": "2026-10-12T16:59:47.684Z",
+ "model": {
+  "id": "Xenova/bert-base-NER",
+  "dtype": "q8"
+ },
+ "documents": 72,
+ "jsonlSha256": "d94d4873ad2753bb4fe246e6a17065753bbb2411bafe329f70e40bd5554c0ef3",
+ "durationMs": 142321,
+ "detections": {
+  "res_d1-1": [
+   {
+    "type": "LOC",
+    "start": 0,
+    "end": 6,
+    "confidence": 0.472419798374176
+   },
+   {
+    "type": "ORG",
+    "start": 7,
+    "end": 18,
+    "confidence": 0.6681709885597229
+   },
+   {
+    "type": "LOC",
+    "start": 22,
+    "end": 38,
+    "confidence": 0.9229573011398315
+   },
+   {
+    "type": "LOC",
+    "start": 40,
+    "end": 59,
+    "confidence": 0.4717831313610077
+   },
+   {
+    "type": "LOC",
+    "start": 61,
+    "end": 70,
+    "confidence": 0.9926607012748718
+   },
+   {
+    "type": "LOC",
+    "start": 72,
+    "end": 77,
+    "confidence": 0.9977198243141174
+   },
+   {
+    "type": "PIN",
+    "start": 80,
+    "end": 86,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 95,
+    "end": 109,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 119,
+    "end": 142,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 620,
+    "end": 627,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 815,
+    "end": 832,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 963,
+    "end": 969,
+    "confidence": 0.8
+   },
+   {
+    "type": "ORG",
+    "start": 1053,
+    "end": 1062,
+    "confidence": 0.9981343746185303
+   },
+   {
+    "type": "ORG",
+    "start": 1064,
+    "end": 1069,
+    "confidence": 0.9984365701675415
+   },
+   {
+    "type": "ORG",
+    "start": 1078,
+    "end": 1082,
+    "confidence": 0.993022620677948
+   },
+   {
+    "type": "DATE",
+    "start": 1084,
+    "end": 1092,
+    "confidence": 0.6
+   },
+   {
+    "type": "LOC",
+    "start": 1111,
+    "end": 1117,
+    "confidence": 0.8173380494117737
+   }
+  ],
+  "res_d1-2": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 14,
+    "confidence": 0.6558376550674438
+   },
+   {
+    "type": "ORG",
+    "start": 15,
+    "end": 19,
+    "confidence": 0.4708351194858551
+   },
+   {
+    "type": "LOC",
+    "start": 25,
+    "end": 34,
+    "confidence": 0.9648709893226624
+   },
+   {
+    "type": "LOC",
+    "start": 36,
+    "end": 40,
+    "confidence": 0.9214460849761963
+   },
+   {
+    "type": "LOC",
+    "start": 41,
+    "end": 54,
+    "confidence": 0.9822363257408142
+   },
+   {
+    "type": "LOC",
+    "start": 56,
+    "end": 69,
+    "confidence": 0.9791978001594543
+   },
+   {
+    "type": "LOC",
+    "start": 71,
+    "end": 77,
+    "confidence": 0.9987552762031555
+   },
+   {
+    "type": "PIN",
+    "start": 80,
+    "end": 86,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 95,
+    "end": 109,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 119,
+    "end": 136,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 601,
+    "end": 610,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 770,
+    "end": 781,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 935,
+    "end": 941,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1055,
+    "end": 1070,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 1088,
+    "end": 1096,
+    "confidence": 0.7794194221496582
+   }
+  ],
+  "res_d1-3": [
+   {
+    "type": "LOC",
+    "start": 0,
+    "end": 6,
+    "confidence": 0.6030797958374023
+   },
+   {
+    "type": "PERSON",
+    "start": 7,
+    "end": 16,
+    "confidence": 0.5983754396438599
+   },
+   {
+    "type": "LOC",
+    "start": 17,
+    "end": 19,
+    "confidence": 0.46780455112457275
+   },
+   {
+    "type": "LOC",
+    "start": 26,
+    "end": 35,
+    "confidence": 0.9857910871505737
+   },
+   {
+    "type": "LOC",
+    "start": 37,
+    "end": 48,
+    "confidence": 0.9902217388153076
+   },
+   {
+    "type": "LOC",
+    "start": 50,
+    "end": 56,
+    "confidence": 0.9992858171463013
+   },
+   {
+    "type": "PIN",
+    "start": 59,
+    "end": 65,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 74,
+    "end": 86,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 96,
+    "end": 127,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 606,
+    "end": 615,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 816,
+    "end": 826,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 955,
+    "end": 961,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1080,
+    "end": 1089,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 1108,
+    "end": 1117,
+    "confidence": 0.9926354885101318
+   }
+  ],
+  "res_d1-4": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 15,
+    "confidence": 0.4841666519641876
+   },
+   {
+    "type": "ORG",
+    "start": 16,
+    "end": 20,
+    "confidence": 0.5135304927825928
+   },
+   {
+    "type": "LOC",
+    "start": 26,
+    "end": 32,
+    "confidence": 0.5347632765769958
+   },
+   {
+    "type": "LOC",
+    "start": 35,
+    "end": 44,
+    "confidence": 0.9523035883903503
+   },
+   {
+    "type": "LOC",
+    "start": 51,
+    "end": 65,
+    "confidence": 0.5216717720031738
+   },
+   {
+    "type": "LOC",
+    "start": 67,
+    "end": 76,
+    "confidence": 0.9938194155693054
+   },
+   {
+    "type": "LOC",
+    "start": 78,
+    "end": 84,
+    "confidence": 0.9947749972343445
+   },
+   {
+    "type": "PIN",
+    "start": 87,
+    "end": 93,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 102,
+    "end": 117,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 127,
+    "end": 147,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 594,
+    "end": 606,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 780,
+    "end": 792,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 920,
+    "end": 926,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1042,
+    "end": 1052,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 1071,
+    "end": 1079,
+    "confidence": 0.907494843006134
+   }
+  ],
+  "res_d1-5": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 19,
+    "confidence": 0.41129982471466064
+   },
+   {
+    "type": "LOC",
+    "start": 24,
+    "end": 32,
+    "confidence": 0.6166486144065857
+   },
+   {
+    "type": "LOC",
+    "start": 33,
+    "end": 42,
+    "confidence": 0.8929756283760071
+   },
+   {
+    "type": "LOC",
+    "start": 44,
+    "end": 53,
+    "confidence": 0.9957624673843384
+   },
+   {
+    "type": "LOC",
+    "start": 55,
+    "end": 64,
+    "confidence": 0.998348593711853
+   },
+   {
+    "type": "PIN",
+    "start": 67,
+    "end": 73,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 82,
+    "end": 92,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 102,
+    "end": 128,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 587,
+    "end": 598,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 781,
+    "end": 789,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 925,
+    "end": 931,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1050,
+    "end": 1058,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 1070,
+    "end": 1084,
+    "confidence": 0.6754719614982605
+   }
+  ],
+  "res_d1-6": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 15,
+    "confidence": 0.8376628160476685
+   },
+   {
+    "type": "LOC",
+    "start": 20,
+    "end": 34,
+    "confidence": 0.9615049362182617
+   },
+   {
+    "type": "LOC",
+    "start": 36,
+    "end": 40,
+    "confidence": 0.6459428668022156
+   },
+   {
+    "type": "LOC",
+    "start": 41,
+    "end": 58,
+    "confidence": 0.5733100771903992
+   },
+   {
+    "type": "LOC",
+    "start": 60,
+    "end": 73,
+    "confidence": 0.9898167252540588
+   },
+   {
+    "type": "LOC",
+    "start": 75,
+    "end": 93,
+    "confidence": 0.9964543581008911
+   },
+   {
+    "type": "PIN",
+    "start": 96,
+    "end": 102,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 111,
+    "end": 125,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 135,
+    "end": 157,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 612,
+    "end": 621,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 792,
+    "end": 807,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 933,
+    "end": 939,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1061,
+    "end": 1071,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 1089,
+    "end": 1093,
+    "confidence": 0.9982385039329529
+   }
+  ],
+  "res_d1-7": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 11,
+    "confidence": 0.832078218460083
+   },
+   {
+    "type": "ORG",
+    "start": 12,
+    "end": 16,
+    "confidence": 0.6212373375892639
+   },
+   {
+    "type": "LOC",
+    "start": 22,
+    "end": 31,
+    "confidence": 0.9724153876304626
+   },
+   {
+    "type": "LOC",
+    "start": 33,
+    "end": 44,
+    "confidence": 0.9854474663734436
+   },
+   {
+    "type": "LOC",
+    "start": 46,
+    "end": 54,
+    "confidence": 0.9978058338165283
+   },
+   {
+    "type": "PIN",
+    "start": 57,
+    "end": 63,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 72,
+    "end": 83,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 93,
+    "end": 115,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 611,
+    "end": 618,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 818,
+    "end": 828,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 953,
+    "end": 959,
+    "confidence": 0.8
+   },
+   {
+    "type": "ORG",
+    "start": 1054,
+    "end": 1059,
+    "confidence": 0.9978671073913574
+   },
+   {
+    "type": "ORG",
+    "start": 1072,
+    "end": 1076,
+    "confidence": 0.988479733467102
+   },
+   {
+    "type": "DATE",
+    "start": 1078,
+    "end": 1087,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 1107,
+    "end": 1110,
+    "confidence": 0.9555203318595886
+   }
+  ],
+  "res_d1-8": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 16,
+    "confidence": 0.8861358761787415
+   },
+   {
+    "type": "LOC",
+    "start": 24,
+    "end": 36,
+    "confidence": 0.9702774882316589
+   },
+   {
+    "type": "LOC",
+    "start": 38,
+    "end": 47,
+    "confidence": 0.9914814829826355
+   },
+   {
+    "type": "LOC",
+    "start": 49,
+    "end": 58,
+    "confidence": 0.9964599013328552
+   },
+   {
+    "type": "PIN",
+    "start": 61,
+    "end": 67,
+    "confidence": 0.8
+   },
+   {
+    "type": "PHONE",
+    "start": 76,
+    "end": 86,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 96,
+    "end": 114,
+    "confidence": 1
+   },
+   {
+    "type": "MONEY",
+    "start": 585,
+    "end": 594,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 770,
+    "end": 779,
+    "confidence": 0.75
+   },
+   {
+    "type": "PIN",
+    "start": 903,
+    "end": 909,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 1026,
+    "end": 1033,
+    "confidence": 0.6
+   },
+   {
+    "type": "LOC",
+    "start": 1052,
+    "end": 1061,
+    "confidence": 0.8336209654808044
+   }
+  ],
+  "res_d2-1": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 7,
+    "confidence": 0.9626833200454712
+   },
+   {
+    "type": "LOC",
+    "start": 32,
+    "end": 43,
+    "confidence": 0.891908586025238
+   },
+   {
+    "type": "LOC",
+    "start": 45,
+    "end": 54,
+    "confidence": 0.9941609501838684
+   },
+   {
+    "type": "PHONE",
+    "start": 59,
+    "end": 73,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 78,
+    "end": 104,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 109,
+    "end": 140,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 237,
+    "end": 246,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 745,
+    "end": 775,
+    "confidence": 0.95
+   }
+  ],
+  "res_d2-2": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 8,
+    "confidence": 0.9372857809066772
+   },
+   {
+    "type": "PERSON",
+    "start": 33,
+    "end": 38,
+    "confidence": 0.9735401272773743
+   },
+   {
+    "type": "LOC",
+    "start": 40,
+    "end": 51,
+    "confidence": 0.9829472303390503
+   },
+   {
+    "type": "PHONE",
+    "start": 56,
+    "end": 67,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 72,
+    "end": 95,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 100,
+    "end": 134,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 229,
+    "end": 238,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 727,
+    "end": 754,
+    "confidence": 0.95
+   }
+  ],
+  "res_d2-3": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 9,
+    "confidence": 0.5468816161155701
+   },
+   {
+    "type": "ORG",
+    "start": 20,
+    "end": 37,
+    "confidence": 0.653271496295929
+   },
+   {
+    "type": "LOC",
+    "start": 39,
+    "end": 50,
+    "confidence": 0.9964526891708374
+   },
+   {
+    "type": "PHONE",
+    "start": 55,
+    "end": 69,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 74,
+    "end": 104,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 109,
+    "end": 153,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 255,
+    "end": 262,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 770,
+    "end": 784,
+    "confidence": 0.9
+   }
+  ],
+  "res_d2-4": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 8,
+    "confidence": 0.7562682032585144
+   },
+   {
+    "type": "LOC",
+    "start": 34,
+    "end": 48,
+    "confidence": 0.8023867011070251
+   },
+   {
+    "type": "LOC",
+    "start": 50,
+    "end": 55,
+    "confidence": 0.9982670545578003
+   },
+   {
+    "type": "PHONE",
+    "start": 60,
+    "end": 74,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 79,
+    "end": 103,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 108,
+    "end": 143,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 250,
+    "end": 260,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 784,
+    "end": 829,
+    "confidence": 0.95
+   }
+  ],
+  "res_d2-5": [
+   {
+    "type": "PERSON",
+    "start": 0,
+    "end": 7,
+    "confidence": 0.9011942148208618
+   },
+   {
+    "type": "LOC",
+    "start": 33,
+    "end": 39,
+    "confidence": 0.9681963324546814
+   },
+   {
+    "type": "LOC",
+    "start": 41,
+    "end": 47,
+    "confidence": 0.9982937574386597
+   },
+   {
+    "type": "AADHAAR",
+    "start": 53,
+    "end": 66,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 71,
+    "end": 91,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 96,
+    "end": 138,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 233,
+    "end": 243,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 747,
+    "end": 760,
+    "confidence": 0.9
+   }
+  ],
+  "res_d2-6": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 9,
+    "confidence": 0.8697838187217712
+   },
+   {
+    "type": "ORG",
+    "start": 28,
+    "end": 31,
+    "confidence": 0.6472770571708679
+   },
+   {
+    "type": "LOC",
+    "start": 40,
+    "end": 45,
+    "confidence": 0.9971774816513062
+   },
+   {
+    "type": "PHONE",
+    "start": 50,
+    "end": 63,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 68,
+    "end": 91,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 96,
+    "end": 129,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 225,
+    "end": 234,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 719,
+    "end": 747,
+    "confidence": 0.95
+   }
+  ],
+  "res_d2-7": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 7,
+    "confidence": 0.9893282651901245
+   },
+   {
+    "type": "LOC",
+    "start": 27,
+    "end": 40,
+    "confidence": 0.9177882671356201
+   },
+   {
+    "type": "LOC",
+    "start": 42,
+    "end": 50,
+    "confidence": 0.9986204504966736
+   },
+   {
+    "type": "PHONE",
+    "start": 55,
+    "end": 68,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 73,
+    "end": 96,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 101,
+    "end": 130,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 231,
+    "end": 238,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 763,
+    "end": 797,
+    "confidence": 0.95
+   }
+  ],
+  "res_d2-8": [
+   {
+    "type": "ORG",
+    "start": 0,
+    "end": 8,
+    "confidence": 0.5204686522483826
+   },
+   {
+    "type": "LOC",
+    "start": 34,
+    "end": 42,
+    "confidence": 0.7649361491203308
+   },
+   {
+    "type": "LOC",
+    "start": 44,
+    "end": 51,
+    "confidence": 0.9946518540382385
+   },
+   {
+    "type": "PHONE",
+    "start": 56,
+    "end": 69,
+    "confidence": 0.7
+   },
+   {
+    "type": "EMAIL",
+    "start": 74,
+    "end": 94,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 99,
+    "end": 132,
+    "confidence": 0.95
+   },
+   {
+    "type": "MONEY",
+    "start": 239,
+    "end": 248,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 751,
+    "end": 783,
+    "confidence": 0.95
+   }
+  ],
+  "res_d3-1": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 23,
+    "confidence": 0.9695016145706177
+   },
+   {
+    "type": "PHONE",
+    "start": 42,
+    "end": 56,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 74,
+    "end": 102,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 120,
+    "end": 132,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 150,
+    "end": 160,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 225,
+    "end": 231,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 249,
+    "end": 256,
+    "confidence": 0.75
+   },
+   {
+    "type": "PERSON",
+    "start": 268,
+    "end": 275,
+    "confidence": 0.8802812695503235
+   },
+   {
+    "type": "ORG",
+    "start": 641,
+    "end": 648,
+    "confidence": 0.9526731371879578
+   },
+   {
+    "type": "PHONE",
+    "start": 677,
+    "end": 687,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-2": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 18,
+    "confidence": 0.7655504941940308
+   },
+   {
+    "type": "PHONE",
+    "start": 37,
+    "end": 52,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 70,
+    "end": 91,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 109,
+    "end": 123,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 141,
+    "end": 151,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 239,
+    "end": 245,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 263,
+    "end": 275,
+    "confidence": 0.75
+   },
+   {
+    "type": "PHONE",
+    "start": 723,
+    "end": 734,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-3": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 21,
+    "confidence": 0.7534666061401367
+   },
+   {
+    "type": "PHONE",
+    "start": 40,
+    "end": 53,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 71,
+    "end": 92,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 110,
+    "end": 122,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 140,
+    "end": 150,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 216,
+    "end": 222,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 240,
+    "end": 251,
+    "confidence": 0.75
+   },
+   {
+    "type": "PHONE",
+    "start": 677,
+    "end": 688,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-4": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 19,
+    "confidence": 0.9482578039169312
+   },
+   {
+    "type": "PHONE",
+    "start": 38,
+    "end": 52,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 70,
+    "end": 88,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 106,
+    "end": 118,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 136,
+    "end": 146,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 237,
+    "end": 243,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 261,
+    "end": 273,
+    "confidence": 0.75
+   },
+   {
+    "type": "PHONE",
+    "start": 695,
+    "end": 709,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-5": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 22,
+    "confidence": 0.9637792706489563
+   },
+   {
+    "type": "PHONE",
+    "start": 41,
+    "end": 52,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 70,
+    "end": 94,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 112,
+    "end": 126,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 144,
+    "end": 154,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 219,
+    "end": 225,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 243,
+    "end": 253,
+    "confidence": 0.75
+   },
+   {
+    "type": "PHONE",
+    "start": 680,
+    "end": 693,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-6": [
+   {
+    "type": "ORG",
+    "start": 10,
+    "end": 24,
+    "confidence": 0.328082412481308
+   },
+   {
+    "type": "PHONE",
+    "start": 43,
+    "end": 54,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 72,
+    "end": 97,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 115,
+    "end": 129,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 147,
+    "end": 157,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 231,
+    "end": 237,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 255,
+    "end": 264,
+    "confidence": 0.75
+   },
+   {
+    "type": "PERSON",
+    "start": 633,
+    "end": 639,
+    "confidence": 0.6869493722915649
+   },
+   {
+    "type": "PHONE",
+    "start": 659,
+    "end": 669,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-7": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 24,
+    "confidence": 0.9479612708091736
+   },
+   {
+    "type": "PHONE",
+    "start": 43,
+    "end": 56,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 74,
+    "end": 100,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 118,
+    "end": 132,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 150,
+    "end": 160,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 233,
+    "end": 239,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 257,
+    "end": 273,
+    "confidence": 0.75
+   },
+   {
+    "type": "AADHAAR",
+    "start": 699,
+    "end": 712,
+    "confidence": 0.85
+   }
+  ],
+  "res_d3-8": [
+   {
+    "type": "PERSON",
+    "start": 10,
+    "end": 25,
+    "confidence": 0.7580609321594238
+   },
+   {
+    "type": "PHONE",
+    "start": 44,
+    "end": 55,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 73,
+    "end": 100,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 118,
+    "end": 132,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 150,
+    "end": 160,
+    "confidence": 0.95
+   },
+   {
+    "type": "PIN",
+    "start": 228,
+    "end": 234,
+    "confidence": 0.8
+   },
+   {
+    "type": "DATE",
+    "start": 252,
+    "end": 263,
+    "confidence": 0.75
+   },
+   {
+    "type": "PHONE",
+    "start": 677,
+    "end": 688,
+    "confidence": 0.85
+   }
+  ],
+  "em_d1-1": [
+   {
+    "type": "MONEY",
+    "start": 122,
+    "end": 133,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 186,
+    "end": 198,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 273,
+    "end": 284,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 291,
+    "end": 302,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 310,
+    "end": 325,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 331,
+    "end": 341,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 383,
+    "end": 395,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 468,
+    "end": 494,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 497,
+    "end": 511,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 514,
+    "end": 551,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-2": [
+   {
+    "type": "PERSON",
+    "start": 54,
+    "end": 62,
+    "confidence": 0.9952185750007629
+   },
+   {
+    "type": "MONEY",
+    "start": 118,
+    "end": 129,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 182,
+    "end": 191,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 271,
+    "end": 284,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 291,
+    "end": 302,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 310,
+    "end": 325,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 331,
+    "end": 341,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 383,
+    "end": 398,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 462,
+    "end": 483,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 486,
+    "end": 500,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 503,
+    "end": 535,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-3": [
+   {
+    "type": "PERSON",
+    "start": 57,
+    "end": 62,
+    "confidence": 0.991691529750824
+   },
+   {
+    "type": "MONEY",
+    "start": 113,
+    "end": 120,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 173,
+    "end": 188,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 205,
+    "end": 224,
+    "confidence": 0.9961543083190918
+   },
+   {
+    "type": "ORG",
+    "start": 231,
+    "end": 240,
+    "confidence": 0.9968101978302002
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 249,
+    "end": 259,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 266,
+    "end": 277,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 285,
+    "end": 300,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 306,
+    "end": 316,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 358,
+    "end": 371,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 383,
+    "end": 397,
+    "confidence": 0.961259663105011
+   },
+   {
+    "type": "ORG",
+    "start": 416,
+    "end": 444,
+    "confidence": 0.992496132850647
+   },
+   {
+    "type": "EMAIL",
+    "start": 445,
+    "end": 467,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 470,
+    "end": 480,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 483,
+    "end": 497,
+    "confidence": 0.9
+   }
+  ],
+  "em_d1-4": [
+   {
+    "type": "MONEY",
+    "start": 115,
+    "end": 127,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 180,
+    "end": 196,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 270,
+    "end": 279,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 286,
+    "end": 297,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 305,
+    "end": 320,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 326,
+    "end": 336,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 378,
+    "end": 392,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 463,
+    "end": 485,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 488,
+    "end": 503,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 506,
+    "end": 548,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-5": [
+   {
+    "type": "MONEY",
+    "start": 117,
+    "end": 124,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 177,
+    "end": 192,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 258,
+    "end": 274,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 281,
+    "end": 292,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 300,
+    "end": 315,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 321,
+    "end": 331,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 373,
+    "end": 387,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 455,
+    "end": 477,
+    "confidence": 0.95
+   },
+   {
+    "type": "AADHAAR",
+    "start": 480,
+    "end": 494,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 497,
+    "end": 528,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-6": [
+   {
+    "type": "PERSON",
+    "start": 57,
+    "end": 66,
+    "confidence": 0.9936756491661072
+   },
+   {
+    "type": "MONEY",
+    "start": 117,
+    "end": 125,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 178,
+    "end": 187,
+    "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 204,
+    "end": 237,
+    "confidence": 0.6842317581176758
+   },
+   {
+    "type": "ORG",
+    "start": 239,
+    "end": 253,
+    "confidence": 0.9684622883796692
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 262,
+    "end": 275,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 282,
+    "end": 293,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 301,
+    "end": 316,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 322,
+    "end": 332,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 374,
+    "end": 385,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 452,
+    "end": 470,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 473,
+    "end": 487,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 490,
+    "end": 517,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-7": [
+   {
+    "type": "MONEY",
+    "start": 120,
+    "end": 128,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 181,
+    "end": 189,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 257,
+    "end": 271,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 278,
+    "end": 289,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 297,
+    "end": 312,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 318,
+    "end": 328,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 370,
+    "end": 380,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 450,
+    "end": 471,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 474,
+    "end": 485,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 488,
+    "end": 521,
+    "confidence": 0.95
+   }
+  ],
+  "em_d1-8": [
+   {
+    "type": "PERSON",
+    "start": 57,
+    "end": 64,
+    "confidence": 0.9949401021003723
+   },
+   {
+    "type": "MONEY",
+    "start": 120,
+    "end": 128,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 181,
+    "end": 197,
+    "confidence": 0.6
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 266,
+    "end": 277,
+    "confidence": 0.8
+   },
+   {
+    "type": "IFSC",
+    "start": 284,
+    "end": 295,
+    "confidence": 0.9
+   },
+   {
+    "type": "GSTIN",
+    "start": 303,
+    "end": 318,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 324,
+    "end": 334,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 376,
+    "end": 387,
+    "confidence": 0.85
+   },
+   {
+    "type": "EMAIL",
+    "start": 455,
+    "end": 477,
+    "confidence": 0.95
+   },
+   {
+    "type": "PHONE",
+    "start": 480,
+    "end": 495,
+    "confidence": 0.7
+   },
+   {
+    "type": "URL",
+    "start": 498,
+    "end": 541,
+    "confidence": 0.95
+   }
+  ],
+  "em_d2-1": [
+   {
+    "type": "PERSON",
+    "start": 55,
+    "end": 57,
+    "confidence": 0.3638392984867096
+   },
+   {
+    "type": "DATE",
+    "start": 119,
+    "end": 129,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 213,
+    "end": 238,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 246,
+    "end": 262,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 313,
+    "end": 324,
+    "confidence": 0.9897249341011047
+   },
+   {
+    "type": "EMAIL",
+    "start": 326,
+    "end": 349,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 431,
+    "end": 439,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 476,
+    "end": 491,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 510,
+    "end": 520,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 532,
+    "end": 545,
+    "confidence": 0.7077717781066895
+   },
+   {
+    "type": "DATE",
+    "start": 576,
+    "end": 591,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 606,
+    "end": 629,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 715,
+    "end": 742,
+    "confidence": 1
+   }
+  ],
+  "em_d2-2": [
+   {
+    "type": "PERSON",
+    "start": 55,
+    "end": 61,
+    "confidence": 0.809281587600708
+   },
+   {
+    "type": "DATE",
+    "start": 115,
+    "end": 123,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 213,
+    "end": 231,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 239,
+    "end": 256,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 326,
+    "end": 350,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 425,
+    "end": 443,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 479,
+    "end": 489,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 508,
+    "end": 521,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 584,
+    "end": 598,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 616,
+    "end": 640,
+    "confidence": 0.95
+   },
+   {
+    "type": "PERSON",
+    "start": 691,
+    "end": 699,
+    "confidence": 0.9834890365600586
+   },
+   {
+    "type": "URL",
+    "start": 726,
+    "end": 757,
+    "confidence": 1
+   }
+  ],
+  "em_d2-3": [
+   {
+    "type": "PERSON",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.9885408282279968
+   },
+   {
+    "type": "DATE",
+    "start": 120,
+    "end": 128,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 211,
+    "end": 234,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 242,
+    "end": 253,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 320,
+    "end": 342,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 416,
+    "end": 426,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 461,
+    "end": 472,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 491,
+    "end": 505,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 564,
+    "end": 580,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 595,
+    "end": 617,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 703,
+    "end": 736,
+    "confidence": 1
+   }
+  ],
+  "em_d2-4": [
+   {
+    "type": "ORG",
+    "start": 57,
+    "end": 63,
+    "confidence": 0.4910600185394287
+   },
+   {
+    "type": "DATE",
+    "start": 117,
+    "end": 127,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 138,
+    "end": 153,
+    "confidence": 0.99822998046875
+   },
+   {
+    "type": "PERSON",
+    "start": 200,
+    "end": 211,
+    "confidence": 0.9934532046318054
+   },
+   {
+    "type": "EMAIL",
+    "start": 213,
+    "end": 230,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 238,
+    "end": 252,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 321,
+    "end": 338,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 413,
+    "end": 419,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 454,
+    "end": 465,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 484,
+    "end": 496,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 550,
+    "end": 565,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 584,
+    "end": 601,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 687,
+    "end": 704,
+    "confidence": 1
+   }
+  ],
+  "em_d2-5": [
+   {
+    "type": "PERSON",
+    "start": 52,
+    "end": 54,
+    "confidence": 0.6956612467765808
+   },
+   {
+    "type": "PERSON",
+    "start": 55,
+    "end": 62,
+    "confidence": 0.9977613091468811
+   },
+   {
+    "type": "DATE",
+    "start": 116,
+    "end": 124,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 209,
+    "end": 231,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 239,
+    "end": 256,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 327,
+    "end": 354,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 430,
+    "end": 441,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 477,
+    "end": 489,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 508,
+    "end": 519,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 558,
+    "end": 561,
+    "confidence": 0.9928608536720276
+   },
+   {
+    "type": "DATE",
+    "start": 572,
+    "end": 586,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 588,
+    "end": 601,
+    "confidence": 0.8292276859283447
+   },
+   {
+    "type": "EMAIL",
+    "start": 603,
+    "end": 630,
+    "confidence": 0.95
+   },
+   {
+    "type": "ORG",
+    "start": 648,
+    "end": 653,
+    "confidence": 0.7491422891616821
+   },
+   {
+    "type": "URL",
+    "start": 716,
+    "end": 733,
+    "confidence": 1
+   }
+  ],
+  "em_d2-6": [
+   {
+    "type": "PERSON",
+    "start": 55,
+    "end": 57,
+    "confidence": 0.8391966819763184
+   },
+   {
+    "type": "PERSON",
+    "start": 58,
+    "end": 64,
+    "confidence": 0.8644762635231018
+   },
+   {
+    "type": "DATE",
+    "start": 118,
+    "end": 134,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 145,
+    "end": 161,
+    "confidence": 0.9941090941429138
+   },
+   {
+    "type": "ORG",
+    "start": 208,
+    "end": 214,
+    "confidence": 0.47568434476852417
+   },
+   {
+    "type": "PERSON",
+    "start": 215,
+    "end": 224,
+    "confidence": 0.9989629983901978
+   },
+   {
+    "type": "EMAIL",
+    "start": 226,
+    "end": 254,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 262,
+    "end": 278,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 351,
+    "end": 377,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 456,
+    "end": 466,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 501,
+    "end": 512,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 531,
+    "end": 540,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 598,
+    "end": 608,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 628,
+    "end": 654,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 740,
+    "end": 771,
+    "confidence": 1
+   }
+  ],
+  "em_d2-7": [
+   {
+    "type": "PERSON",
+    "start": 57,
+    "end": 62,
+    "confidence": 0.9606916904449463
+   },
+   {
+    "type": "DATE",
+    "start": 116,
+    "end": 128,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 139,
+    "end": 151,
+    "confidence": 0.9921454787254333
+   },
+   {
+    "type": "PERSON",
+    "start": 198,
+    "end": 212,
+    "confidence": 0.848781943321228
+   },
+   {
+    "type": "EMAIL",
+    "start": 214,
+    "end": 234,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 242,
+    "end": 259,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 324,
+    "end": 347,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 420,
+    "end": 428,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 463,
+    "end": 473,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 492,
+    "end": 502,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 563,
+    "end": 578,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 594,
+    "end": 617,
+    "confidence": 0.95
+   },
+   {
+    "type": "PERSON",
+    "start": 677,
+    "end": 684,
+    "confidence": 0.8548739552497864
+   },
+   {
+    "type": "URL",
+    "start": 703,
+    "end": 735,
+    "confidence": 1
+   }
+  ],
+  "em_d2-8": [
+   {
+    "type": "PERSON",
+    "start": 54,
+    "end": 58,
+    "confidence": 0.9984846711158752
+   },
+   {
+    "type": "DATE",
+    "start": 112,
+    "end": 120,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 199,
+    "end": 217,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 225,
+    "end": 240,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 292,
+    "end": 303,
+    "confidence": 0.9573748111724854
+   },
+   {
+    "type": "EMAIL",
+    "start": 305,
+    "end": 328,
+    "confidence": 0.95
+   },
+   {
+    "type": "DATE",
+    "start": 402,
+    "end": 412,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 449,
+    "end": 462,
+    "confidence": 0.85
+   },
+   {
+    "type": "MONEY",
+    "start": 481,
+    "end": 492,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 504,
+    "end": 508,
+    "confidence": 0.4433284401893616
+   },
+   {
+    "type": "ORG",
+    "start": 509,
+    "end": 512,
+    "confidence": 0.781189501285553
+   },
+   {
+    "type": "DATE",
+    "start": 547,
+    "end": 564,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 579,
+    "end": 602,
+    "confidence": 0.95
+   },
+   {
+    "type": "URL",
+    "start": 688,
+    "end": 731,
+    "confidence": 1
+   }
+  ],
+  "em_d3-1": [
+   {
+    "type": "ORG",
+    "start": 9,
+    "end": 15,
+    "confidence": 0.5013235211372375
+   },
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 61,
+    "confidence": 0.9913473129272461
+   },
+   {
+    "type": "PERSON",
+    "start": 69,
+    "end": 73,
+    "confidence": 0.5041710734367371
+   },
+   {
+    "type": "PERSON",
+    "start": 74,
+    "end": 85,
+    "confidence": 0.5739076733589172
+   },
+   {
+    "type": "ORG",
+    "start": 182,
+    "end": 210,
+    "confidence": 0.9714046716690063
+   },
+   {
+    "type": "LOC",
+    "start": 231,
+    "end": 238,
+    "confidence": 0.798232913017273
+   },
+   {
+    "type": "LOC",
+    "start": 240,
+    "end": 252,
+    "confidence": 0.9846734404563904
+   },
+   {
+    "type": "LOC",
+    "start": 254,
+    "end": 268,
+    "confidence": 0.991552472114563
+   },
+   {
+    "type": "LOC",
+    "start": 270,
+    "end": 279,
+    "confidence": 0.9964300990104675
+   },
+   {
+    "type": "PIN",
+    "start": 282,
+    "end": 288,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 310,
+    "end": 325,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 331,
+    "end": 341,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 369,
+    "end": 385,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 392,
+    "end": 411,
+    "confidence": 0.9980299472808838
+   },
+   {
+    "type": "ORG",
+    "start": 413,
+    "end": 417,
+    "confidence": 0.8100544214248657
+   },
+   {
+    "type": "IFSC",
+    "start": 418,
+    "end": 429,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 446,
+    "end": 463,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 480,
+    "end": 494,
+    "confidence": 0.7285717725753784
+   },
+   {
+    "type": "PHONE",
+    "start": 496,
+    "end": 509,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 604,
+    "end": 631,
+    "confidence": 0.9584445357322693
+   },
+   {
+    "type": "ORG",
+    "start": 633,
+    "end": 660,
+    "confidence": 0.9876927733421326
+   },
+   {
+    "type": "EMAIL",
+    "start": 661,
+    "end": 685,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-2": [
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 60,
+    "confidence": 0.992219865322113
+   },
+   {
+    "type": "PERSON",
+    "start": 68,
+    "end": 72,
+    "confidence": 0.786575436592102
+   },
+   {
+    "type": "ORG",
+    "start": 73,
+    "end": 77,
+    "confidence": 0.6172517538070679
+   },
+   {
+    "type": "ORG",
+    "start": 174,
+    "end": 200,
+    "confidence": 0.9934596419334412
+   },
+   {
+    "type": "LOC",
+    "start": 230,
+    "end": 241,
+    "confidence": 0.9358745217323303
+   },
+   {
+    "type": "LOC",
+    "start": 243,
+    "end": 251,
+    "confidence": 0.9966586232185364
+   },
+   {
+    "type": "LOC",
+    "start": 253,
+    "end": 258,
+    "confidence": 0.99822998046875
+   },
+   {
+    "type": "PIN",
+    "start": 261,
+    "end": 267,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 289,
+    "end": 304,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 310,
+    "end": 320,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 348,
+    "end": 370,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 371,
+    "end": 375,
+    "confidence": 0.6831254363059998
+   },
+   {
+    "type": "ORG",
+    "start": 377,
+    "end": 396,
+    "confidence": 0.9987054467201233
+   },
+   {
+    "type": "ORG",
+    "start": 398,
+    "end": 402,
+    "confidence": 0.9956620335578918
+   },
+   {
+    "type": "IFSC",
+    "start": 403,
+    "end": 414,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 431,
+    "end": 444,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 461,
+    "end": 472,
+    "confidence": 0.9787226319313049
+   },
+   {
+    "type": "PHONE",
+    "start": 474,
+    "end": 485,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 578,
+    "end": 600,
+    "confidence": 0.8800289034843445
+   },
+   {
+    "type": "ORG",
+    "start": 602,
+    "end": 629,
+    "confidence": 0.9899417757987976
+   },
+   {
+    "type": "EMAIL",
+    "start": 630,
+    "end": 651,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-3": [
+   {
+    "type": "ORG",
+    "start": 9,
+    "end": 15,
+    "confidence": 0.5377036333084106
+   },
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 56,
+    "confidence": 0.9939866065979004
+   },
+   {
+    "type": "PERSON",
+    "start": 68,
+    "end": 81,
+    "confidence": 0.9978338479995728
+   },
+   {
+    "type": "ORG",
+    "start": 178,
+    "end": 207,
+    "confidence": 0.9892330765724182
+   },
+   {
+    "type": "LOC",
+    "start": 235,
+    "end": 251,
+    "confidence": 0.5253279805183411
+   },
+   {
+    "type": "LOC",
+    "start": 253,
+    "end": 262,
+    "confidence": 0.9920315146446228
+   },
+   {
+    "type": "LOC",
+    "start": 264,
+    "end": 273,
+    "confidence": 0.9989690184593201
+   },
+   {
+    "type": "PIN",
+    "start": 276,
+    "end": 282,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 304,
+    "end": 319,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 325,
+    "end": 335,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 363,
+    "end": 374,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 381,
+    "end": 401,
+    "confidence": 0.9992064237594604
+   },
+   {
+    "type": "ORG",
+    "start": 403,
+    "end": 407,
+    "confidence": 0.9966000914573669
+   },
+   {
+    "type": "IFSC",
+    "start": 408,
+    "end": 419,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 436,
+    "end": 450,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 467,
+    "end": 482,
+    "confidence": 0.9935880303382874
+   },
+   {
+    "type": "PHONE",
+    "start": 484,
+    "end": 494,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 589,
+    "end": 610,
+    "confidence": 0.9683263897895813
+   },
+   {
+    "type": "ORG",
+    "start": 612,
+    "end": 632,
+    "confidence": 0.9961685538291931
+   },
+   {
+    "type": "EMAIL",
+    "start": 633,
+    "end": 651,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-4": [
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 65,
+    "confidence": 0.9984302520751953
+   },
+   {
+    "type": "PERSON",
+    "start": 77,
+    "end": 91,
+    "confidence": 0.9882366061210632
+   },
+   {
+    "type": "ORG",
+    "start": 188,
+    "end": 215,
+    "confidence": 0.9946722388267517
+   },
+   {
+    "type": "LOC",
+    "start": 243,
+    "end": 254,
+    "confidence": 0.9460325837135315
+   },
+   {
+    "type": "LOC",
+    "start": 256,
+    "end": 266,
+    "confidence": 0.9650126695632935
+   },
+   {
+    "type": "LOC",
+    "start": 268,
+    "end": 276,
+    "confidence": 0.9914939403533936
+   },
+   {
+    "type": "PIN",
+    "start": 279,
+    "end": 285,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 307,
+    "end": 322,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 328,
+    "end": 338,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 366,
+    "end": 384,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 391,
+    "end": 410,
+    "confidence": 0.9988526701927185
+   },
+   {
+    "type": "ORG",
+    "start": 412,
+    "end": 416,
+    "confidence": 0.997310221195221
+   },
+   {
+    "type": "IFSC",
+    "start": 417,
+    "end": 428,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 445,
+    "end": 460,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 477,
+    "end": 490,
+    "confidence": 0.8957182168960571
+   },
+   {
+    "type": "PHONE",
+    "start": 492,
+    "end": 502,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 597,
+    "end": 621,
+    "confidence": 0.9814062714576721
+   },
+   {
+    "type": "ORG",
+    "start": 623,
+    "end": 646,
+    "confidence": 0.9952327609062195
+   },
+   {
+    "type": "EMAIL",
+    "start": 647,
+    "end": 664,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-5": [
+   {
+    "type": "ORG",
+    "start": 9,
+    "end": 15,
+    "confidence": 0.5318481922149658
+   },
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 63,
+    "confidence": 0.9928624629974365
+   },
+   {
+    "type": "PERSON",
+    "start": 75,
+    "end": 88,
+    "confidence": 0.9818276166915894
+   },
+   {
+    "type": "ORG",
+    "start": 185,
+    "end": 212,
+    "confidence": 0.9944714307785034
+   },
+   {
+    "type": "LOC",
+    "start": 238,
+    "end": 244,
+    "confidence": 0.49684178829193115
+   },
+   {
+    "type": "LOC",
+    "start": 247,
+    "end": 256,
+    "confidence": 0.9333548545837402
+   },
+   {
+    "type": "LOC",
+    "start": 258,
+    "end": 264,
+    "confidence": 0.7709237933158875
+   },
+   {
+    "type": "LOC",
+    "start": 269,
+    "end": 277,
+    "confidence": 0.9895275831222534
+   },
+   {
+    "type": "PIN",
+    "start": 280,
+    "end": 286,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 308,
+    "end": 323,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 329,
+    "end": 339,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 367,
+    "end": 390,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 391,
+    "end": 395,
+    "confidence": 0.7569646239280701
+   },
+   {
+    "type": "ORG",
+    "start": 397,
+    "end": 407,
+    "confidence": 0.9978647232055664
+   },
+   {
+    "type": "ORG",
+    "start": 409,
+    "end": 413,
+    "confidence": 0.6848047375679016
+   },
+   {
+    "type": "IFSC",
+    "start": 414,
+    "end": 425,
+    "confidence": 0.9
+   },
+   {
+    "type": "PHONE",
+    "start": 442,
+    "end": 452,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 469,
+    "end": 480,
+    "confidence": 0.5374591946601868
+   },
+   {
+    "type": "PHONE",
+    "start": 482,
+    "end": 493,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 587,
+    "end": 603,
+    "confidence": 0.5847081542015076
+   },
+   {
+    "type": "ORG",
+    "start": 617,
+    "end": 645,
+    "confidence": 0.9937965869903564
+   },
+   {
+    "type": "EMAIL",
+    "start": 646,
+    "end": 672,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-6": [
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 56,
+    "confidence": 0.9979355335235596
+   },
+   {
+    "type": "ORG",
+    "start": 175,
+    "end": 203,
+    "confidence": 0.9711341857910156
+   },
+   {
+    "type": "LOC",
+    "start": 233,
+    "end": 243,
+    "confidence": 0.9141467809677124
+   },
+   {
+    "type": "LOC",
+    "start": 245,
+    "end": 259,
+    "confidence": 0.9929913878440857
+   },
+   {
+    "type": "LOC",
+    "start": 261,
+    "end": 268,
+    "confidence": 0.9978684186935425
+   },
+   {
+    "type": "PIN",
+    "start": 271,
+    "end": 277,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 299,
+    "end": 314,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 320,
+    "end": 330,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 358,
+    "end": 371,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 378,
+    "end": 398,
+    "confidence": 0.9989751577377319
+   },
+   {
+    "type": "ORG",
+    "start": 400,
+    "end": 404,
+    "confidence": 0.9968883991241455
+   },
+   {
+    "type": "IFSC",
+    "start": 405,
+    "end": 416,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 433,
+    "end": 446,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 463,
+    "end": 477,
+    "confidence": 0.9867945313453674
+   },
+   {
+    "type": "PHONE",
+    "start": 479,
+    "end": 489,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 582,
+    "end": 609,
+    "confidence": 0.6411980390548706
+   },
+   {
+    "type": "ORG",
+    "start": 611,
+    "end": 639,
+    "confidence": 0.9919142723083496
+   },
+   {
+    "type": "EMAIL",
+    "start": 640,
+    "end": 659,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-7": [
+   {
+    "type": "ORG",
+    "start": 9,
+    "end": 15,
+    "confidence": 0.5433697700500488
+   },
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 62,
+    "confidence": 0.9917636513710022
+   },
+   {
+    "type": "PERSON",
+    "start": 70,
+    "end": 73,
+    "confidence": 0.9548721313476562
+   },
+   {
+    "type": "PERSON",
+    "start": 75,
+    "end": 80,
+    "confidence": 0.9157297611236572
+   },
+   {
+    "type": "ORG",
+    "start": 177,
+    "end": 201,
+    "confidence": 0.9921097159385681
+   },
+   {
+    "type": "LOC",
+    "start": 230,
+    "end": 242,
+    "confidence": 0.9181279540061951
+   },
+   {
+    "type": "LOC",
+    "start": 244,
+    "end": 255,
+    "confidence": 0.9936338663101196
+   },
+   {
+    "type": "LOC",
+    "start": 257,
+    "end": 266,
+    "confidence": 0.9993959665298462
+   },
+   {
+    "type": "PIN",
+    "start": 269,
+    "end": 275,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 297,
+    "end": 312,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 318,
+    "end": 328,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 356,
+    "end": 371,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 378,
+    "end": 397,
+    "confidence": 0.9988691210746765
+   },
+   {
+    "type": "ORG",
+    "start": 399,
+    "end": 403,
+    "confidence": 0.9957239031791687
+   },
+   {
+    "type": "IFSC",
+    "start": 404,
+    "end": 415,
+    "confidence": 0.9
+   },
+   {
+    "type": "BANK_ACCOUNT",
+    "start": 432,
+    "end": 442,
+    "confidence": 0.8
+   },
+   {
+    "type": "PERSON",
+    "start": 459,
+    "end": 472,
+    "confidence": 0.997281014919281
+   },
+   {
+    "type": "PHONE",
+    "start": 474,
+    "end": 484,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 577,
+    "end": 582,
+    "confidence": 0.5836499929428101
+   },
+   {
+    "type": "PERSON",
+    "start": 583,
+    "end": 592,
+    "confidence": 0.6204618215560913
+   },
+   {
+    "type": "ORG",
+    "start": 593,
+    "end": 604,
+    "confidence": 0.7780696153640747
+   },
+   {
+    "type": "ORG",
+    "start": 606,
+    "end": 625,
+    "confidence": 0.9850955009460449
+   },
+   {
+    "type": "EMAIL",
+    "start": 626,
+    "end": 650,
+    "confidence": 0.95
+   }
+  ],
+  "em_d3-8": [
+   {
+    "type": "ORG",
+    "start": 37,
+    "end": 56,
+    "confidence": 0.9930524230003357
+   },
+   {
+    "type": "PERSON",
+    "start": 64,
+    "end": 66,
+    "confidence": 0.657508909702301
+   },
+   {
+    "type": "PERSON",
+    "start": 68,
+    "end": 77,
+    "confidence": 0.5356743931770325
+   },
+   {
+    "type": "ORG",
+    "start": 174,
+    "end": 196,
+    "confidence": 0.9897323846817017
+   },
+   {
+    "type": "LOC",
+    "start": 226,
+    "end": 238,
+    "confidence": 0.9333301782608032
+   },
+   {
+    "type": "LOC",
+    "start": 240,
+    "end": 249,
+    "confidence": 0.9675657749176025
+   },
+   {
+    "type": "LOC",
+    "start": 251,
+    "end": 257,
+    "confidence": 0.9854059815406799
+   },
+   {
+    "type": "PIN",
+    "start": 260,
+    "end": 266,
+    "confidence": 0.8
+   },
+   {
+    "type": "GSTIN",
+    "start": 288,
+    "end": 303,
+    "confidence": 1
+   },
+   {
+    "type": "PAN",
+    "start": 309,
+    "end": 319,
+    "confidence": 0.95
+   },
+   {
+    "type": "UPI",
+    "start": 347,
+    "end": 361,
+    "confidence": 0.9
+   },
+   {
+    "type": "ORG",
+    "start": 368,
+    "end": 379,
+    "confidence": 0.9973146319389343
+   },
+   {
+    "type": "ORG",
+    "start": 381,
+    "end": 385,
+    "confidence": 0.5217465758323669
+   },
+   {
+    "type": "IFSC",
+    "start": 386,
+    "end": 397,
+    "confidence": 0.9
+   },
+   {
+    "type": "AADHAAR",
+    "start": 414,
+    "end": 426,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 443,
+    "end": 455,
+    "confidence": 0.9978207349777222
+   },
+   {
+    "type": "PHONE",
+    "start": 457,
+    "end": 469,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 563,
+    "end": 569,
+    "confidence": 0.8348919153213501
+   },
+   {
+    "type": "PERSON",
+    "start": 570,
+    "end": 576,
+    "confidence": 0.6609591245651245
+   },
+   {
+    "type": "ORG",
+    "start": 577,
+    "end": 588,
+    "confidence": 0.7762815356254578
+   },
+   {
+    "type": "ORG",
+    "start": 590,
+    "end": 615,
+    "confidence": 0.9965422749519348
+   },
+   {
+    "type": "EMAIL",
+    "start": 616,
+    "end": 633,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d1-1": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 107,
+    "end": 136,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 138,
+    "end": 146,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 195,
+    "end": 203,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 223,
+    "end": 234,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 236,
+    "end": 244,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 272,
+    "end": 283,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 310,
+    "end": 320,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 322,
+    "end": 330,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d1-2": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 21,
+    "end": 27,
+    "confidence": 0.5656489729881287
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 78,
+    "end": 87,
+    "confidence": 0.4713175892829895
+   },
+   {
+    "type": "EMAIL",
+    "start": 110,
+    "end": 128,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 130,
+    "end": 138,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 162,
+    "end": 171,
+    "confidence": 0.5773559212684631
+   },
+   {
+    "type": "DATE",
+    "start": 189,
+    "end": 197,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 209,
+    "end": 218,
+    "confidence": 0.8045235276222229
+   },
+   {
+    "type": "PHONE",
+    "start": 220,
+    "end": 233,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 235,
+    "end": 243,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 255,
+    "end": 261,
+    "confidence": 0.6268290877342224
+   },
+   {
+    "type": "MONEY",
+    "start": 271,
+    "end": 280,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 307,
+    "end": 324,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 326,
+    "end": 334,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 346,
+    "end": 355,
+    "confidence": 0.4101135730743408
+   }
+  ],
+  "ch_d1-3": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 105,
+    "end": 133,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 135,
+    "end": 143,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 191,
+    "end": 199,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 217,
+    "end": 231,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 233,
+    "end": 241,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 269,
+    "end": 278,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 305,
+    "end": 323,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 325,
+    "end": 333,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d1-4": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 21,
+    "end": 27,
+    "confidence": 0.738162636756897
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 78,
+    "end": 84,
+    "confidence": 0.35221317410469055
+   },
+   {
+    "type": "EMAIL",
+    "start": 107,
+    "end": 135,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 137,
+    "end": 145,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 157,
+    "end": 163,
+    "confidence": 0.7426447868347168
+   },
+   {
+    "type": "PERSON",
+    "start": 169,
+    "end": 174,
+    "confidence": 0.7084631323814392
+   },
+   {
+    "type": "DATE",
+    "start": 192,
+    "end": 200,
+    "confidence": 0.6
+   },
+   {
+    "type": "LOC",
+    "start": 212,
+    "end": 218,
+    "confidence": 0.8355876803398132
+   },
+   {
+    "type": "PHONE",
+    "start": 220,
+    "end": 230,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 232,
+    "end": 240,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 252,
+    "end": 258,
+    "confidence": 0.8427469730377197
+   },
+   {
+    "type": "MONEY",
+    "start": 268,
+    "end": 279,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 306,
+    "end": 327,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 329,
+    "end": 337,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d1-5": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 56,
+    "end": 64,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 76,
+    "end": 81,
+    "confidence": 0.42820683121681213
+   },
+   {
+    "type": "EMAIL",
+    "start": 104,
+    "end": 130,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 132,
+    "end": 140,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 185,
+    "end": 193,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 205,
+    "end": 210,
+    "confidence": 0.7591074705123901
+   },
+   {
+    "type": "PHONE",
+    "start": 212,
+    "end": 222,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 224,
+    "end": 232,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 258,
+    "end": 266,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 293,
+    "end": 315,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 317,
+    "end": 325,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 337,
+    "end": 342,
+    "confidence": 0.4140292704105377
+   }
+  ],
+  "ch_d1-6": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 106,
+    "end": 124,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 126,
+    "end": 134,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 181,
+    "end": 189,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 208,
+    "end": 218,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 220,
+    "end": 228,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 256,
+    "end": 267,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 294,
+    "end": 309,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 311,
+    "end": 319,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d1-7": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 108,
+    "end": 133,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 135,
+    "end": 143,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 191,
+    "end": 199,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 220,
+    "end": 230,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 232,
+    "end": 240,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 252,
+    "end": 258,
+    "confidence": 0.677180290222168
+   },
+   {
+    "type": "MONEY",
+    "start": 268,
+    "end": 279,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 306,
+    "end": 318,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 320,
+    "end": 328,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d1-8": [
+   {
+    "type": "DATE",
+    "start": 1,
+    "end": 9,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 66,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 78,
+    "end": 84,
+    "confidence": 0.38296234607696533
+   },
+   {
+    "type": "EMAIL",
+    "start": 107,
+    "end": 130,
+    "confidence": 1
+   },
+   {
+    "type": "DATE",
+    "start": 132,
+    "end": 140,
+    "confidence": 0.6
+   },
+   {
+    "type": "DATE",
+    "start": 188,
+    "end": 196,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 208,
+    "end": 214,
+    "confidence": 0.5258572697639465
+   },
+   {
+    "type": "PHONE",
+    "start": 216,
+    "end": 229,
+    "confidence": 0.7
+   },
+   {
+    "type": "DATE",
+    "start": 231,
+    "end": 239,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 267,
+    "end": 274,
+    "confidence": 0.85
+   },
+   {
+    "type": "UPI",
+    "start": 301,
+    "end": 312,
+    "confidence": 0.9
+   },
+   {
+    "type": "DATE",
+    "start": 314,
+    "end": 322,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d2-1": [
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 77,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 112,
+    "end": 139,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 147,
+    "end": 158,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 272,
+    "end": 284,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 306,
+    "end": 317,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 405,
+    "end": 416,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 546,
+    "end": 574,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-2": [
+   {
+    "type": "DATE",
+    "start": 59,
+    "end": 75,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 103,
+    "end": 124,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 132,
+    "end": 142,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 265,
+    "end": 277,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 299,
+    "end": 317,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 404,
+    "end": 419,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 527,
+    "end": 533,
+    "confidence": 0.9640268087387085
+   },
+   {
+    "type": "EMAIL",
+    "start": 534,
+    "end": 560,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d2-3": [
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 75,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 109,
+    "end": 126,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 134,
+    "end": 145,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 264,
+    "end": 278,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 300,
+    "end": 310,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 397,
+    "end": 407,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 533,
+    "end": 535,
+    "confidence": 0.9963237047195435
+   },
+   {
+    "type": "URL",
+    "start": 536,
+    "end": 567,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-4": [
+   {
+    "type": "ORG",
+    "start": 8,
+    "end": 18,
+    "confidence": 0.44058120250701904
+   },
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 75,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 108,
+    "end": 132,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 140,
+    "end": 152,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 268,
+    "end": 280,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 302,
+    "end": 312,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 400,
+    "end": 412,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 545,
+    "end": 578,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-5": [
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 80,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 108,
+    "end": 124,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 132,
+    "end": 146,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 254,
+    "end": 268,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 290,
+    "end": 300,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 387,
+    "end": 401,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 528,
+    "end": 563,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-6": [
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 79,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 113,
+    "end": 140,
+    "confidence": 1
+   },
+   {
+    "type": "AADHAAR",
+    "start": 149,
+    "end": 162,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 277,
+    "end": 291,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 313,
+    "end": 323,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 412,
+    "end": 425,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 558,
+    "end": 592,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-7": [
+   {
+    "type": "DATE",
+    "start": 64,
+    "end": 78,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 111,
+    "end": 137,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 145,
+    "end": 159,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 268,
+    "end": 282,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 304,
+    "end": 312,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 400,
+    "end": 410,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 530,
+    "end": 540,
+    "confidence": 0.9666312336921692
+   },
+   {
+    "type": "URL",
+    "start": 544,
+    "end": 570,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d2-8": [
+   {
+    "type": "DATE",
+    "start": 59,
+    "end": 72,
+    "confidence": 0.6
+   },
+   {
+    "type": "EMAIL",
+    "start": 103,
+    "end": 127,
+    "confidence": 1
+   },
+   {
+    "type": "PHONE",
+    "start": 135,
+    "end": 147,
+    "confidence": 0.85
+   },
+   {
+    "type": "IP",
+    "start": 264,
+    "end": 277,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 299,
+    "end": 311,
+    "confidence": 0.6
+   },
+   {
+    "type": "PHONE",
+    "start": 398,
+    "end": 408,
+    "confidence": 0.85
+   },
+   {
+    "type": "URL",
+    "start": 535,
+    "end": 569,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-1": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 53,
+    "confidence": 0.9931507706642151
+   },
+   {
+    "type": "DATE",
+    "start": 60,
+    "end": 76,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 78,
+    "end": 84,
+    "confidence": 0.9498986601829529
+   },
+   {
+    "type": "PERSON",
+    "start": 114,
+    "end": 119,
+    "confidence": 0.9971274137496948
+   },
+   {
+    "type": "PERSON",
+    "start": 148,
+    "end": 153,
+    "confidence": 0.998141884803772
+   },
+   {
+    "type": "MONEY",
+    "start": 171,
+    "end": 181,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 208,
+    "end": 218,
+    "confidence": 0.9873349070549011
+   },
+   {
+    "type": "LOC",
+    "start": 223,
+    "end": 231,
+    "confidence": 0.9979689121246338
+   },
+   {
+    "type": "PERSON",
+    "start": 233,
+    "end": 239,
+    "confidence": 0.9897510409355164
+   },
+   {
+    "type": "PERSON",
+    "start": 281,
+    "end": 287,
+    "confidence": 0.9981369376182556
+   },
+   {
+    "type": "PERSON",
+    "start": 289,
+    "end": 294,
+    "confidence": 0.9984666109085083
+   },
+   {
+    "type": "PHONE",
+    "start": 330,
+    "end": 344,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 346,
+    "end": 352,
+    "confidence": 0.9967457056045532
+   },
+   {
+    "type": "ORG",
+    "start": 375,
+    "end": 403,
+    "confidence": 0.9934499263763428
+   },
+   {
+    "type": "ORG",
+    "start": 419,
+    "end": 432,
+    "confidence": 0.7894956469535828
+   },
+   {
+    "type": "DATE",
+    "start": 457,
+    "end": 465,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 467,
+    "end": 473,
+    "confidence": 0.8683327436447144
+   },
+   {
+    "type": "PERSON",
+    "start": 489,
+    "end": 495,
+    "confidence": 0.9983120560646057
+   },
+   {
+    "type": "PERSON",
+    "start": 518,
+    "end": 523,
+    "confidence": 0.9966235160827637
+   },
+   {
+    "type": "EMAIL",
+    "start": 537,
+    "end": 559,
+    "confidence": 0.6
+   }
+  ],
+  "ch_d3-2": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 53,
+    "confidence": 0.987054169178009
+   },
+   {
+    "type": "DATE",
+    "start": 60,
+    "end": 74,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 76,
+    "end": 80,
+    "confidence": 0.9890329241752625
+   },
+   {
+    "type": "PERSON",
+    "start": 110,
+    "end": 115,
+    "confidence": 0.9971157312393188
+   },
+   {
+    "type": "PERSON",
+    "start": 144,
+    "end": 149,
+    "confidence": 0.9972911477088928
+   },
+   {
+    "type": "MONEY",
+    "start": 167,
+    "end": 173,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 200,
+    "end": 206,
+    "confidence": 0.9324209094047546
+   },
+   {
+    "type": "LOC",
+    "start": 211,
+    "end": 217,
+    "confidence": 0.9974668025970459
+   },
+   {
+    "type": "PERSON",
+    "start": 219,
+    "end": 223,
+    "confidence": 0.9953348636627197
+   },
+   {
+    "type": "PERSON",
+    "start": 261,
+    "end": 263,
+    "confidence": 0.9951452612876892
+   },
+   {
+    "type": "PERSON",
+    "start": 265,
+    "end": 270,
+    "confidence": 0.5073282718658447
+   },
+   {
+    "type": "PERSON",
+    "start": 272,
+    "end": 277,
+    "confidence": 0.9981762170791626
+   },
+   {
+    "type": "PHONE",
+    "start": 313,
+    "end": 328,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 330,
+    "end": 339,
+    "confidence": 0.9950463175773621
+   },
+   {
+    "type": "ORG",
+    "start": 362,
+    "end": 389,
+    "confidence": 0.996944785118103
+   },
+   {
+    "type": "LOC",
+    "start": 405,
+    "end": 415,
+    "confidence": 0.9910537600517273
+   },
+   {
+    "type": "DATE",
+    "start": 440,
+    "end": 450,
+    "confidence": 0.6
+   },
+   {
+    "type": "URL",
+    "start": 531,
+    "end": 561,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-3": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 43,
+    "confidence": 0.7765277028083801
+   },
+   {
+    "type": "DATE",
+    "start": 50,
+    "end": 63,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 65,
+    "end": 69,
+    "confidence": 0.7868576645851135
+   },
+   {
+    "type": "PERSON",
+    "start": 99,
+    "end": 106,
+    "confidence": 0.9749156832695007
+   },
+   {
+    "type": "PERSON",
+    "start": 135,
+    "end": 142,
+    "confidence": 0.9886471629142761
+   },
+   {
+    "type": "MONEY",
+    "start": 160,
+    "end": 169,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 196,
+    "end": 201,
+    "confidence": 0.9973776340484619
+   },
+   {
+    "type": "LOC",
+    "start": 206,
+    "end": 217,
+    "confidence": 0.9949001669883728
+   },
+   {
+    "type": "PERSON",
+    "start": 219,
+    "end": 223,
+    "confidence": 0.6786218285560608
+   },
+   {
+    "type": "PERSON",
+    "start": 265,
+    "end": 271,
+    "confidence": 0.9880369901657104
+   },
+   {
+    "type": "PERSON",
+    "start": 273,
+    "end": 280,
+    "confidence": 0.9859232306480408
+   },
+   {
+    "type": "PHONE",
+    "start": 316,
+    "end": 330,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 332,
+    "end": 338,
+    "confidence": 0.9925720691680908
+   },
+   {
+    "type": "ORG",
+    "start": 361,
+    "end": 390,
+    "confidence": 0.9966237545013428
+   },
+   {
+    "type": "LOC",
+    "start": 406,
+    "end": 417,
+    "confidence": 0.9858555197715759
+   },
+   {
+    "type": "DATE",
+    "start": 442,
+    "end": 452,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 474,
+    "end": 480,
+    "confidence": 0.9933584928512573
+   },
+   {
+    "type": "PERSON",
+    "start": 503,
+    "end": 510,
+    "confidence": 0.940972089767456
+   },
+   {
+    "type": "URL",
+    "start": 532,
+    "end": 572,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-4": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 53,
+    "confidence": 0.9969198107719421
+   },
+   {
+    "type": "DATE",
+    "start": 60,
+    "end": 71,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 168,
+    "end": 182,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 230,
+    "end": 236,
+    "confidence": 0.9701711535453796
+   },
+   {
+    "type": "PHONE",
+    "start": 339,
+    "end": 349,
+    "confidence": 0.85
+   },
+   {
+    "type": "DATE",
+    "start": 449,
+    "end": 465,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 516,
+    "end": 522,
+    "confidence": 0.9948868155479431
+   },
+   {
+    "type": "URL",
+    "start": 544,
+    "end": 578,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-5": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 50,
+    "confidence": 0.9973998665809631
+   },
+   {
+    "type": "DATE",
+    "start": 57,
+    "end": 75,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 173,
+    "end": 180,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 207,
+    "end": 220,
+    "confidence": 0.9942852258682251
+   },
+   {
+    "type": "LOC",
+    "start": 225,
+    "end": 231,
+    "confidence": 0.9985535144805908
+   },
+   {
+    "type": "PHONE",
+    "start": 333,
+    "end": 346,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 376,
+    "end": 400,
+    "confidence": 0.9972966909408569
+   },
+   {
+    "type": "ORG",
+    "start": 416,
+    "end": 421,
+    "confidence": 0.9791848659515381
+   },
+   {
+    "type": "DATE",
+    "start": 446,
+    "end": 454,
+    "confidence": 0.6
+   },
+   {
+    "type": "URL",
+    "start": 535,
+    "end": 565,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-6": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 50,
+    "confidence": 0.9918348789215088
+   },
+   {
+    "type": "DATE",
+    "start": 57,
+    "end": 73,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 75,
+    "end": 83,
+    "confidence": 0.9863266944885254
+   },
+   {
+    "type": "MONEY",
+    "start": 168,
+    "end": 176,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 203,
+    "end": 208,
+    "confidence": 0.9962427020072937
+   },
+   {
+    "type": "LOC",
+    "start": 213,
+    "end": 223,
+    "confidence": 0.9964527487754822
+   },
+   {
+    "type": "PERSON",
+    "start": 225,
+    "end": 233,
+    "confidence": 0.9485118985176086
+   },
+   {
+    "type": "PERSON",
+    "start": 275,
+    "end": 287,
+    "confidence": 0.9978532195091248
+   },
+   {
+    "type": "PHONE",
+    "start": 329,
+    "end": 343,
+    "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 345,
+    "end": 349,
+    "confidence": 0.994964063167572
+   },
+   {
+    "type": "ORG",
+    "start": 372,
+    "end": 392,
+    "confidence": 0.9721660017967224
+   },
+   {
+    "type": "LOC",
+    "start": 408,
+    "end": 416,
+    "confidence": 0.9861863851547241
+   },
+   {
+    "type": "DATE",
+    "start": 441,
+    "end": 458,
+    "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 460,
+    "end": 468,
+    "confidence": 0.7900029420852661
+   },
+   {
+    "type": "PERSON",
+    "start": 484,
+    "end": 488,
+    "confidence": 0.9982388019561768
+   },
+   {
+    "type": "URL",
+    "start": 537,
+    "end": 572,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-7": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 51,
+    "confidence": 0.9918986558914185
+   },
+   {
+    "type": "DATE",
+    "start": 58,
+    "end": 74,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 171,
+    "end": 182,
+    "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 209,
+    "end": 215,
+    "confidence": 0.9982047080993652
+   },
+   {
+    "type": "LOC",
+    "start": 220,
+    "end": 228,
+    "confidence": 0.9983438849449158
+   },
+   {
+    "type": "PHONE",
+    "start": 336,
+    "end": 350,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 382,
+    "end": 410,
+    "confidence": 0.9946134090423584
+   },
+   {
+    "type": "LOC",
+    "start": 426,
+    "end": 435,
+    "confidence": 0.9950254559516907
+   },
+   {
+    "type": "DATE",
+    "start": 460,
+    "end": 470,
+    "confidence": 0.6
+   },
+   {
+    "type": "URL",
+    "start": 552,
+    "end": 589,
+    "confidence": 0.95
+   }
+  ],
+  "ch_d3-8": [
+   {
+    "type": "ORG",
+    "start": 26,
+    "end": 50,
+    "confidence": 0.9937570095062256
+   },
+   {
+    "type": "DATE",
+    "start": 57,
+    "end": 74,
+    "confidence": 0.6
+   },
+   {
+    "type": "MONEY",
+    "start": 168,
+    "end": 177,
+    "confidence": 0.7
+   },
+   {
+    "type": "LOC",
+    "start": 204,
+    "end": 214,
+    "confidence": 0.9868442416191101
+   },
+   {
+    "type": "LOC",
+    "start": 219,
+    "end": 224,
+    "confidence": 0.9953586459159851
+   },
+   {
+    "type": "PHONE",
+    "start": 323,
+    "end": 334,
+    "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 366,
+    "end": 387,
+    "confidence": 0.9954447150230408
+   },
+   {
+    "type": "DATE",
+    "start": 437,
+    "end": 453,
+    "confidence": 0.6
+   },
+   {
+    "type": "URL",
+    "start": 533,
+    "end": 564,
+    "confidence": 0.95
+   }
+  ]
+ },
+ "summary": {
+  "documents": 72,
+  "truthTotal": 1200,
+  "fullyMasked": 726,
+  "typeCorrectFullyMasked": 699,
+  "partlyMasked": 21,
+  "missed": 453,
+  "recall": {
+   "num": 726,
+   "den": 1200,
+   "pct": 0.605,
+   "lo": 0.5770477355690989,
+   "hi": 0.6322821297553757
+  },
+  "typeCorrectRecall": {
+   "num": 699,
+   "den": 1200,
+   "pct": 0.5825,
+   "lo": 0.5543776383889685,
+   "hi": 0.6100958272231187
+  },
+  "leakDocs": {
+   "num": 66,
+   "den": 72,
+   "pct": 0.9166666666666666,
+   "lo": 0.8298744472876599,
+   "hi": 0.9612481028695096
+  },
+  "detections": {
+   "total": 878,
+   "true": 708,
+   "mismatch": 45,
+   "falsePositive": 125
+  },
+  "precision": {
+   "num": 708,
+   "den": 833,
+   "pct": 0.8499399759903962,
+   "lo": 0.8240833019753441,
+   "hi": 0.8725837853205075
+  },
+  "mismatchPairs": {
+   "AADHAAR -> BANK_ACCOUNT": 1,
+   "AADHAAR -> PHONE": 4,
+   "EMAIL -> URL": 2,
+   "LOC -> PERSON": 5,
+   "ORG -> LOC": 4,
+   "ORG -> PERSON": 25,
+   "PERSON -> LOC": 1,
+   "PERSON -> ORG": 2,
+   "PHONE -> BANK_ACCOUNT": 1
+  },
+  "negHits": {
+   "ticket": {
+    "total": 16,
+    "touched": 1,
+    "detections": 1
+   },
+   "invoice": {
+    "total": 16,
+    "touched": 0,
+    "detections": 0
+   },
+   "order": {
+    "total": 24,
+    "touched": 0,
+    "detections": 0
+   },
+   "ref": {
+    "total": 8,
+    "touched": 0,
+    "detections": 0
+   },
+   "version": {
+    "total": 8,
+    "touched": 0,
+    "detections": 0
+   }
+  },
+  "recallBy": {
+   "type": {
+    "AADHAAR": {
+     "total": 8,
+     "full": 8,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     }
+    },
+    "BANK_ACCOUNT": {
+     "total": 16,
+     "full": 16,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 14,
+      "den": 16,
+      "pct": 0.875,
+      "lo": 0.6397666856325173,
+      "hi": 0.9650232506629428
+     }
+    },
+    "DATE": {
+     "total": 96,
+     "full": 96,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 96,
+      "den": 96,
+      "pct": 1,
+      "lo": 0.9615230525151842,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 96,
+      "den": 96,
+      "pct": 1,
+      "lo": 0.9615230525151842,
+      "hi": 1
+     }
+    },
+    "EMAIL": {
+     "total": 80,
+     "full": 80,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 80,
+      "den": 80,
+      "pct": 1,
+      "lo": 0.954180263735425,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 80,
+      "den": 80,
+      "pct": 1,
+      "lo": 0.954180263735425,
+      "hi": 1
+     }
+    },
+    "GSTIN": {
+     "total": 16,
+     "full": 16,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "IFSC": {
+     "total": 16,
+     "full": 16,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "IP": {
+     "total": 8,
+     "full": 8,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     }
+    },
+    "LOC": {
+     "total": 176,
+     "full": 66,
+     "partial": 2,
+     "missed": 108,
+     "recall": {
+      "num": 66,
+      "den": 176,
+      "pct": 0.375,
+      "lo": 0.3068632166372529,
+      "hi": 0.44847703834268493
+     },
+     "typeCorrect": {
+      "num": 62,
+      "den": 176,
+      "pct": 0.3522727272727273,
+      "lo": 0.2855423977663727,
+      "hi": 0.4253142672099175
+     }
+    },
+    "MONEY": {
+     "total": 48,
+     "full": 48,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 48,
+      "den": 48,
+      "pct": 1,
+      "lo": 0.9258973488472576,
+      "hi": 0.9999999999999999
+     },
+     "typeCorrect": {
+      "num": 48,
+      "den": 48,
+      "pct": 1,
+      "lo": 0.9258973488472576,
+      "hi": 0.9999999999999999
+     }
+    },
+    "ORG": {
+     "total": 168,
+     "full": 42,
+     "partial": 3,
+     "missed": 123,
+     "recall": {
+      "num": 42,
+      "den": 168,
+      "pct": 0.25,
+      "lo": 0.1906051286908763,
+      "hi": 0.32057260708439583
+     },
+     "typeCorrect": {
+      "num": 42,
+      "den": 168,
+      "pct": 0.25,
+      "lo": 0.1906051286908763,
+      "hi": 0.32057260708439583
+     }
+    },
+    "PAN": {
+     "total": 24,
+     "full": 24,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 24,
+      "den": 24,
+      "pct": 1,
+      "lo": 0.8620194241710247,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 24,
+      "den": 24,
+      "pct": 1,
+      "lo": 0.8620194241710247,
+      "hi": 1
+     }
+    },
+    "PERSON": {
+     "total": 352,
+     "full": 117,
+     "partial": 13,
+     "missed": 222,
+     "recall": {
+      "num": 117,
+      "den": 352,
+      "pct": 0.33238636363636365,
+      "lo": 0.285217048253224,
+      "hi": 0.38317473056072016
+     },
+     "typeCorrect": {
+      "num": 99,
+      "den": 352,
+      "pct": 0.28125,
+      "lo": 0.2368362259252726,
+      "hi": 0.33038694303529864
+     }
+    },
+    "PHONE": {
+     "total": 96,
+     "full": 93,
+     "partial": 3,
+     "missed": 0,
+     "recall": {
+      "num": 93,
+      "den": 96,
+      "pct": 0.96875,
+      "lo": 0.9121117385108631,
+      "hi": 0.989316123222122
+     },
+     "typeCorrect": {
+      "num": 92,
+      "den": 96,
+      "pct": 0.9583333333333334,
+      "lo": 0.8977165749246647,
+      "hi": 0.9836795565475875
+     }
+    },
+    "PIN": {
+     "total": 32,
+     "full": 32,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 32,
+      "den": 32,
+      "pct": 1,
+      "lo": 0.8928172849426366,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 32,
+      "den": 32,
+      "pct": 1,
+      "lo": 0.8928172849426366,
+      "hi": 1
+     }
+    },
+    "UPI": {
+     "total": 16,
+     "full": 16,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "URL": {
+     "total": 48,
+     "full": 48,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 48,
+      "den": 48,
+      "pct": 1,
+      "lo": 0.9258973488472576,
+      "hi": 0.9999999999999999
+     },
+     "typeCorrect": {
+      "num": 46,
+      "den": 48,
+      "pct": 0.9583333333333334,
+      "lo": 0.8602408885222853,
+      "hi": 0.9884983479210344
+     }
+    }
+   },
+   "preset": {
+    "chats": {
+     "total": 344,
+     "full": 214,
+     "partial": 1,
+     "missed": 129,
+     "recall": {
+      "num": 214,
+      "den": 344,
+      "pct": 0.622093023255814,
+      "lo": 0.569771937820657,
+      "hi": 0.6717172917597037
+     },
+     "typeCorrect": {
+      "num": 209,
+      "den": 344,
+      "pct": 0.6075581395348837,
+      "lo": 0.5550412059190558,
+      "hi": 0.6576993058541191
+     }
+    },
+    "emails": {
+     "total": 400,
+     "full": 308,
+     "partial": 6,
+     "missed": 86,
+     "recall": {
+      "num": 308,
+      "den": 400,
+      "pct": 0.77,
+      "lo": 0.7263063466698358,
+      "hi": 0.8085568274063366
+     },
+     "typeCorrect": {
+      "num": 297,
+      "den": 400,
+      "pct": 0.7425,
+      "lo": 0.6974839488186009,
+      "hi": 0.7829024204905541
+     }
+    },
+    "resumes": {
+     "total": 456,
+     "full": 204,
+     "partial": 14,
+     "missed": 238,
+     "recall": {
+      "num": 204,
+      "den": 456,
+      "pct": 0.4473684210526316,
+      "lo": 0.4023592773208458,
+      "hi": 0.4932569522677777
+     },
+     "typeCorrect": {
+      "num": 193,
+      "den": 456,
+      "pct": 0.4232456140350877,
+      "lo": 0.3787233534110568,
+      "hi": 0.46905031473901926
+     }
+    }
+   },
+   "personPattern": {
+    "full": {
+     "total": 112,
+     "full": 39,
+     "partial": 13,
+     "missed": 60,
+     "recall": {
+      "num": 39,
+      "den": 112,
+      "pct": 0.3482142857142857,
+      "lo": 0.26634598320951786,
+      "hi": 0.4401497834235397
+     },
+     "typeCorrect": {
+      "num": 29,
+      "den": 112,
+      "pct": 0.25892857142857145,
+      "lo": 0.18675273129699618,
+      "hi": 0.34709348629668346
+     }
+    },
+    "honorific": {
+     "total": 40,
+     "full": 11,
+     "partial": 0,
+     "missed": 29,
+     "recall": {
+      "num": 11,
+      "den": 40,
+      "pct": 0.275,
+      "lo": 0.1610785343314309,
+      "hi": 0.4283525083312457
+     },
+     "typeCorrect": {
+      "num": 10,
+      "den": 40,
+      "pct": 0.25,
+      "lo": 0.14186967895549518,
+      "hi": 0.40194259066970106
+     }
+    },
+    "initials_first": {
+     "total": 8,
+     "full": 0,
+     "partial": 0,
+     "missed": 8,
+     "recall": {
+      "num": 0,
+      "den": 8,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.3244156195108769
+     },
+     "typeCorrect": {
+      "num": 0,
+      "den": 8,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.3244156195108769
+     }
+    },
+    "initials_last": {
+     "total": 8,
+     "full": 8,
+     "partial": 0,
+     "missed": 0,
+     "recall": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     },
+     "typeCorrect": {
+      "num": 3,
+      "den": 8,
+      "pct": 0.375,
+      "lo": 0.13684175946152105,
+      "hi": 0.6942621454161981
+     }
+    },
+    "multipart": {
+     "total": 8,
+     "full": 0,
+     "partial": 0,
+     "missed": 8,
+     "recall": {
+      "num": 0,
+      "den": 8,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.3244156195108769
+     },
+     "typeCorrect": {
+      "num": 0,
+      "den": 8,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.3244156195108769
+     }
+    },
+    "single": {
+     "total": 176,
+     "full": 59,
+     "partial": 0,
+     "missed": 117,
+     "recall": {
+      "num": 59,
+      "den": 176,
+      "pct": 0.3352272727272727,
+      "lo": 0.2696623239089698,
+      "hi": 0.40783164856458454
+     },
+     "typeCorrect": {
+      "num": 57,
+      "den": 176,
+      "pct": 0.32386363636363635,
+      "lo": 0.25913005710926834,
+      "hi": 0.39612212036246225
+     }
+    }
+   },
+   "caseStyle": {
+    "lower": {
+     "total": 51,
+     "full": 0,
+     "partial": 0,
+     "missed": 51,
+     "recall": {
+      "num": 0,
+      "den": 51,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.07004901388726806
+     },
+     "typeCorrect": {
+      "num": 0,
+      "den": 51,
+      "pct": 0,
+      "lo": 0,
+      "hi": 0.07004901388726806
+     }
+    },
+    "title": {
+     "total": 274,
+     "full": 107,
+     "partial": 12,
+     "missed": 155,
+     "recall": {
+      "num": 107,
+      "den": 274,
+      "pct": 0.3905109489051095,
+      "lo": 0.33463851616515305,
+      "hi": 0.4494111005949002
+     },
+     "typeCorrect": {
+      "num": 92,
+      "den": 274,
+      "pct": 0.3357664233576642,
+      "lo": 0.2824596770852912,
+      "hi": 0.3936147480547886
+     }
+    },
+    "upper": {
+     "total": 27,
+     "full": 10,
+     "partial": 1,
+     "missed": 16,
+     "recall": {
+      "num": 10,
+      "den": 27,
+      "pct": 0.37037037037037035,
+      "lo": 0.21532287067936856,
+      "hi": 0.5577109537655369
+     },
+     "typeCorrect": {
+      "num": 7,
+      "den": 27,
+      "pct": 0.25925925925925924,
+      "lo": 0.13170208422866778,
+      "hi": 0.4467893040261568
+     }
+    }
+   }
+  },
+  "leakBy": {
+   "preset": {
+    "chats": {
+     "num": 23,
+     "den": 24,
+     "pct": 0.9583333333333334,
+     "lo": 0.7975777375115778,
+     "hi": 0.992606734645195
+    },
+    "emails": {
+     "num": 19,
+     "den": 24,
+     "pct": 0.7916666666666666,
+     "lo": 0.5952915551476452,
+     "hi": 0.9075531089521192
+    },
+    "resumes": {
+     "num": 24,
+     "den": 24,
+     "pct": 1,
+     "lo": 0.8620194241710247,
+     "hi": 1
+    }
+   }
+  },
+  "precisionBy": {
+   "type": {
+    "AADHAAR": {
+     "detections": 13,
+     "true": 8,
+     "mismatch": 5,
+     "falsePositive": 0,
+     "precision": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     }
+    },
+    "BANK_ACCOUNT": {
+     "detections": 14,
+     "true": 14,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 14,
+      "den": 14,
+      "pct": 1,
+      "lo": 0.7846829880728186,
+      "hi": 1
+     }
+    },
+    "DATE": {
+     "detections": 144,
+     "true": 96,
+     "mismatch": 0,
+     "falsePositive": 48,
+     "precision": {
+      "num": 96,
+      "den": 144,
+      "pct": 0.6666666666666666,
+      "lo": 0.5862234638042094,
+      "hi": 0.7384483471069279
+     }
+    },
+    "EMAIL": {
+     "detections": 82,
+     "true": 80,
+     "mismatch": 2,
+     "falsePositive": 0,
+     "precision": {
+      "num": 80,
+      "den": 80,
+      "pct": 1,
+      "lo": 0.954180263735425,
+      "hi": 1
+     }
+    },
+    "GSTIN": {
+     "detections": 16,
+     "true": 16,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "IFSC": {
+     "detections": 16,
+     "true": 16,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "IP": {
+     "detections": 8,
+     "true": 8,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 8,
+      "den": 8,
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
+     }
+    },
+    "LOC": {
+     "detections": 95,
+     "true": 63,
+     "mismatch": 5,
+     "falsePositive": 27,
+     "precision": {
+      "num": 63,
+      "den": 90,
+      "pct": 0.7,
+      "lo": 0.598732953143893,
+      "hi": 0.7848922194874346
+     }
+    },
+    "MONEY": {
+     "detections": 48,
+     "true": 48,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 48,
+      "den": 48,
+      "pct": 1,
+      "lo": 0.9258973488472576,
+      "hi": 0.9999999999999999
+     }
+    },
+    "ORG": {
+     "detections": 109,
+     "true": 43,
+     "mismatch": 29,
+     "falsePositive": 37,
+     "precision": {
+      "num": 43,
+      "den": 80,
+      "pct": 0.5375,
+      "lo": 0.4290416436680269,
+      "hi": 0.6425218761121299
+     }
+    },
+    "PAN": {
+     "detections": 24,
+     "true": 24,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 24,
+      "den": 24,
+      "pct": 1,
+      "lo": 0.8620194241710247,
+      "hi": 1
+     }
+    },
+    "PERSON": {
+     "detections": 122,
+     "true": 106,
+     "mismatch": 3,
+     "falsePositive": 13,
+     "precision": {
+      "num": 106,
+      "den": 119,
+      "pct": 0.8907563025210085,
+      "lo": 0.8220343172040586,
+      "hi": 0.9350382054592737
+     }
+    },
+    "PHONE": {
+     "detections": 93,
+     "true": 92,
+     "mismatch": 1,
+     "falsePositive": 0,
+     "precision": {
+      "num": 92,
+      "den": 92,
+      "pct": 1,
+      "lo": 0.9599171967079014,
+      "hi": 1
+     }
+    },
+    "PIN": {
+     "detections": 32,
+     "true": 32,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 32,
+      "den": 32,
+      "pct": 1,
+      "lo": 0.8928172849426366,
+      "hi": 1
+     }
+    },
+    "UPI": {
+     "detections": 16,
+     "true": 16,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 16,
+      "den": 16,
+      "pct": 1,
+      "lo": 0.8063865817272802,
+      "hi": 1
+     }
+    },
+    "URL": {
+     "detections": 46,
+     "true": 46,
+     "mismatch": 0,
+     "falsePositive": 0,
+     "precision": {
+      "num": 46,
+      "den": 46,
+      "pct": 1,
+      "lo": 0.9229238226702192,
+      "hi": 1
+     }
+    }
+   },
+   "preset": {
+    "chats": {
+     "detections": 268,
+     "true": 209,
+     "mismatch": 6,
+     "falsePositive": 53,
+     "precision": {
+      "num": 209,
+      "den": 262,
+      "pct": 0.7977099236641222,
+      "lo": 0.7449268583374264,
+      "hi": 0.8418887491521463
+     }
+    },
+    "emails": {
+     "detections": 364,
+     "true": 302,
+     "mismatch": 16,
+     "falsePositive": 46,
+     "precision": {
+      "num": 302,
+      "den": 348,
+      "pct": 0.867816091954023,
+      "lo": 0.8281825263088469,
+      "hi": 0.8994176210301827
+     }
+    },
+    "resumes": {
+     "detections": 246,
+     "true": 197,
+     "mismatch": 23,
+     "falsePositive": 26,
+     "precision": {
+      "num": 197,
+      "den": 223,
+      "pct": 0.8834080717488789,
+      "lo": 0.8346485464294113,
+      "hi": 0.9191814388995583
+     }
+    }
+   }
+  },
+  "mismatches": [
+   {
+    "docId": "res_d1-1",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Kamala"
+   },
+   {
+    "docId": "res_d1-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Thakur\nPlot"
+   },
+   {
+    "docId": "res_d1-1",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Thakur"
+   },
+   {
+    "docId": "res_d1-2",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Kulkarni"
+   },
+   {
+    "docId": "res_d1-3",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Anitha"
+   },
+   {
+    "docId": "res_d1-4",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "VARGHESE"
+   },
+   {
+    "docId": "res_d1-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Chinmay Thomas\nFlat"
+   },
+   {
+    "docId": "res_d1-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Chinmay Thomas"
+   },
+   {
+    "docId": "res_d1-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Jyoti Bora\nFlat"
+   },
+   {
+    "docId": "res_d1-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Bora"
+   },
+   {
+    "docId": "res_d1-8",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Fernandes"
+   },
+   {
+    "docId": "res_d2-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Lalit N"
+   },
+   {
+    "docId": "res_d2-2",
+    "detected": "PERSON",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Powai"
+   },
+   {
+    "docId": "res_d2-3",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Analyst\nSalt Lake"
+   },
+   {
+    "docId": "res_d2-4",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Gaurav J"
+   },
+   {
+    "docId": "res_d2-5",
+    "detected": "AADHAAR",
+    "truthTypes": [
+     "PHONE"
+    ],
+    "value": "91-8153084236"
+   },
+   {
+    "docId": "res_d2-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Karthik D"
+   },
+   {
+    "docId": "res_d2-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "HSR"
+   },
+   {
+    "docId": "res_d2-7",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "IMRAN M"
+   },
+   {
+    "docId": "res_d2-8",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Anitha R"
+   },
+   {
+    "docId": "res_d3-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Karthik Shinde"
+   },
+   {
+    "docId": "res_d3-6",
+    "detected": "PERSON",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "Kaveri"
+   },
+   {
+    "docId": "res_d3-7",
+    "detected": "AADHAAR",
+    "truthTypes": [
+     "PHONE"
+    ],
+    "value": "91-6400244792"
+   },
+   {
+    "docId": "em_d1-5",
+    "detected": "AADHAAR",
+    "truthTypes": [
+     "PHONE"
+    ],
+    "value": "91-71633-71897"
+   },
+   {
+    "docId": "em_d2-4",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "JOSEPH"
+   },
+   {
+    "docId": "em_d2-5",
+    "detected": "PERSON",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "Pvt"
+   },
+   {
+    "docId": "em_d2-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Faisal"
+   },
+   {
+    "docId": "em_d2-8",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Jha"
+   },
+   {
+    "docId": "em_d3-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Venkatesh Reddy\nProcurement"
+   },
+   {
+    "docId": "em_d3-2",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Gill"
+   },
+   {
+    "docId": "em_d3-2",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Joseph Jha\nProcurement"
+   },
+   {
+    "docId": "em_d3-3",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Neha Bhat\nProcurement"
+   },
+   {
+    "docId": "em_d3-4",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Lalit Kamath\nProcurement"
+   },
+   {
+    "docId": "em_d3-5",
+    "detected": "PHONE",
+    "truthTypes": [
+     "BANK_ACCOUNT"
+    ],
+    "value": "6781312869"
+   },
+   {
+    "docId": "em_d3-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Zainab Fernandes"
+   },
+   {
+    "docId": "em_d3-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "BHASKAR AGARWAL\nProcurement"
+   },
+   {
+    "docId": "em_d3-7",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Deepa"
+   },
+   {
+    "docId": "em_d3-8",
+    "detected": "AADHAAR",
+    "truthTypes": [
+     "BANK_ACCOUNT"
+    ],
+    "value": "881626205089"
+   },
+   {
+    "docId": "em_d3-8",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Simran"
+   },
+   {
+    "docId": "ch_d1-4",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Vikram"
+   },
+   {
+    "docId": "ch_d2-2",
+    "detected": "EMAIL",
+    "truthTypes": [
+     "URL"
+    ],
+    "value": "screenshot at www.indus.in"
+   },
+   {
+    "docId": "ch_d2-6",
+    "detected": "AADHAAR",
+    "truthTypes": [
+     "PHONE"
+    ],
+    "value": "91-9486368959"
+   },
+   {
+    "docId": "ch_d3-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Jubilee Hills"
+   },
+   {
+    "docId": "ch_d3-1",
+    "detected": "EMAIL",
+    "truthTypes": [
+     "URL"
+    ],
+    "value": "deck at www.sunrise.in"
+   },
+   {
+    "docId": "ch_d3-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Baner"
+   }
+  ],
+  "falsePositives": [
+   {
+    "docId": "res_d1-1",
+    "type": "LOC",
+    "value": "Old Airport Road"
+   },
+   {
+    "docId": "res_d1-1",
+    "type": "LOC",
+    "value": "Near Old Water Tank"
+   },
+   {
+    "docId": "res_d1-1",
+    "type": "ORG",
+    "value": "knowledge"
+   },
+   {
+    "docId": "res_d1-1",
+    "type": "ORG",
+    "value": "Place"
+   },
+   {
+    "docId": "res_d1-1",
+    "type": "ORG",
+    "value": "Date"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "ORG",
+    "value": "Flat"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "LOC",
+    "value": "Ring Road"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "LOC",
+    "value": "Near"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "LOC",
+    "value": "Lakeview Park"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "LOC",
+    "value": "No"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "LOC",
+    "value": "Ring Road"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "ORG",
+    "value": "Plot"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "Sector"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "Main Road"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "Old Water Tank"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "LOC",
+    "value": "Sector 9"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "LOC",
+    "value": "Main Road"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "LOC",
+    "value": "Lake View Road"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "LOC",
+    "value": "Near"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "LOC",
+    "value": "Rose Petal Cinema"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "ORG",
+    "value": "Plot"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "LOC",
+    "value": "Ring Road"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "ORG",
+    "value": "Place"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "ORG",
+    "value": "Date"
+   },
+   {
+    "docId": "res_d1-8",
+    "type": "LOC",
+    "value": "Cross Road 3"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "PERSON",
+    "value": "Seeking"
+   },
+   {
+    "docId": "em_d1-3",
+    "type": "ORG",
+    "value": "Axis Bank"
+   },
+   {
+    "docId": "em_d1-6",
+    "type": "ORG",
+    "value": "Bank of Baroda"
+   },
+   {
+    "docId": "em_d2-1",
+    "type": "PERSON",
+    "value": "Hi"
+   },
+   {
+    "docId": "em_d2-2",
+    "type": "PERSON",
+    "value": "delivery"
+   },
+   {
+    "docId": "em_d2-5",
+    "type": "PERSON",
+    "value": "Hi"
+   },
+   {
+    "docId": "em_d2-5",
+    "type": "ORG",
+    "value": "share"
+   },
+   {
+    "docId": "em_d2-6",
+    "type": "PERSON",
+    "value": "Hi"
+   },
+   {
+    "docId": "em_d2-7",
+    "type": "PERSON",
+    "value": "contact"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "ORG",
+    "value": "Vendor"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "PERSON",
+    "value": "Shri"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "LOC",
+    "value": "Flat 25"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "LOC",
+    "value": "Nehru Street"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "ORG",
+    "value": "Kotak Mahindra Bank"
+   },
+   {
+    "docId": "em_d3-1",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-2",
+    "type": "PERSON",
+    "value": "Shri"
+   },
+   {
+    "docId": "em_d3-2",
+    "type": "LOC",
+    "value": "Market Road"
+   },
+   {
+    "docId": "em_d3-2",
+    "type": "ORG",
+    "value": "Bank"
+   },
+   {
+    "docId": "em_d3-2",
+    "type": "ORG",
+    "value": "State Bank of India"
+   },
+   {
+    "docId": "em_d3-2",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-3",
+    "type": "ORG",
+    "value": "Vendor"
+   },
+   {
+    "docId": "em_d3-3",
+    "type": "LOC",
+    "value": "Old Airport Road"
+   },
+   {
+    "docId": "em_d3-3",
+    "type": "ORG",
+    "value": "Punjab National Bank"
+   },
+   {
+    "docId": "em_d3-3",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-4",
+    "type": "LOC",
+    "value": "Gandhi Marg"
+   },
+   {
+    "docId": "em_d3-4",
+    "type": "ORG",
+    "value": "State Bank of India"
+   },
+   {
+    "docId": "em_d3-4",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "ORG",
+    "value": "Vendor"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "LOC",
+    "value": "Sector"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "LOC",
+    "value": "Main Road"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "ORG",
+    "value": "Bank"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "ORG",
+    "value": "ICICI Bank"
+   },
+   {
+    "docId": "em_d3-5",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-6",
+    "type": "LOC",
+    "value": "Canal Road"
+   },
+   {
+    "docId": "em_d3-6",
+    "type": "ORG",
+    "value": "Punjab National Bank"
+   },
+   {
+    "docId": "em_d3-6",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "ORG",
+    "value": "Vendor"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "PERSON",
+    "value": "Smt"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "LOC",
+    "value": "Cross Road 3"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "ORG",
+    "value": "State Bank of India"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-7",
+    "type": "ORG",
+    "value": "Procurement"
+   },
+   {
+    "docId": "em_d3-8",
+    "type": "PERSON",
+    "value": "Er"
+   },
+   {
+    "docId": "em_d3-8",
+    "type": "LOC",
+    "value": "Cross Road 3"
+   },
+   {
+    "docId": "em_d3-8",
+    "type": "ORG",
+    "value": "Canara Bank"
+   },
+   {
+    "docId": "em_d3-8",
+    "type": "ORG",
+    "value": "IFSC"
+   },
+   {
+    "docId": "em_d3-8",
+    "type": "ORG",
+    "value": "Procurement"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-1",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-2",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-3",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-4",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-5",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-6",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-7",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d1-8",
+    "type": "DATE",
+    "value": "12/05/24"
+   },
+   {
+    "docId": "ch_d2-2",
+    "type": "ORG",
+    "value": "shared"
+   },
+   {
+    "docId": "ch_d2-3",
+    "type": "PERSON",
+    "value": "at"
+   },
+   {
+    "docId": "ch_d2-4",
+    "type": "ORG",
+    "value": "INC4210743"
+   },
+   {
+    "docId": "ch_d2-7",
+    "type": "PERSON",
+    "value": "screenshot"
+   },
+   {
+    "docId": "ch_d3-2",
+    "type": "PERSON",
+    "value": "Er"
+   }
+  ],
+  "worstMisses": [
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "kavita",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "ice bhej diya kya?\n[12/05/24, 10:43 am] ",
+    "after": ": haan, abhi mail kiya kavitasubramanian",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "kavita",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "manian@yahoo.co.in\n[12/05/24, 10:44 am] ",
+    "after": ": ok. pallavi ka number do na\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "pallavi",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": ".co.in\n[12/05/24, 10:44 am] kavita: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] so",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "vi ka number do na\n[12/05/24, 10:44 am] ",
+    "after": ": 62187-01918\n[12/05/24, 10:47 am] kavit",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "kavita",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "ourav: 62187-01918\n[12/05/24, 10:47 am] ",
+    "after": ": payment Rs.1,29,900 kal tak ho jayega,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": " UPI id vermaa@ybl\n[12/05/24, 10:48 am] ",
+    "after": ": done. order OD76454550 ka status check",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-2",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Rajesh",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "r.bora@yahoo.co.in\n[12/05/24, 10:44 am] ",
+    "after": ": ok. Venkatesh ka number do na\n[12/05/2",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "zoya",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "ice bhej diya kya?\n[12/05/24, 10:43 am] ",
+    "after": ": haan, abhi mail kiya dorjee.sourav@red",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "rav@rediffmail.com\n[12/05/24, 10:44 am] ",
+    "after": ": ok. nikhil ka number do na\n[12/05/24, ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "nikhil",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "il.com\n[12/05/24, 10:44 am] sourav: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] zo",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "zoya",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "il ka number do na\n[12/05/24, 10:44 am] ",
+    "after": ": 91 74645 85249\n[12/05/24, 10:47 am] so",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sourav",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "ya: 91 74645 85249\n[12/05/24, 10:47 am] ",
+    "after": ": payment ₹1,07,300 kal tak ho jayega, U",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "zoya",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "kavita.trivedi@ibl\n[12/05/24, 10:48 am] ",
+    "after": ": done. order OD84497826 ka status check",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-4",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Vikram",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "preet.patel@okaxis\n[12/05/24, 10:48 am] ",
+    "after": ": done. order ORD-6955699 ka status chec",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-5",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Amit",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-5",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Amit",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "ari@rediffmail.com\n[12/05/24, 10:44 am] ",
+    "after": ": ok. Jyoti ka number do na\n[12/05/24, 1",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-5",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Jyoti",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "mail.com\n[12/05/24, 10:44 am] Amit: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] Im",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-5",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Amit",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": " Imran: 6933921669\n[12/05/24, 10:47 am] ",
+    "after": ": payment ₹303,000 kal tak ho jayega, UP",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "shruti",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "abdul",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "ice bhej diya kya?\n[12/05/24, 10:43 am] ",
+    "after": ": haan, abhi mail kiya shruti23@gmail.co",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "shruti",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "shruti23@gmail.com\n[12/05/24, 10:44 am] ",
+    "after": ": ok. varun ka number do na\n[12/05/24, 1",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "varun",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "il.com\n[12/05/24, 10:44 am] shruti: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] ab",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "abdul",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "un ka number do na\n[12/05/24, 10:44 am] ",
+    "after": ": 8863220133\n[12/05/24, 10:47 am] shruti",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "shruti",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": " abdul: 8863220133\n[12/05/24, 10:47 am] ",
+    "after": ": payment Rs.4,74,100 kal tak ho jayega,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-6",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "abdul",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "id zainab20@okaxis\n[12/05/24, 10:48 am] ",
+    "after": ": done. order ORD-2124050 ka status chec",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Balaji",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Lakshmi",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": "ice bhej diya kya?\n[12/05/24, 10:43 am] ",
+    "after": ": haan, abhi mail kiya balaji.kapoor@yah",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Balaji",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "kapoor@yahoo.co.in\n[12/05/24, 10:44 am] ",
+    "after": ": ok. Tenzin ka number do na\n[12/05/24, ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Tenzin",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": ".co.in\n[12/05/24, 10:44 am] Balaji: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] La",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Lakshmi",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": "in ka number do na\n[12/05/24, 10:44 am] ",
+    "after": ": 9993948094\n[12/05/24, 10:47 am] Balaji",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-7",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Lakshmi",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": "PI id manoj921@ybl\n[12/05/24, 10:48 am] ",
+    "after": ": done. order SO-533758 ka status check ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-8",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Naveen",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "[12/05/24, 10:42 am] ",
+    "after": ": bhai invoice bhej diya kya?\n[12/05/24,",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-8",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Naveen",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "nverma@hotmail.com\n[12/05/24, 10:44 am] ",
+    "after": ": ok. Yamini ka number do na\n[12/05/24, ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-8",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Yamini",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "il.com\n[12/05/24, 10:44 am] Naveen: ok. ",
+    "after": " ka number do na\n[12/05/24, 10:44 am] Ad",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-8",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Naveen",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "tya: 91 6320214912\n[12/05/24, 10:47 am] ",
+    "after": ": payment ₹21 LPA kal tak ho jayega, UPI",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d1-8",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Aditya",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "UPI id iyers@paytm\n[12/05/24, 10:48 am] ",
+    "after": ": done. order SO-022877 ka status check ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "full",
+    "caseStyle": "title",
+    "value": "Ishita Deshpande",
+    "status": "missed",
+    "uncovered": "16 of 16 characters not covered",
+    "before": ": Open\nCreated: 23 March 2022\nCustomer: ",
+    "after": "\nEmail: ishitadeshpande@yahoo.co.in\nPhon",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-1",
+    "preset": "chats",
+    "type": "ORG",
+    "pattern": null,
+    "caseStyle": "n/a",
+    "value": "Tapestry Design Studio",
+    "status": "missed",
+    "uncovered": "22 of 22 characters not covered",
+    "before": "yahoo.co.in\nPhone: 06169607810\nCompany: ",
+    "after": "\n\nDescription:\nCustomer reports that the",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Ishita",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "8 is blocked. Customer asked us to call ",
+    "after": " back on 64689-21331.\n\nInternal notes:\nM",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "full",
+    "caseStyle": "title",
+    "value": "Mridul Bhat",
+    "status": "missed",
+    "uncovered": "11 of 11 characters not covered",
+    "before": "a back on 64689-21331.\n\nInternal notes:\n",
+    "after": " (L2 support): checked logs, version 6.2",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-1",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "initials_first",
+    "caseStyle": "title",
+    "value": "R. L. Bains",
+    "status": "missed",
+    "uncovered": "11 of 11 characters not covered",
+    "before": "ecked logs, version 6.2.9. Escalated to ",
+    "after": ".\nCustomer shared screenshot at https://",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-2",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "full",
+    "caseStyle": "title",
+    "value": "Anita Rao",
+    "status": "missed",
+    "uncovered": "9 of 9 characters not covered",
+    "before": "pen\nCreated: 20 January, 2025\nCustomer: ",
+    "after": "\nEmail: anita.rao@outlook.com\nPhone: 784",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-2",
+    "preset": "chats",
+    "type": "ORG",
+    "pattern": null,
+    "caseStyle": "n/a",
+    "value": "Anantha Constructions Pvt Ltd",
+    "status": "missed",
+    "uncovered": "29 of 29 characters not covered",
+    "before": "@outlook.com\nPhone: 7843870421\nCompany: ",
+    "after": "\n\nDescription:\nCustomer reports that the",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-2",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Anita",
+    "status": "missed",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "2 is blocked. Customer asked us to call ",
+    "after": " back on +91 64637 82084.\n\nInternal note",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-2",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "full",
+    "caseStyle": "title",
+    "value": "Kamala Patel",
+    "status": "missed",
+    "uncovered": "12 of 12 characters not covered",
+    "before": "ck on +91 64637 82084.\n\nInternal notes:\n",
+    "after": " (L2 support): checked logs, version 8.1",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-2",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "initials_first",
+    "caseStyle": "title",
+    "value": "S. Yadav",
+    "status": "missed",
+    "uncovered": "8 of 8 characters not covered",
+    "before": "cked logs, version 8.11.3. Escalated to ",
+    "after": ".\nCustomer shared screenshot at www.indu",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-3",
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "full",
+    "caseStyle": "title",
+    "value": "Arjun Pattanaik",
+    "status": "missed",
+    "uncovered": "15 of 15 characters not covered",
+    "before": "us: Open\nCreated: 5 June 2022\nCustomer: ",
+    "after": "\nEmail: arjun.p@proton.me\nPhone: 0630098",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d2-3",
+    "preset": "chats",
+    "type": "ORG",
+    "pattern": null,
+    "caseStyle": "n/a",
+    "value": "Quartz Mining Equipment Ltd",
+    "status": "missed",
+    "uncovered": "27 of 27 characters not covered",
+    "before": "p@proton.me\nPhone: 06300985589\nCompany: ",
+    "after": "\n\nDescription:\nCustomer reports that the",
+    "detectedAs": []
+   }
+  ]
+ }
+}
