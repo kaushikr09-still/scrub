@@ -1,14 +1,14 @@
 {
  "format": 1,
  "split": "dev",
- "runAt": "2026-10-12T16:59:47.684Z",
+ "runAt": "2026-10-12T18:17:29.669Z",
  "model": {
   "id": "Xenova/bert-base-NER",
   "dtype": "q8"
  },
  "documents": 72,
  "jsonlSha256": "d94d4873ad2753bb4fe246e6a17065753bbb2411bafe329f70e40bd5554c0ef3",
- "durationMs": 142321,
+ "durationMs": 127103,
  "detections": {
   "res_d1-1": [
    {
@@ -66,10 +66,70 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 246,
+    "end": 263,
+    "confidence": 0.6882452368736267
+   },
+   {
+    "type": "ORG",
+    "start": 268,
+    "end": 273,
+    "confidence": 0.9782077670097351
+   },
+   {
+    "type": "ORG",
+    "start": 322,
+    "end": 346,
+    "confidence": 0.997355580329895
+   },
+   {
+    "type": "LOC",
+    "start": 348,
+    "end": 366,
+    "confidence": 0.9931690096855164
+   },
+   {
+    "type": "PERSON",
+    "start": 438,
+    "end": 445,
+    "confidence": 0.9967173337936401
+   },
+   {
+    "type": "ORG",
+    "start": 534,
+    "end": 559,
+    "confidence": 0.9985802173614502
+   },
+   {
+    "type": "LOC",
+    "start": 561,
+    "end": 567,
+    "confidence": 0.9964009523391724
+   },
+   {
     "type": "MONEY",
     "start": 620,
     "end": 627,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 668,
+    "end": 694,
+    "confidence": 0.9897778034210205
+   },
+   {
+    "type": "ORG",
+    "start": 712,
+    "end": 732,
+    "confidence": 0.9860741496086121
+   },
+   {
+    "type": "PERSON",
+    "start": 772,
+    "end": 799,
+    "confidence": 0.9866951107978821
    },
    {
     "type": "DATE",
@@ -78,28 +138,34 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 920,
+    "end": 934,
+    "confidence": 0.955229640007019
+   },
+   {
+    "type": "LOC",
+    "start": 936,
+    "end": 947,
+    "confidence": 0.9870287775993347
+   },
+   {
+    "type": "LOC",
+    "start": 949,
+    "end": 960,
+    "confidence": 0.9974716305732727
+   },
+   {
     "type": "PIN",
     "start": 963,
     "end": 969,
     "confidence": 0.8
    },
    {
-    "type": "ORG",
-    "start": 1053,
-    "end": 1062,
-    "confidence": 0.9981343746185303
-   },
-   {
-    "type": "ORG",
-    "start": 1064,
-    "end": 1069,
-    "confidence": 0.9984365701675415
-   },
-   {
-    "type": "ORG",
-    "start": 1078,
-    "end": 1082,
-    "confidence": 0.993022620677948
+    "type": "LOC",
+    "start": 1071,
+    "end": 1077,
+    "confidence": 0.9792513251304626
    },
    {
     "type": "DATE",
@@ -108,10 +174,10 @@
     "confidence": 0.6
    },
    {
-    "type": "LOC",
-    "start": 1111,
+    "type": "ORG",
+    "start": 1104,
     "end": 1117,
-    "confidence": 0.8173380494117737
+    "confidence": 0.9933025240898132
    }
   ],
   "res_d1-2": [
@@ -176,10 +242,76 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 244,
+    "end": 252,
+    "confidence": 0.9905413389205933
+   },
+   {
+    "type": "ORG",
+    "start": 301,
+    "end": 328,
+    "confidence": 0.9973210692405701
+   },
+   {
+    "type": "LOC",
+    "start": 330,
+    "end": 339,
+    "confidence": 0.9992037415504456
+   },
+   {
+    "type": "PERSON",
+    "start": 411,
+    "end": 417,
+    "confidence": 0.9978258609771729
+   },
+   {
+    "type": "ORG",
+    "start": 427,
+    "end": 438,
+    "confidence": 0.7070776224136353
+   },
+   {
+    "type": "ORG",
+    "start": 511,
+    "end": 539,
+    "confidence": 0.9958621859550476
+   },
+   {
+    "type": "LOC",
+    "start": 541,
+    "end": 548,
+    "confidence": 0.9980130791664124
+   },
+   {
     "type": "MONEY",
     "start": 601,
     "end": 610,
     "confidence": 0.7
+   },
+   {
+    "type": "LOC",
+    "start": 637,
+    "end": 649,
+    "confidence": 0.5762956738471985
+   },
+   {
+    "type": "ORG",
+    "start": 650,
+    "end": 661,
+    "confidence": 0.7150259613990784
+   },
+   {
+    "type": "ORG",
+    "start": 679,
+    "end": 698,
+    "confidence": 0.776380181312561
+   },
+   {
+    "type": "PERSON",
+    "start": 738,
+    "end": 754,
+    "confidence": 0.9387356638908386
    },
    {
     "type": "DATE",
@@ -188,10 +320,40 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 873,
+    "end": 884,
+    "confidence": 0.955909252166748
+   },
+   {
+    "type": "LOC",
+    "start": 886,
+    "end": 906,
+    "confidence": 0.9631658792495728
+   },
+   {
+    "type": "LOC",
+    "start": 908,
+    "end": 922,
+    "confidence": 0.9916468858718872
+   },
+   {
+    "type": "LOC",
+    "start": 924,
+    "end": 932,
+    "confidence": 0.9959666132926941
+   },
+   {
     "type": "PIN",
     "start": 935,
     "end": 941,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1043,
+    "end": 1048,
+    "confidence": 0.7940452098846436
    },
    {
     "type": "DATE",
@@ -200,10 +362,10 @@
     "confidence": 0.6
    },
    {
-    "type": "ORG",
-    "start": 1088,
+    "type": "PERSON",
+    "start": 1082,
     "end": 1096,
-    "confidence": 0.7794194221496582
+    "confidence": 0.9502165913581848
    }
   ],
   "res_d1-3": [
@@ -262,10 +424,88 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 226,
+    "end": 236,
+    "confidence": 0.8446906805038452
+   },
+   {
+    "type": "ORG",
+    "start": 241,
+    "end": 246,
+    "confidence": 0.5626925826072693
+   },
+   {
+    "type": "ORG",
+    "start": 296,
+    "end": 324,
+    "confidence": 0.9966411590576172
+   },
+   {
+    "type": "LOC",
+    "start": 326,
+    "end": 337,
+    "confidence": 0.996067464351654
+   },
+   {
+    "type": "PERSON",
+    "start": 409,
+    "end": 413,
+    "confidence": 0.9907042384147644
+   },
+   {
+    "type": "ORG",
+    "start": 520,
+    "end": 544,
+    "confidence": 0.9957761168479919
+   },
+   {
+    "type": "LOC",
+    "start": 546,
+    "end": 553,
+    "confidence": 0.99790358543396
+   },
+   {
     "type": "MONEY",
     "start": 606,
     "end": 615,
     "confidence": 0.7
+   },
+   {
+    "type": "ORG",
+    "start": 647,
+    "end": 663,
+    "confidence": 0.8773016333580017
+   },
+   {
+    "type": "ORG",
+    "start": 665,
+    "end": 698,
+    "confidence": 0.9501762986183167
+   },
+   {
+    "type": "LOC",
+    "start": 716,
+    "end": 719,
+    "confidence": 0.6373802423477173
+   },
+   {
+    "type": "LOC",
+    "start": 720,
+    "end": 728,
+    "confidence": 0.5346797704696655
+   },
+   {
+    "type": "ORG",
+    "start": 729,
+    "end": 740,
+    "confidence": 0.5624279975891113
+   },
+   {
+    "type": "PERSON",
+    "start": 780,
+    "end": 800,
+    "confidence": 0.9697012901306152
    },
    {
     "type": "DATE",
@@ -274,10 +514,40 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 911,
+    "end": 915,
+    "confidence": 0.8500436544418335
+   },
+   {
+    "type": "LOC",
+    "start": 921,
+    "end": 930,
+    "confidence": 0.7739752531051636
+   },
+   {
+    "type": "LOC",
+    "start": 932,
+    "end": 942,
+    "confidence": 0.9363407492637634
+   },
+   {
+    "type": "LOC",
+    "start": 944,
+    "end": 952,
+    "confidence": 0.9943557381629944
+   },
+   {
     "type": "PIN",
     "start": 955,
     "end": 961,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1063,
+    "end": 1073,
+    "confidence": 0.9091863632202148
    },
    {
     "type": "DATE",
@@ -287,9 +557,9 @@
    },
    {
     "type": "PERSON",
-    "start": 1108,
+    "start": 1101,
     "end": 1117,
-    "confidence": 0.9926354885101318
+    "confidence": 0.9970642328262329
    }
   ],
   "res_d1-4": [
@@ -354,10 +624,88 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 245,
+    "end": 250,
+    "confidence": 0.9800443649291992
+   },
+   {
+    "type": "ORG",
+    "start": 255,
+    "end": 260,
+    "confidence": 0.8164220452308655
+   },
+   {
+    "type": "ORG",
+    "start": 305,
+    "end": 325,
+    "confidence": 0.9553273320198059
+   },
+   {
+    "type": "LOC",
+    "start": 327,
+    "end": 336,
+    "confidence": 0.9986036419868469
+   },
+   {
+    "type": "ORG",
+    "start": 408,
+    "end": 413,
+    "confidence": 0.9925956130027771
+   },
+   {
+    "type": "ORG",
+    "start": 423,
+    "end": 432,
+    "confidence": 0.7142823338508606
+   },
+   {
+    "type": "ORG",
+    "start": 508,
+    "end": 533,
+    "confidence": 0.9943538904190063
+   },
+   {
+    "type": "LOC",
+    "start": 535,
+    "end": 541,
+    "confidence": 0.9984241724014282
+   },
+   {
     "type": "MONEY",
     "start": 594,
     "end": 606,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 630,
+    "end": 633,
+    "confidence": 0.769408106803894
+   },
+   {
+    "type": "LOC",
+    "start": 635,
+    "end": 644,
+    "confidence": 0.6263678073883057
+   },
+   {
+    "type": "ORG",
+    "start": 645,
+    "end": 668,
+    "confidence": 0.4739700257778168
+   },
+   {
+    "type": "LOC",
+    "start": 686,
+    "end": 698,
+    "confidence": 0.6923866271972656
+   },
+   {
+    "type": "PERSON",
+    "start": 750,
+    "end": 764,
+    "confidence": 0.6609994769096375
    },
    {
     "type": "DATE",
@@ -366,10 +714,46 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 877,
+    "end": 878,
+    "confidence": 0.7741556167602539
+   },
+   {
+    "type": "LOC",
+    "start": 879,
+    "end": 881,
+    "confidence": 0.5607694387435913
+   },
+   {
+    "type": "LOC",
+    "start": 887,
+    "end": 894,
+    "confidence": 0.9516534805297852
+   },
+   {
+    "type": "LOC",
+    "start": 896,
+    "end": 906,
+    "confidence": 0.9940767288208008
+   },
+   {
+    "type": "LOC",
+    "start": 908,
+    "end": 917,
+    "confidence": 0.9988667368888855
+   },
+   {
     "type": "PIN",
     "start": 920,
     "end": 926,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1028,
+    "end": 1035,
+    "confidence": 0.9978744387626648
    },
    {
     "type": "DATE",
@@ -378,10 +762,10 @@
     "confidence": 0.6
    },
    {
-    "type": "ORG",
-    "start": 1071,
+    "type": "PERSON",
+    "start": 1064,
     "end": 1079,
-    "confidence": 0.907494843006134
+    "confidence": 0.6086045503616333
    }
   ],
   "res_d1-5": [
@@ -434,10 +818,76 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 233,
+    "end": 243,
+    "confidence": 0.9771508574485779
+   },
+   {
+    "type": "ORG",
+    "start": 248,
+    "end": 253,
+    "confidence": 0.7635509371757507
+   },
+   {
+    "type": "ORG",
+    "start": 297,
+    "end": 324,
+    "confidence": 0.9949222207069397
+   },
+   {
+    "type": "LOC",
+    "start": 326,
+    "end": 334,
+    "confidence": 0.9963905215263367
+   },
+   {
+    "type": "PERSON",
+    "start": 406,
+    "end": 412,
+    "confidence": 0.9965270161628723
+   },
+   {
+    "type": "ORG",
+    "start": 501,
+    "end": 525,
+    "confidence": 0.9972397089004517
+   },
+   {
+    "type": "LOC",
+    "start": 527,
+    "end": 534,
+    "confidence": 0.9472614526748657
+   },
+   {
     "type": "MONEY",
     "start": 587,
     "end": 598,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 622,
+    "end": 625,
+    "confidence": 0.7630855441093445
+   },
+   {
+    "type": "ORG",
+    "start": 627,
+    "end": 658,
+    "confidence": 0.9976598024368286
+   },
+   {
+    "type": "ORG",
+    "start": 676,
+    "end": 706,
+    "confidence": 0.9906130433082581
+   },
+   {
+    "type": "PERSON",
+    "start": 746,
+    "end": 765,
+    "confidence": 0.9330496788024902
    },
    {
     "type": "DATE",
@@ -446,10 +896,34 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 882,
+    "end": 898,
+    "confidence": 0.9368879795074463
+   },
+   {
+    "type": "LOC",
+    "start": 900,
+    "end": 911,
+    "confidence": 0.9942631125450134
+   },
+   {
+    "type": "LOC",
+    "start": 913,
+    "end": 922,
+    "confidence": 0.9949038028717041
+   },
+   {
     "type": "PIN",
     "start": 925,
     "end": 931,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1033,
+    "end": 1043,
+    "confidence": 0.9038657546043396
    },
    {
     "type": "DATE",
@@ -458,10 +932,16 @@
     "confidence": 0.6
    },
    {
-    "type": "ORG",
+    "type": "PERSON",
     "start": 1070,
+    "end": 1077,
+    "confidence": 0.5145794153213501
+   },
+   {
+    "type": "ORG",
+    "start": 1078,
     "end": 1084,
-    "confidence": 0.6754719614982605
+    "confidence": 0.35069525241851807
    }
   ],
   "res_d1-6": [
@@ -520,10 +1000,82 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 271,
+    "end": 278,
+    "confidence": 0.9938210844993591
+   },
+   {
+    "type": "ORG",
+    "start": 323,
+    "end": 347,
+    "confidence": 0.9955087900161743
+   },
+   {
+    "type": "LOC",
+    "start": 349,
+    "end": 356,
+    "confidence": 0.9986579418182373
+   },
+   {
+    "type": "PERSON",
+    "start": 428,
+    "end": 435,
+    "confidence": 0.9913149476051331
+   },
+   {
+    "type": "ORG",
+    "start": 445,
+    "end": 456,
+    "confidence": 0.75172358751297
+   },
+   {
+    "type": "ORG",
+    "start": 502,
+    "end": 507,
+    "confidence": 0.7754331827163696
+   },
+   {
+    "type": "ORG",
+    "start": 526,
+    "end": 551,
+    "confidence": 0.9976230263710022
+   },
+   {
+    "type": "LOC",
+    "start": 553,
+    "end": 559,
+    "confidence": 0.9939473271369934
+   },
+   {
     "type": "MONEY",
     "start": 612,
     "end": 621,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 650,
+    "end": 657,
+    "confidence": 0.46418312191963196
+   },
+   {
+    "type": "ORG",
+    "start": 659,
+    "end": 679,
+    "confidence": 0.947303295135498
+   },
+   {
+    "type": "ORG",
+    "start": 697,
+    "end": 716,
+    "confidence": 0.9464977383613586
+   },
+   {
+    "type": "PERSON",
+    "start": 756,
+    "end": 776,
+    "confidence": 0.917392373085022
    },
    {
     "type": "DATE",
@@ -532,10 +1084,34 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 899,
+    "end": 915,
+    "confidence": 0.9579362869262695
+   },
+   {
+    "type": "LOC",
+    "start": 917,
+    "end": 922,
+    "confidence": 0.9776678681373596
+   },
+   {
+    "type": "LOC",
+    "start": 924,
+    "end": 930,
+    "confidence": 0.9982136487960815
+   },
+   {
     "type": "PIN",
     "start": 933,
     "end": 939,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1041,
+    "end": 1054,
+    "confidence": 0.9276312589645386
    },
    {
     "type": "DATE",
@@ -545,9 +1121,9 @@
    },
    {
     "type": "ORG",
-    "start": 1089,
+    "start": 1083,
     "end": 1093,
-    "confidence": 0.9982385039329529
+    "confidence": 0.9969731569290161
    }
   ],
   "res_d1-7": [
@@ -600,10 +1176,82 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 222,
+    "end": 232,
+    "confidence": 0.9927576780319214
+   },
+   {
+    "type": "ORG",
+    "start": 290,
+    "end": 317,
+    "confidence": 0.9946774244308472
+   },
+   {
+    "type": "LOC",
+    "start": 319,
+    "end": 324,
+    "confidence": 0.9983166456222534
+   },
+   {
+    "type": "PERSON",
+    "start": 396,
+    "end": 403,
+    "confidence": 0.9965165257453918
+   },
+   {
+    "type": "ORG",
+    "start": 413,
+    "end": 433,
+    "confidence": 0.6121855974197388
+   },
+   {
+    "type": "ORG",
+    "start": 474,
+    "end": 481,
+    "confidence": 0.3968450725078583
+   },
+   {
+    "type": "ORG",
+    "start": 514,
+    "end": 538,
+    "confidence": 0.9957966804504395
+   },
+   {
+    "type": "LOC",
+    "start": 540,
+    "end": 558,
+    "confidence": 0.9871256351470947
+   },
+   {
     "type": "MONEY",
     "start": 611,
     "end": 618,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 651,
+    "end": 673,
+    "confidence": 0.7840660810470581
+   },
+   {
+    "type": "ORG",
+    "start": 675,
+    "end": 695,
+    "confidence": 0.97564697265625
+   },
+   {
+    "type": "ORG",
+    "start": 713,
+    "end": 743,
+    "confidence": 0.9798249006271362
+   },
+   {
+    "type": "PERSON",
+    "start": 783,
+    "end": 802,
+    "confidence": 0.9394528865814209
    },
    {
     "type": "DATE",
@@ -612,22 +1260,40 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 913,
+    "end": 919,
+    "confidence": 0.8894248604774475
+   },
+   {
+    "type": "LOC",
+    "start": 921,
+    "end": 934,
+    "confidence": 0.979586660861969
+   },
+   {
+    "type": "LOC",
+    "start": 936,
+    "end": 944,
+    "confidence": 0.9862306118011475
+   },
+   {
+    "type": "LOC",
+    "start": 946,
+    "end": 950,
+    "confidence": 0.9958053827285767
+   },
+   {
     "type": "PIN",
     "start": 953,
     "end": 959,
     "confidence": 0.8
    },
    {
-    "type": "ORG",
-    "start": 1054,
-    "end": 1059,
-    "confidence": 0.9978671073913574
-   },
-   {
-    "type": "ORG",
-    "start": 1072,
-    "end": 1076,
-    "confidence": 0.988479733467102
+    "type": "LOC",
+    "start": 1061,
+    "end": 1071,
+    "confidence": 0.8770173192024231
    },
    {
     "type": "DATE",
@@ -637,9 +1303,9 @@
    },
    {
     "type": "PERSON",
-    "start": 1107,
+    "start": 1099,
     "end": 1110,
-    "confidence": 0.9555203318595886
+    "confidence": 0.9929103851318359
    }
   ],
   "res_d1-8": [
@@ -686,10 +1352,82 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 226,
+    "end": 235,
+    "confidence": 0.4945458769798279
+   },
+   {
+    "type": "ORG",
+    "start": 240,
+    "end": 247,
+    "confidence": 0.7041977643966675
+   },
+   {
+    "type": "ORG",
+    "start": 295,
+    "end": 323,
+    "confidence": 0.9980828762054443
+   },
+   {
+    "type": "LOC",
+    "start": 325,
+    "end": 336,
+    "confidence": 0.9947030544281006
+   },
+   {
+    "type": "PERSON",
+    "start": 408,
+    "end": 414,
+    "confidence": 0.9970837235450745
+   },
+   {
+    "type": "ORG",
+    "start": 477,
+    "end": 480,
+    "confidence": 0.6621319055557251
+   },
+   {
+    "type": "ORG",
+    "start": 504,
+    "end": 525,
+    "confidence": 0.9953394532203674
+   },
+   {
+    "type": "LOC",
+    "start": 527,
+    "end": 532,
+    "confidence": 0.997450590133667
+   },
+   {
     "type": "MONEY",
     "start": 585,
     "end": 594,
     "confidence": 0.7
+   },
+   {
+    "type": "ORG",
+    "start": 621,
+    "end": 649,
+    "confidence": 0.9718154668807983
+   },
+   {
+    "type": "LOC",
+    "start": 667,
+    "end": 676,
+    "confidence": 0.7252740263938904
+   },
+   {
+    "type": "ORG",
+    "start": 677,
+    "end": 690,
+    "confidence": 0.7668183445930481
+   },
+   {
+    "type": "PERSON",
+    "start": 730,
+    "end": 754,
+    "confidence": 0.9502246975898743
    },
    {
     "type": "DATE",
@@ -698,10 +1436,40 @@
     "confidence": 0.75
    },
    {
+    "type": "LOC",
+    "start": 864,
+    "end": 868,
+    "confidence": 0.7586697340011597
+   },
+   {
+    "type": "LOC",
+    "start": 873,
+    "end": 880,
+    "confidence": 0.9403648376464844
+   },
+   {
+    "type": "LOC",
+    "start": 882,
+    "end": 893,
+    "confidence": 0.9940100312232971
+   },
+   {
+    "type": "LOC",
+    "start": 895,
+    "end": 900,
+    "confidence": 0.9979323148727417
+   },
+   {
     "type": "PIN",
     "start": 903,
     "end": 909,
     "confidence": 0.8
+   },
+   {
+    "type": "LOC",
+    "start": 1011,
+    "end": 1019,
+    "confidence": 0.9803624153137207
    },
    {
     "type": "DATE",
@@ -710,10 +1478,10 @@
     "confidence": 0.6
    },
    {
-    "type": "LOC",
-    "start": 1052,
+    "type": "PERSON",
+    "start": 1045,
     "end": 1061,
-    "confidence": 0.8336209654808044
+    "confidence": 0.9157296419143677
    }
   ],
   "res_d2-1": [
@@ -754,10 +1522,82 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 199,
+    "end": 206,
+    "confidence": 0.38647231459617615
+   },
+   {
     "type": "MONEY",
     "start": 237,
     "end": 246,
     "confidence": 0.7
+   },
+   {
+    "type": "ORG",
+    "start": 273,
+    "end": 279,
+    "confidence": 0.9965096712112427
+   },
+   {
+    "type": "ORG",
+    "start": 282,
+    "end": 292,
+    "confidence": 0.942500650882721
+   },
+   {
+    "type": "ORG",
+    "start": 293,
+    "end": 314,
+    "confidence": 0.9816470742225647
+   },
+   {
+    "type": "LOC",
+    "start": 316,
+    "end": 321,
+    "confidence": 0.9951601028442383
+   },
+   {
+    "type": "PERSON",
+    "start": 397,
+    "end": 405,
+    "confidence": 0.994467556476593
+   },
+   {
+    "type": "ORG",
+    "start": 429,
+    "end": 432,
+    "confidence": 0.5269855260848999
+   },
+   {
+    "type": "ORG",
+    "start": 442,
+    "end": 463,
+    "confidence": 0.9982802867889404
+   },
+   {
+    "type": "ORG",
+    "start": 488,
+    "end": 516,
+    "confidence": 0.9969372153282166
+   },
+   {
+    "type": "PERSON",
+    "start": 560,
+    "end": 574,
+    "confidence": 0.9985790252685547
+   },
+   {
+    "type": "ORG",
+    "start": 707,
+    "end": 726,
+    "confidence": 0.504692554473877
+   },
+   {
+    "type": "LOC",
+    "start": 728,
+    "end": 737,
+    "confidence": 0.9925074577331543
    },
    {
     "type": "URL",
@@ -804,10 +1644,88 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 193,
+    "end": 196,
+    "confidence": 0.9502806663513184
+   },
+   {
+    "type": "ORG",
+    "start": 201,
+    "end": 209,
+    "confidence": 0.9071751236915588
+   },
+   {
     "type": "MONEY",
     "start": 229,
     "end": 238,
     "confidence": 0.7
+   },
+   {
+    "type": "LOC",
+    "start": 265,
+    "end": 274,
+    "confidence": 0.9660609364509583
+   },
+   {
+    "type": "ORG",
+    "start": 277,
+    "end": 287,
+    "confidence": 0.9036051034927368
+   },
+   {
+    "type": "ORG",
+    "start": 288,
+    "end": 312,
+    "confidence": 0.9962612986564636
+   },
+   {
+    "type": "ORG",
+    "start": 314,
+    "end": 322,
+    "confidence": 0.9511847496032715
+   },
+   {
+    "type": "PERSON",
+    "start": 392,
+    "end": 397,
+    "confidence": 0.987028181552887
+   },
+   {
+    "type": "ORG",
+    "start": 421,
+    "end": 426,
+    "confidence": 0.6857531666755676
+   },
+   {
+    "type": "ORG",
+    "start": 436,
+    "end": 456,
+    "confidence": 0.9981138110160828
+   },
+   {
+    "type": "ORG",
+    "start": 481,
+    "end": 506,
+    "confidence": 0.9960578083992004
+   },
+   {
+    "type": "PERSON",
+    "start": 556,
+    "end": 567,
+    "confidence": 0.9911847710609436
+   },
+   {
+    "type": "ORG",
+    "start": 681,
+    "end": 709,
+    "confidence": 0.9800518751144409
+   },
+   {
+    "type": "LOC",
+    "start": 711,
+    "end": 726,
+    "confidence": 0.9214670658111572
    },
    {
     "type": "URL",
@@ -854,10 +1772,88 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 168,
+    "end": 175,
+    "confidence": 0.5152668356895447
+   },
+   {
+    "type": "ORG",
+    "start": 228,
+    "end": 235,
+    "confidence": 0.5858854055404663
+   },
+   {
     "type": "MONEY",
     "start": 255,
     "end": 262,
     "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 289,
+    "end": 295,
+    "confidence": 0.9792931079864502
+   },
+   {
+    "type": "ORG",
+    "start": 298,
+    "end": 328,
+    "confidence": 0.4750369191169739
+   },
+   {
+    "type": "ORG",
+    "start": 330,
+    "end": 335,
+    "confidence": 0.9639198184013367
+   },
+   {
+    "type": "PERSON",
+    "start": 405,
+    "end": 417,
+    "confidence": 0.9993334412574768
+   },
+   {
+    "type": "ORG",
+    "start": 441,
+    "end": 446,
+    "confidence": 0.49524158239364624
+   },
+   {
+    "type": "ORG",
+    "start": 456,
+    "end": 481,
+    "confidence": 0.9983829855918884
+   },
+   {
+    "type": "ORG",
+    "start": 506,
+    "end": 530,
+    "confidence": 0.990571141242981
+   },
+   {
+    "type": "PERSON",
+    "start": 580,
+    "end": 592,
+    "confidence": 0.9564192891120911
+   },
+   {
+    "type": "ORG",
+    "start": 703,
+    "end": 706,
+    "confidence": 0.6053630113601685
+   },
+   {
+    "type": "ORG",
+    "start": 709,
+    "end": 742,
+    "confidence": 0.9665066003799438
+   },
+   {
+    "type": "LOC",
+    "start": 744,
+    "end": 769,
+    "confidence": 0.7462093234062195
    },
    {
     "type": "URL",
@@ -904,10 +1900,88 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 203,
+    "end": 208,
+    "confidence": 0.9674022793769836
+   },
+   {
+    "type": "ORG",
+    "start": 213,
+    "end": 230,
+    "confidence": 0.8017631769180298
+   },
+   {
     "type": "MONEY",
     "start": 250,
     "end": 260,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 287,
+    "end": 294,
+    "confidence": 0.5598958134651184
+   },
+   {
+    "type": "ORG",
+    "start": 297,
+    "end": 307,
+    "confidence": 0.672652542591095
+   },
+   {
+    "type": "ORG",
+    "start": 308,
+    "end": 336,
+    "confidence": 0.5190933346748352
+   },
+   {
+    "type": "LOC",
+    "start": 338,
+    "end": 344,
+    "confidence": 0.9951034188270569
+   },
+   {
+    "type": "PERSON",
+    "start": 420,
+    "end": 426,
+    "confidence": 0.9969585537910461
+   },
+   {
+    "type": "ORG",
+    "start": 450,
+    "end": 457,
+    "confidence": 0.459335058927536
+   },
+   {
+    "type": "ORG",
+    "start": 477,
+    "end": 497,
+    "confidence": 0.998369038105011
+   },
+   {
+    "type": "ORG",
+    "start": 522,
+    "end": 546,
+    "confidence": 0.9981910586357117
+   },
+   {
+    "type": "PERSON",
+    "start": 590,
+    "end": 602,
+    "confidence": 0.998893141746521
+   },
+   {
+    "type": "ORG",
+    "start": 733,
+    "end": 761,
+    "confidence": 0.9566952586174011
+   },
+   {
+    "type": "LOC",
+    "start": 763,
+    "end": 776,
+    "confidence": 0.9801143407821655
    },
    {
     "type": "URL",
@@ -936,10 +2010,10 @@
     "confidence": 0.9982937574386597
    },
    {
-    "type": "AADHAAR",
-    "start": 53,
+    "type": "PHONE",
+    "start": 52,
     "end": 66,
-    "confidence": 0.85
+    "confidence": 0.7
    },
    {
     "type": "EMAIL",
@@ -954,10 +2028,88 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 197,
+    "end": 205,
+    "confidence": 0.8192688822746277
+   },
+   {
+    "type": "ORG",
+    "start": 210,
+    "end": 213,
+    "confidence": 0.9094223380088806
+   },
+   {
     "type": "MONEY",
     "start": 233,
     "end": 243,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 270,
+    "end": 280,
+    "confidence": 0.9959895610809326
+   },
+   {
+    "type": "ORG",
+    "start": 283,
+    "end": 313,
+    "confidence": 0.8010005950927734
+   },
+   {
+    "type": "LOC",
+    "start": 315,
+    "end": 321,
+    "confidence": 0.9556550979614258
+   },
+   {
+    "type": "PERSON",
+    "start": 387,
+    "end": 389,
+    "confidence": 0.99847412109375
+   },
+   {
+    "type": "PERSON",
+    "start": 391,
+    "end": 395,
+    "confidence": 0.9337835907936096
+   },
+   {
+    "type": "ORG",
+    "start": 436,
+    "end": 459,
+    "confidence": 0.9991022944450378
+   },
+   {
+    "type": "ORG",
+    "start": 484,
+    "end": 509,
+    "confidence": 0.9982984066009521
+   },
+   {
+    "type": "PERSON",
+    "start": 553,
+    "end": 563,
+    "confidence": 0.9384497404098511
+   },
+   {
+    "type": "ORG",
+    "start": 686,
+    "end": 694,
+    "confidence": 0.42439860105514526
+   },
+   {
+    "type": "ORG",
+    "start": 705,
+    "end": 731,
+    "confidence": 0.9891721606254578
+   },
+   {
+    "type": "LOC",
+    "start": 733,
+    "end": 739,
+    "confidence": 0.9556995630264282
    },
    {
     "type": "URL",
@@ -1004,10 +2156,94 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 187,
+    "end": 192,
+    "confidence": 0.8798539638519287
+   },
+   {
+    "type": "ORG",
+    "start": 197,
+    "end": 205,
+    "confidence": 0.6604475378990173
+   },
+   {
     "type": "MONEY",
     "start": 225,
     "end": 234,
     "confidence": 0.7
+   },
+   {
+    "type": "LOC",
+    "start": 261,
+    "end": 265,
+    "confidence": 0.9784760475158691
+   },
+   {
+    "type": "ORG",
+    "start": 268,
+    "end": 278,
+    "confidence": 0.5321140885353088
+   },
+   {
+    "type": "ORG",
+    "start": 279,
+    "end": 296,
+    "confidence": 0.5148699283599854
+   },
+   {
+    "type": "LOC",
+    "start": 298,
+    "end": 304,
+    "confidence": 0.9670063853263855
+   },
+   {
+    "type": "PERSON",
+    "start": 380,
+    "end": 392,
+    "confidence": 0.9993336796760559
+   },
+   {
+    "type": "ORG",
+    "start": 430,
+    "end": 452,
+    "confidence": 0.9987599849700928
+   },
+   {
+    "type": "ORG",
+    "start": 477,
+    "end": 502,
+    "confidence": 0.9972979426383972
+   },
+   {
+    "type": "PERSON",
+    "start": 546,
+    "end": 552,
+    "confidence": 0.6914337873458862
+   },
+   {
+    "type": "ORG",
+    "start": 553,
+    "end": 559,
+    "confidence": 0.8400719165802002
+   },
+   {
+    "type": "ORG",
+    "start": 677,
+    "end": 680,
+    "confidence": 0.42061319947242737
+   },
+   {
+    "type": "ORG",
+    "start": 683,
+    "end": 703,
+    "confidence": 0.9188639521598816
+   },
+   {
+    "type": "LOC",
+    "start": 705,
+    "end": 718,
+    "confidence": 0.5256381630897522
    },
    {
     "type": "URL",
@@ -1054,10 +2290,64 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 201,
+    "end": 211,
+    "confidence": 0.8537564277648926
+   },
+   {
     "type": "MONEY",
     "start": 231,
     "end": 238,
     "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 265,
+    "end": 272,
+    "confidence": 0.9828336834907532
+   },
+   {
+    "type": "ORG",
+    "start": 275,
+    "end": 306,
+    "confidence": 0.8466519713401794
+   },
+   {
+    "type": "ORG",
+    "start": 308,
+    "end": 314,
+    "confidence": 0.5961827039718628
+   },
+   {
+    "type": "ORG",
+    "start": 447,
+    "end": 473,
+    "confidence": 0.9983553886413574
+   },
+   {
+    "type": "ORG",
+    "start": 498,
+    "end": 523,
+    "confidence": 0.9934245944023132
+   },
+   {
+    "type": "PERSON",
+    "start": 568,
+    "end": 580,
+    "confidence": 0.9991137981414795
+   },
+   {
+    "type": "ORG",
+    "start": 715,
+    "end": 745,
+    "confidence": 0.9705251455307007
+   },
+   {
+    "type": "LOC",
+    "start": 747,
+    "end": 755,
+    "confidence": 0.9881772398948669
    },
    {
     "type": "URL",
@@ -1104,10 +2394,82 @@
     "confidence": 0.95
    },
    {
+    "type": "ORG",
+    "start": 202,
+    "end": 219,
+    "confidence": 0.3961983919143677
+   },
+   {
     "type": "MONEY",
     "start": 239,
     "end": 248,
     "confidence": 0.7
+   },
+   {
+    "type": "LOC",
+    "start": 275,
+    "end": 280,
+    "confidence": 0.9913843274116516
+   },
+   {
+    "type": "ORG",
+    "start": 283,
+    "end": 313,
+    "confidence": 0.7179020643234253
+   },
+   {
+    "type": "LOC",
+    "start": 315,
+    "end": 323,
+    "confidence": 0.8048259019851685
+   },
+   {
+    "type": "PERSON",
+    "start": 393,
+    "end": 398,
+    "confidence": 0.9760076999664307
+   },
+   {
+    "type": "ORG",
+    "start": 422,
+    "end": 430,
+    "confidence": 0.5608485341072083
+   },
+   {
+    "type": "ORG",
+    "start": 440,
+    "end": 468,
+    "confidence": 0.9974244236946106
+   },
+   {
+    "type": "ORG",
+    "start": 493,
+    "end": 517,
+    "confidence": 0.989677906036377
+   },
+   {
+    "type": "PERSON",
+    "start": 566,
+    "end": 571,
+    "confidence": 0.9008495211601257
+   },
+   {
+    "type": "ORG",
+    "start": 572,
+    "end": 578,
+    "confidence": 0.48002898693084717
+   },
+   {
+    "type": "ORG",
+    "start": 702,
+    "end": 735,
+    "confidence": 0.9198257327079773
+   },
+   {
+    "type": "LOC",
+    "start": 737,
+    "end": 750,
+    "confidence": 0.5964732766151428
    },
    {
     "type": "URL",
@@ -1136,6 +2498,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 103,
+    "end": 110,
+    "confidence": 0.43560975790023804
+   },
+   {
     "type": "AADHAAR",
     "start": 120,
     "end": 132,
@@ -1146,6 +2514,24 @@
     "start": 150,
     "end": 160,
     "confidence": 0.95
+   },
+   {
+    "type": "LOC",
+    "start": 191,
+    "end": 200,
+    "confidence": 0.9366246461868286
+   },
+   {
+    "type": "LOC",
+    "start": 202,
+    "end": 214,
+    "confidence": 0.9972931146621704
+   },
+   {
+    "type": "LOC",
+    "start": 216,
+    "end": 222,
+    "confidence": 0.9992868900299072
    },
    {
     "type": "PIN",
@@ -1160,16 +2546,76 @@
     "confidence": 0.75
    },
    {
+    "type": "ORG",
+    "start": 258,
+    "end": 267,
+    "confidence": 0.8106603622436523
+   },
+   {
+    "type": "ORG",
+    "start": 348,
+    "end": 355,
+    "confidence": 0.693638026714325
+   },
+   {
+    "type": "ORG",
+    "start": 361,
+    "end": 381,
+    "confidence": 0.9807930588722229
+   },
+   {
+    "type": "LOC",
+    "start": 383,
+    "end": 389,
+    "confidence": 0.9958894848823547
+   },
+   {
+    "type": "ORG",
+    "start": 420,
+    "end": 440,
+    "confidence": 0.9893467426300049
+   },
+   {
+    "type": "ORG",
+    "start": 466,
+    "end": 488,
+    "confidence": 0.9270223379135132
+   },
+   {
+    "type": "LOC",
+    "start": 490,
+    "end": 495,
+    "confidence": 0.998487114906311
+   },
+   {
     "type": "PERSON",
-    "start": 268,
-    "end": 275,
-    "confidence": 0.8802812695503235
+    "start": 526,
+    "end": 538,
+    "confidence": 0.9982512593269348
+   },
+   {
+    "type": "PERSON",
+    "start": 554,
+    "end": 566,
+    "confidence": 0.5615067481994629
+   },
+   {
+    "type": "ORG",
+    "start": 568,
+    "end": 576,
+    "confidence": 0.9766263365745544
+   },
+   {
+    "type": "PERSON",
+    "start": 608,
+    "end": 620,
+    "confidence": 0.9987565279006958
    },
    {
     "type": "ORG",
     "start": 641,
-    "end": 648,
-    "confidence": 0.9526731371879578
+    "end": 670,
+    "confidence": 0.9454652667045593
    },
    {
     "type": "PHONE",
@@ -1198,6 +2644,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 92,
+    "end": 102,
+    "confidence": 0.5081881284713745
+   },
+   {
     "type": "AADHAAR",
     "start": 109,
     "end": 123,
@@ -1210,6 +2662,30 @@
     "confidence": 0.95
    },
    {
+    "type": "LOC",
+    "start": 180,
+    "end": 194,
+    "confidence": 0.9742658734321594
+   },
+   {
+    "type": "LOC",
+    "start": 196,
+    "end": 215,
+    "confidence": 0.7166920900344849
+   },
+   {
+    "type": "LOC",
+    "start": 217,
+    "end": 228,
+    "confidence": 0.9965451955795288
+   },
+   {
+    "type": "LOC",
+    "start": 230,
+    "end": 236,
+    "confidence": 0.9956995844841003
+   },
+   {
     "type": "PIN",
     "start": 239,
     "end": 245,
@@ -1220,6 +2696,90 @@
     "start": 263,
     "end": 275,
     "confidence": 0.75
+   },
+   {
+    "type": "ORG",
+    "start": 277,
+    "end": 286,
+    "confidence": 0.9543820023536682
+   },
+   {
+    "type": "ORG",
+    "start": 322,
+    "end": 333,
+    "confidence": 0.9028193354606628
+   },
+   {
+    "type": "ORG",
+    "start": 382,
+    "end": 413,
+    "confidence": 0.9976818561553955
+   },
+   {
+    "type": "LOC",
+    "start": 415,
+    "end": 423,
+    "confidence": 0.9526435732841492
+   },
+   {
+    "type": "ORG",
+    "start": 434,
+    "end": 438,
+    "confidence": 0.5404984951019287
+   },
+   {
+    "type": "ORG",
+    "start": 454,
+    "end": 484,
+    "confidence": 0.9975342750549316
+   },
+   {
+    "type": "ORG",
+    "start": 510,
+    "end": 535,
+    "confidence": 0.9893611073493958
+   },
+   {
+    "type": "LOC",
+    "start": 537,
+    "end": 543,
+    "confidence": 0.9869145750999451
+   },
+   {
+    "type": "PERSON",
+    "start": 568,
+    "end": 570,
+    "confidence": 0.9782999753952026
+   },
+   {
+    "type": "PERSON",
+    "start": 572,
+    "end": 586,
+    "confidence": 0.9975146055221558
+   },
+   {
+    "type": "ORG",
+    "start": 590,
+    "end": 593,
+    "confidence": 0.6169862151145935
+   },
+   {
+    "type": "ORG",
+    "start": 609,
+    "end": 614,
+    "confidence": 0.7110576629638672
+   },
+   {
+    "type": "PERSON",
+    "start": 655,
+    "end": 666,
+    "confidence": 0.9975736141204834
+   },
+   {
+    "type": "ORG",
+    "start": 689,
+    "end": 716,
+    "confidence": 0.9939948916435242
    },
    {
     "type": "PHONE",
@@ -1248,6 +2808,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 93,
+    "end": 100,
+    "confidence": 0.4410474896430969
+   },
+   {
     "type": "AADHAAR",
     "start": 110,
     "end": 122,
@@ -1260,6 +2826,24 @@
     "confidence": 0.95
    },
    {
+    "type": "LOC",
+    "start": 179,
+    "end": 190,
+    "confidence": 0.9531142115592957
+   },
+   {
+    "type": "LOC",
+    "start": 192,
+    "end": 204,
+    "confidence": 0.9954436421394348
+   },
+   {
+    "type": "LOC",
+    "start": 206,
+    "end": 213,
+    "confidence": 0.9985642433166504
+   },
+   {
     "type": "PIN",
     "start": 216,
     "end": 222,
@@ -1270,6 +2854,72 @@
     "start": 240,
     "end": 251,
     "confidence": 0.75
+   },
+   {
+    "type": "ORG",
+    "start": 253,
+    "end": 262,
+    "confidence": 0.9320512413978577
+   },
+   {
+    "type": "ORG",
+    "start": 298,
+    "end": 313,
+    "confidence": 0.9947404861450195
+   },
+   {
+    "type": "ORG",
+    "start": 353,
+    "end": 381,
+    "confidence": 0.988137423992157
+   },
+   {
+    "type": "LOC",
+    "start": 383,
+    "end": 388,
+    "confidence": 0.5009322166442871
+   },
+   {
+    "type": "ORG",
+    "start": 419,
+    "end": 452,
+    "confidence": 0.8888856768608093
+   },
+   {
+    "type": "ORG",
+    "start": 478,
+    "end": 498,
+    "confidence": 0.9930734634399414
+   },
+   {
+    "type": "LOC",
+    "start": 500,
+    "end": 505,
+    "confidence": 0.9892940521240234
+   },
+   {
+    "type": "PERSON",
+    "start": 534,
+    "end": 546,
+    "confidence": 0.9767189025878906
+   },
+   {
+    "type": "ORG",
+    "start": 550,
+    "end": 556,
+    "confidence": 0.5405806303024292
+   },
+   {
+    "type": "PERSON",
+    "start": 627,
+    "end": 631,
+    "confidence": 0.8064502477645874
+   },
+   {
+    "type": "ORG",
+    "start": 653,
+    "end": 670,
+    "confidence": 0.9497806429862976
    },
    {
     "type": "PHONE",
@@ -1298,6 +2948,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 89,
+    "end": 99,
+    "confidence": 0.42362284660339355
+   },
+   {
     "type": "AADHAAR",
     "start": 106,
     "end": 118,
@@ -1310,6 +2966,30 @@
     "confidence": 0.95
    },
    {
+    "type": "LOC",
+    "start": 177,
+    "end": 189,
+    "confidence": 0.909356415271759
+   },
+   {
+    "type": "LOC",
+    "start": 191,
+    "end": 210,
+    "confidence": 0.9309913516044617
+   },
+   {
+    "type": "LOC",
+    "start": 212,
+    "end": 226,
+    "confidence": 0.9954185485839844
+   },
+   {
+    "type": "LOC",
+    "start": 228,
+    "end": 234,
+    "confidence": 0.9989711046218872
+   },
+   {
     "type": "PIN",
     "start": 237,
     "end": 243,
@@ -1320,6 +3000,72 @@
     "start": 261,
     "end": 273,
     "confidence": 0.75
+   },
+   {
+    "type": "ORG",
+    "start": 275,
+    "end": 284,
+    "confidence": 0.9350637197494507
+   },
+   {
+    "type": "ORG",
+    "start": 320,
+    "end": 331,
+    "confidence": 0.9127876162528992
+   },
+   {
+    "type": "ORG",
+    "start": 357,
+    "end": 388,
+    "confidence": 0.9984000325202942
+   },
+   {
+    "type": "ORG",
+    "start": 390,
+    "end": 398,
+    "confidence": 0.7738508582115173
+   },
+   {
+    "type": "ORG",
+    "start": 429,
+    "end": 455,
+    "confidence": 0.9939119219779968
+   },
+   {
+    "type": "ORG",
+    "start": 481,
+    "end": 505,
+    "confidence": 0.9910128712654114
+   },
+   {
+    "type": "LOC",
+    "start": 507,
+    "end": 513,
+    "confidence": 0.9958363771438599
+   },
+   {
+    "type": "PERSON",
+    "start": 542,
+    "end": 554,
+    "confidence": 0.9994718432426453
+   },
+   {
+    "type": "PERSON",
+    "start": 622,
+    "end": 625,
+    "confidence": 0.42904001474380493
+   },
+   {
+    "type": "PERSON",
+    "start": 627,
+    "end": 642,
+    "confidence": 0.9726436734199524
+   },
+   {
+    "type": "ORG",
+    "start": 665,
+    "end": 688,
+    "confidence": 0.9963135719299316
    },
    {
     "type": "PHONE",
@@ -1348,6 +3094,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 95,
+    "end": 102,
+    "confidence": 0.9541746973991394
+   },
+   {
     "type": "AADHAAR",
     "start": 112,
     "end": 126,
@@ -1360,6 +3112,24 @@
     "confidence": 0.95
    },
    {
+    "type": "LOC",
+    "start": 185,
+    "end": 196,
+    "confidence": 0.9088817834854126
+   },
+   {
+    "type": "ORG",
+    "start": 198,
+    "end": 208,
+    "confidence": 0.5027524828910828
+   },
+   {
+    "type": "LOC",
+    "start": 210,
+    "end": 216,
+    "confidence": 0.9977055191993713
+   },
+   {
     "type": "PIN",
     "start": 219,
     "end": 225,
@@ -1370,6 +3140,78 @@
     "start": 243,
     "end": 253,
     "confidence": 0.75
+   },
+   {
+    "type": "ORG",
+    "start": 255,
+    "end": 264,
+    "confidence": 0.6899642944335938
+   },
+   {
+    "type": "ORG",
+    "start": 336,
+    "end": 352,
+    "confidence": 0.4515146315097809
+   },
+   {
+    "type": "ORG",
+    "start": 358,
+    "end": 378,
+    "confidence": 0.990833580493927
+   },
+   {
+    "type": "LOC",
+    "start": 380,
+    "end": 387,
+    "confidence": 0.9955224990844727
+   },
+   {
+    "type": "ORG",
+    "start": 398,
+    "end": 402,
+    "confidence": 0.44370096921920776
+   },
+   {
+    "type": "ORG",
+    "start": 418,
+    "end": 438,
+    "confidence": 0.9872639179229736
+   },
+   {
+    "type": "ORG",
+    "start": 464,
+    "end": 491,
+    "confidence": 0.9963452816009521
+   },
+   {
+    "type": "LOC",
+    "start": 493,
+    "end": 502,
+    "confidence": 0.9982188940048218
+   },
+   {
+    "type": "PERSON",
+    "start": 531,
+    "end": 542,
+    "confidence": 0.9988886713981628
+   },
+   {
+    "type": "ORG",
+    "start": 569,
+    "end": 573,
+    "confidence": 0.29892826080322266
+   },
+   {
+    "type": "PERSON",
+    "start": 612,
+    "end": 622,
+    "confidence": 0.9990084767341614
+   },
+   {
+    "type": "ORG",
+    "start": 644,
+    "end": 673,
+    "confidence": 0.9924254417419434
    },
    {
     "type": "PHONE",
@@ -1398,6 +3240,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 98,
+    "end": 108,
+    "confidence": 0.5424478054046631
+   },
+   {
     "type": "AADHAAR",
     "start": 115,
     "end": 129,
@@ -1408,6 +3256,24 @@
     "start": 147,
     "end": 157,
     "confidence": 0.95
+   },
+   {
+    "type": "LOC",
+    "start": 197,
+    "end": 206,
+    "confidence": 0.9302748441696167
+   },
+   {
+    "type": "LOC",
+    "start": 208,
+    "end": 222,
+    "confidence": 0.9955853223800659
+   },
+   {
+    "type": "LOC",
+    "start": 224,
+    "end": 228,
+    "confidence": 0.9948410987854004
    },
    {
     "type": "PIN",
@@ -1422,10 +3288,70 @@
     "confidence": 0.75
    },
    {
+    "type": "ORG",
+    "start": 335,
+    "end": 338,
+    "confidence": 0.44868209958076477
+   },
+   {
+    "type": "ORG",
+    "start": 344,
+    "end": 377,
+    "confidence": 0.9882922768592834
+   },
+   {
+    "type": "LOC",
+    "start": 379,
+    "end": 385,
+    "confidence": 0.992713451385498
+   },
+   {
+    "type": "ORG",
+    "start": 396,
+    "end": 400,
+    "confidence": 0.7872491478919983
+   },
+   {
+    "type": "ORG",
+    "start": 416,
+    "end": 436,
+    "confidence": 0.9743279814720154
+   },
+   {
+    "type": "ORG",
+    "start": 462,
+    "end": 485,
+    "confidence": 0.9974314570426941
+   },
+   {
+    "type": "LOC",
+    "start": 487,
+    "end": 492,
+    "confidence": 0.997313916683197
+   },
+   {
     "type": "PERSON",
+    "start": 521,
+    "end": 534,
+    "confidence": 0.9944007992744446
+   },
+   {
+    "type": "PERSON",
+    "start": 599,
+    "end": 601,
+    "confidence": 0.7375655770301819
+   },
+   {
+    "type": "PERSON",
+    "start": 603,
+    "end": 608,
+    "confidence": 0.8323943018913269
+   },
+   {
+    "type": "ORG",
     "start": 633,
-    "end": 639,
-    "confidence": 0.6869493722915649
+    "end": 652,
+    "confidence": 0.9840697646141052
    },
    {
     "type": "PHONE",
@@ -1454,6 +3380,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 101,
+    "end": 108,
+    "confidence": 0.6265081167221069
+   },
+   {
     "type": "AADHAAR",
     "start": 118,
     "end": 132,
@@ -1464,6 +3396,18 @@
     "start": 150,
     "end": 160,
     "confidence": 0.95
+   },
+   {
+    "type": "LOC",
+    "start": 202,
+    "end": 210,
+    "confidence": 0.9860981702804565
+   },
+   {
+    "type": "LOC",
+    "start": 212,
+    "end": 230,
+    "confidence": 0.9974247813224792
    },
    {
     "type": "PIN",
@@ -1478,8 +3422,62 @@
     "confidence": 0.75
    },
    {
-    "type": "AADHAAR",
-    "start": 699,
+    "type": "ORG",
+    "start": 275,
+    "end": 284,
+    "confidence": 0.4853466749191284
+   },
+   {
+    "type": "ORG",
+    "start": 368,
+    "end": 392,
+    "confidence": 0.9937665462493896
+   },
+   {
+    "type": "ORG",
+    "start": 394,
+    "end": 405,
+    "confidence": 0.6776763200759888
+   },
+   {
+    "type": "ORG",
+    "start": 436,
+    "end": 469,
+    "confidence": 0.9898392558097839
+   },
+   {
+    "type": "ORG",
+    "start": 495,
+    "end": 523,
+    "confidence": 0.9424224495887756
+   },
+   {
+    "type": "LOC",
+    "start": 525,
+    "end": 531,
+    "confidence": 0.9904232621192932
+   },
+   {
+    "type": "PERSON",
+    "start": 560,
+    "end": 571,
+    "confidence": 0.9983646273612976
+   },
+   {
+    "type": "PERSON",
+    "start": 636,
+    "end": 649,
+    "confidence": 0.9991236329078674
+   },
+   {
+    "type": "ORG",
+    "start": 670,
+    "end": 691,
+    "confidence": 0.9669793844223022
+   },
+   {
+    "type": "PHONE",
+    "start": 698,
     "end": 712,
     "confidence": 0.85
    }
@@ -1504,6 +3502,12 @@
     "confidence": 1
    },
    {
+    "type": "ORG",
+    "start": 101,
+    "end": 108,
+    "confidence": 0.47802457213401794
+   },
+   {
     "type": "AADHAAR",
     "start": 118,
     "end": 132,
@@ -1514,6 +3518,30 @@
     "start": 150,
     "end": 160,
     "confidence": 0.95
+   },
+   {
+    "type": "LOC",
+    "start": 188,
+    "end": 196,
+    "confidence": 0.5862597227096558
+   },
+   {
+    "type": "LOC",
+    "start": 197,
+    "end": 206,
+    "confidence": 0.9377565383911133
+   },
+   {
+    "type": "LOC",
+    "start": 208,
+    "end": 218,
+    "confidence": 0.9883608222007751
+   },
+   {
+    "type": "LOC",
+    "start": 220,
+    "end": 225,
+    "confidence": 0.9983450770378113
    },
    {
     "type": "PIN",
@@ -1528,6 +3556,66 @@
     "confidence": 0.75
    },
    {
+    "type": "ORG",
+    "start": 265,
+    "end": 274,
+    "confidence": 0.9089446067810059
+   },
+   {
+    "type": "ORG",
+    "start": 343,
+    "end": 369,
+    "confidence": 0.9970828294754028
+   },
+   {
+    "type": "LOC",
+    "start": 371,
+    "end": 378,
+    "confidence": 0.8529776334762573
+   },
+   {
+    "type": "ORG",
+    "start": 409,
+    "end": 435,
+    "confidence": 0.9967414736747742
+   },
+   {
+    "type": "ORG",
+    "start": 461,
+    "end": 488,
+    "confidence": 0.9895345568656921
+   },
+   {
+    "type": "LOC",
+    "start": 490,
+    "end": 499,
+    "confidence": 0.984712541103363
+   },
+   {
+    "type": "ORG",
+    "start": 529,
+    "end": 536,
+    "confidence": 0.44521623849868774
+   },
+   {
+    "type": "ORG",
+    "start": 540,
+    "end": 557,
+    "confidence": 0.5177819132804871
+   },
+   {
+    "type": "PERSON",
+    "start": 616,
+    "end": 634,
+    "confidence": 0.9986247420310974
+   },
+   {
+    "type": "ORG",
+    "start": 651,
+    "end": 666,
+    "confidence": 0.9526194334030151
+   },
+   {
     "type": "PHONE",
     "start": 677,
     "end": 688,
@@ -1535,6 +3623,12 @@
    }
   ],
   "em_d1-1": [
+   {
+    "type": "PERSON",
+    "start": 59,
+    "end": 66,
+    "confidence": 0.9746401906013489
+   },
    {
     "type": "MONEY",
     "start": 122,
@@ -1546,6 +3640,18 @@
     "start": 186,
     "end": 198,
     "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 215,
+    "end": 242,
+    "confidence": 0.9951862692832947
+   },
+   {
+    "type": "ORG",
+    "start": 249,
+    "end": 264,
+    "confidence": 0.9842250347137451
    },
    {
     "type": "BANK_ACCOUNT",
@@ -1576,6 +3682,18 @@
     "start": 383,
     "end": 395,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 407,
+    "end": 421,
+    "confidence": 0.5439816117286682
+   },
+   {
+    "type": "ORG",
+    "start": 440,
+    "end": 467,
+    "confidence": 0.9952841401100159
    },
    {
     "type": "EMAIL",
@@ -1616,6 +3734,18 @@
     "confidence": 0.6
    },
    {
+    "type": "ORG",
+    "start": 208,
+    "end": 235,
+    "confidence": 0.9974187612533569
+   },
+   {
+    "type": "ORG",
+    "start": 242,
+    "end": 262,
+    "confidence": 0.9988783001899719
+   },
+   {
     "type": "BANK_ACCOUNT",
     "start": 271,
     "end": 284,
@@ -1644,6 +3774,18 @@
     "start": 383,
     "end": 398,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 410,
+    "end": 422,
+    "confidence": 0.7592775225639343
+   },
+   {
+    "type": "ORG",
+    "start": 441,
+    "end": 461,
+    "confidence": 0.9970419406890869
    },
    {
     "type": "EMAIL",
@@ -1758,6 +3900,12 @@
   ],
   "em_d1-4": [
    {
+    "type": "PERSON",
+    "start": 59,
+    "end": 64,
+    "confidence": 0.9822316765785217
+   },
+   {
     "type": "MONEY",
     "start": 115,
     "end": 127,
@@ -1768,6 +3916,18 @@
     "start": 180,
     "end": 196,
     "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 213,
+    "end": 240,
+    "confidence": 0.7489716410636902
+   },
+   {
+    "type": "ORG",
+    "start": 242,
+    "end": 261,
+    "confidence": 0.9901490211486816
    },
    {
     "type": "BANK_ACCOUNT",
@@ -1800,6 +3960,18 @@
     "confidence": 0.85
    },
    {
+    "type": "PERSON",
+    "start": 404,
+    "end": 424,
+    "confidence": 0.8721653819084167
+   },
+   {
+    "type": "ORG",
+    "start": 443,
+    "end": 462,
+    "confidence": 0.9984321594238281
+   },
+   {
     "type": "EMAIL",
     "start": 463,
     "end": 485,
@@ -1820,6 +3992,12 @@
   ],
   "em_d1-5": [
    {
+    "type": "PERSON",
+    "start": 59,
+    "end": 66,
+    "confidence": 0.9984831213951111
+   },
+   {
     "type": "MONEY",
     "start": 117,
     "end": 124,
@@ -1830,6 +4008,18 @@
     "start": 177,
     "end": 192,
     "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 209,
+    "end": 238,
+    "confidence": 0.9961586594581604
+   },
+   {
+    "type": "ORG",
+    "start": 240,
+    "end": 249,
+    "confidence": 0.9934459924697876
    },
    {
     "type": "BANK_ACCOUNT",
@@ -1860,6 +4050,18 @@
     "start": 373,
     "end": 387,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 399,
+    "end": 412,
+    "confidence": 0.7886840105056763
+   },
+   {
+    "type": "ORG",
+    "start": 431,
+    "end": 454,
+    "confidence": 0.9970833659172058
    },
    {
     "type": "EMAIL",
@@ -1942,6 +4144,18 @@
     "confidence": 0.85
    },
    {
+    "type": "PERSON",
+    "start": 397,
+    "end": 408,
+    "confidence": 0.9576015472412109
+   },
+   {
+    "type": "ORG",
+    "start": 427,
+    "end": 451,
+    "confidence": 0.9958534240722656
+   },
+   {
     "type": "EMAIL",
     "start": 452,
     "end": 470,
@@ -1962,6 +4176,12 @@
   ],
   "em_d1-7": [
    {
+    "type": "PERSON",
+    "start": 59,
+    "end": 66,
+    "confidence": 0.9788282513618469
+   },
+   {
     "type": "MONEY",
     "start": 120,
     "end": 128,
@@ -1972,6 +4192,18 @@
     "start": 181,
     "end": 189,
     "confidence": 0.6
+   },
+   {
+    "type": "ORG",
+    "start": 206,
+    "end": 231,
+    "confidence": 0.5174108147621155
+   },
+   {
+    "type": "ORG",
+    "start": 233,
+    "end": 248,
+    "confidence": 0.9726381301879883
    },
    {
     "type": "BANK_ACCOUNT",
@@ -2002,6 +4234,24 @@
     "start": 370,
     "end": 380,
     "confidence": 0.85
+   },
+   {
+    "type": "LOC",
+    "start": 392,
+    "end": 396,
+    "confidence": 0.4234257638454437
+   },
+   {
+    "type": "PERSON",
+    "start": 397,
+    "end": 402,
+    "confidence": 0.38757023215293884
+   },
+   {
+    "type": "ORG",
+    "start": 421,
+    "end": 449,
+    "confidence": 0.9876894950866699
    },
    {
     "type": "EMAIL",
@@ -2042,6 +4292,18 @@
     "confidence": 0.6
    },
    {
+    "type": "ORG",
+    "start": 214,
+    "end": 236,
+    "confidence": 0.9975378513336182
+   },
+   {
+    "type": "ORG",
+    "start": 238,
+    "end": 257,
+    "confidence": 0.9988946318626404
+   },
+   {
     "type": "BANK_ACCOUNT",
     "start": 266,
     "end": 277,
@@ -2072,6 +4334,18 @@
     "confidence": 0.85
    },
    {
+    "type": "PERSON",
+    "start": 399,
+    "end": 412,
+    "confidence": 0.672789454460144
+   },
+   {
+    "type": "ORG",
+    "start": 431,
+    "end": 454,
+    "confidence": 0.9942393898963928
+   },
+   {
     "type": "EMAIL",
     "start": 455,
     "end": 477,
@@ -2094,14 +4368,26 @@
    {
     "type": "PERSON",
     "start": 55,
-    "end": 57,
-    "confidence": 0.3638392984867096
+    "end": 65,
+    "confidence": 0.3008613884449005
    },
    {
     "type": "DATE",
     "start": 119,
     "end": 129,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 140,
+    "end": 151,
+    "confidence": 0.9897249341011047
+   },
+   {
+    "type": "PERSON",
+    "start": 198,
+    "end": 211,
+    "confidence": 0.7077717781066895
    },
    {
     "type": "EMAIL",
@@ -2119,7 +4405,7 @@
     "type": "PERSON",
     "start": 313,
     "end": 324,
-    "confidence": 0.9897249341011047
+    "confidence": 0.9949439167976379
    },
    {
     "type": "EMAIL",
@@ -2128,10 +4414,28 @@
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 355,
+    "end": 359,
+    "confidence": 0.9593670964241028
+   },
+   {
+    "type": "LOC",
+    "start": 409,
+    "end": 427,
+    "confidence": 0.9922691583633423
+   },
+   {
     "type": "DATE",
     "start": 431,
     "end": 439,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 452,
+    "end": 458,
+    "confidence": 0.9979211688041687
    },
    {
     "type": "PHONE",
@@ -2148,14 +4452,26 @@
    {
     "type": "PERSON",
     "start": 532,
-    "end": 545,
-    "confidence": 0.7077717781066895
+    "end": 538,
+    "confidence": 0.8028552532196045
+   },
+   {
+    "type": "ORG",
+    "start": 539,
+    "end": 569,
+    "confidence": 0.8510209918022156
    },
    {
     "type": "DATE",
     "start": 576,
     "end": 591,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 593,
+    "end": 604,
+    "confidence": 0.9933955669403076
    },
    {
     "type": "EMAIL",
@@ -2184,6 +4500,18 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 134,
+    "end": 148,
+    "confidence": 0.993833065032959
+   },
+   {
+    "type": "PERSON",
+    "start": 195,
+    "end": 211,
+    "confidence": 0.9317874908447266
+   },
+   {
     "type": "EMAIL",
     "start": 213,
     "end": 231,
@@ -2196,16 +4524,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 310,
+    "end": 324,
+    "confidence": 0.9972894191741943
+   },
+   {
     "type": "EMAIL",
     "start": 326,
     "end": 350,
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 356,
+    "end": 363,
+    "confidence": 0.8999499082565308
+   },
+   {
+    "type": "LOC",
+    "start": 413,
+    "end": 421,
+    "confidence": 0.9971632957458496
+   },
+   {
     "type": "DATE",
     "start": 425,
     "end": 443,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 456,
+    "end": 461,
+    "confidence": 0.9952110052108765
    },
    {
     "type": "PHONE",
@@ -2220,22 +4572,34 @@
     "confidence": 0.85
    },
    {
+    "type": "PERSON",
+    "start": 533,
+    "end": 539,
+    "confidence": 0.8633716702461243
+   },
+   {
+    "type": "ORG",
+    "start": 540,
+    "end": 577,
+    "confidence": 0.7944481372833252
+   },
+   {
     "type": "DATE",
     "start": 584,
     "end": 598,
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 600,
+    "end": 614,
+    "confidence": 0.9628834128379822
+   },
+   {
     "type": "EMAIL",
     "start": 616,
     "end": 640,
     "confidence": 0.95
-   },
-   {
-    "type": "PERSON",
-    "start": 691,
-    "end": 699,
-    "confidence": 0.9834890365600586
    },
    {
     "type": "URL",
@@ -2258,6 +4622,18 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 139,
+    "end": 150,
+    "confidence": 0.9935466051101685
+   },
+   {
+    "type": "ORG",
+    "start": 197,
+    "end": 209,
+    "confidence": 0.9956272840499878
+   },
+   {
     "type": "EMAIL",
     "start": 211,
     "end": 234,
@@ -2270,16 +4646,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 307,
+    "end": 318,
+    "confidence": 0.9973607659339905
+   },
+   {
     "type": "EMAIL",
     "start": 320,
     "end": 342,
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 348,
+    "end": 353,
+    "confidence": 0.9572959542274475
+   },
+   {
+    "type": "LOC",
+    "start": 404,
+    "end": 412,
+    "confidence": 0.9957990050315857
+   },
+   {
     "type": "DATE",
     "start": 416,
     "end": 426,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 439,
+    "end": 443,
+    "confidence": 0.9552732706069946
    },
    {
     "type": "PHONE",
@@ -2294,10 +4694,22 @@
     "confidence": 0.85
    },
    {
+    "type": "ORG",
+    "start": 517,
+    "end": 557,
+    "confidence": 0.9957749843597412
+   },
+   {
     "type": "DATE",
     "start": 564,
     "end": 580,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 582,
+    "end": 593,
+    "confidence": 0.9136934876441956
    },
    {
     "type": "EMAIL",
@@ -2317,7 +4729,7 @@
     "type": "ORG",
     "start": 57,
     "end": 63,
-    "confidence": 0.4910600185394287
+    "confidence": 0.5104513764381409
    },
    {
     "type": "DATE",
@@ -2350,10 +4762,28 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 304,
+    "end": 319,
+    "confidence": 0.9981492161750793
+   },
+   {
     "type": "EMAIL",
     "start": 321,
     "end": 338,
     "confidence": 0.95
+   },
+   {
+    "type": "PERSON",
+    "start": 344,
+    "end": 349,
+    "confidence": 0.6170815825462341
+   },
+   {
+    "type": "LOC",
+    "start": 401,
+    "end": 409,
+    "confidence": 0.9956774115562439
    },
    {
     "type": "DATE",
@@ -2374,10 +4804,22 @@
     "confidence": 0.85
    },
    {
+    "type": "ORG",
+    "start": 508,
+    "end": 543,
+    "confidence": 0.9014617204666138
+   },
+   {
     "type": "DATE",
     "start": 550,
     "end": 565,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 567,
+    "end": 582,
+    "confidence": 0.9983885884284973
    },
    {
     "type": "EMAIL",
@@ -2412,6 +4854,18 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 135,
+    "end": 148,
+    "confidence": 0.9928608536720276
+   },
+   {
+    "type": "ORG",
+    "start": 195,
+    "end": 207,
+    "confidence": 0.5117200016975403
+   },
+   {
     "type": "EMAIL",
     "start": 209,
     "end": 231,
@@ -2424,16 +4878,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 312,
+    "end": 325,
+    "confidence": 0.9971265196800232
+   },
+   {
     "type": "EMAIL",
     "start": 327,
     "end": 354,
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 360,
+    "end": 367,
+    "confidence": 0.9915985465049744
+   },
+   {
+    "type": "LOC",
+    "start": 418,
+    "end": 426,
+    "confidence": 0.9977650046348572
+   },
+   {
     "type": "DATE",
     "start": 430,
     "end": 441,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 454,
+    "end": 459,
+    "confidence": 0.9652673602104187
    },
    {
     "type": "PHONE",
@@ -2448,10 +4926,10 @@
     "confidence": 0.85
    },
    {
-    "type": "PERSON",
-    "start": 558,
-    "end": 561,
-    "confidence": 0.9928608536720276
+    "type": "ORG",
+    "start": 531,
+    "end": 565,
+    "confidence": 0.9364986419677734
    },
    {
     "type": "DATE",
@@ -2463,19 +4941,13 @@
     "type": "PERSON",
     "start": 588,
     "end": 601,
-    "confidence": 0.8292276859283447
+    "confidence": 0.9151512980461121
    },
    {
     "type": "EMAIL",
     "start": 603,
     "end": 630,
     "confidence": 0.95
-   },
-   {
-    "type": "ORG",
-    "start": 648,
-    "end": 653,
-    "confidence": 0.7491422891616821
    },
    {
     "type": "URL",
@@ -2510,16 +4982,10 @@
     "confidence": 0.9941090941429138
    },
    {
-    "type": "ORG",
-    "start": 208,
-    "end": 214,
-    "confidence": 0.47568434476852417
-   },
-   {
     "type": "PERSON",
-    "start": 215,
+    "start": 208,
     "end": 224,
-    "confidence": 0.9989629983901978
+    "confidence": 0.9932716488838196
    },
    {
     "type": "EMAIL",
@@ -2534,16 +5000,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 333,
+    "end": 349,
+    "confidence": 0.9964889883995056
+   },
+   {
     "type": "EMAIL",
     "start": 351,
     "end": 377,
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 380,
+    "end": 393,
+    "confidence": 0.9683907628059387
+   },
+   {
+    "type": "LOC",
+    "start": 443,
+    "end": 452,
+    "confidence": 0.9969155788421631
+   },
+   {
     "type": "DATE",
     "start": 456,
     "end": 466,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 479,
+    "end": 483,
+    "confidence": 0.9630220532417297
    },
    {
     "type": "PHONE",
@@ -2558,10 +5048,22 @@
     "confidence": 0.7
    },
    {
+    "type": "ORG",
+    "start": 552,
+    "end": 591,
+    "confidence": 0.8658609986305237
+   },
+   {
     "type": "DATE",
     "start": 598,
     "end": 608,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 610,
+    "end": 626,
+    "confidence": 0.9972079992294312
    },
    {
     "type": "EMAIL",
@@ -2614,16 +5116,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 310,
+    "end": 322,
+    "confidence": 0.9954690337181091
+   },
+   {
     "type": "EMAIL",
     "start": 324,
     "end": 347,
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 353,
+    "end": 358,
+    "confidence": 0.8844544291496277
+   },
+   {
+    "type": "LOC",
+    "start": 410,
+    "end": 416,
+    "confidence": 0.9959871768951416
+   },
+   {
     "type": "DATE",
     "start": 420,
     "end": 428,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 441,
+    "end": 445,
+    "confidence": 0.974165678024292
    },
    {
     "type": "PHONE",
@@ -2638,22 +5164,28 @@
     "confidence": 0.85
    },
    {
+    "type": "ORG",
+    "start": 514,
+    "end": 556,
+    "confidence": 0.8126614689826965
+   },
+   {
     "type": "DATE",
     "start": 563,
     "end": 578,
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 580,
+    "end": 592,
+    "confidence": 0.9174055457115173
+   },
+   {
     "type": "EMAIL",
     "start": 594,
     "end": 617,
     "confidence": 0.95
-   },
-   {
-    "type": "PERSON",
-    "start": 677,
-    "end": 684,
-    "confidence": 0.8548739552497864
    },
    {
     "type": "URL",
@@ -2676,6 +5208,24 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 131,
+    "end": 142,
+    "confidence": 0.9573748111724854
+   },
+   {
+    "type": "PERSON",
+    "start": 189,
+    "end": 193,
+    "confidence": 0.4433284401893616
+   },
+   {
+    "type": "ORG",
+    "start": 194,
+    "end": 197,
+    "confidence": 0.781189501285553
+   },
+   {
     "type": "EMAIL",
     "start": 199,
     "end": 217,
@@ -2691,7 +5241,7 @@
     "type": "PERSON",
     "start": 292,
     "end": 303,
-    "confidence": 0.9573748111724854
+    "confidence": 0.9878414273262024
    },
    {
     "type": "EMAIL",
@@ -2700,10 +5250,28 @@
     "confidence": 0.95
    },
    {
+    "type": "PERSON",
+    "start": 334,
+    "end": 339,
+    "confidence": 0.5286084413528442
+   },
+   {
+    "type": "LOC",
+    "start": 390,
+    "end": 398,
+    "confidence": 0.995461642742157
+   },
+   {
     "type": "DATE",
     "start": 402,
     "end": 412,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 425,
+    "end": 431,
+    "confidence": 0.972565233707428
    },
    {
     "type": "PHONE",
@@ -2718,22 +5286,22 @@
     "confidence": 0.85
    },
    {
-    "type": "PERSON",
-    "start": 504,
-    "end": 508,
-    "confidence": 0.4433284401893616
-   },
-   {
     "type": "ORG",
-    "start": 509,
-    "end": 512,
-    "confidence": 0.781189501285553
+    "start": 504,
+    "end": 540,
+    "confidence": 0.9601709842681885
    },
    {
     "type": "DATE",
     "start": 547,
     "end": 564,
     "confidence": 0.6
+   },
+   {
+    "type": "PERSON",
+    "start": 566,
+    "end": 577,
+    "confidence": 0.6534422039985657
    },
    {
     "type": "EMAIL",
@@ -2753,7 +5321,7 @@
     "type": "ORG",
     "start": 9,
     "end": 15,
-    "confidence": 0.5013235211372375
+    "confidence": 0.48741385340690613
    },
    {
     "type": "ORG",
@@ -3604,20 +6172,8 @@
    {
     "type": "ORG",
     "start": 577,
-    "end": 582,
-    "confidence": 0.5836499929428101
-   },
-   {
-    "type": "PERSON",
-    "start": 583,
-    "end": 592,
-    "confidence": 0.6204618215560913
-   },
-   {
-    "type": "ORG",
-    "start": 593,
     "end": 604,
-    "confidence": 0.7780696153640747
+    "confidence": 0.5836499929428101
    },
    {
     "type": "ORG",
@@ -3709,7 +6265,7 @@
     "type": "ORG",
     "start": 381,
     "end": 385,
-    "confidence": 0.5217465758323669
+    "confidence": 0.5704351663589478
    },
    {
     "type": "IFSC",
@@ -3738,18 +6294,6 @@
    {
     "type": "ORG",
     "start": 563,
-    "end": 569,
-    "confidence": 0.8348919153213501
-   },
-   {
-    "type": "PERSON",
-    "start": 570,
-    "end": 576,
-    "confidence": 0.6609591245651245
-   },
-   {
-    "type": "ORG",
-    "start": 577,
     "end": 588,
     "confidence": 0.7762815356254578
    },
@@ -4378,6 +6922,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 88,
+    "end": 104,
+    "confidence": 0.9731099605560303
+   },
+   {
     "type": "EMAIL",
     "start": 112,
     "end": 139,
@@ -4388,6 +6938,12 @@
     "start": 147,
     "end": 158,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 168,
+    "end": 190,
+    "confidence": 0.9865280985832214
    },
    {
     "type": "IP",
@@ -4402,10 +6958,40 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 390,
+    "end": 396,
+    "confidence": 0.698259174823761
+   },
+   {
     "type": "PHONE",
     "start": 405,
     "end": 416,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 435,
+    "end": 446,
+    "confidence": 0.565609335899353
+   },
+   {
+    "type": "PERSON",
+    "start": 503,
+    "end": 504,
+    "confidence": 0.54405677318573
+   },
+   {
+    "type": "ORG",
+    "start": 506,
+    "end": 508,
+    "confidence": 0.6834933161735535
+   },
+   {
+    "type": "PERSON",
+    "start": 509,
+    "end": 514,
+    "confidence": 0.8339910507202148
    },
    {
     "type": "URL",
@@ -4422,6 +7008,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 86,
+    "end": 95,
+    "confidence": 0.9960179328918457
+   },
+   {
     "type": "EMAIL",
     "start": 103,
     "end": 124,
@@ -4432,6 +7024,12 @@
     "start": 132,
     "end": 142,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 152,
+    "end": 181,
+    "confidence": 0.9943469762802124
    },
    {
     "type": "IP",
@@ -4446,16 +7044,34 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 390,
+    "end": 395,
+    "confidence": 0.9698437452316284
+   },
+   {
     "type": "PHONE",
     "start": 404,
     "end": 419,
     "confidence": 0.85
    },
    {
-    "type": "ORG",
-    "start": 527,
-    "end": 533,
-    "confidence": 0.9640268087387085
+    "type": "PERSON",
+    "start": 438,
+    "end": 450,
+    "confidence": 0.9979202747344971
+   },
+   {
+    "type": "PERSON",
+    "start": 508,
+    "end": 509,
+    "confidence": 0.5560255646705627
+   },
+   {
+    "type": "LOC",
+    "start": 511,
+    "end": 516,
+    "confidence": 0.4301846921443939
    },
    {
     "type": "EMAIL",
@@ -4472,6 +7088,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 86,
+    "end": 101,
+    "confidence": 0.9948558211326599
+   },
+   {
     "type": "EMAIL",
     "start": 109,
     "end": 126,
@@ -4482,6 +7104,12 @@
     "start": 134,
     "end": 145,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 155,
+    "end": 182,
+    "confidence": 0.9939154982566833
    },
    {
     "type": "IP",
@@ -4496,6 +7124,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 383,
+    "end": 388,
+    "confidence": 0.9798837900161743
+   },
+   {
     "type": "PHONE",
     "start": 397,
     "end": 407,
@@ -4503,9 +7137,15 @@
    },
    {
     "type": "PERSON",
-    "start": 533,
-    "end": 535,
-    "confidence": 0.9963237047195435
+    "start": 426,
+    "end": 438,
+    "confidence": 0.9761537909507751
+   },
+   {
+    "type": "PERSON",
+    "start": 496,
+    "end": 504,
+    "confidence": 0.9543007016181946
    },
    {
     "type": "URL",
@@ -4528,6 +7168,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 86,
+    "end": 100,
+    "confidence": 0.9978170394897461
+   },
+   {
     "type": "EMAIL",
     "start": 108,
     "end": 132,
@@ -4538,6 +7184,12 @@
     "start": 140,
     "end": 152,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 162,
+    "end": 186,
+    "confidence": 0.9943190813064575
    },
    {
     "type": "IP",
@@ -4552,10 +7204,28 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 384,
+    "end": 391,
+    "confidence": 0.9870476722717285
+   },
+   {
     "type": "PHONE",
     "start": 400,
     "end": 412,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 431,
+    "end": 446,
+    "confidence": 0.9982997179031372
+   },
+   {
+    "type": "PERSON",
+    "start": 503,
+    "end": 513,
+    "confidence": 0.9348527789115906
    },
    {
     "type": "URL",
@@ -4572,6 +7242,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 91,
+    "end": 100,
+    "confidence": 0.7281819581985474
+   },
+   {
     "type": "EMAIL",
     "start": 108,
     "end": 124,
@@ -4582,6 +7258,12 @@
     "start": 132,
     "end": 146,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 156,
+    "end": 175,
+    "confidence": 0.621465802192688
    },
    {
     "type": "IP",
@@ -4596,10 +7278,28 @@
     "confidence": 0.6
    },
    {
+    "type": "ORG",
+    "start": 374,
+    "end": 378,
+    "confidence": 0.7060571312904358
+   },
+   {
     "type": "PHONE",
     "start": 387,
     "end": 401,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 420,
+    "end": 431,
+    "confidence": 0.9561373591423035
+   },
+   {
+    "type": "PERSON",
+    "start": 489,
+    "end": 496,
+    "confidence": 0.9833542108535767
    },
    {
     "type": "URL",
@@ -4616,16 +7316,28 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 90,
+    "end": 105,
+    "confidence": 0.9988311529159546
+   },
+   {
     "type": "EMAIL",
     "start": 113,
     "end": 140,
     "confidence": 1
    },
    {
-    "type": "AADHAAR",
-    "start": 149,
+    "type": "PHONE",
+    "start": 148,
     "end": 162,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 172,
+    "end": 197,
+    "confidence": 0.9914595484733582
    },
    {
     "type": "IP",
@@ -4640,10 +7352,28 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 395,
+    "end": 403,
+    "confidence": 0.9839001297950745
+   },
+   {
     "type": "PHONE",
     "start": 412,
     "end": 425,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 444,
+    "end": 459,
+    "confidence": 0.9982699751853943
+   },
+   {
+    "type": "PERSON",
+    "start": 517,
+    "end": 526,
+    "confidence": 0.7186362743377686
    },
    {
     "type": "URL",
@@ -4660,6 +7390,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 89,
+    "end": 103,
+    "confidence": 0.9896422624588013
+   },
+   {
     "type": "EMAIL",
     "start": 111,
     "end": 137,
@@ -4670,6 +7406,12 @@
     "start": 145,
     "end": 159,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 169,
+    "end": 188,
+    "confidence": 0.9884205460548401
    },
    {
     "type": "IP",
@@ -4684,6 +7426,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 386,
+    "end": 391,
+    "confidence": 0.9702813625335693
+   },
+   {
     "type": "PHONE",
     "start": 400,
     "end": 410,
@@ -4691,9 +7439,27 @@
    },
    {
     "type": "PERSON",
-    "start": 530,
-    "end": 540,
-    "confidence": 0.9666312336921692
+    "start": 429,
+    "end": 442,
+    "confidence": 0.9501715302467346
+   },
+   {
+    "type": "PERSON",
+    "start": 500,
+    "end": 501,
+    "confidence": 0.4331051707267761
+   },
+   {
+    "type": "ORG",
+    "start": 503,
+    "end": 505,
+    "confidence": 0.4095832109451294
+   },
+   {
+    "type": "PERSON",
+    "start": 506,
+    "end": 512,
+    "confidence": 0.910325288772583
    },
    {
     "type": "URL",
@@ -4710,6 +7476,12 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 83,
+    "end": 95,
+    "confidence": 0.9978684782981873
+   },
+   {
     "type": "EMAIL",
     "start": 103,
     "end": 127,
@@ -4720,6 +7492,12 @@
     "start": 135,
     "end": 147,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 157,
+    "end": 184,
+    "confidence": 0.9959864616394043
    },
    {
     "type": "IP",
@@ -4734,10 +7512,28 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 383,
+    "end": 389,
+    "confidence": 0.9512640833854675
+   },
+   {
     "type": "PHONE",
     "start": 398,
     "end": 408,
     "confidence": 0.85
+   },
+   {
+    "type": "PERSON",
+    "start": 427,
+    "end": 436,
+    "confidence": 0.9966793060302734
+   },
+   {
+    "type": "PERSON",
+    "start": 494,
+    "end": 503,
+    "confidence": 0.4874989986419678
    },
    {
     "type": "URL",
@@ -4972,6 +7768,24 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 452,
+    "end": 456,
+    "confidence": 0.9708609580993652
+   },
+   {
+    "type": "PERSON",
+    "start": 472,
+    "end": 481,
+    "confidence": 0.9852128028869629
+   },
+   {
+    "type": "PERSON",
+    "start": 504,
+    "end": 509,
+    "confidence": 0.9879087209701538
+   },
+   {
     "type": "URL",
     "start": 531,
     "end": 561,
@@ -5108,22 +7922,76 @@
     "confidence": 0.6
    },
    {
+    "type": "PERSON",
+    "start": 73,
+    "end": 79,
+    "confidence": 0.9701711535453796
+   },
+   {
+    "type": "PERSON",
+    "start": 109,
+    "end": 115,
+    "confidence": 0.9948868155479431
+   },
+   {
+    "type": "PERSON",
+    "start": 144,
+    "end": 150,
+    "confidence": 0.9962432980537415
+   },
+   {
     "type": "MONEY",
     "start": 168,
     "end": 182,
     "confidence": 0.85
    },
    {
+    "type": "LOC",
+    "start": 209,
+    "end": 217,
+    "confidence": 0.9954492449760437
+   },
+   {
+    "type": "LOC",
+    "start": 222,
+    "end": 228,
+    "confidence": 0.9956941604614258
+   },
+   {
     "type": "PERSON",
     "start": 230,
     "end": 236,
-    "confidence": 0.9701711535453796
+    "confidence": 0.9958403706550598
+   },
+   {
+    "type": "PERSON",
+    "start": 280,
+    "end": 295,
+    "confidence": 0.9991875886917114
+   },
+   {
+    "type": "PERSON",
+    "start": 297,
+    "end": 303,
+    "confidence": 0.9963135719299316
    },
    {
     "type": "PHONE",
     "start": 339,
     "end": 349,
     "confidence": 0.85
+   },
+   {
+    "type": "ORG",
+    "start": 378,
+    "end": 397,
+    "confidence": 0.9987612366676331
+   },
+   {
+    "type": "LOC",
+    "start": 413,
+    "end": 424,
+    "confidence": 0.994318962097168
    },
    {
     "type": "DATE",
@@ -5133,9 +8001,15 @@
    },
    {
     "type": "PERSON",
+    "start": 467,
+    "end": 473,
+    "confidence": 0.977157711982727
+   },
+   {
+    "type": "PERSON",
     "start": 516,
     "end": 522,
-    "confidence": 0.9948868155479431
+    "confidence": 0.9922394752502441
    },
    {
     "type": "URL",
@@ -5426,53 +8300,53 @@
  "summary": {
   "documents": 72,
   "truthTotal": 1200,
-  "fullyMasked": 726,
-  "typeCorrectFullyMasked": 699,
-  "partlyMasked": 21,
-  "missed": 453,
+  "fullyMasked": 1101,
+  "typeCorrectFullyMasked": 1050,
+  "partlyMasked": 20,
+  "missed": 79,
   "recall": {
-   "num": 726,
+   "num": 1101,
    "den": 1200,
-   "pct": 0.605,
-   "lo": 0.5770477355690989,
-   "hi": 0.6322821297553757
+   "pct": 0.9175,
+   "lo": 0.9005689055640018,
+   "hi": 0.9317665113214089
   },
   "typeCorrectRecall": {
-   "num": 699,
+   "num": 1050,
    "den": 1200,
-   "pct": 0.5825,
-   "lo": 0.5543776383889685,
-   "hi": 0.6100958272231187
+   "pct": 0.875,
+   "lo": 0.8550827408367934,
+   "hi": 0.89252392103633
   },
   "leakDocs": {
-   "num": 66,
+   "num": 34,
    "den": 72,
-   "pct": 0.9166666666666666,
-   "lo": 0.8298744472876599,
-   "hi": 0.9612481028695096
+   "pct": 0.4722222222222222,
+   "lo": 0.3612631919907143,
+   "hi": 0.5859953046654743
   },
   "detections": {
-   "total": 878,
-   "true": 708,
-   "mismatch": 45,
-   "falsePositive": 125
+   "total": 1357,
+   "true": 1069,
+   "mismatch": 63,
+   "falsePositive": 225
   },
   "precision": {
-   "num": 708,
-   "den": 833,
-   "pct": 0.8499399759903962,
-   "lo": 0.8240833019753441,
-   "hi": 0.8725837853205075
+   "num": 1069,
+   "den": 1294,
+   "pct": 0.8261205564142194,
+   "lo": 0.8045125455595193,
+   "hi": 0.8457979391714369
   },
   "mismatchPairs": {
    "AADHAAR -> BANK_ACCOUNT": 1,
-   "AADHAAR -> PHONE": 4,
+   "AADHAAR -> PHONE": 1,
    "EMAIL -> URL": 2,
+   "LOC -> ORG": 6,
    "LOC -> PERSON": 5,
-   "ORG -> LOC": 4,
-   "ORG -> PERSON": 25,
+   "ORG -> LOC": 13,
+   "ORG -> PERSON": 33,
    "PERSON -> LOC": 1,
-   "PERSON -> ORG": 2,
    "PHONE -> BANK_ACCOUNT": 1
   },
   "negHits": {
@@ -5646,22 +8520,22 @@
     },
     "LOC": {
      "total": 176,
-     "full": 66,
+     "full": 173,
      "partial": 2,
-     "missed": 108,
+     "missed": 1,
      "recall": {
-      "num": 66,
+      "num": 173,
       "den": 176,
-      "pct": 0.375,
-      "lo": 0.3068632166372529,
-      "hi": 0.44847703834268493
+      "pct": 0.9829545454545454,
+      "lo": 0.9510898249206845,
+      "hi": 0.994186462656828
      },
      "typeCorrect": {
-      "num": 62,
+      "num": 160,
       "den": 176,
-      "pct": 0.3522727272727273,
-      "lo": 0.2855423977663727,
-      "hi": 0.4253142672099175
+      "pct": 0.9090909090909091,
+      "lo": 0.8574368505737389,
+      "hi": 0.9432677694919187
      }
     },
     "MONEY": {
@@ -5686,22 +8560,22 @@
     },
     "ORG": {
      "total": 168,
-     "full": 42,
-     "partial": 3,
-     "missed": 123,
+     "full": 162,
+     "partial": 6,
+     "missed": 0,
      "recall": {
-      "num": 42,
+      "num": 162,
       "den": 168,
-      "pct": 0.25,
-      "lo": 0.1906051286908763,
-      "hi": 0.32057260708439583
+      "pct": 0.9642857142857143,
+      "lo": 0.9242816438896537,
+      "hi": 0.9835311325276981
      },
      "typeCorrect": {
-      "num": 42,
+      "num": 162,
       "den": 168,
-      "pct": 0.25,
-      "lo": 0.1906051286908763,
-      "hi": 0.32057260708439583
+      "pct": 0.9642857142857143,
+      "lo": 0.9242816438896537,
+      "hi": 0.9835311325276981
      }
     },
     "PAN": {
@@ -5726,42 +8600,42 @@
     },
     "PERSON": {
      "total": 352,
-     "full": 117,
-     "partial": 13,
-     "missed": 222,
+     "full": 262,
+     "partial": 12,
+     "missed": 78,
      "recall": {
-      "num": 117,
+      "num": 262,
       "den": 352,
-      "pct": 0.33238636363636365,
-      "lo": 0.285217048253224,
-      "hi": 0.38317473056072016
+      "pct": 0.7443181818181818,
+      "lo": 0.6962768932203008,
+      "hi": 0.7870842427458143
      },
      "typeCorrect": {
-      "num": 99,
+      "num": 229,
       "den": 352,
-      "pct": 0.28125,
-      "lo": 0.2368362259252726,
-      "hi": 0.33038694303529864
+      "pct": 0.6505681818181818,
+      "lo": 0.5993760896044311,
+      "hi": 0.6985092616305002
      }
     },
     "PHONE": {
      "total": 96,
-     "full": 93,
-     "partial": 3,
+     "full": 96,
+     "partial": 0,
      "missed": 0,
      "recall": {
-      "num": 93,
+      "num": 96,
       "den": 96,
-      "pct": 0.96875,
-      "lo": 0.9121117385108631,
-      "hi": 0.989316123222122
+      "pct": 1,
+      "lo": 0.9615230525151842,
+      "hi": 1
      },
      "typeCorrect": {
-      "num": 92,
+      "num": 95,
       "den": 96,
-      "pct": 0.9583333333333334,
-      "lo": 0.8977165749246647,
-      "hi": 0.9836795565475875
+      "pct": 0.9895833333333334,
+      "lo": 0.9433324450728878,
+      "hi": 0.9981588771815634
      }
     },
     "PIN": {
@@ -5828,124 +8702,124 @@
    "preset": {
     "chats": {
      "total": 344,
-     "full": 214,
-     "partial": 1,
-     "missed": 129,
+     "full": 265,
+     "partial": 3,
+     "missed": 76,
      "recall": {
-      "num": 214,
+      "num": 265,
       "den": 344,
-      "pct": 0.622093023255814,
-      "lo": 0.569771937820657,
-      "hi": 0.6717172917597037
+      "pct": 0.7703488372093024,
+      "lo": 0.7230602037683591,
+      "hi": 0.811665947445297
      },
      "typeCorrect": {
-      "num": 209,
+      "num": 259,
       "den": 344,
-      "pct": 0.6075581395348837,
-      "lo": 0.5550412059190558,
-      "hi": 0.6576993058541191
+      "pct": 0.752906976744186,
+      "lo": 0.7046999052243477,
+      "hi": 0.7955277846206852
      }
     },
     "emails": {
      "total": 400,
-     "full": 308,
-     "partial": 6,
-     "missed": 86,
+     "full": 393,
+     "partial": 5,
+     "missed": 2,
      "recall": {
-      "num": 308,
+      "num": 393,
       "den": 400,
-      "pct": 0.77,
-      "lo": 0.7263063466698358,
-      "hi": 0.8085568274063366
+      "pct": 0.9825,
+      "lo": 0.9643224844820973,
+      "hi": 0.9914978173392109
      },
      "typeCorrect": {
-      "num": 297,
+      "num": 371,
       "den": 400,
-      "pct": 0.7425,
-      "lo": 0.6974839488186009,
-      "hi": 0.7829024204905541
+      "pct": 0.9275,
+      "lo": 0.8978168807373348,
+      "hi": 0.9490498115499382
      }
     },
     "resumes": {
      "total": 456,
-     "full": 204,
-     "partial": 14,
-     "missed": 238,
+     "full": 443,
+     "partial": 12,
+     "missed": 1,
      "recall": {
-      "num": 204,
+      "num": 443,
       "den": 456,
-      "pct": 0.4473684210526316,
-      "lo": 0.4023592773208458,
-      "hi": 0.4932569522677777
+      "pct": 0.9714912280701754,
+      "lo": 0.9518394854468425,
+      "hi": 0.9832651244884046
      },
      "typeCorrect": {
-      "num": 193,
+      "num": 420,
       "den": 456,
-      "pct": 0.4232456140350877,
-      "lo": 0.3787233534110568,
-      "hi": 0.46905031473901926
+      "pct": 0.9210526315789473,
+      "lo": 0.892638399651126,
+      "hi": 0.9424317636398853
      }
     }
    },
    "personPattern": {
     "full": {
      "total": 112,
-     "full": 39,
-     "partial": 13,
-     "missed": 60,
+     "full": 103,
+     "partial": 9,
+     "missed": 0,
      "recall": {
-      "num": 39,
+      "num": 103,
       "den": 112,
-      "pct": 0.3482142857142857,
-      "lo": 0.26634598320951786,
-      "hi": 0.4401497834235397
+      "pct": 0.9196428571428571,
+      "lo": 0.8543029723025655,
+      "hi": 0.9571499081825106
      },
      "typeCorrect": {
-      "num": 29,
+      "num": 81,
       "den": 112,
-      "pct": 0.25892857142857145,
-      "lo": 0.18675273129699618,
-      "hi": 0.34709348629668346
+      "pct": 0.7232142857142857,
+      "lo": 0.6340004702052653,
+      "hi": 0.7976234023931794
      }
     },
     "honorific": {
      "total": 40,
-     "full": 11,
+     "full": 35,
      "partial": 0,
-     "missed": 29,
+     "missed": 5,
      "recall": {
-      "num": 11,
+      "num": 35,
       "den": 40,
-      "pct": 0.275,
-      "lo": 0.1610785343314309,
-      "hi": 0.4283525083312457
+      "pct": 0.875,
+      "lo": 0.7388757932976187,
+      "hi": 0.9454058022645873
      },
      "typeCorrect": {
-      "num": 10,
+      "num": 33,
       "den": 40,
-      "pct": 0.25,
-      "lo": 0.14186967895549518,
-      "hi": 0.40194259066970106
+      "pct": 0.825,
+      "lo": 0.6804970794560755,
+      "hi": 0.9125469700311694
      }
     },
     "initials_first": {
      "total": 8,
-     "full": 0,
-     "partial": 0,
-     "missed": 8,
+     "full": 5,
+     "partial": 3,
+     "missed": 0,
      "recall": {
-      "num": 0,
+      "num": 5,
       "den": 8,
-      "pct": 0,
-      "lo": 0,
-      "hi": 0.3244156195108769
+      "pct": 0.625,
+      "lo": 0.30573785458380187,
+      "hi": 0.863158240538479
      },
      "typeCorrect": {
-      "num": 0,
+      "num": 5,
       "den": 8,
-      "pct": 0,
-      "lo": 0,
-      "hi": 0.3244156195108769
+      "pct": 0.625,
+      "lo": 0.30573785458380187,
+      "hi": 0.863158240538479
      }
     },
     "initials_last": {
@@ -5970,42 +8844,42 @@
     },
     "multipart": {
      "total": 8,
-     "full": 0,
+     "full": 8,
      "partial": 0,
-     "missed": 8,
+     "missed": 0,
      "recall": {
-      "num": 0,
+      "num": 8,
       "den": 8,
-      "pct": 0,
-      "lo": 0,
-      "hi": 0.3244156195108769
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
      },
      "typeCorrect": {
-      "num": 0,
+      "num": 8,
       "den": 8,
-      "pct": 0,
-      "lo": 0,
-      "hi": 0.3244156195108769
+      "pct": 1,
+      "lo": 0.6755843804891231,
+      "hi": 1
      }
     },
     "single": {
      "total": 176,
-     "full": 59,
+     "full": 103,
      "partial": 0,
-     "missed": 117,
+     "missed": 73,
      "recall": {
-      "num": 59,
+      "num": 103,
       "den": 176,
-      "pct": 0.3352272727272727,
-      "lo": 0.2696623239089698,
-      "hi": 0.40783164856458454
+      "pct": 0.5852272727272727,
+      "lo": 0.511376115774452,
+      "hi": 0.6554373467392266
      },
      "typeCorrect": {
-      "num": 57,
+      "num": 99,
       "den": 176,
-      "pct": 0.32386363636363635,
-      "lo": 0.25913005710926834,
-      "hi": 0.39612212036246225
+      "pct": 0.5625,
+      "lo": 0.48864875950058684,
+      "hi": 0.6336811130094442
      }
     }
    },
@@ -6032,42 +8906,42 @@
     },
     "title": {
      "total": 274,
-     "full": 107,
+     "full": 238,
      "partial": 12,
-     "missed": 155,
+     "missed": 24,
      "recall": {
-      "num": 107,
+      "num": 238,
       "den": 274,
-      "pct": 0.3905109489051095,
-      "lo": 0.33463851616515305,
-      "hi": 0.4494111005949002
+      "pct": 0.8686131386861314,
+      "lo": 0.8234674357491504,
+      "hi": 0.9035655211586705
      },
      "typeCorrect": {
-      "num": 92,
+      "num": 211,
       "den": 274,
-      "pct": 0.3357664233576642,
-      "lo": 0.2824596770852912,
-      "hi": 0.3936147480547886
+      "pct": 0.7700729927007299,
+      "lo": 0.7167193846698084,
+      "hi": 0.8159582273220604
      }
     },
     "upper": {
      "total": 27,
-     "full": 10,
-     "partial": 1,
-     "missed": 16,
+     "full": 24,
+     "partial": 0,
+     "missed": 3,
      "recall": {
-      "num": 10,
+      "num": 24,
       "den": 27,
-      "pct": 0.37037037037037035,
-      "lo": 0.21532287067936856,
-      "hi": 0.5577109537655369
+      "pct": 0.8888888888888888,
+      "lo": 0.7194181745602705,
+      "hi": 0.9614803521050127
      },
      "typeCorrect": {
-      "num": 7,
+      "num": 18,
       "den": 27,
-      "pct": 0.25925925925925924,
-      "lo": 0.13170208422866778,
-      "hi": 0.4467893040261568
+      "pct": 0.6666666666666666,
+      "lo": 0.47824419872105484,
+      "hi": 0.8135694555640665
      }
     }
    }
@@ -6075,34 +8949,34 @@
   "leakBy": {
    "preset": {
     "chats": {
-     "num": 23,
+     "num": 17,
      "den": 24,
-     "pct": 0.9583333333333334,
-     "lo": 0.7975777375115778,
-     "hi": 0.992606734645195
+     "pct": 0.7083333333333334,
+     "lo": 0.508319363412903,
+     "hi": 0.8508553966583573
     },
     "emails": {
-     "num": 19,
+     "num": 7,
      "den": 24,
-     "pct": 0.7916666666666666,
-     "lo": 0.5952915551476452,
-     "hi": 0.9075531089521192
+     "pct": 0.2916666666666667,
+     "lo": 0.14914460334164278,
+     "hi": 0.49168063658709704
     },
     "resumes": {
-     "num": 24,
+     "num": 10,
      "den": 24,
-     "pct": 1,
-     "lo": 0.8620194241710247,
-     "hi": 1
+     "pct": 0.4166666666666667,
+     "lo": 0.24467347246538232,
+     "hi": 0.6116566235061137
     }
    }
   },
   "precisionBy": {
    "type": {
     "AADHAAR": {
-     "detections": 13,
+     "detections": 10,
      "true": 8,
-     "mismatch": 5,
+     "mismatch": 2,
      "falsePositive": 0,
      "precision": {
       "num": 8,
@@ -6191,16 +9065,16 @@
      }
     },
     "LOC": {
-     "detections": 95,
-     "true": 63,
-     "mismatch": 5,
-     "falsePositive": 27,
+     "detections": 223,
+     "true": 161,
+     "mismatch": 11,
+     "falsePositive": 51,
      "precision": {
-      "num": 63,
-      "den": 90,
-      "pct": 0.7,
-      "lo": 0.598732953143893,
-      "hi": 0.7848922194874346
+      "num": 161,
+      "den": 212,
+      "pct": 0.7594339622641509,
+      "lo": 0.697606771259334,
+      "hi": 0.8120262188593456
      }
     },
     "MONEY": {
@@ -6217,16 +9091,16 @@
      }
     },
     "ORG": {
-     "detections": 109,
-     "true": 43,
-     "mismatch": 29,
-     "falsePositive": 37,
+     "detections": 327,
+     "true": 167,
+     "mismatch": 46,
+     "falsePositive": 114,
      "precision": {
-      "num": 43,
-      "den": 80,
-      "pct": 0.5375,
-      "lo": 0.4290416436680269,
-      "hi": 0.6425218761121299
+      "num": 167,
+      "den": 281,
+      "pct": 0.594306049822064,
+      "lo": 0.5359958462491364,
+      "hi": 0.6500724808491526
      }
     },
     "PAN": {
@@ -6243,28 +9117,28 @@
      }
     },
     "PERSON": {
-     "detections": 122,
-     "true": 106,
-     "mismatch": 3,
-     "falsePositive": 13,
+     "detections": 255,
+     "true": 242,
+     "mismatch": 1,
+     "falsePositive": 12,
      "precision": {
-      "num": 106,
-      "den": 119,
-      "pct": 0.8907563025210085,
-      "lo": 0.8220343172040586,
-      "hi": 0.9350382054592737
+      "num": 242,
+      "den": 254,
+      "pct": 0.952755905511811,
+      "lo": 0.9192494349085494,
+      "hi": 0.9727710924229593
      }
     },
     "PHONE": {
-     "detections": 93,
-     "true": 92,
+     "detections": 96,
+     "true": 95,
      "mismatch": 1,
      "falsePositive": 0,
      "precision": {
-      "num": 92,
-      "den": 92,
+      "num": 95,
+      "den": 95,
       "pct": 1,
-      "lo": 0.9599171967079014,
+      "lo": 0.9611337736337738,
       "hi": 1
      }
     },
@@ -6310,42 +9184,42 @@
    },
    "preset": {
     "chats": {
-     "detections": 268,
-     "true": 209,
-     "mismatch": 6,
-     "falsePositive": 53,
+     "detections": 323,
+     "true": 264,
+     "mismatch": 9,
+     "falsePositive": 50,
      "precision": {
-      "num": 209,
-      "den": 262,
-      "pct": 0.7977099236641222,
-      "lo": 0.7449268583374264,
-      "hi": 0.8418887491521463
+      "num": 264,
+      "den": 314,
+      "pct": 0.8407643312101911,
+      "lo": 0.7962092666508244,
+      "hi": 0.8770820835059835
      }
     },
     "emails": {
-     "detections": 364,
-     "true": 302,
-     "mismatch": 16,
+     "detections": 440,
+     "true": 376,
+     "mismatch": 18,
      "falsePositive": 46,
      "precision": {
-      "num": 302,
-      "den": 348,
-      "pct": 0.867816091954023,
-      "lo": 0.8281825263088469,
-      "hi": 0.8994176210301827
+      "num": 376,
+      "den": 422,
+      "pct": 0.8909952606635071,
+      "lo": 0.8576585496884249,
+      "hi": 0.9172774828645244
      }
     },
     "resumes": {
-     "detections": 246,
-     "true": 197,
-     "mismatch": 23,
-     "falsePositive": 26,
+     "detections": 594,
+     "true": 429,
+     "mismatch": 36,
+     "falsePositive": 129,
      "precision": {
-      "num": 197,
-      "den": 223,
-      "pct": 0.8834080717488789,
-      "lo": 0.8346485464294113,
-      "hi": 0.9191814388995583
+      "num": 429,
+      "den": 558,
+      "pct": 0.7688172043010753,
+      "lo": 0.7320698544813958,
+      "hi": 0.8018884711392061
      }
     }
    }
@@ -6369,19 +9243,19 @@
    },
    {
     "docId": "res_d1-1",
-    "detected": "LOC",
-    "truthTypes": [
-     "PERSON"
-    ],
-    "value": "Thakur"
-   },
-   {
-    "docId": "res_d1-2",
     "detected": "ORG",
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Kulkarni"
+    "value": "Kamala Thakur"
+   },
+   {
+    "docId": "res_d1-2",
+    "detected": "LOC",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "St. Aldric's"
    },
    {
     "docId": "res_d1-3",
@@ -6392,12 +9266,44 @@
     "value": "Anitha"
    },
    {
+    "docId": "res_d1-3",
+    "detected": "LOC",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "St."
+   },
+   {
+    "docId": "res_d1-3",
+    "detected": "LOC",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "Aldric's"
+   },
+   {
     "docId": "res_d1-4",
     "detected": "ORG",
     "truthTypes": [
      "PERSON"
     ],
-    "value": "VARGHESE"
+    "value": "ABDUL"
+   },
+   {
+    "docId": "res_d1-4",
+    "detected": "LOC",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "Greenwood"
+   },
+   {
+    "docId": "res_d1-4",
+    "detected": "LOC",
+    "truthTypes": [
+     "ORG"
+    ],
+    "value": "St. Aldric's"
    },
    {
     "docId": "res_d1-5",
@@ -6413,7 +9319,7 @@
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Chinmay Thomas"
+    "value": "Thomas"
    },
    {
     "docId": "res_d1-6",
@@ -6429,15 +9335,15 @@
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Bora"
+    "value": "Jyoti Bora"
    },
    {
     "docId": "res_d1-8",
     "detected": "LOC",
     "truthTypes": [
-     "PERSON"
+     "ORG"
     ],
-    "value": "Fernandes"
+    "value": "Riverdale"
    },
    {
     "docId": "res_d2-1",
@@ -6448,12 +9354,28 @@
     "value": "Lalit N"
    },
    {
+    "docId": "res_d2-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Nashik"
+   },
+   {
     "docId": "res_d2-2",
     "detected": "PERSON",
     "truthTypes": [
      "LOC"
     ],
     "value": "Powai"
+   },
+   {
+    "docId": "res_d2-2",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Dehradun"
    },
    {
     "docId": "res_d2-3",
@@ -6464,6 +9386,14 @@
     "value": "Analyst\nSalt Lake"
    },
    {
+    "docId": "res_d2-3",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Patna"
+   },
+   {
     "docId": "res_d2-4",
     "detected": "ORG",
     "truthTypes": [
@@ -6472,12 +9402,20 @@
     "value": "Gaurav J"
    },
    {
-    "docId": "res_d2-5",
-    "detected": "AADHAAR",
+    "docId": "res_d2-4",
+    "detected": "ORG",
     "truthTypes": [
-     "PHONE"
+     "LOC"
     ],
-    "value": "91-8153084236"
+    "value": "Gangtok"
+   },
+   {
+    "docId": "res_d2-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Coimbatore"
    },
    {
     "docId": "res_d2-6",
@@ -6496,12 +9434,28 @@
     "value": "HSR"
    },
    {
+    "docId": "res_d2-6",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Mishra"
+   },
+   {
     "docId": "res_d2-7",
     "detected": "ORG",
     "truthTypes": [
      "PERSON"
     ],
     "value": "IMRAN M"
+   },
+   {
+    "docId": "res_d2-7",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Mysuru"
    },
    {
     "docId": "res_d2-8",
@@ -6512,6 +9466,30 @@
     "value": "Anitha R"
    },
    {
+    "docId": "res_d2-8",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Jadhav"
+   },
+   {
+    "docId": "res_d3-4",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Dehradun"
+   },
+   {
+    "docId": "res_d3-5",
+    "detected": "ORG",
+    "truthTypes": [
+     "LOC"
+    ],
+    "value": "Ballygunge"
+   },
+   {
     "docId": "res_d3-6",
     "detected": "ORG",
     "truthTypes": [
@@ -6520,20 +9498,28 @@
     "value": "Karthik Shinde"
    },
    {
-    "docId": "res_d3-6",
-    "detected": "PERSON",
+    "docId": "res_d3-7",
+    "detected": "ORG",
     "truthTypes": [
-     "ORG"
+     "LOC"
     ],
-    "value": "Kaveri"
+    "value": "Bhubaneswar"
    },
    {
-    "docId": "res_d3-7",
-    "detected": "AADHAAR",
+    "docId": "res_d3-8",
+    "detected": "ORG",
     "truthTypes": [
-     "PHONE"
+     "PERSON"
     ],
-    "value": "91-6400244792"
+    "value": "DHILLON"
+   },
+   {
+    "docId": "em_d1-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Vandana Ansari"
    },
    {
     "docId": "em_d1-5",
@@ -6542,6 +9528,22 @@
      "PHONE"
     ],
     "value": "91-71633-71897"
+   },
+   {
+    "docId": "em_d1-7",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Zoya"
+   },
+   {
+    "docId": "em_d2-3",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Lhamo Saxena"
    },
    {
     "docId": "em_d2-4",
@@ -6553,19 +9555,11 @@
    },
    {
     "docId": "em_d2-5",
-    "detected": "PERSON",
-    "truthTypes": [
-     "ORG"
-    ],
-    "value": "Pvt"
-   },
-   {
-    "docId": "em_d2-6",
     "detected": "ORG",
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Faisal"
+    "value": "Sneha Chopra"
    },
    {
     "docId": "em_d2-8",
@@ -6645,7 +9639,7 @@
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Deepa"
+    "value": "Deepa Singhania\nProcurement"
    },
    {
     "docId": "em_d3-8",
@@ -6661,7 +9655,7 @@
     "truthTypes": [
      "PERSON"
     ],
-    "value": "Simran"
+    "value": "Simran Dorjee\nProcurement"
    },
    {
     "docId": "ch_d1-4",
@@ -6672,6 +9666,22 @@
     "value": "Vikram"
    },
    {
+    "docId": "ch_d2-1",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "L."
+   },
+   {
+    "docId": "ch_d2-2",
+    "detected": "LOC",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "Yadav"
+   },
+   {
     "docId": "ch_d2-2",
     "detected": "EMAIL",
     "truthTypes": [
@@ -6680,12 +9690,20 @@
     "value": "screenshot at www.indus.in"
    },
    {
-    "docId": "ch_d2-6",
-    "detected": "AADHAAR",
+    "docId": "ch_d2-5",
+    "detected": "ORG",
     "truthTypes": [
-     "PHONE"
+     "PERSON"
     ],
-    "value": "91-9486368959"
+    "value": "Amit"
+   },
+   {
+    "docId": "ch_d2-7",
+    "detected": "ORG",
+    "truthTypes": [
+     "PERSON"
+    ],
+    "value": "A."
    },
    {
     "docId": "ch_d3-1",
@@ -6726,17 +9744,17 @@
    {
     "docId": "res_d1-1",
     "type": "ORG",
-    "value": "knowledge"
+    "value": "Digital Marketing"
    },
    {
     "docId": "res_d1-1",
     "type": "ORG",
-    "value": "Place"
+    "value": "Excel"
    },
    {
     "docId": "res_d1-1",
-    "type": "ORG",
-    "value": "Date"
+    "type": "LOC",
+    "value": "Lake View Road"
    },
    {
     "docId": "res_d1-2",
@@ -6759,6 +9777,26 @@
     "value": "Lakeview Park"
    },
    {
+    "docId": "res_d1-2",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "ORG",
+    "value": "Procurement"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "LOC",
+    "value": "Park Avenue"
+   },
+   {
+    "docId": "res_d1-2",
+    "type": "LOC",
+    "value": "Near Central Library"
+   },
+   {
     "docId": "res_d1-3",
     "type": "LOC",
     "value": "No"
@@ -6767,6 +9805,31 @@
     "docId": "res_d1-3",
     "type": "LOC",
     "value": "Ring Road"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "ORG",
+    "value": "Salesforce"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "ORG",
+    "value": "Tally"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "ORG",
+    "value": "Computer Science"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "LOC",
+    "value": "Plot"
+   },
+   {
+    "docId": "res_d1-3",
+    "type": "LOC",
+    "value": "12th Main"
    },
    {
     "docId": "res_d1-4",
@@ -6789,6 +9852,41 @@
     "value": "Old Water Tank"
    },
    {
+    "docId": "res_d1-4",
+    "type": "ORG",
+    "value": "Excel"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "ORG",
+    "value": "Tally"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "ORG",
+    "value": "Marketing"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "ORG",
+    "value": "Com"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "H"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "No"
+   },
+   {
+    "docId": "res_d1-4",
+    "type": "LOC",
+    "value": "MG Road"
+   },
+   {
     "docId": "res_d1-5",
     "type": "LOC",
     "value": "Sector 9"
@@ -6797,6 +9895,26 @@
     "docId": "res_d1-5",
     "type": "LOC",
     "value": "Main Road"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "ORG",
+    "value": "Salesforce"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "ORG",
+    "value": "Tally"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "ORG",
+    "value": "Com"
+   },
+   {
+    "docId": "res_d1-5",
+    "type": "LOC",
+    "value": "Rose Garden Road"
    },
    {
     "docId": "res_d1-6",
@@ -6814,6 +9932,31 @@
     "value": "Rose Petal Cinema"
    },
    {
+    "docId": "res_d1-6",
+    "type": "ORG",
+    "value": "AutoCAD"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "ORG",
+    "value": "Procurement"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "ORG",
+    "value": "Excel"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "ORG",
+    "value": "Finance"
+   },
+   {
+    "docId": "res_d1-6",
+    "type": "LOC",
+    "value": "Rose Garden Road"
+   },
+   {
     "docId": "res_d1-7",
     "type": "ORG",
     "value": "Plot"
@@ -6826,12 +9969,32 @@
    {
     "docId": "res_d1-7",
     "type": "ORG",
-    "value": "Place"
+    "value": "Salesforce"
    },
    {
     "docId": "res_d1-7",
     "type": "ORG",
-    "value": "Date"
+    "value": "Human Resources team"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "ORG",
+    "value": "Digital"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "ORG",
+    "value": "Mechanical Engineering"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "LOC",
+    "value": "H.No 3"
+   },
+   {
+    "docId": "res_d1-7",
+    "type": "LOC",
+    "value": "Temple Street"
    },
    {
     "docId": "res_d1-8",
@@ -6839,9 +10002,389 @@
     "value": "Cross Road 3"
    },
    {
+    "docId": "res_d1-8",
+    "type": "ORG",
+    "value": "Marketing"
+   },
+   {
+    "docId": "res_d1-8",
+    "type": "ORG",
+    "value": "AutoCAD"
+   },
+   {
+    "docId": "res_d1-8",
+    "type": "ORG",
+    "value": "SAP"
+   },
+   {
+    "docId": "res_d1-8",
+    "type": "LOC",
+    "value": "Plot"
+   },
+   {
+    "docId": "res_d1-8",
+    "type": "LOC",
+    "value": "MG Road"
+   },
+   {
+    "docId": "res_d2-1",
+    "type": "ORG",
+    "value": "AutoCAD"
+   },
+   {
+    "docId": "res_d2-1",
+    "type": "ORG",
+    "value": "EXPERIENCE"
+   },
+   {
+    "docId": "res_d2-1",
+    "type": "ORG",
+    "value": "SAP"
+   },
+   {
+    "docId": "res_d2-2",
+    "type": "ORG",
+    "value": "SAP"
+   },
+   {
+    "docId": "res_d2-2",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d2-2",
+    "type": "ORG",
+    "value": "EXPERIENCE"
+   },
+   {
+    "docId": "res_d2-2",
+    "type": "ORG",
+    "value": "Tally"
+   },
+   {
+    "docId": "res_d2-3",
+    "type": "ORG",
+    "value": "Analyst"
+   },
+   {
+    "docId": "res_d2-3",
+    "type": "ORG",
+    "value": "AutoCAD"
+   },
+   {
+    "docId": "res_d2-3",
+    "type": "ORG",
+    "value": "Tally"
+   },
+   {
+    "docId": "res_d2-3",
+    "type": "ORG",
+    "value": "Com"
+   },
+   {
+    "docId": "res_d2-4",
+    "type": "ORG",
+    "value": "Excel"
+   },
+   {
+    "docId": "res_d2-4",
+    "type": "ORG",
+    "value": "Digital Marketing"
+   },
+   {
+    "docId": "res_d2-4",
+    "type": "ORG",
+    "value": "EXPERIENCE"
+   },
+   {
+    "docId": "res_d2-4",
+    "type": "ORG",
+    "value": "Digital"
+   },
+   {
+    "docId": "res_d2-5",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d2-5",
+    "type": "ORG",
+    "value": "SAP"
+   },
+   {
+    "docId": "res_d2-5",
+    "type": "PERSON",
+    "value": "Er"
+   },
+   {
+    "docId": "res_d2-5",
+    "type": "ORG",
+    "value": "Computer"
+   },
+   {
+    "docId": "res_d2-6",
+    "type": "ORG",
+    "value": "Excel"
+   },
+   {
+    "docId": "res_d2-6",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d2-6",
+    "type": "ORG",
+    "value": "EXPERIENCE"
+   },
+   {
+    "docId": "res_d2-6",
+    "type": "ORG",
+    "value": "Com"
+   },
+   {
+    "docId": "res_d2-7",
+    "type": "ORG",
+    "value": "Salesforce"
+   },
+   {
+    "docId": "res_d2-8",
+    "type": "ORG",
+    "value": "Digital Marketing"
+   },
+   {
+    "docId": "res_d2-8",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "ORG",
+    "value": "Aadhaar"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "LOC",
+    "value": "Link Road"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "ORG",
+    "value": "Science"
+   },
+   {
     "docId": "res_d3-1",
     "type": "PERSON",
-    "value": "Seeking"
+    "value": "SKILLS\nTally"
+   },
+   {
+    "docId": "res_d3-1",
+    "type": "ORG",
+    "value": "Power BI"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "Aadhaar No"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "LOC",
+    "value": "Lake View Road"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "LOC",
+    "value": "Near Old Water Tank"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "Engineering"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "CGPA"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "PERSON",
+    "value": "Er"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "SAP"
+   },
+   {
+    "docId": "res_d3-2",
+    "type": "ORG",
+    "value": "Excel"
+   },
+   {
+    "docId": "res_d3-3",
+    "type": "ORG",
+    "value": "Aadhaar"
+   },
+   {
+    "docId": "res_d3-3",
+    "type": "LOC",
+    "value": "Market Road"
+   },
+   {
+    "docId": "res_d3-3",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-3",
+    "type": "ORG",
+    "value": "Human Resources"
+   },
+   {
+    "docId": "res_d3-3",
+    "type": "ORG",
+    "value": "Python"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "ORG",
+    "value": "Aadhaar No"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "LOC",
+    "value": "Cross Road 3"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "LOC",
+    "value": "Near District Court"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "ORG",
+    "value": "Engineering"
+   },
+   {
+    "docId": "res_d3-4",
+    "type": "PERSON",
+    "value": "Smt"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "ORG",
+    "value": "Aadhaar"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "LOC",
+    "value": "Church Lane"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "ORG",
+    "value": "Computer Science"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "ORG",
+    "value": "CGPA"
+   },
+   {
+    "docId": "res_d3-5",
+    "type": "ORG",
+    "value": "Java"
+   },
+   {
+    "docId": "res_d3-6",
+    "type": "ORG",
+    "value": "Aadhaar No"
+   },
+   {
+    "docId": "res_d3-6",
+    "type": "LOC",
+    "value": "Main Road"
+   },
+   {
+    "docId": "res_d3-6",
+    "type": "ORG",
+    "value": "Com"
+   },
+   {
+    "docId": "res_d3-6",
+    "type": "ORG",
+    "value": "CGPA"
+   },
+   {
+    "docId": "res_d3-6",
+    "type": "PERSON",
+    "value": "Er"
+   },
+   {
+    "docId": "res_d3-7",
+    "type": "ORG",
+    "value": "Aadhaar"
+   },
+   {
+    "docId": "res_d3-7",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-8",
+    "type": "ORG",
+    "value": "Aadhaar"
+   },
+   {
+    "docId": "res_d3-8",
+    "type": "LOC",
+    "value": "Sector 9"
+   },
+   {
+    "docId": "res_d3-8",
+    "type": "LOC",
+    "value": "Main Road"
+   },
+   {
+    "docId": "res_d3-8",
+    "type": "ORG",
+    "value": "OBJECTIVE"
+   },
+   {
+    "docId": "res_d3-8",
+    "type": "ORG",
+    "value": "Digital Marketing"
+   },
+   {
+    "docId": "em_d1-1",
+    "type": "ORG",
+    "value": "IDFC FIRST Bank"
+   },
+   {
+    "docId": "em_d1-2",
+    "type": "ORG",
+    "value": "Punjab National Bank"
    },
    {
     "docId": "em_d1-3",
@@ -6849,39 +10392,39 @@
     "value": "Axis Bank"
    },
    {
+    "docId": "em_d1-4",
+    "type": "ORG",
+    "value": "Kotak Mahindra Bank"
+   },
+   {
+    "docId": "em_d1-5",
+    "type": "ORG",
+    "value": "HDFC Bank"
+   },
+   {
     "docId": "em_d1-6",
     "type": "ORG",
     "value": "Bank of Baroda"
    },
    {
-    "docId": "em_d2-1",
-    "type": "PERSON",
-    "value": "Hi"
-   },
-   {
-    "docId": "em_d2-2",
-    "type": "PERSON",
-    "value": "delivery"
-   },
-   {
-    "docId": "em_d2-5",
-    "type": "PERSON",
-    "value": "Hi"
-   },
-   {
-    "docId": "em_d2-5",
+    "docId": "em_d1-7",
     "type": "ORG",
-    "value": "share"
+    "value": "IDFC FIRST Bank"
+   },
+   {
+    "docId": "em_d1-8",
+    "type": "ORG",
+    "value": "State Bank of India"
+   },
+   {
+    "docId": "em_d2-5",
+    "type": "PERSON",
+    "value": "Hi"
    },
    {
     "docId": "em_d2-6",
     "type": "PERSON",
     "value": "Hi"
-   },
-   {
-    "docId": "em_d2-7",
-    "type": "PERSON",
-    "value": "contact"
    },
    {
     "docId": "em_d3-1",
@@ -7044,11 +10587,6 @@
     "value": "IFSC"
    },
    {
-    "docId": "em_d3-7",
-    "type": "ORG",
-    "value": "Procurement"
-   },
-   {
     "docId": "em_d3-8",
     "type": "PERSON",
     "value": "Er"
@@ -7069,11 +10607,6 @@
     "value": "IFSC"
    },
    {
-    "docId": "em_d3-8",
-    "type": "ORG",
-    "value": "Procurement"
-   },
-   {
     "docId": "ch_d1-1",
     "type": "DATE",
     "value": "12/05/24"
@@ -7312,26 +10845,11 @@
     "docId": "ch_d1-8",
     "type": "DATE",
     "value": "12/05/24"
-   },
-   {
-    "docId": "ch_d2-2",
-    "type": "ORG",
-    "value": "shared"
-   },
-   {
-    "docId": "ch_d2-3",
-    "type": "PERSON",
-    "value": "at"
    },
    {
     "docId": "ch_d2-4",
     "type": "ORG",
     "value": "INC4210743"
-   },
-   {
-    "docId": "ch_d2-7",
-    "type": "PERSON",
-    "value": "screenshot"
    },
    {
     "docId": "ch_d3-2",
@@ -7342,6 +10860,7 @@
   "worstMisses": [
    {
     "docId": "ch_d1-1",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7355,6 +10874,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 78,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7368,6 +10888,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 158,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7381,6 +10902,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 170,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7394,6 +10916,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 215,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7407,6 +10930,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 256,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7420,6 +10944,7 @@
    },
    {
     "docId": "ch_d1-1",
+    "start": 342,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7433,6 +10958,7 @@
    },
    {
     "docId": "ch_d1-2",
+    "start": 150,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7446,6 +10972,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7459,6 +10986,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 78,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7472,6 +11000,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 155,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7485,6 +11014,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 167,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7498,6 +11028,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 211,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7511,6 +11042,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 253,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7524,6 +11056,7 @@
    },
    {
     "docId": "ch_d1-3",
+    "start": 345,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7537,6 +11070,7 @@
    },
    {
     "docId": "ch_d1-4",
+    "start": 349,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7550,6 +11084,7 @@
    },
    {
     "docId": "ch_d1-5",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7563,6 +11098,7 @@
    },
    {
     "docId": "ch_d1-5",
+    "start": 152,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7576,6 +11112,7 @@
    },
    {
     "docId": "ch_d1-5",
+    "start": 162,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7589,6 +11126,7 @@
    },
    {
     "docId": "ch_d1-5",
+    "start": 244,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7602,6 +11140,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7615,6 +11154,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 78,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7628,6 +11168,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 146,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7641,6 +11182,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 158,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7654,6 +11196,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 201,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7667,6 +11210,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 240,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7680,6 +11224,7 @@
    },
    {
     "docId": "ch_d1-6",
+    "start": 331,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7693,6 +11238,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7706,6 +11252,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 78,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7719,6 +11266,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 155,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7732,6 +11280,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 167,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7745,6 +11294,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 211,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7758,6 +11308,7 @@
    },
    {
     "docId": "ch_d1-7",
+    "start": 340,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7771,6 +11322,7 @@
    },
    {
     "docId": "ch_d1-8",
+    "start": 21,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7784,6 +11336,7 @@
    },
    {
     "docId": "ch_d1-8",
+    "start": 152,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7797,6 +11350,7 @@
    },
    {
     "docId": "ch_d1-8",
+    "start": 164,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7810,6 +11364,7 @@
    },
    {
     "docId": "ch_d1-8",
+    "start": 251,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7823,6 +11378,7 @@
    },
    {
     "docId": "ch_d1-8",
+    "start": 334,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
@@ -7835,159 +11391,171 @@
     "detectedAs": []
    },
    {
-    "docId": "ch_d2-1",
-    "preset": "chats",
-    "type": "PERSON",
-    "pattern": "full",
-    "caseStyle": "title",
-    "value": "Ishita Deshpande",
-    "status": "missed",
-    "uncovered": "16 of 16 characters not covered",
-    "before": ": Open\nCreated: 23 March 2022\nCustomer: ",
-    "after": "\nEmail: ishitadeshpande@yahoo.co.in\nPhon",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-1",
-    "preset": "chats",
-    "type": "ORG",
-    "pattern": null,
-    "caseStyle": "n/a",
-    "value": "Tapestry Design Studio",
-    "status": "missed",
-    "uncovered": "22 of 22 characters not covered",
-    "before": "yahoo.co.in\nPhone: 06169607810\nCompany: ",
-    "after": "\n\nDescription:\nCustomer reports that the",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-1",
+    "docId": "ch_d3-3",
+    "start": 454,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
     "caseStyle": "title",
-    "value": "Ishita",
+    "value": "Neha",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "gar said they would sign by 05.02.2024.\n",
+    "after": ": Action items: Joseph to send the contr",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-4",
+    "start": 351,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Ritu",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "waiting. I will call him on 6768641808.\n",
+    "after": ": I can follow up with Pioneer Valve Wor",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-4",
+    "start": 489,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "title",
+    "value": "Ritu",
+    "status": "missed",
+    "uncovered": "4 of 4 characters not covered",
+    "before": "16th August 2023.\nSimran: Action items: ",
+    "after": " to send the contract, Harini to share t",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 77,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sandeep",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": "urity Systems\nDate: 18 September, 2020\n\n",
+    "after": ": Okay everyone, let's start. anjali, ca",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 114,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "anjali",
     "status": "missed",
     "uncovered": "6 of 6 characters not covered",
-    "before": "8 is blocked. Customer asked us to call ",
-    "after": " back on 64689-21331.\n\nInternal notes:\nM",
+    "before": "0\n\nsandeep: Okay everyone, let's start. ",
+    "after": ", can you share the numbers?\nanjali: Sur",
     "detectedAs": []
    },
    {
-    "docId": "ch_d2-1",
-    "preset": "chats",
-    "type": "PERSON",
-    "pattern": "full",
-    "caseStyle": "title",
-    "value": "Mridul Bhat",
-    "status": "missed",
-    "uncovered": "11 of 11 characters not covered",
-    "before": "a back on 64689-21331.\n\nInternal notes:\n",
-    "after": " (L2 support): checked logs, version 6.2",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-1",
-    "preset": "chats",
-    "type": "PERSON",
-    "pattern": "initials_first",
-    "caseStyle": "title",
-    "value": "R. L. Bains",
-    "status": "missed",
-    "uncovered": "11 of 11 characters not covered",
-    "before": "ecked logs, version 6.2.9. Escalated to ",
-    "after": ".\nCustomer shared screenshot at https://",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-2",
-    "preset": "chats",
-    "type": "PERSON",
-    "pattern": "full",
-    "caseStyle": "title",
-    "value": "Anita Rao",
-    "status": "missed",
-    "uncovered": "9 of 9 characters not covered",
-    "before": "pen\nCreated: 20 January, 2025\nCustomer: ",
-    "after": "\nEmail: anita.rao@outlook.com\nPhone: 784",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-2",
-    "preset": "chats",
-    "type": "ORG",
-    "pattern": null,
-    "caseStyle": "n/a",
-    "value": "Anantha Constructions Pvt Ltd",
-    "status": "missed",
-    "uncovered": "29 of 29 characters not covered",
-    "before": "@outlook.com\nPhone: 7843870421\nCompany: ",
-    "after": "\n\nDescription:\nCustomer reports that the",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-2",
+    "docId": "ch_d3-5",
+    "start": 149,
     "preset": "chats",
     "type": "PERSON",
     "pattern": "single",
-    "caseStyle": "title",
-    "value": "Anita",
+    "caseStyle": "lower",
+    "value": "anjali",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "art. anjali, can you share the numbers?\n",
+    "after": ": Sure. We closed ₹38 LPA this quarter, ",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 233,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sandeep",
+    "status": "missed",
+    "uncovered": "7 of 7 characters not covered",
+    "before": ", mostly from Visakhapatnam and Mumbai.\n",
+    "after": ": Good. And the pending approval from Sm",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 283,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "honorific",
+    "caseStyle": "lower",
+    "value": "thakur",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": "ood. And the pending approval from Smt. ",
+    "after": "?\nanjali: Still waiting. I will call him",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 291,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "anjali",
+    "status": "missed",
+    "uncovered": "6 of 6 characters not covered",
+    "before": " the pending approval from Smt. thakur?\n",
+    "after": ": Still waiting. I will call him on +916",
+    "detectedAs": []
+   },
+   {
+    "docId": "ch_d3-5",
+    "start": 348,
+    "preset": "chats",
+    "type": "PERSON",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "rahul",
     "status": "missed",
     "uncovered": "5 of 5 characters not covered",
-    "before": "2 is blocked. Customer asked us to call ",
-    "after": " back on +91 64637 82084.\n\nInternal note",
+    "before": "ting. I will call him on +916371887655.\n",
+    "after": ": I can follow up with Silverline Packag",
     "detectedAs": []
    },
    {
-    "docId": "ch_d2-2",
+    "docId": "ch_d3-5",
+    "start": 456,
     "preset": "chats",
     "type": "PERSON",
-    "pattern": "full",
-    "caseStyle": "title",
-    "value": "Kamala Patel",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "sandeep",
     "status": "missed",
-    "uncovered": "12 of 12 characters not covered",
-    "before": "ck on +91 64637 82084.\n\nInternal notes:\n",
-    "after": " (L2 support): checked logs, version 8.1",
+    "uncovered": "7 of 7 characters not covered",
+    "before": "Baner said they would sign by 13/01/19.\n",
+    "after": ": Action items: rahul to send the contra",
     "detectedAs": []
    },
    {
-    "docId": "ch_d2-2",
+    "docId": "ch_d3-5",
+    "start": 479,
     "preset": "chats",
     "type": "PERSON",
-    "pattern": "initials_first",
-    "caseStyle": "title",
-    "value": "S. Yadav",
+    "pattern": "single",
+    "caseStyle": "lower",
+    "value": "rahul",
     "status": "missed",
-    "uncovered": "8 of 8 characters not covered",
-    "before": "cked logs, version 8.11.3. Escalated to ",
-    "after": ".\nCustomer shared screenshot at www.indu",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-3",
-    "preset": "chats",
-    "type": "PERSON",
-    "pattern": "full",
-    "caseStyle": "title",
-    "value": "Arjun Pattanaik",
-    "status": "missed",
-    "uncovered": "15 of 15 characters not covered",
-    "before": "us: Open\nCreated: 5 June 2022\nCustomer: ",
-    "after": "\nEmail: arjun.p@proton.me\nPhone: 0630098",
-    "detectedAs": []
-   },
-   {
-    "docId": "ch_d2-3",
-    "preset": "chats",
-    "type": "ORG",
-    "pattern": null,
-    "caseStyle": "n/a",
-    "value": "Quartz Mining Equipment Ltd",
-    "status": "missed",
-    "uncovered": "27 of 27 characters not covered",
-    "before": "p@proton.me\nPhone: 06300985589\nCompany: ",
-    "after": "\n\nDescription:\nCustomer reports that the",
+    "uncovered": "5 of 5 characters not covered",
+    "before": "ign by 13/01/19.\nsandeep: Action items: ",
+    "after": " to send the contract, anjali to share t",
     "detectedAs": []
    }
   ]

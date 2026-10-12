@@ -1,13 +1,13 @@
 # Scrub evaluation: dev split
 
-- Code version (git commit): 4b931237d38a05cb407a76d4005b17c195133c7d
+- Code version (git commit): 4946553436addb315cc1179a87875e0933ed18a2
 - Split: dev
-- Run date and time: 2026-10-12T16:59:47.684Z
+- Run date and time: 2026-10-12T18:17:29.669Z
 - Model: Xenova/bert-base-NER (q8)
 - Documents: 72
 - SHA-256 of the scored file: d94d4873ad2753bb4fe246e6a17065753bbb2411bafe329f70e40bd5554c0ef3
 - File on disk now: same SHA-256 as the scored file
-- Run time: 142.3 seconds
+- Run time: 127.1 seconds
 
 ## Definitions
 
@@ -41,13 +41,13 @@ Start with the headline recall and the document leak rate: they say how often so
 
 | Measure | Result |
 | --- | --- |
-| Recall: truth spans fully masked | 726 of 1200 (60.5%, 95% CI 57.7% to 63.2%) |
-| Type-correct recall: fully masked by detections of the right type | 699 of 1200 (58.3%, 95% CI 55.4% to 61.0%) |
-| Truth spans partly masked (counted as leaks) | 21 of 1200 |
-| Truth spans missed completely | 453 of 1200 |
-| Document leak rate: documents with at least one span not fully masked | 66 of 72 (91.7%, 95% CI 83.0% to 96.1%) |
-| Precision: true detections out of true plus false positives | 708 of 833 (85.0%, 95% CI 82.4% to 87.3%) |
-| All detections | 878 (true 708, type mismatch 45, false positive 125) |
+| Recall: truth spans fully masked | 1101 of 1200 (91.8%, 95% CI 90.1% to 93.2%) |
+| Type-correct recall: fully masked by detections of the right type | 1050 of 1200 (87.5%, 95% CI 85.5% to 89.3%) |
+| Truth spans partly masked (counted as leaks) | 20 of 1200 |
+| Truth spans missed completely | 79 of 1200 |
+| Document leak rate: documents with at least one span not fully masked | 34 of 72 (47.2%, 95% CI 36.1% to 58.6%) |
+| Precision: true detections out of true plus false positives | 1069 of 1294 (82.6%, 95% CI 80.5% to 84.6%) |
+| All detections | 1357 (true 1069, type mismatch 63, false positive 225) |
 
 ### Recall by entity type
 
@@ -60,12 +60,12 @@ Start with the headline recall and the document leak rate: they say how often so
 | GSTIN | 16 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 0 | 0 |
 | IFSC | 16 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 0 | 0 |
 | IP | 8 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) | 0 | 0 |
-| LOC | 176 | 66 of 176 (37.5%, 95% CI 30.7% to 44.8%) | 62 of 176 (35.2%, 95% CI 28.6% to 42.5%) | 2 | 108 |
+| LOC | 176 | 173 of 176 (98.3%, 95% CI 95.1% to 99.4%) | 160 of 176 (90.9%, 95% CI 85.7% to 94.3%) | 2 | 1 |
 | MONEY | 48 | 48 of 48 (100.0%, 95% CI 92.6% to 100.0%) | 48 of 48 (100.0%, 95% CI 92.6% to 100.0%) | 0 | 0 |
-| ORG | 168 | 42 of 168 (25.0%, 95% CI 19.1% to 32.1%) | 42 of 168 (25.0%, 95% CI 19.1% to 32.1%) | 3 | 123 |
+| ORG | 168 | 162 of 168 (96.4%, 95% CI 92.4% to 98.4%) | 162 of 168 (96.4%, 95% CI 92.4% to 98.4%) | 6 | 0 |
 | PAN | 24 | 24 of 24 (100.0%, 95% CI 86.2% to 100.0%) | 24 of 24 (100.0%, 95% CI 86.2% to 100.0%) | 0 | 0 |
-| PERSON | 352 | 117 of 352 (33.2%, 95% CI 28.5% to 38.3%) | 99 of 352 (28.1%, 95% CI 23.7% to 33.0%) | 13 | 222 |
-| PHONE | 96 | 93 of 96 (96.9%, 95% CI 91.2% to 98.9%) | 92 of 96 (95.8%, 95% CI 89.8% to 98.4%) | 3 | 0 |
+| PERSON | 352 | 262 of 352 (74.4%, 95% CI 69.6% to 78.7%) | 229 of 352 (65.1%, 95% CI 59.9% to 69.9%) | 12 | 78 |
+| PHONE | 96 | 96 of 96 (100.0%, 95% CI 96.2% to 100.0%) | 95 of 96 (99.0%, 95% CI 94.3% to 99.8%) | 0 | 0 |
 | PIN | 32 | 32 of 32 (100.0%, 95% CI 89.3% to 100.0%) | 32 of 32 (100.0%, 95% CI 89.3% to 100.0%) | 0 | 0 |
 | UPI | 16 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) | 0 | 0 |
 | URL | 48 | 48 of 48 (100.0%, 95% CI 92.6% to 100.0%) | 46 of 48 (95.8%, 95% CI 86.0% to 98.8%) | 0 | 0 |
@@ -74,54 +74,54 @@ Start with the headline recall and the document leak rate: they say how often so
 
 | Preset | Spans | Recall (fully masked) | Type-correct recall | Partly masked | Missed |
 | --- | --- | --- | --- | --- | --- |
-| chats | 344 | 214 of 344 (62.2%, 95% CI 57.0% to 67.2%) | 209 of 344 (60.8%, 95% CI 55.5% to 65.8%) | 1 | 129 |
-| emails | 400 | 308 of 400 (77.0%, 95% CI 72.6% to 80.9%) | 297 of 400 (74.3%, 95% CI 69.7% to 78.3%) | 6 | 86 |
-| resumes | 456 | 204 of 456 (44.7%, 95% CI 40.2% to 49.3%) | 193 of 456 (42.3%, 95% CI 37.9% to 46.9%) | 14 | 238 |
+| chats | 344 | 265 of 344 (77.0%, 95% CI 72.3% to 81.2%) | 259 of 344 (75.3%, 95% CI 70.5% to 79.6%) | 3 | 76 |
+| emails | 400 | 393 of 400 (98.3%, 95% CI 96.4% to 99.1%) | 371 of 400 (92.8%, 95% CI 89.8% to 94.9%) | 5 | 2 |
+| resumes | 456 | 443 of 456 (97.1%, 95% CI 95.2% to 98.3%) | 420 of 456 (92.1%, 95% CI 89.3% to 94.2%) | 12 | 1 |
 
 ### Recall by PERSON pattern
 
 | Pattern | Spans | Recall (fully masked) | Type-correct recall | Partly masked | Missed |
 | --- | --- | --- | --- | --- | --- |
-| full | 112 | 39 of 112 (34.8%, 95% CI 26.6% to 44.0%) | 29 of 112 (25.9%, 95% CI 18.7% to 34.7%) | 13 | 60 |
-| honorific | 40 | 11 of 40 (27.5%, 95% CI 16.1% to 42.8%) | 10 of 40 (25.0%, 95% CI 14.2% to 40.2%) | 0 | 29 |
-| initials_first | 8 | 0 of 8 (0.0%, 95% CI 0.0% to 32.4%) | 0 of 8 (0.0%, 95% CI 0.0% to 32.4%) | 0 | 8 |
+| full | 112 | 103 of 112 (92.0%, 95% CI 85.4% to 95.7%) | 81 of 112 (72.3%, 95% CI 63.4% to 79.8%) | 9 | 0 |
+| honorific | 40 | 35 of 40 (87.5%, 95% CI 73.9% to 94.5%) | 33 of 40 (82.5%, 95% CI 68.0% to 91.3%) | 0 | 5 |
+| initials_first | 8 | 5 of 8 (62.5%, 95% CI 30.6% to 86.3%) | 5 of 8 (62.5%, 95% CI 30.6% to 86.3%) | 3 | 0 |
 | initials_last | 8 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) | 3 of 8 (37.5%, 95% CI 13.7% to 69.4%) | 0 | 0 |
-| multipart | 8 | 0 of 8 (0.0%, 95% CI 0.0% to 32.4%) | 0 of 8 (0.0%, 95% CI 0.0% to 32.4%) | 0 | 8 |
-| single | 176 | 59 of 176 (33.5%, 95% CI 27.0% to 40.8%) | 57 of 176 (32.4%, 95% CI 25.9% to 39.6%) | 0 | 117 |
+| multipart | 8 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) | 0 | 0 |
+| single | 176 | 103 of 176 (58.5%, 95% CI 51.1% to 65.5%) | 99 of 176 (56.3%, 95% CI 48.9% to 63.4%) | 0 | 73 |
 
 ### Recall by PERSON case style
 
 | Case style | Spans | Recall (fully masked) | Type-correct recall | Partly masked | Missed |
 | --- | --- | --- | --- | --- | --- |
 | lower | 51 | 0 of 51 (0.0%, 95% CI 0.0% to 7.0%) | 0 of 51 (0.0%, 95% CI 0.0% to 7.0%) | 0 | 51 |
-| title | 274 | 107 of 274 (39.1%, 95% CI 33.5% to 44.9%) | 92 of 274 (33.6%, 95% CI 28.2% to 39.4%) | 12 | 155 |
-| upper | 27 | 10 of 27 (37.0%, 95% CI 21.5% to 55.8%) | 7 of 27 (25.9%, 95% CI 13.2% to 44.7%) | 1 | 16 |
+| title | 274 | 238 of 274 (86.9%, 95% CI 82.3% to 90.4%) | 211 of 274 (77.0%, 95% CI 71.7% to 81.6%) | 12 | 24 |
+| upper | 27 | 24 of 27 (88.9%, 95% CI 71.9% to 96.1%) | 18 of 27 (66.7%, 95% CI 47.8% to 81.4%) | 0 | 3 |
 
 ### Document leak rate by preset
 
 | Preset | Documents with a leak |
 | --- | --- |
-| chats | 23 of 24 (95.8%, 95% CI 79.8% to 99.3%) |
-| emails | 19 of 24 (79.2%, 95% CI 59.5% to 90.8%) |
-| resumes | 24 of 24 (100.0%, 95% CI 86.2% to 100.0%) |
+| chats | 17 of 24 (70.8%, 95% CI 50.8% to 85.1%) |
+| emails | 7 of 24 (29.2%, 95% CI 14.9% to 49.2%) |
+| resumes | 10 of 24 (41.7%, 95% CI 24.5% to 61.2%) |
 
 ### Precision by detected type
 
 | Detected type | Detections | True | Type mismatch | False positive | Precision |
 | --- | --- | --- | --- | --- | --- |
-| AADHAAR | 13 | 8 | 5 | 0 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) |
+| AADHAAR | 10 | 8 | 2 | 0 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) |
 | BANK_ACCOUNT | 14 | 14 | 0 | 0 | 14 of 14 (100.0%, 95% CI 78.5% to 100.0%) |
 | DATE | 144 | 96 | 0 | 48 | 96 of 144 (66.7%, 95% CI 58.6% to 73.8%) |
 | EMAIL | 82 | 80 | 2 | 0 | 80 of 80 (100.0%, 95% CI 95.4% to 100.0%) |
 | GSTIN | 16 | 16 | 0 | 0 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) |
 | IFSC | 16 | 16 | 0 | 0 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) |
 | IP | 8 | 8 | 0 | 0 | 8 of 8 (100.0%, 95% CI 67.6% to 100.0%) |
-| LOC | 95 | 63 | 5 | 27 | 63 of 90 (70.0%, 95% CI 59.9% to 78.5%) |
+| LOC | 223 | 161 | 11 | 51 | 161 of 212 (75.9%, 95% CI 69.8% to 81.2%) |
 | MONEY | 48 | 48 | 0 | 0 | 48 of 48 (100.0%, 95% CI 92.6% to 100.0%) |
-| ORG | 109 | 43 | 29 | 37 | 43 of 80 (53.8%, 95% CI 42.9% to 64.3%) |
+| ORG | 327 | 167 | 46 | 114 | 167 of 281 (59.4%, 95% CI 53.6% to 65.0%) |
 | PAN | 24 | 24 | 0 | 0 | 24 of 24 (100.0%, 95% CI 86.2% to 100.0%) |
-| PERSON | 122 | 106 | 3 | 13 | 106 of 119 (89.1%, 95% CI 82.2% to 93.5%) |
-| PHONE | 93 | 92 | 1 | 0 | 92 of 92 (100.0%, 95% CI 96.0% to 100.0%) |
+| PERSON | 255 | 242 | 1 | 12 | 242 of 254 (95.3%, 95% CI 91.9% to 97.3%) |
+| PHONE | 96 | 95 | 1 | 0 | 95 of 95 (100.0%, 95% CI 96.1% to 100.0%) |
 | PIN | 32 | 32 | 0 | 0 | 32 of 32 (100.0%, 95% CI 89.3% to 100.0%) |
 | UPI | 16 | 16 | 0 | 0 | 16 of 16 (100.0%, 95% CI 80.6% to 100.0%) |
 | URL | 46 | 46 | 0 | 0 | 46 of 46 (100.0%, 95% CI 92.3% to 100.0%) |
@@ -130,22 +130,22 @@ Start with the headline recall and the document leak rate: they say how often so
 
 | Preset | Detections | True | Type mismatch | False positive | Precision |
 | --- | --- | --- | --- | --- | --- |
-| chats | 268 | 209 | 6 | 53 | 209 of 262 (79.8%, 95% CI 74.5% to 84.2%) |
-| emails | 364 | 302 | 16 | 46 | 302 of 348 (86.8%, 95% CI 82.8% to 89.9%) |
-| resumes | 246 | 197 | 23 | 26 | 197 of 223 (88.3%, 95% CI 83.5% to 91.9%) |
+| chats | 323 | 264 | 9 | 50 | 264 of 314 (84.1%, 95% CI 79.6% to 87.7%) |
+| emails | 440 | 376 | 18 | 46 | 376 of 422 (89.1%, 95% CI 85.8% to 91.7%) |
+| resumes | 594 | 429 | 36 | 129 | 429 of 558 (76.9%, 95% CI 73.2% to 80.2%) |
 
 ### Type mismatches (still protective, listed separately)
 
 | Detected as -> truth type | Detections |
 | --- | --- |
 | AADHAAR -> BANK_ACCOUNT | 1 |
-| AADHAAR -> PHONE | 4 |
+| AADHAAR -> PHONE | 1 |
 | EMAIL -> URL | 2 |
+| LOC -> ORG | 6 |
 | LOC -> PERSON | 5 |
-| ORG -> LOC | 4 |
-| ORG -> PERSON | 25 |
+| ORG -> LOC | 13 |
+| ORG -> PERSON | 33 |
 | PERSON -> LOC | 1 |
-| PERSON -> ORG | 2 |
 | PHONE -> BANK_ACCOUNT | 1 |
 
 ### Look-alike numbers (NEG): detections that overlap them
@@ -166,56 +166,56 @@ Structured IDs first, then names, organisations and places; within each, missed 
 
 | # | Doc | Type | Pattern / case | Status | Value | Before | After | Detected as |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | ch_d2-6 | PHONE | - / n/a | partial, 1 of 14 characters not covered | +91-9486368959 | ail: chopra.mohammed@hotmail.com⏎Phone:  | ⏎Company: Bluepeak Software Pvt Ltd⏎⏎Des | AADHAAR |
-| 2 | res_d2-5 | PHONE | - / n/a | partial, 1 of 14 characters not covered | +91-8153084236 |  Project Coordinator⏎Dwarka, Indore  \|   |   \|  s.thomas@outlook.com  \|  https://ww | AADHAAR |
-| 3 | res_d3-7 | PHONE | - / n/a | partial, 1 of 14 characters not covered | +91-6400244792 | e Engineer, Vasant Retail Pvt Ltd - Ph:  |  | AADHAAR |
-| 4 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 5 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya kavitasubramanian | - |
-| 6 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | manian@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. pallavi ka number do na⏎[12/05/24, | - |
-| 7 | ch_d1-1 | PERSON | single / lower | missed, 7 of 7 characters not covered | pallavi | .co.in⏎[12/05/24, 10:44 am] kavita: ok.  |  ka number do na⏎[12/05/24, 10:44 am] so | - |
-| 8 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | vi ka number do na⏎[12/05/24, 10:44 am]  | : 62187-01918⏎[12/05/24, 10:47 am] kavit | - |
-| 9 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | ourav: 62187-01918⏎[12/05/24, 10:47 am]  | : payment Rs.1,29,900 kal tak ho jayega, | - |
-| 10 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav |  UPI id vermaa@ybl⏎[12/05/24, 10:48 am]  | : done. order OD76454550 ka status check | - |
-| 11 | ch_d1-2 | PERSON | single / title | missed, 6 of 6 characters not covered | Rajesh | r.bora@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. Venkatesh ka number do na⏎[12/05/2 | - |
-| 12 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 13 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya dorjee.sourav@red | - |
-| 14 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | rav@rediffmail.com⏎[12/05/24, 10:44 am]  | : ok. nikhil ka number do na⏎[12/05/24,  | - |
-| 15 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | nikhil | il.com⏎[12/05/24, 10:44 am] sourav: ok.  |  ka number do na⏎[12/05/24, 10:44 am] zo | - |
-| 16 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | il ka number do na⏎[12/05/24, 10:44 am]  | : 91 74645 85249⏎[12/05/24, 10:47 am] so | - |
-| 17 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | ya: 91 74645 85249⏎[12/05/24, 10:47 am]  | : payment ₹1,07,300 kal tak ho jayega, U | - |
-| 18 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | kavita.trivedi@ibl⏎[12/05/24, 10:48 am]  | : done. order OD84497826 ka status check | - |
-| 19 | ch_d1-4 | PERSON | single / title | missed, 6 of 6 characters not covered | Vikram | preet.patel@okaxis⏎[12/05/24, 10:48 am]  | : done. order ORD-6955699 ka status chec | - |
-| 20 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 21 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit | ari@rediffmail.com⏎[12/05/24, 10:44 am]  | : ok. Jyoti ka number do na⏎[12/05/24, 1 | - |
-| 22 | ch_d1-5 | PERSON | single / title | missed, 5 of 5 characters not covered | Jyoti | mail.com⏎[12/05/24, 10:44 am] Amit: ok.  |  ka number do na⏎[12/05/24, 10:44 am] Im | - |
-| 23 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit |  Imran: 6933921669⏎[12/05/24, 10:47 am]  | : payment ₹303,000 kal tak ho jayega, UP | - |
-| 24 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 25 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya shruti23@gmail.co | - |
-| 26 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti | shruti23@gmail.com⏎[12/05/24, 10:44 am]  | : ok. varun ka number do na⏎[12/05/24, 1 | - |
-| 27 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | varun | il.com⏎[12/05/24, 10:44 am] shruti: ok.  |  ka number do na⏎[12/05/24, 10:44 am] ab | - |
-| 28 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | un ka number do na⏎[12/05/24, 10:44 am]  | : 8863220133⏎[12/05/24, 10:47 am] shruti | - |
-| 29 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti |  abdul: 8863220133⏎[12/05/24, 10:47 am]  | : payment Rs.4,74,100 kal tak ho jayega, | - |
-| 30 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | id zainab20@okaxis⏎[12/05/24, 10:48 am]  | : done. order ORD-2124050 ka status chec | - |
-| 31 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Balaji | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 32 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya balaji.kapoor@yah | - |
-| 33 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Balaji | kapoor@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. Tenzin ka number do na⏎[12/05/24,  | - |
-| 34 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Tenzin | .co.in⏎[12/05/24, 10:44 am] Balaji: ok.  |  ka number do na⏎[12/05/24, 10:44 am] La | - |
-| 35 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | in ka number do na⏎[12/05/24, 10:44 am]  | : 9993948094⏎[12/05/24, 10:47 am] Balaji | - |
-| 36 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | PI id manoj921@ybl⏎[12/05/24, 10:48 am]  | : done. order SO-533758 ka status check  | - |
-| 37 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
-| 38 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | nverma@hotmail.com⏎[12/05/24, 10:44 am]  | : ok. Yamini ka number do na⏎[12/05/24,  | - |
-| 39 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Yamini | il.com⏎[12/05/24, 10:44 am] Naveen: ok.  |  ka number do na⏎[12/05/24, 10:44 am] Ad | - |
-| 40 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | tya: 91 6320214912⏎[12/05/24, 10:47 am]  | : payment ₹21 LPA kal tak ho jayega, UPI | - |
-| 41 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Aditya | UPI id iyers@paytm⏎[12/05/24, 10:48 am]  | : done. order SO-022877 ka status check  | - |
-| 42 | ch_d2-1 | PERSON | full / title | missed, 16 of 16 characters not covered | Ishita Deshpande | : Open⏎Created: 23 March 2022⏎Customer:  | ⏎Email: ishitadeshpande@yahoo.co.in⏎Phon | - |
-| 43 | ch_d2-1 | ORG | - / n/a | missed, 22 of 22 characters not covered | Tapestry Design Studio | yahoo.co.in⏎Phone: 06169607810⏎Company:  | ⏎⏎Description:⏎Customer reports that the | - |
-| 44 | ch_d2-1 | PERSON | single / title | missed, 6 of 6 characters not covered | Ishita | 8 is blocked. Customer asked us to call  |  back on 64689-21331.⏎⏎Internal notes:⏎M | - |
-| 45 | ch_d2-1 | PERSON | full / title | missed, 11 of 11 characters not covered | Mridul Bhat | a back on 64689-21331.⏎⏎Internal notes:⏎ |  (L2 support): checked logs, version 6.2 | - |
-| 46 | ch_d2-1 | PERSON | initials_first / title | missed, 11 of 11 characters not covered | R. L. Bains | ecked logs, version 6.2.9. Escalated to  | .⏎Customer shared screenshot at https:// | - |
-| 47 | ch_d2-2 | PERSON | full / title | missed, 9 of 9 characters not covered | Anita Rao | pen⏎Created: 20 January, 2025⏎Customer:  | ⏎Email: anita.rao@outlook.com⏎Phone: 784 | - |
-| 48 | ch_d2-2 | ORG | - / n/a | missed, 29 of 29 characters not covered | Anantha Constructions Pvt Ltd | @outlook.com⏎Phone: 7843870421⏎Company:  | ⏎⏎Description:⏎Customer reports that the | - |
-| 49 | ch_d2-2 | PERSON | single / title | missed, 5 of 5 characters not covered | Anita | 2 is blocked. Customer asked us to call  |  back on +91 64637 82084.⏎⏎Internal note | - |
-| 50 | ch_d2-2 | PERSON | full / title | missed, 12 of 12 characters not covered | Kamala Patel | ck on +91 64637 82084.⏎⏎Internal notes:⏎ |  (L2 support): checked logs, version 8.1 | - |
+| 1 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 2 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya kavitasubramanian | - |
+| 3 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | manian@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. pallavi ka number do na⏎[12/05/24, | - |
+| 4 | ch_d1-1 | PERSON | single / lower | missed, 7 of 7 characters not covered | pallavi | .co.in⏎[12/05/24, 10:44 am] kavita: ok.  |  ka number do na⏎[12/05/24, 10:44 am] so | - |
+| 5 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | vi ka number do na⏎[12/05/24, 10:44 am]  | : 62187-01918⏎[12/05/24, 10:47 am] kavit | - |
+| 6 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | kavita | ourav: 62187-01918⏎[12/05/24, 10:47 am]  | : payment Rs.1,29,900 kal tak ho jayega, | - |
+| 7 | ch_d1-1 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav |  UPI id vermaa@ybl⏎[12/05/24, 10:48 am]  | : done. order OD76454550 ka status check | - |
+| 8 | ch_d1-2 | PERSON | single / title | missed, 6 of 6 characters not covered | Rajesh | r.bora@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. Venkatesh ka number do na⏎[12/05/2 | - |
+| 9 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 10 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya dorjee.sourav@red | - |
+| 11 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | rav@rediffmail.com⏎[12/05/24, 10:44 am]  | : ok. nikhil ka number do na⏎[12/05/24,  | - |
+| 12 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | nikhil | il.com⏎[12/05/24, 10:44 am] sourav: ok.  |  ka number do na⏎[12/05/24, 10:44 am] zo | - |
+| 13 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | il ka number do na⏎[12/05/24, 10:44 am]  | : 91 74645 85249⏎[12/05/24, 10:47 am] so | - |
+| 14 | ch_d1-3 | PERSON | single / lower | missed, 6 of 6 characters not covered | sourav | ya: 91 74645 85249⏎[12/05/24, 10:47 am]  | : payment ₹1,07,300 kal tak ho jayega, U | - |
+| 15 | ch_d1-3 | PERSON | single / lower | missed, 4 of 4 characters not covered | zoya | kavita.trivedi@ibl⏎[12/05/24, 10:48 am]  | : done. order OD84497826 ka status check | - |
+| 16 | ch_d1-4 | PERSON | single / title | missed, 6 of 6 characters not covered | Vikram | preet.patel@okaxis⏎[12/05/24, 10:48 am]  | : done. order ORD-6955699 ka status chec | - |
+| 17 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 18 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit | ari@rediffmail.com⏎[12/05/24, 10:44 am]  | : ok. Jyoti ka number do na⏎[12/05/24, 1 | - |
+| 19 | ch_d1-5 | PERSON | single / title | missed, 5 of 5 characters not covered | Jyoti | mail.com⏎[12/05/24, 10:44 am] Amit: ok.  |  ka number do na⏎[12/05/24, 10:44 am] Im | - |
+| 20 | ch_d1-5 | PERSON | single / title | missed, 4 of 4 characters not covered | Amit |  Imran: 6933921669⏎[12/05/24, 10:47 am]  | : payment ₹303,000 kal tak ho jayega, UP | - |
+| 21 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 22 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya shruti23@gmail.co | - |
+| 23 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti | shruti23@gmail.com⏎[12/05/24, 10:44 am]  | : ok. varun ka number do na⏎[12/05/24, 1 | - |
+| 24 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | varun | il.com⏎[12/05/24, 10:44 am] shruti: ok.  |  ka number do na⏎[12/05/24, 10:44 am] ab | - |
+| 25 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | un ka number do na⏎[12/05/24, 10:44 am]  | : 8863220133⏎[12/05/24, 10:47 am] shruti | - |
+| 26 | ch_d1-6 | PERSON | single / lower | missed, 6 of 6 characters not covered | shruti |  abdul: 8863220133⏎[12/05/24, 10:47 am]  | : payment Rs.4,74,100 kal tak ho jayega, | - |
+| 27 | ch_d1-6 | PERSON | single / lower | missed, 5 of 5 characters not covered | abdul | id zainab20@okaxis⏎[12/05/24, 10:48 am]  | : done. order ORD-2124050 ka status chec | - |
+| 28 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Balaji | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 29 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | ice bhej diya kya?⏎[12/05/24, 10:43 am]  | : haan, abhi mail kiya balaji.kapoor@yah | - |
+| 30 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Balaji | kapoor@yahoo.co.in⏎[12/05/24, 10:44 am]  | : ok. Tenzin ka number do na⏎[12/05/24,  | - |
+| 31 | ch_d1-7 | PERSON | single / title | missed, 6 of 6 characters not covered | Tenzin | .co.in⏎[12/05/24, 10:44 am] Balaji: ok.  |  ka number do na⏎[12/05/24, 10:44 am] La | - |
+| 32 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | in ka number do na⏎[12/05/24, 10:44 am]  | : 9993948094⏎[12/05/24, 10:47 am] Balaji | - |
+| 33 | ch_d1-7 | PERSON | single / title | missed, 7 of 7 characters not covered | Lakshmi | PI id manoj921@ybl⏎[12/05/24, 10:48 am]  | : done. order SO-533758 ka status check  | - |
+| 34 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | [12/05/24, 10:42 am]  | : bhai invoice bhej diya kya?⏎[12/05/24, | - |
+| 35 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | nverma@hotmail.com⏎[12/05/24, 10:44 am]  | : ok. Yamini ka number do na⏎[12/05/24,  | - |
+| 36 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Yamini | il.com⏎[12/05/24, 10:44 am] Naveen: ok.  |  ka number do na⏎[12/05/24, 10:44 am] Ad | - |
+| 37 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Naveen | tya: 91 6320214912⏎[12/05/24, 10:47 am]  | : payment ₹21 LPA kal tak ho jayega, UPI | - |
+| 38 | ch_d1-8 | PERSON | single / title | missed, 6 of 6 characters not covered | Aditya | UPI id iyers@paytm⏎[12/05/24, 10:48 am]  | : done. order SO-022877 ka status check  | - |
+| 39 | ch_d3-3 | PERSON | single / title | missed, 4 of 4 characters not covered | Neha | gar said they would sign by 05.02.2024.⏎ | : Action items: Joseph to send the contr | - |
+| 40 | ch_d3-4 | PERSON | single / title | missed, 4 of 4 characters not covered | Ritu | waiting. I will call him on 6768641808.⏎ | : I can follow up with Pioneer Valve Wor | - |
+| 41 | ch_d3-4 | PERSON | single / title | missed, 4 of 4 characters not covered | Ritu | 16th August 2023.⏎Simran: Action items:  |  to send the contract, Harini to share t | - |
+| 42 | ch_d3-5 | PERSON | single / lower | missed, 7 of 7 characters not covered | sandeep | urity Systems⏎Date: 18 September, 2020⏎⏎ | : Okay everyone, let's start. anjali, ca | - |
+| 43 | ch_d3-5 | PERSON | single / lower | missed, 6 of 6 characters not covered | anjali | 0⏎⏎sandeep: Okay everyone, let's start.  | , can you share the numbers?⏎anjali: Sur | - |
+| 44 | ch_d3-5 | PERSON | single / lower | missed, 6 of 6 characters not covered | anjali | art. anjali, can you share the numbers?⏎ | : Sure. We closed ₹38 LPA this quarter,  | - |
+| 45 | ch_d3-5 | PERSON | single / lower | missed, 7 of 7 characters not covered | sandeep | , mostly from Visakhapatnam and Mumbai.⏎ | : Good. And the pending approval from Sm | - |
+| 46 | ch_d3-5 | PERSON | honorific / lower | missed, 6 of 6 characters not covered | thakur | ood. And the pending approval from Smt.  | ?⏎anjali: Still waiting. I will call him | - |
+| 47 | ch_d3-5 | PERSON | single / lower | missed, 6 of 6 characters not covered | anjali |  the pending approval from Smt. thakur?⏎ | : Still waiting. I will call him on +916 | - |
+| 48 | ch_d3-5 | PERSON | single / lower | missed, 5 of 5 characters not covered | rahul | ting. I will call him on +916371887655.⏎ | : I can follow up with Silverline Packag | - |
+| 49 | ch_d3-5 | PERSON | single / lower | missed, 7 of 7 characters not covered | sandeep | Baner said they would sign by 13/01/19.⏎ | : Action items: rahul to send the contra | - |
+| 50 | ch_d3-5 | PERSON | single / lower | missed, 5 of 5 characters not covered | rahul | ign by 13/01/19.⏎sandeep: Action items:  |  to send the contract, anjali to share t | - |
 
 ## Most common false positives (dev only)
 
@@ -223,41 +223,41 @@ Structured IDs first, then names, organisations and places; within each, missed 
 | --- | --- |
 | DATE: 12/05/24 | 48 |
 | ORG: IFSC | 8 |
+| ORG: OBJECTIVE | 7 |
+| ORG: Excel | 6 |
+| ORG: Power BI | 6 |
+| LOC: Main Road | 5 |
+| ORG: Aadhaar | 5 |
+| ORG: Com | 5 |
+| ORG: SAP | 5 |
+| ORG: Tally | 5 |
+| PERSON: Er | 5 |
+| LOC: Cross Road 3 | 4 |
+| ORG: AutoCAD | 4 |
+| ORG: Digital Marketing | 4 |
+| ORG: EXPERIENCE | 4 |
+| ORG: Salesforce | 4 |
+| ORG: State Bank of India | 4 |
 | ORG: Vendor | 4 |
-| LOC: Cross Road 3 | 3 |
-| LOC: Main Road | 3 |
+| LOC: Lake View Road | 3 |
 | LOC: Ring Road | 3 |
-| ORG: State Bank of India | 3 |
-| PERSON: Hi | 3 |
+| ORG: Aadhaar No | 3 |
+| ORG: CGPA | 3 |
+| ORG: Punjab National Bank | 3 |
+| LOC: Market Road | 2 |
+| LOC: MG Road | 2 |
 | LOC: Near | 2 |
+| LOC: Near Old Water Tank | 2 |
+| LOC: No | 2 |
 | LOC: Old Airport Road | 2 |
+| LOC: Plot | 2 |
+| LOC: Rose Garden Road | 2 |
 | LOC: Sector | 2 |
+| LOC: Sector 9 | 2 |
 | ORG: Bank | 2 |
-| ORG: Date | 2 |
-| ORG: Place | 2 |
-| ORG: Plot | 2 |
-| ORG: Procurement | 2 |
-| ORG: Punjab National Bank | 2 |
-| PERSON: Er | 2 |
-| PERSON: Shri | 2 |
-| LOC: Canal Road | 1 |
-| LOC: Flat 25 | 1 |
-| LOC: Gandhi Marg | 1 |
-| LOC: Lake View Road | 1 |
-| LOC: Lakeview Park | 1 |
-| LOC: Market Road | 1 |
-| LOC: Near Old Water Tank | 1 |
-| LOC: Nehru Street | 1 |
-| LOC: No | 1 |
-| LOC: Old Water Tank | 1 |
-| LOC: Rose Petal Cinema | 1 |
-| LOC: Sector 9 | 1 |
-| ORG: Axis Bank | 1 |
-| ORG: Bank of Baroda | 1 |
-| ORG: Canara Bank | 1 |
-| ORG: Flat | 1 |
-| ORG: ICICI Bank | 1 |
-| ORG: INC4210743 | 1 |
-| ORG: knowledge | 1 |
-| ORG: Kotak Mahindra Bank | 1 |
-| ORG: share | 1 |
+| ORG: Computer Science | 2 |
+| ORG: Digital | 2 |
+| ORG: Engineering | 2 |
+| ORG: IDFC FIRST Bank | 2 |
+| ORG: Kotak Mahindra Bank | 2 |
+| ORG: Marketing | 2 |
