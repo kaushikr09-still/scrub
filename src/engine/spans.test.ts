@@ -139,3 +139,27 @@ describe("locatePredictions keeps its place after punctuation stuck to a word", 
     expect(spans.filter((s) => s.label !== "O").map((s) => text.slice(s.start, s.end))).toEqual(["Ravi"]);
   });
 });
+
+describe("locatePredictions gives a word split into pieces the label the pieces vote for", () => {
+  const w = (word: string, entity: string, score: number): RawPrediction => ({ word, entity, score });
+  const label = (text: string, preds: RawPrediction[]) => locatePredictions(text, preds).map((s) => [text.slice(s.start, s.end), s.label]);
+
+  it("a MISC first piece does not hide a PER piece", () => {
+    expect(label("Hi Nandini,", [w("Hi", "O", 1), w("Nan", "I-MISC", 0.5), w("##din", "I-PER", 0.9), w("##i", "O", 1), w(",", "O", 1)])).toEqual([
+      ["Hi", "O"],
+      ["Nandini", "I-PER"],
+      [",", "O"],
+    ]);
+  });
+  it("the stronger label wins when pieces disagree", () => {
+    expect(label("Mukherjee", [w("Mu", "B-ORG", 0.4), w("##kher", "I-PER", 0.9), w("##jee", "I-PER", 0.9)])).toEqual([["Mukherjee", "I-PER"]]);
+    expect(label("Mukherjee", [w("Mu", "B-PER", 0.95), w("##kher", "I-ORG", 0.4), w("##jee", "O", 1)])).toEqual([["Mukherjee", "B-PER"]]);
+  });
+  it("a word of pieces that all agree is unchanged", () => {
+    expect(label("Ishita", [w("Is", "B-PER", 0.97), w("##hita", "B-PER", 0.68)])).toEqual([["Ishita", "B-PER"]]);
+  });
+  it("a word whose pieces are only O or MISC stays O / MISC", () => {
+    expect(label("Xyz", [w("X", "O", 1), w("##yz", "O", 1)])).toEqual([["Xyz", "O"]]);
+    expect(label("Xyz", [w("X", "B-MISC", 0.9), w("##yz", "O", 1)])).toEqual([["Xyz", "B-MISC"]]);
+  });
+});

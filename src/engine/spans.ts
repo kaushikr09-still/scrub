@@ -20,6 +20,26 @@ export interface Located {
 
 const isWordChar = (ch: string | undefined): boolean => ch !== undefined && /[\p{L}\p{N}]/u.test(ch);
 
+/** What the pieces of one word say: label kind (PER, ORG, LOC, MISC) → total score, the first label seen for it, and that piece's score. */
+type Votes = Map<string, { sum: number; label: string; score: number | undefined }>;
+
+const kindOf = (label: string): string => label.replace(/^[BIES][-_]/i, "").toUpperCase();
+
+function vote(votes: Votes, label: string, score: number | undefined): void {
+  const kind = kindOf(label);
+  if (kind === "O" || kind === "") return;
+  const v = votes.get(kind);
+  if (v) v.sum += score ?? 0.5;
+  else votes.set(kind, { sum: score ?? 0.5, label, score });
+}
+
+/** The label for the word: the strongest name kind; MISC only if there is no name kind; null if every piece said O. */
+function winningVote(votes: Votes): { label: string; score: number | undefined } | null {
+  let best: { sum: number; label: string; score: number | undefined } | null = null;
+  for (const [kind, v] of votes) if (kind !== "MISC" && (!best || v.sum > best.sum)) best = v;
+  return best ?? votes.get("MISC") ?? null;
+}
+
 /**
  * Turns token predictions into character spans in the original text.
  * Uses start/end when given; otherwise finds each token in the text, ignoring case,
@@ -30,11 +50,13 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
   const lower = text.toLowerCase();
   const out: Located[] = [];
   let cursor = 0;
+  let votes: Votes = new Map();
   for (const p of predictions) {
     const label = p.entity_group ?? p.entity ?? "";
     const score = p.score;
     if (typeof p.start === "number" && typeof p.end === "number") {
       out.push(score === undefined ? { label, start: p.start, end: p.end } : { label, start: p.start, end: p.end, score });
+      votes = new Map();
       cursor = Math.max(cursor, p.end);
       continue;
     }
@@ -44,8 +66,14 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
     const prev = out[out.length - 1];
     if (continuation && prev && lower.startsWith(piece, prev.end)) {
       prev.end += piece.length;
-      // A word is a name if any of its pieces is: keep a name label even when the first piece was "O".
-      if (prev.label === "O" && label !== "O" && label !== "") prev.label = label;
+      // The pieces of one word vote with their scores. A name label (PER, ORG, LOC) beats MISC and O, so a word is
+      // a name if its pieces say so, even when the first piece was "O" or "MISC".
+      vote(votes, label, score);
+      const winner = winningVote(votes);
+      if (winner) {
+        prev.label = winner.label;
+        if (winner.score !== undefined) prev.score = winner.score;
+      }
       cursor = prev.end;
       continue;
     }
@@ -64,6 +92,8 @@ export function locatePredictions(text: string, predictions: RawPrediction[]): L
     // match would carry the cursor past real names.
     if (idx < 0) continue;
     out.push(score === undefined ? { label, start: idx, end: idx + piece.length } : { label, start: idx, end: idx + piece.length, score });
+    votes = new Map();
+    vote(votes, label, score);
     cursor = idx + piece.length;
   }
   return out;
