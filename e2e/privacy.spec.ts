@@ -85,3 +85,68 @@ test("restore: placeholders in a reply return the real values", async ({ browser
   expect(restored).not.toMatch(/\[[A-Z_]+_\d+\]/);
   await context.close();
 });
+
+// Examples: Load example fills the box, Scrub masks it (names too, with the model), and nothing is requested.
+test("example: chat log loads, scrubs with the name model, and makes no requests", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("#notice-heading")).toHaveText("Name check ready", { timeout: 3 * 60_000 });
+  const requests: string[] = [];
+  page.on("request", (r) => requests.push(`${r.method()} ${r.url()}`));
+
+  await page.getByLabel("Chat logs").check();
+  await page.locator("#load-example").click();
+  const example = await page.locator("#input").inputValue();
+  expect(example).toContain("PRIYA NAIR");
+  expect(example).toContain("haan ji");
+
+  await page.locator("#scrub-button").click();
+  await page.waitForFunction(() => document.querySelector<HTMLTextAreaElement>("#scrubbed")!.value !== "");
+  const out = await page.locator("#scrubbed").inputValue();
+  for (const secret of ["ravi.nair@example.com", "ABCDE1234F", "2345 6789 0124", "4242 4242 4242 4242"]) {
+    expect(out).not.toContain(secret);
+  }
+  // Names in lowercase chat are a known limit (SPEC: Limits), so only the rule-based details are asserted here.
+  await expect(page.locator("#review")).toBeVisible();
+
+  // An ALL CAPS name in ordinary English is masked by the name model (via the title-case copy).
+  await page.getByLabel("Business emails").check();
+  await page.locator("#load-example").click();
+  await page.locator("#scrub-button").click();
+  await page.waitForFunction(() => document.querySelector<HTMLTextAreaElement>("#scrubbed")!.value.includes("[EMAIL_1]"));
+  const business = await page.locator("#scrubbed").inputValue();
+  expect(business).not.toContain("VIKRAM DESHMUKH");
+  expect(business).toMatch(/\[PERSON_\d+\]/);
+  expect(requests, "requests made after the example was loaded").toEqual([]);
+});
+
+// The review checklist: untick leaves a value plain everywhere, tick masks it again, restore still works.
+test("review checklist: untick and tick update the output, restore still works", async ({ browser }) => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.route(HF, (r) => r.abort()); // rules are enough for this test
+  await page.goto("/");
+  await page.getByLabel("Business emails").check();
+  await page.locator("#load-example").click();
+  await page.locator("#scrub-button").click();
+  await page.waitForFunction(() => document.querySelector<HTMLTextAreaElement>("#scrubbed")!.value !== "");
+  const scrubbed = page.locator("#scrubbed");
+  const email = "accounts@example.com";
+  expect(await scrubbed.inputValue()).not.toContain(email);
+
+  const row = page.getByLabel(new RegExp(`EMAIL ${email}`));
+  await expect(row).toBeChecked();
+  await row.uncheck();
+  expect(await scrubbed.inputValue()).toContain(email);
+  await expect(page.locator("#review-list li.plain")).toHaveCount(1);
+  await row.check();
+  expect(await scrubbed.inputValue()).not.toContain(email);
+
+  // a category tick-box works too, and the other values still restore
+  await page.locator("#cat-URL").uncheck();
+  expect(await scrubbed.inputValue()).toContain("https://portal.example.com/orders/2291");
+  const pan = (await scrubbed.inputValue()).match(/\[PAN_\d+\]/)![0];
+  await page.locator("#reply").fill(`Noted ${pan}.`);
+  await page.locator("#restore-button").click();
+  expect(await page.locator("#restored").inputValue()).toBe("Noted ABCDE1234F.");
+  await context.close();
+});
