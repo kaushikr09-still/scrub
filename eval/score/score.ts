@@ -24,6 +24,7 @@ export interface PrecisionRow {
 
 export interface Miss {
   docId: string;
+  start: number;
   preset: string;
   type: string;
   pattern: string | null;
@@ -195,11 +196,15 @@ export function scoreRun(docs: readonly EvalDoc[], detections: Record<string, re
     }
   }
 
+  // Structured IDs first (a rule miss is the more serious one), then missed before partly masked, then by how much is left.
+  const isName = (t: string) => t === "PERSON" || t === "ORG" || t === "LOC";
   misses.sort(
     (a, b) =>
+      Number(isName(a.type)) - Number(isName(b.type)) ||
       Number(b.status === "missed") - Number(a.status === "missed") ||
       fractionLeft(b) - fractionLeft(a) ||
-      a.docId.localeCompare(b.docId),
+      a.docId.localeCompare(b.docId) ||
+      a.start - b.start,
   );
 
   return {
@@ -239,6 +244,7 @@ function fractionLeft(m: Miss): number {
 function describeMiss(doc: EvalDoc, t: TruthSpan, status: "missed" | "partial", left: number, dets: readonly Det[], ctx: number): Miss {
   return {
     docId: doc.id,
+    start: t.start,
     preset: doc.preset,
     type: t.type,
     pattern: t.pattern,

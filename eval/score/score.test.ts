@@ -195,6 +195,11 @@ describe("worst misses", () => {
     expect(m.uncovered).toBe("4 of 4 characters not covered");
     expect(s.worstMisses[1].uncovered).toBe("7 of 12 characters not covered");
   });
+  it("puts structured IDs ahead of names", () => {
+    const e = doc("e", "chats", [["Amit", "PERSON", { pattern: "single", caseStyle: "lower" }], ["9876543210", "PHONE"]]);
+    const s = scoreRun([e], { e: [at(e, "9876543210", "PHONE", 0, 5)] }, { includeDetail: true });
+    expect(s.worstMisses.map((m) => m.type)).toEqual(["PHONE", "PERSON"]);
+  });
   it("limits the list and is left out when detail is off", () => {
     expect(scoreRun([a], detections, { includeDetail: true, maxMisses: 1 }).worstMisses).toHaveLength(1);
     const s = scoreRun([a], detections);

@@ -135,7 +135,7 @@ export function renderMarkdown(s: Summary, meta: ReportMeta): string {
   for (const t of buildTables(s)) out.push(mdTable(t), "");
 
   if (s.worstMisses.length > 0) {
-    out.push("## Worst misses (dev only)", "", "Missed spans first, then partly masked ones by how much is left uncovered. Context is 40 characters each side; ⏎ marks a line break.", "");
+    out.push("## Worst misses (dev only)", "", "Structured IDs first, then names, organisations and places; within each, missed spans first, then partly masked ones by how much is left uncovered. Context is 40 characters each side; ⏎ marks a line break.", "");
     out.push("| # | Doc | Type | Pattern / case | Status | Value | Before | After | Detected as |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
     s.worstMisses.forEach((m, i) => {
       out.push(
