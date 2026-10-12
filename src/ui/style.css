@@ -194,3 +194,80 @@ progress {
   height: 16px;
   vertical-align: middle;
 }
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin: 12px 0;
+  padding: 8px 12px;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.choice,
+.review-list li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  min-height: 32px;
+}
+
+.choice input,
+.review-list input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  flex: none;
+}
+
+.choice label,
+.review-list label {
+  font-weight: 400;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0 12px;
+}
+
+.choice-grid .choice {
+  font-size: 0.95rem;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.review-list li {
+  border-top: 1px solid var(--border);
+  padding: 6px 0;
+}
+
+.review-type {
+  font-weight: 600;
+}
+
+/* Unticked rows are marked by a word and a dashed line, not only by colour. */
+.review-list li.plain .review-value {
+  text-decoration: line-through dashed;
+}
+
+button.secondary {
+  color: var(--fg);
+  background: var(--bg);
+  border-color: var(--border);
+}

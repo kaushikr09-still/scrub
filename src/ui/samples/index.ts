@@ -67,7 +67,7 @@ Northgate Traders Pvt Ltd, Pune`,
 [10:04] Support (Kavya): Thank you. Your refund of Rs. 3,499 was sent on 22/02/2025 to UPI ravi.nair@okexample. Is that right?
 [10:05] Ravi: haan ji, wahi hai. lekin paisa abhi tak nahi aaya, kya karun? mera account number 000456789012346 hai, IFSC SBIN0001234.
 [10:06] Support (Kavya): Samajh gaya. Please wait 2 din, aur agar nahi aaya toh batana.
-[10:07] Ravi: theek hai. Meri wife ka naam PRIYA NAIR hai, woh bhi isi card se pay karti hai: 4242 4242 4242 4242.
+[10:07] Ravi: theek hai. The card holder is my wife, PRIYA NAIR. Woh bhi isi card se pay karti hai: 4242 4242 4242 4242.
 [10:08] Support (Kavya): Noted. For identity check please confirm your PAN ABCDE1234F and Aadhaar 2345 6789 0124.
 [10:09] Ravi: Sure. PAN ABCDE1234F, Aadhaar 2345 6789 0124. Delivery PIN 600042, Chennai.
 [10:10] Support (Kavya): Thanks. Ticket link: https://help.example.com/tickets/5531. Logged from IP 203.0.113.77.

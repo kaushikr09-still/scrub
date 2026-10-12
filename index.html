@@ -41,6 +41,23 @@
 
       <section class="step" aria-labelledby="step1-title">
         <h2 id="step1-title">1. Your text</h2>
+        <fieldset class="presets">
+          <legend>What kind of text is it?</legend>
+          <div class="choice"><input type="radio" name="preset" id="preset-resumes" value="resumes" /><label for="preset-resumes">Resumes</label></div>
+          <div class="choice"><input type="radio" name="preset" id="preset-business" value="business" checked /><label for="preset-business">Business emails</label></div>
+          <div class="choice"><input type="radio" name="preset" id="preset-chat" value="chat" /><label for="preset-chat">Chat logs</label></div>
+        </fieldset>
+        <fieldset class="categories">
+          <legend>Kinds of detail to mask</legend>
+          <p id="categories-hint" class="hint">
+            Ticked kinds are masked. Unticked kinds are left as plain text. Choosing a text type above sets these for you.
+          </p>
+          <div id="category-list" class="choice-grid" aria-describedby="categories-hint"></div>
+        </fieldset>
+        <p>
+          <button id="load-example" type="button" class="secondary">Load example<span id="load-example-for" class="visually-hidden"></span></button>
+          <span id="example-status" class="status" aria-live="polite"></span>
+        </p>
         <label for="input">Paste the text you want to share</label>
         <textarea
           id="input"
@@ -72,6 +89,16 @@
           <p id="names-note" class="status"></p>
           <ul id="scrub-warnings" class="warnings"></ul>
         </div>
+        <fieldset id="review" class="review" hidden>
+          <legend>Review what is masked</legend>
+          <p id="review-hint" class="hint">
+            One row for each different value found. Ticked means masked everywhere it appears. Unticked means left as
+            plain text everywhere. The scrubbed text above updates as you tick.
+          </p>
+          <p id="left-plain" class="status" aria-live="polite"></p>
+          <p id="review-status" class="status" aria-live="polite"></p>
+          <ul id="review-list" class="review-list" aria-describedby="review-hint"></ul>
+        </fieldset>
         <div class="ack" id="ack-row">
           <input id="ack" type="checkbox" aria-describedby="copy-scrubbed-status" />
           <label for="ack">I understand that names, organisations and places were not checked.</label>

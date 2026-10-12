@@ -270,6 +270,14 @@ describe("ScrubSession review checklist", () => {
     expect(s.scrubbedCopy(TEXT2 + "x")).toMatchObject({ ok: false, focus: "input" });
   });
 
+  it("forget() drops the held scrub: nothing to rebuild or copy", async () => {
+    const s = new ScrubSession();
+    await s.scrub(TEXT2);
+    s.forget();
+    expect(s.rebuild()).toBeNull();
+    expect(s.scrubbedCopy(TEXT2).ok).toBe(false);
+  });
+
   it("does nothing before a scrub", () => {
     const s = new ScrubSession();
     expect(s.setValueMasked("x", false)).toBeNull();

@@ -104,6 +104,19 @@ export class ScrubSession {
     private readonly names: NameChecker | null = null,
   ) {}
 
+  /** Drops the held scrub (for example when an example replaces the text), so nothing old can be rebuilt or copied. */
+  forget(): void {
+    this.runs++;
+    this.mapping = null;
+    this.scrubbedFrom = null;
+    this.scrubbedText = "";
+    this.restoredFrom = null;
+    this.restoredText = "";
+    this.found = [];
+    this.overrides = {};
+    this.namesChecked = false;
+  }
+
   setPreset(id: PresetId): void {
     this.preset = id;
     this.categories = defaultsFor(id);
