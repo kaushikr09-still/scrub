@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- Dev-only page: diagnoses weak PERSON detection on the dev split. Not linked from index.html and not part of the
+     production build. Reads eval/generated/dev.jsonl from this dev server and nothing else. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrub diagnosis (dev only)</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { margin: 0 auto; padding: 16px; max-width: 60rem; }
+      button { font: inherit; padding: 8px 16px; }
+      pre { overflow-x: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Name diagnosis (dev split only)</h1>
+    <p><button id="run" type="button">Run diagnosis</button> <button id="download" type="button" disabled>Download diagnose-dev.json</button></p>
+    <p id="model-status" role="status" aria-live="polite">Name model: starting.</p>
+    <p id="status" role="status" aria-live="polite">Not started.</p>
+    <pre id="out"></pre>
+    <script type="module" src="/eval/diagnose.ts"></script>
+  </body>
+</html>

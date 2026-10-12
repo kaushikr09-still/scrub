@@ -87,7 +87,7 @@ export function mapLabel(label: string): DetectionType | null {
   }
 }
 
-interface Span {
+export interface Span {
   type: DetectionType;
   start: number;
   end: number;
@@ -95,7 +95,7 @@ interface Span {
 }
 
 /** Groups token spans into entity spans: a B- label starts a new one; an I- label continues the last. */
-function group(piece: string, located: Located[], offset: number): Span[] {
+export function group(piece: string, located: Located[], offset: number): Span[] {
   const out: Span[] = [];
   let cur: Span | null = null;
   for (const l of located) {
@@ -118,7 +118,7 @@ function group(piece: string, located: Located[], offset: number): Span[] {
 }
 
 /** Merges duplicates from overlapping chunks: same type overlapping is unioned; different types keep the longer. */
-function mergeSpans(spans: Span[]): Span[] {
+export function mergeSpans(spans: Span[]): Span[] {
   const sorted = [...spans].sort((a, b) => a.start - b.start || b.end - a.end);
   const out: Span[] = [];
   for (const s of sorted) {
