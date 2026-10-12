@@ -5,7 +5,8 @@ import { detect } from "../engine/detect";
 import { combineDetections } from "../engine/names";
 import { restore } from "../engine/restore";
 import { scrub, type Mapping } from "../engine/scrub";
-import type { Detection } from "../engine/types";
+import type { Detection, DetectionType } from "../engine/types";
+import { buildRows, defaultsFor, filterDetections, type CategoryState, type Overrides, type PresetId, type ReviewRow } from "./review";
 
 export type ModelState = "loading" | "ready" | "failed";
 
@@ -30,8 +31,21 @@ export interface ScrubView {
   namesChecked: boolean;
   /** One sentence on whether names were checked in this scrub. */
   namesNote: string;
+  /** One row per distinct detected value, for the review checklist. */
+  rows: ReviewRow[];
+  /** Types that were found but are left as plain text because their category is off. */
+  leftPlain: DetectionType[];
   /** The result was thrown away: the text changed, or a newer scrub replaced it. */
   discarded?: boolean;
+}
+
+/** What the page shows after a tick-box changes. Restored text is cleared, as placeholder numbers can change. */
+export interface RebuildView {
+  text: string;
+  summary: string;
+  warnings: string[];
+  rows: ReviewRow[];
+  leftPlain: DetectionType[];
 }
 
 export interface RestoreView {
@@ -57,9 +71,11 @@ const NOTE_LOADING =
   "Names NOT checked: the name model was still loading when you pressed Scrub, so this is a rules-only result. Press Scrub again once it is ready.";
 const NOTE_FAILED = "Names NOT checked: the name model could not check this text, so this is a rules-only result.";
 
-function summarise(types: string[]): string {
+function summarise(types: string[], foundCount = types.length): string {
   if (types.length === 0) {
-    return "Nothing found. Read your text yourself before you share it.";
+    return foundCount === 0
+      ? "Nothing found. Read your text yourself before you share it."
+      : "Nothing is masked: every item found is unticked. Read your text yourself before you share it.";
   }
   const counts = new Map<string, number>();
   for (const t of types) counts.set(t, (counts.get(t) ?? 0) + 1);
@@ -77,11 +93,63 @@ export class ScrubSession {
   /** Whether the scrub now held was names-checked. Fixed when that scrub finished: never updated later. */
   private namesChecked = false;
   private runs = 0;
+  /** Everything detected in the scrubbed text. The page filters this; the engine masks only what passes. */
+  private found: Detection[] = [];
+  private preset: PresetId = "business";
+  private categories: CategoryState = defaultsFor("business");
+  private overrides: Overrides = {};
 
   constructor(
     private readonly engine: Engine = { detect, scrub, restore },
     private readonly names: NameChecker | null = null,
   ) {}
+
+  setPreset(id: PresetId): void {
+    this.preset = id;
+    this.categories = defaultsFor(id);
+    this.overrides = {};
+  }
+
+  presetId(): PresetId {
+    return this.preset;
+  }
+
+  categoryOn(type: DetectionType): boolean {
+    return this.categories[type];
+  }
+
+  /** Ticks a category and forgets per-value choices in it. Returns the new view, or null before a scrub. */
+  setCategory(type: DetectionType, on: boolean): RebuildView | null {
+    this.categories = { ...this.categories, [type]: on };
+    const rows = buildRows(this.found, this.categories, {});
+    for (const r of rows) if (r.type === type) delete this.overrides[r.key];
+    return this.rebuild();
+  }
+
+  setValueMasked(key: string, masked: boolean): RebuildView | null {
+    this.overrides = { ...this.overrides, [key]: masked };
+    return this.rebuild();
+  }
+
+  /** Builds the output from the saved detections and the current ticks. Null if nothing was scrubbed. */
+  rebuild(): RebuildView | null {
+    if (this.scrubbedFrom === null) return null;
+    const input = this.scrubbedFrom;
+    const masked = filterDetections(this.found, this.categories, this.overrides);
+    const r = this.engine.scrub(input, masked);
+    this.mapping = r.mapping;
+    this.scrubbedText = r.text;
+    this.restoredFrom = null;
+    this.restoredText = "";
+    const warnings = countTokens(r.warnings.map((w) => w.token)).map(
+      (t) =>
+        `Your text already contains ${t}, which looks like a placeholder. ` +
+        "New placeholders were numbered above it so they don't clash.",
+    );
+    const rows = buildRows(this.found, this.categories, this.overrides);
+    const leftPlain = [...new Set(rows.filter((x) => !x.masked).map((x) => x.type))];
+    return { text: r.text, summary: summarise(masked.map((d) => d.type), this.found.length), warnings, rows, leftPlain };
+  }
 
   setAcknowledged(value: boolean): void {
     this.acknowledged = value;
@@ -105,6 +173,7 @@ export class ScrubSession {
     this.restoredFrom = null;
     this.restoredText = "";
     this.namesChecked = false;
+    this.found = [];
     const fail = (warning: string, discarded = false): ScrubView => ({
       ok: false,
       text: "",
@@ -112,6 +181,8 @@ export class ScrubSession {
       warnings: warning ? [warning] : [],
       namesChecked: false,
       namesNote: "",
+      rows: [],
+      leftPlain: [],
       ...(discarded ? { discarded } : {}),
     });
     if (input.trim() === "") return fail("Paste some text first.");
@@ -134,25 +205,16 @@ export class ScrubSession {
       if (currentInput && currentInput() !== input) {
         return fail("You changed your text while it was being checked. Press Scrub again.", true);
       }
-      const r = this.engine.scrub(input, found);
-      this.mapping = r.mapping;
+      // Per-value choices belong to one scrub; the preset and category ticks carry over.
+      this.overrides = {};
+      this.found = found;
       this.scrubbedFrom = input;
-      this.scrubbedText = r.text;
       this.namesChecked = checked;
-      const warnings = countTokens(r.warnings.map((w) => w.token)).map(
-        (t) =>
-          `Your text already contains ${t}, which looks like a placeholder. ` +
-          "New placeholders were numbered above it so they don't clash.",
-      );
-      return {
-        ok: true,
-        text: r.text,
-        summary: summarise(found.map((d) => d.type)),
-        warnings,
-        namesChecked: checked,
-        namesNote: note,
-      };
+      const v = this.rebuild();
+      if (v === null) throw new Error("rebuild");
+      return { ok: true, ...v, namesChecked: checked, namesNote: note };
     } catch {
+      this.scrubbedFrom = null; // nothing usable is held, so nothing can be copied
       // Fail closed. The error itself is not shown, as it could quote the text.
       return fail("Something went wrong while checking your text. Nothing was scrubbed, so there is nothing to copy.");
     }

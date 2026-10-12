@@ -30,7 +30,7 @@ export interface ScrubResult {
 /** Types whose values are the same thing whatever their letter case. */
 const CASE_INSENSITIVE: ReadonlySet<DetectionType> = new Set(["EMAIL", "UPI", "PAN", "GSTIN", "IFSC"]);
 
-function sameValueKey(d: Detection): string {
+export function sameValueKey(d: Detection): string {
   const v = CASE_INSENSITIVE.has(d.type) ? d.value.toLowerCase() : d.value;
   return `${d.type}\u0000${v}`;
 }

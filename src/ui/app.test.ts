@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { detect } from "../engine/detect";
 import { restore } from "../engine/restore";
 import { scrub } from "../engine/scrub";
-import { ScrubSession, type Engine } from "./app";
+import { ScrubSession, type Engine, type NameChecker } from "./app";
 
 const TEXT = "Mail asha@example.com or asha@example.com, call 98765 43210.";
 
@@ -188,5 +188,91 @@ describe("ScrubSession.restoredCopy", () => {
     s.restore("Hi [EMAIL_1]");
     await s.scrub("x@y.in");
     expect(s.restoredCopy("Hi [EMAIL_1]").ok).toBe(false);
+  });
+});
+
+describe("ScrubSession review checklist", () => {
+  const TEXT2 = "Mail asha@example.com, again asha@example.com, call 98765 43210.";
+  const names: NameChecker = {
+    state: () => "ready",
+    find: async (t) => {
+      const v = "Acme Ltd";
+      const start = t.indexOf(v);
+      return start < 0 ? [] : [{ type: "ORG", start, end: start + v.length, value: v, confidence: 0.9 }];
+    },
+  };
+
+  it("lists one row per distinct value with its count", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub(TEXT2);
+    expect(v.rows.map((r) => [r.type, r.value, r.count, r.masked])).toEqual([
+      ["EMAIL", "asha@example.com", 2, true],
+      ["PHONE", "98765 43210", 1, true],
+    ]);
+  });
+
+  it("unticking leaves the value plain everywhere, and ticking masks it again", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub(TEXT2);
+    const email = v.rows[0].key;
+    const off = s.setValueMasked(email, false)!;
+    expect(off.text).toBe("Mail asha@example.com, again asha@example.com, call [PHONE_1].");
+    expect(off.rows[0].masked).toBe(false);
+    expect(s.setValueMasked(email, true)!.text).toBe("Mail [EMAIL_1], again [EMAIL_1], call [PHONE_1].");
+  });
+
+  it("restore works for everything that is still masked", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub(TEXT2);
+    s.setValueMasked(v.rows[0].key, false);
+    expect(s.restore("Call [PHONE_1] and write asha@example.com").text).toBe("Call 98765 43210 and write asha@example.com");
+  });
+
+  it("changing the ticks clears an old restored reply", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub(TEXT2);
+    s.restore("[PHONE_1]");
+    s.setValueMasked(v.rows[1].key, false);
+    expect(s.restoredCopy("[PHONE_1]").ok).toBe(false);
+  });
+
+  it("the Business emails preset (default) masks organisations; Resumes leaves them", async () => {
+    const s = new ScrubSession(undefined, names);
+    const text = "Worked at Acme Ltd. asha@example.com";
+    expect((await s.scrub(text)).text).toBe("Worked at [ORG_1]. [EMAIL_1]");
+    s.setPreset("resumes");
+    expect(s.rebuild()!.text).toBe("Worked at Acme Ltd. [EMAIL_1]");
+    expect(s.rebuild()!.leftPlain).toEqual(["ORG"]);
+  });
+
+  it("a category tick-box resets that category's per-value choices", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub(TEXT2);
+    s.setValueMasked(v.rows[0].key, false);
+    expect(s.setCategory("EMAIL", true)!.rows[0].masked).toBe(true);
+    expect(s.setCategory("EMAIL", false)!.text).toContain("asha@example.com");
+  });
+
+  it("a new scrub keeps the preset and category choices", async () => {
+    const s = new ScrubSession();
+    s.setPreset("chat");
+    s.setCategory("PHONE", false);
+    expect((await s.scrub(TEXT2)).text).toBe("Mail [EMAIL_1], again [EMAIL_1], call 98765 43210.");
+  });
+
+  it("toggling never lifts the names-NOT-checked gate or the stale check", async () => {
+    const s = new ScrubSession(); // no name checker: names not checked
+    const v = await s.scrub(TEXT2);
+    s.setValueMasked(v.rows[0].key, false);
+    expect(s.scrubbedCopy(TEXT2)).toMatchObject({ ok: false, focus: "ack" });
+    s.setAcknowledged(true);
+    expect(s.scrubbedCopy(TEXT2)).toMatchObject({ ok: true });
+    expect(s.scrubbedCopy(TEXT2 + "x")).toMatchObject({ ok: false, focus: "input" });
+  });
+
+  it("does nothing before a scrub", () => {
+    const s = new ScrubSession();
+    expect(s.setValueMasked("x", false)).toBeNull();
+    expect(s.rebuild()).toBeNull();
   });
 });
