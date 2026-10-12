@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- Dev-only page that scores the real detection path on the generated benchmark. Not linked from index.html and not
+     part of the production build (Vite builds only index.html). It reads eval/generated/*.jsonl from this dev server;
+     no text goes anywhere else. The only network request is the one-time model download. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrub evaluation</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { margin: 0 auto; padding: 16px; max-width: 80rem; }
+      button, select { font: inherit; padding: 8px 16px; }
+      fieldset { margin: 12px 0; }
+      .scroll { overflow-x: auto; }
+      table { border-collapse: collapse; margin: 8px 0 20px; }
+      th, td { border: 1px solid; padding: 4px 8px; text-align: left; vertical-align: top; }
+      td { white-space: pre-line; }
+      progress { width: 100%; max-width: 30rem; }
+      .small { font-size: 0.85em; }
+      #refusal { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h1>Evaluation (dev only)</h1>
+    <p>
+      Runs the real detection path (rules, name model, ALL CAPS copy, whole-word snapping) over a generated split with
+      every category on and no preset filtering, then scores it. Dev results may be re-run freely. The test split is
+      frozen: run it once.
+    </p>
+    <p>
+      <label for="split">Split</label>
+      <select id="split">
+        <option value="dev">dev</option>
+        <option value="test">test (frozen)</option>
+      </select>
+    </p>
+    <fieldset id="frozen" hidden>
+      <legend>Frozen run</legend>
+      <input type="checkbox" id="frozen-ok" />
+      <label for="frozen-ok">I understand this is the frozen run and I will not tune on it</label>
+    </fieldset>
+    <p><button id="run" type="button">Run evaluation</button></p>
+    <p id="model-status" role="status" aria-live="polite">Name model: starting.</p>
+    <p id="status" role="status" aria-live="polite">Not started.</p>
+    <p id="refusal" role="alert"></p>
+    <progress id="progress" value="0" max="1" hidden aria-label="Documents processed"></progress>
+    <p><button id="download" type="button" disabled>Download results.json</button></p>
+    <div id="tables" class="scroll"></div>
+    <script type="module" src="/eval/eval.ts"></script>
+  </body>
+</html>
