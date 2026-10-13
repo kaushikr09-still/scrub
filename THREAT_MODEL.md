@@ -26,4 +26,4 @@ These are the model download address and the file host it redirects to.
 - Placeholders in a chatbot reply return the real values: `e2e/privacy.spec.ts`, "restore".
 
 ## Known limits
-TODO: list from LIMITATIONS once that file exists.
+See the "What it does not do" section of README.md and the Limits section of SPEC.md.
