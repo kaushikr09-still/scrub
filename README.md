@@ -89,6 +89,7 @@ More detail: `SPEC.md` (limits section) and `THREAT_MODEL.md`.
 - **Why a frozen test set?** So the headline number can't be tuned to look good.
 - **Why list a checklist instead of auto-everything?** The model will sometimes be wrong, so you stay in control.
 
+Read the full story in [CASE_STUDY.md](CASE_STUDY.md) and the open risks in [RISKS.md](RISKS.md).
 The full spec is in `SPEC.md`.
 
 ## Run it yourself
