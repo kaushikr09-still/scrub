@@ -278,6 +278,18 @@ describe("ScrubSession review checklist", () => {
     expect(s.scrubbedCopy(TEXT2).ok).toBe(false);
   });
 
+  it("dropScrubKeepRestore() refuses copy and rebuild but still restores the last scrub", async () => {
+    const s = new ScrubSession();
+    const v = await s.scrub("Mail me at priya@example.com please.");
+    const placeholder = v.text.match(/\[[A-Z]+_\d+\]/)![0];
+    s.setAcknowledged(true);
+    s.dropScrubKeepRestore();
+    expect(s.rebuild()).toBeNull();
+    expect(s.scrubbedCopy("")).toMatchObject({ ok: false, message: expect.stringContaining("Nothing to copy yet") });
+    expect(s.scrubbedCopy("Mail me at priya@example.com please.").ok).toBe(false);
+    expect(s.restore(`Noted ${placeholder}.`).text).toBe("Noted priya@example.com.");
+  });
+
   it("does nothing before a scrub", () => {
     const s = new ScrubSession();
     expect(s.setValueMasked("x", false)).toBeNull();

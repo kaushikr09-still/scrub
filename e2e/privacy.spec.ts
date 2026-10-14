@@ -135,6 +135,74 @@ test("first visit: ready notice is short and the fold-outs start closed", async 
   await expect(page.getByText("New here? Press Load example, then Scrub. The example text is invented.")).toBeVisible();
 });
 
+// Empty box: warnings and scrubbed output clear, Copy refuses, Restore still works for the last scrub.
+test("empty input clears warnings and output, keeps Restore working", async ({ browser }) => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.route(HF, (r) => r.abort()); // rules are enough for this test
+  await page.goto("/");
+
+  // "Paste some text first." clears once the box is typed in and emptied again
+  await page.locator("#scrub-button").click();
+  await expect(page.locator("#scrub-warnings")).toContainText("Paste some text first.");
+  await page.locator("#input").fill("x");
+  await page.locator("#input").fill("");
+  await expect(page.locator("#scrub-warnings")).toBeEmpty();
+
+  // scrub the example, then edit without emptying: the stale warning stays
+  await page.locator("#load-example").click();
+  await page.locator("#scrub-button").click();
+  await page.waitForFunction(() => document.querySelector<HTMLTextAreaElement>("#scrubbed")!.value !== "");
+  const example = await page.locator("#input").inputValue();
+  const scrubbedText = await page.locator("#scrubbed").inputValue();
+  const placeholder = scrubbedText.match(/\[EMAIL_\d+\]/)![0];
+  await page.locator("#input").fill(example + " more");
+  await expect(page.locator("#input-status")).toContainText("You changed your text after scrubbing");
+
+  // emptying the box clears the warning and the scrubbed output
+  await page.locator("#input").fill("");
+  await expect(page.locator("#input-status")).toBeEmpty();
+  expect(await page.locator("#scrubbed").inputValue()).toBe("");
+  await expect(page.locator("#scrub-summary")).toBeEmpty();
+
+  // Copy still refuses
+  await page.locator("#copy-scrubbed").click();
+  await expect(page.locator("#copy-scrubbed-status")).toContainText("Nothing to copy yet");
+
+  // Restore still works for the last scrub
+  // placeholders are numbered in order of appearance, so the first [EMAIL_n] is the first address in the example
+  const email = example.match(/[\w.]+@example\.com/)![0];
+  expect(email).toBe("vikram.deshmukh@example.com");
+  await page.locator("#reply").fill(`Noted ${placeholder}.`);
+  await page.locator("#restore-button").click();
+  expect(await page.locator("#restored").inputValue()).toBe(`Noted ${email}.`);
+  await context.close();
+});
+
+// Load example row: the hint goes away once there is text; the status sits on its own line below the button.
+test("example hint hides when the box has text; status is on its own line", async ({ browser }) => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.route(HF, (r) => r.abort());
+  await page.goto("/");
+  const hint = page.locator("#example-hint");
+  const status = page.locator("#example-status");
+  await expect(hint).toBeVisible();
+
+  await page.locator("#load-example").click();
+  await expect(hint).toBeHidden();
+  await expect(status).toHaveText("Example loaded. It is made up. Press Scrub.");
+  const button = (await page.locator("#load-example").boundingBox())!;
+  const line = (await status.boundingBox())!;
+  expect(line.y).toBeGreaterThanOrEqual(button.y + button.height);
+
+  await page.locator("#input").fill("");
+  await expect(hint).toBeVisible();
+  await page.locator("#input").fill("a");
+  await expect(hint).toBeHidden();
+  await context.close();
+});
+
 // The review checklist: untick leaves a value plain everywhere, tick masks it again, restore still works.
 test("review checklist: untick and tick update the output, restore still works", async ({ browser }) => {
   const context = await browser.newContext();

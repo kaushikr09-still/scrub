@@ -71,6 +71,10 @@ h2 {
   margin: 4px 0;
 }
 
+#example-status:empty {
+  display: none;
+}
+
 details {
   margin: 8px 0;
 }

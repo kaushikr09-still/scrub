@@ -117,6 +117,21 @@ export class ScrubSession {
     this.namesChecked = false;
   }
 
+  /**
+   * Drops the scrubbed output (for example when the input box is emptied) so nothing can be copied or rebuilt,
+   * but keeps the placeholder list so a reply to the last scrub can still be restored.
+   */
+  dropScrubKeepRestore(): void {
+    this.runs++;
+    this.scrubbedFrom = null;
+    this.scrubbedText = "";
+    this.restoredFrom = null;
+    this.restoredText = "";
+    this.found = [];
+    this.overrides = {};
+    this.namesChecked = false;
+  }
+
   setPreset(id: PresetId): void {
     this.preset = id;
     this.categories = defaultsFor(id);

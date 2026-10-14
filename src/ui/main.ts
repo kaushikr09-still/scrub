@@ -38,7 +38,13 @@ const copyRestoredStatus = el<HTMLParagraphElement>("copy-restored-status");
 const categoryList = el<HTMLDivElement>("category-list");
 const loadExample = el<HTMLButtonElement>("load-example");
 const loadExampleFor = el<HTMLSpanElement>("load-example-for");
-const exampleStatus = el<HTMLSpanElement>("example-status");
+const exampleStatus = el<HTMLParagraphElement>("example-status");
+const exampleHint = el<HTMLSpanElement>("example-hint");
+
+/** The "New here?" hint is for an empty box only. */
+function updateExampleHint(): void {
+  exampleHint.hidden = input.value !== "";
+}
 const review = el<HTMLFieldSetElement>("review");
 const reviewList = el<HTMLUListElement>("review-list");
 const reviewStatus = el<HTMLParagraphElement>("review-status");
@@ -292,8 +298,10 @@ loadExample.addEventListener("click", () => {
   clearOutput();
   setWarning(inputStatus, "");
   exampleStatus.textContent = "Example loaded. It is made up. Press Scrub.";
+  updateExampleHint();
   input.focus();
 });
+updateExampleHint(); // browsers may restore the box contents on reload
 
 scrubButton.addEventListener("click", () => void doScrub());
 restoreButton.addEventListener("click", doRestore);
@@ -301,6 +309,14 @@ onCtrlEnter(input, () => void doScrub());
 onCtrlEnter(reply, doRestore);
 
 input.addEventListener("input", () => {
+  updateExampleHint();
+  if (input.value === "") {
+    // An empty box: drop the old output and warnings, but keep the placeholder list so Restore still works.
+    session.dropScrubKeepRestore();
+    clearOutput();
+    setWarning(inputStatus, "");
+    return;
+  }
   setWarning(
     inputStatus,
     session.isStale(input.value) ? "You changed your text after scrubbing. Press Scrub again before copying." : "",
