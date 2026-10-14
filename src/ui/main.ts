@@ -20,6 +20,9 @@ const noticeHeading = el<HTMLSpanElement>("notice-heading");
 const noticeIcon = el<HTMLSpanElement>("notice-icon");
 const modelStatus = el<HTMLParagraphElement>("model-status");
 const modelDownload = el<HTMLDivElement>("model-download");
+const rulesIntro = el<HTMLParagraphElement>("rules-intro");
+const rulesFold = el<HTMLDetailsElement>("rules-fold");
+const readYourself = el<HTMLParagraphElement>("read-yourself");
 const modelProgress = el<HTMLProgressElement>("model-progress");
 const modelProgressText = el<HTMLSpanElement>("model-progress-text");
 const scrubWarnings = el<HTMLUListElement>("scrub-warnings");
@@ -182,10 +185,16 @@ function clearRestore(): void {
 function renderModel(): void {
   const state = model?.state() ?? "failed";
   noticeIcon.hidden = state === "ready";
+  // Only the ready state uses the short text and the fold-out; the other states keep the full list and warning line.
+  rulesIntro.hidden = state === "ready";
+  readYourself.hidden = state === "ready";
+  rulesFold.hidden = state !== "ready";
   if (state === "ready") {
     noticeHeading.textContent = "Name check ready";
-    modelStatus.textContent =
-      "The name model is ready. Names, organisations and places are checked when you press Scrub. It misses some, especially in all-lowercase text.";
+    modelStatus.replaceChildren(
+      "Names, organisations and places are checked when you press Scrub. It misses some, especially in all-lowercase text. ",
+      Object.assign(document.createElement("strong"), { textContent: "Read your text yourself before you share it." }),
+    );
     modelDownload.hidden = true;
   } else if (state === "failed") {
     noticeHeading.textContent = "Names NOT checked";

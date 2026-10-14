@@ -119,6 +119,22 @@ test("example: chat log loads, scrubs with the name model, and makes no requests
   expect(requests, "requests made after the example was loaded").toEqual([]);
 });
 
+// First-visit layout: the ready notice is short, with the rules list and the category ticks in closed fold-outs.
+test("first visit: ready notice is short and the fold-outs start closed", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator("#notice-heading")).toHaveText("Name check ready", { timeout: 3 * 60_000 });
+  await expect(page.locator("#model-status")).toContainText("checked when you press Scrub");
+  await expect(page.locator("#model-status strong")).toHaveText("Read your text yourself before you share it.");
+  await expect(page.locator("#model-status")).not.toContainText("The name model is ready");
+  await expect(page.locator("#rules-fold")).toBeVisible();
+  await expect(page.locator("#rules-fold")).not.toHaveAttribute("open", "");
+  await expect(page.locator("#categories-fold")).not.toHaveAttribute("open", "");
+  await expect(page.locator("#rules-intro")).toBeHidden();
+  await page.getByText("What does Scrub look for?").click();
+  await expect(page.locator("#rules-fold")).toContainText("IP addresses");
+  await expect(page.getByText("New here? Press Load example, then Scrub. The example text is invented.")).toBeVisible();
+});
+
 // The review checklist: untick leaves a value plain everywhere, tick masks it again, restore still works.
 test("review checklist: untick and tick update the output, restore still works", async ({ browser }) => {
   const context = await browser.newContext();
@@ -142,6 +158,9 @@ test("review checklist: untick and tick update the output, restore still works",
   expect(await scrubbed.inputValue()).not.toContain(email);
 
   // a category tick-box works too, and the other values still restore
+  // (the tick-boxes sit in a fold-out that is closed by default)
+  await expect(page.locator("#cat-URL")).toBeHidden();
+  await page.getByText("Advanced: choose what to mask").click();
   await page.locator("#cat-URL").uncheck();
   expect(await scrubbed.inputValue()).toContain("https://portal.example.com/orders/2291");
   const pan = (await scrubbed.inputValue()).match(/\[PAN_\d+\]/)![0];

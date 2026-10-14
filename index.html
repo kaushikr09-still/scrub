@@ -31,12 +31,20 @@
             <span id="model-progress-text"></span>
           </p>
         </div>
-        <p>
+        <p id="rules-intro">
           The rules look for: email addresses, phone numbers, Aadhaar, PAN, GSTIN, IFSC, UPI IDs, card numbers,
           dates, money amounts, PIN codes, bank account numbers (only next to words like A/c or Account No), web
           addresses (URLs) and IP addresses.
         </p>
-        <p><strong>Read your text yourself before you share it.</strong></p>
+        <details id="rules-fold" hidden>
+          <summary>What does Scrub look for?</summary>
+          <p>
+            The rules look for: email addresses, phone numbers, Aadhaar, PAN, GSTIN, IFSC, UPI IDs, card numbers,
+            dates, money amounts, PIN codes, bank account numbers (only next to words like A/c or Account No), web
+            addresses (URLs) and IP addresses.
+          </p>
+        </details>
+        <p id="read-yourself"><strong>Read your text yourself before you share it.</strong></p>
       </section>
 
       <section class="step" aria-labelledby="step1-title">
@@ -49,13 +57,17 @@
         </fieldset>
         <fieldset class="categories">
           <legend>Kinds of detail to mask</legend>
-          <p id="categories-hint" class="hint">
-            Ticked kinds are masked. Unticked kinds are left as plain text. Choosing a text type above sets these for you.
-          </p>
-          <div id="category-list" class="choice-grid" aria-describedby="categories-hint"></div>
+          <details id="categories-fold">
+            <summary>Advanced: choose what to mask</summary>
+            <p id="categories-hint" class="hint">
+              Ticked kinds are masked. Unticked kinds are left as plain text. Choosing a text type above sets these for you.
+            </p>
+            <div id="category-list" class="choice-grid" aria-describedby="categories-hint"></div>
+          </details>
         </fieldset>
         <p>
           <button id="load-example" type="button" class="secondary">Load example<span id="load-example-for" class="visually-hidden"></span></button>
+          <span class="hint">New here? Press Load example, then Scrub. The example text is invented.</span>
           <span id="example-status" class="status" aria-live="polite"></span>
         </p>
         <label for="input">Paste the text you want to share</label>

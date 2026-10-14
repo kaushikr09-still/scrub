@@ -71,6 +71,15 @@ h2 {
   margin: 4px 0;
 }
 
+details {
+  margin: 8px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .step {
   border-top: 1px solid var(--border);
   padding: 16px 0;
